@@ -1,0 +1,791 @@
+mapArmature:
+  - [
+      "kmi = km.keymap_items.new('armature.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('armature.delete', 'X', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('armature.delete', 'DEL', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('armature.click_extrude', 'SELECTMOUSE', 'CLICK', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('armature.separate', 'P', 'PRESS', ctrl=True, alt=True)",
+    ]
+
+mapNLAEditor:
+  - [
+      "kmi = km.keymap_items.new('nla.select_all_toggle', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'invert', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('nla.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('nla.apply_scale', 'A', 'PRESS')",
+    ]
+
+mapAnimation:
+  - [
+      "kmi = km.keymap_items.new('anim.change_frame', 'SELECTMOUSE', 'DOUBLE_CLICK')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('anim.previewrange_clear', 'P', 'PRESS', alt=True)",
+    ]
+
+mapView2D:
+  - [
+      "kmi = km.keymap_items.new('view2d.pan', 'MIDDLEMOUSE', 'ANY')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view2d.pan', 'ACTIONMOUSE', 'ANY')",
+      "kmi.active = False",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view2d.ndof', 'NDOF_MOTION', 'ANY')",
+    ]
+
+mapGraphEditor:
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_enum', 'TAB', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'area.type')",
+      "kmi_props_setattr(kmi.properties, 'value', 'DOPESHEET_EDITOR')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.cursor_set', 'SELECTMOUSE', 'DOUBLE_CLICK')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.select_leftright', 'SELECTMOUSE', 'PRESS', alt=True)",
+      "kmi_props_setattr(kmi.properties, 'mode', 'CHECK')",
+      "kmi_props_setattr(kmi.properties, 'extend', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.select_leftright', 'SELECTMOUSE', 'PRESS', shift=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'mode', 'CHECK')",
+      "kmi_props_setattr(kmi.properties, 'extend', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.select_all_toggle', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'invert', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.clean', 'O', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.delete', 'X', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.delete', 'DEL', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.click_insert', 'SELECTMOUSE', 'CLICK', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('graph.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('marker.rename', 'M', 'PRESS', ctrl=True)",
+    ]
+
+mapImage:
+  - [
+      "kmi = km.keymap_items.new('image.view_all', 'F', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'fit_view', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('image.view_pan', 'ACTIONMOUSE', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('image.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('image.view_ndof', 'NDOF_MOTION', 'ANY')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('image.sample', 'SELECTMOUSE', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.mode_set', 'TAB', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'mode', 'OBJECT')",
+      "kmi_props_setattr(kmi.properties, 'toggle', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'ONE', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 0)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'TWO', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 1)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'THREE', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 2)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'FOUR', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 3)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'FIVE', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 4)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'SIX', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 5)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'SEVEN', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 6)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'EIGHT', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 7)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_int', 'NINE', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')",
+      "kmi_props_setattr(kmi.properties, 'value', 8)",
+    ]
+
+mapSequencer:
+  - [
+      "kmi = km.keymap_items.new('sequencer.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.select', 'SELECTMOUSE', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'extend', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_handle', False)",
+      "kmi_props_setattr(kmi.properties, 'left_right', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_time', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.select', 'SELECTMOUSE', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', True)",
+      "kmi_props_setattr(kmi.properties, 'linked_handle', False)",
+      "kmi_props_setattr(kmi.properties, 'left_right', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_time', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.select', 'SELECTMOUSE', 'PRESS', alt=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_handle', True)",
+      "kmi_props_setattr(kmi.properties, 'left_right', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_time', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.select', 'SELECTMOUSE', 'PRESS', shift=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', True)",
+      "kmi_props_setattr(kmi.properties, 'linked_handle', True)",
+      "kmi_props_setattr(kmi.properties, 'left_right', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_time', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.select', 'SELECTMOUSE', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_handle', False)",
+      "kmi_props_setattr(kmi.properties, 'left_right', True)",
+      "kmi_props_setattr(kmi.properties, 'linked_time', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('sequencer.select', 'SELECTMOUSE', 'PRESS', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', True)",
+      "kmi_props_setattr(kmi.properties, 'linked_handle', False)",
+      "kmi_props_setattr(kmi.properties, 'left_right', False)",
+      "kmi_props_setattr(kmi.properties, 'linked_time', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('marker.rename', 'M', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view2d.pan', 'RIGHTMOUSE', 'PRESS')",
+    ]
+
+mapCurve:
+  - [
+      "kmi = km.keymap_items.new('curve.vertex_add', 'SELECTMOUSE', 'CLICK', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('curve.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('curve.delete', 'X', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('curve.delete', 'DEL', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+
+mapImagePaint:
+  - [
+      "kmi = km.keymap_items.new('wm.radial_control', 'F', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path_primary', 'tool_settings.image_paint.brush.size')",
+      "kmi_props_setattr(kmi.properties, 'data_path_secondary', 'tool_settings.unified_paint_settings.size')",
+      "kmi_props_setattr(kmi.properties, 'use_secondary', 'tool_settings.unified_paint_settings.use_unified_size')",
+      "kmi_props_setattr(kmi.properties, 'rotation_path', 'tool_settings.image_paint.brush.mask_texture_slot.angle')",
+      "kmi_props_setattr(kmi.properties, 'color_path', 'tool_settings.image_paint.brush.cursor_color_add')",
+      "kmi_props_setattr(kmi.properties, 'fill_color_path', 'tool_settings.image_paint.brush.color')",
+      "kmi_props_setattr(kmi.properties, 'zoom_path', 'space_data.zoom')",
+      "kmi_props_setattr(kmi.properties, 'image_id', 'tool_settings.image_paint.brush')",
+      "kmi_props_setattr(kmi.properties, 'secondary_tex', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.radial_control', 'F', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path_primary', 'tool_settings.image_paint.brush.strength')",
+      "kmi_props_setattr(kmi.properties, 'data_path_secondary', 'tool_settings.unified_paint_settings.strength')",
+      "kmi_props_setattr(kmi.properties, 'use_secondary', 'tool_settings.unified_paint_settings.use_unified_strength')",
+      "kmi_props_setattr(kmi.properties, 'rotation_path', 'tool_settings.image_paint.brush.mask_texture_slot.angle')",
+      "kmi_props_setattr(kmi.properties, 'color_path', 'tool_settings.image_paint.brush.cursor_color_add')",
+      "kmi_props_setattr(kmi.properties, 'fill_color_path', 'tool_settings.image_paint.brush.color')",
+      "kmi_props_setattr(kmi.properties, 'zoom_path', '')",
+      "kmi_props_setattr(kmi.properties, 'image_id', 'tool_settings.image_paint.brush')",
+      "kmi_props_setattr(kmi.properties, 'secondary_tex', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.radial_control', 'F', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path_primary', 'tool_settings.image_paint.brush.texture_slot.angle')",
+      "kmi_props_setattr(kmi.properties, 'data_path_secondary', '')",
+      "kmi_props_setattr(kmi.properties, 'use_secondary', '')",
+      "kmi_props_setattr(kmi.properties, 'rotation_path', 'tool_settings.image_paint.brush.texture_slot.angle')",
+      "kmi_props_setattr(kmi.properties, 'color_path', 'tool_settings.image_paint.brush.cursor_color_add')",
+      "kmi_props_setattr(kmi.properties, 'fill_color_path', 'tool_settings.image_paint.brush.color')",
+      "kmi_props_setattr(kmi.properties, 'zoom_path', '')",
+      "kmi_props_setattr(kmi.properties, 'image_id', 'tool_settings.image_paint.brush')",
+      "kmi_props_setattr(kmi.properties, 'secondary_tex', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.radial_control', 'F', 'PRESS', ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path_primary', 'tool_settings.image_paint.brush.mask_texture_slot.angle')",
+      "kmi_props_setattr(kmi.properties, 'data_path_secondary', '')",
+      "kmi_props_setattr(kmi.properties, 'use_secondary', '')",
+      "kmi_props_setattr(kmi.properties, 'rotation_path', 'tool_settings.image_paint.brush.mask_texture_slot.angle')",
+      "kmi_props_setattr(kmi.properties, 'color_path', 'tool_settings.image_paint.brush.cursor_color_add')",
+      "kmi_props_setattr(kmi.properties, 'fill_color_path', 'tool_settings.image_paint.brush.color')",
+      "kmi_props_setattr(kmi.properties, 'zoom_path', '')",
+      "kmi_props_setattr(kmi.properties, 'image_id', 'tool_settings.image_paint.brush')",
+      "kmi_props_setattr(kmi.properties, 'secondary_tex', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('brush.stencil_control', 'RIGHTMOUSE', 'PRESS', alt=True)",
+      "kmi_props_setattr(kmi.properties, 'mode', 'TRANSLATION')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_menu_enum', 'R', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.image_paint.brush.texture_angle_source_random')",
+    ]
+
+mapMetaball:
+  - [
+      "kmi = km.keymap_items.new('mball.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+
+mapNodeEditor:
+  - [
+      "kmi = km.keymap_items.new('wm.call_menu', 'W', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'name', 'AMTH_NODE_MT_amaranth_templates')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.show_active_node_image', 'SELECTMOUSE', 'RELEASE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.show_active_node_image', 'ACTIONMOUSE', 'RELEASE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.call_menu', 'EQUAL', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'name', 'NODE_MT_nw_node_align_menu')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.nw_merge_nodes', 'ZERO', 'PRESS', ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'mode', 'MIX')",
+      "kmi_props_setattr(kmi.properties, 'merge_type', 'MIX')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.nw_merge_nodes', 'NUMPAD_0', 'PRESS', ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'mode', 'MIX')",
+      "kmi_props_setattr(kmi.properties, 'merge_type', 'MIX')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.backimage_sample', 'SELECTMOUSE', 'PRESS', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.parent_clear', 'P', 'PRESS', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.select_same_type', 'G', 'PRESS', shift=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.group_edit', 'TAB', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'exit', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('node.detach_translate_attach', 'F', 'PRESS', alt=True)",
+    ]
+
+mapClipEditor:
+  - [
+      "kmi = km.keymap_items.new('clip.view_pan', 'ACTIONMOUSE', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.view_ndof', 'NDOF_MOTION', 'ANY')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)",
+    ]
+
+mapMarkers:
+  - [
+      "kmi = km.keymap_items.new('marker.move', 'EVT_TWEAK_S', 'ANY', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('marker.select_all', 'A', 'PRESS', ctrl=True)",
+    ]
+
+mapParticle:
+  - [
+      "kmi = km.keymap_items.new('particle.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.manipulator', 'LEFTMOUSE', 'PRESS', any=True)",
+      "kmi_props_setattr(kmi.properties, 'release_confirm', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+
+mapOutliner:
+  - [
+      "kmi = km.keymap_items.new('outliner.scroll_page', 'PAGE_DOWN', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('outliner.selected_toggle', 'A', 'PRESS', ctrl=True)",
+    ]
+
+mapFaceMask:
+  - [
+      "kmi = km.keymap_items.new('paint.face_select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+
+mapFileBrowserMain:
+  - [
+      "kmi = km.keymap_items.new('file.select', 'LEFTMOUSE', 'CLICK', alt=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', True)",
+      "kmi_props_setattr(kmi.properties, 'fill', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('file.select_all_toggle', 'A', 'PRESS', ctrl=True)",
+    ]
+
+mapSequencerPreview:
+  - [
+      "kmi = km.keymap_items.new('sequencer.view_all_preview', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+
+map3DView:
+  - [
+      "kmi = km.keymap_items.new('view3d.show_only_render', 'Z', 'PRESS', shift=True, alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.return_to_original', 'NUMPAD_SLASH', 'PRESS', shift=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.edit_linked', 'NUMPAD_SLASH', 'PRESS', shift=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.manipulator', 'LEFTMOUSE', 'PRESS', any=True)",
+      "kmi_props_setattr(kmi.properties, 'release_confirm', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.cursor3d', 'ACTIONMOUSE', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.move', 'RIGHTMOUSE', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_roll', 'NUMPAD_4', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'angle', -0.2617993950843811)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_roll', 'NUMPAD_6', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'angle', 0.2617993950843811)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_roll', 'WHEELUPMOUSE', 'PRESS', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'angle', -0.2617993950843811)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_roll', 'WHEELDOWNMOUSE', 'PRESS', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'angle', 0.2617993950843811)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.ndof_orbit_zoom', 'NDOF_MOTION', 'ANY')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.ndof_orbit', 'NDOF_MOTION', 'ANY', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.ndof_pan', 'NDOF_MOTION', 'ANY', shift=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.ndof_all', 'NDOF_MOTION', 'ANY', shift=True, ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_selected', 'NDOF_BUTTON_FIT', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'use_all_regions', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_roll', 'NDOF_BUTTON_ROLL_CCW', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'angle', -1.5707963705062866)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.view_roll', 'NDOF_BUTTON_ROLL_CW', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'angle', 1.5707963705062866)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_FRONT', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'type', 'FRONT')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_BACK', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'type', 'BACK')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_LEFT', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'type', 'LEFT')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_RIGHT', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'type', 'RIGHT')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_TOP', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'type', 'TOP')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_BOTTOM', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'type', 'BOTTOM')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_FRONT', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'type', 'FRONT')",
+      "kmi_props_setattr(kmi.properties, 'align_active', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_RIGHT', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'type', 'RIGHT')",
+      "kmi_props_setattr(kmi.properties, 'align_active', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.viewnumpad', 'NDOF_BUTTON_TOP', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'type', 'TOP')",
+      "kmi_props_setattr(kmi.properties, 'align_active', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_toggle_enum', 'Z', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.viewport_shade')",
+      "kmi_props_setattr(kmi.properties, 'value_1', 'SOLID')",
+      "kmi_props_setattr(kmi.properties, 'value_2', 'RENDERED')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('transform.skin_resize', 'A', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.select_grouped', 'SELECTMOUSE', 'DOUBLE_CLICK')",
+      "kmi_props_setattr(kmi.properties, 'type', 'GROUP')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.select_border', 'EVT_TWEAK_L', 'ANY', alt=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', False)",
+    ]
+
+mapUVEditor:
+  - [
+      "kmi = km.keymap_items.new('uv.select_border', 'B', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'pinned', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('uv.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('uv.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('uv.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_menu_enum', 'TAB', 'PRESS', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.snap_uv_element')",
+    ]
+
+mapClipGraphEditor:
+  - [
+      "kmi = km.keymap_items.new('clip.change_frame', 'SELECTMOUSE', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.graph_select_all_markers', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.graph_select_border', 'EVT_TWEAK_L', 'ANY', any=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.graph_view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+
+mapInfo:
+  - [
+      "kmi = km.keymap_items.new('info.select_all_toggle', 'A', 'PRESS', ctrl=True)",
+    ]
+
+mapDopesheet:
+  - [
+      "kmi = km.keymap_items.new('wm.context_toggle_enum', 'TAB', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'space_data.mode')",
+      "kmi_props_setattr(kmi.properties, 'value_1', 'ACTION')",
+      "kmi_props_setattr(kmi.properties, 'value_2', 'DOPESHEET')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_set_enum', 'TAB', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'area.type')",
+      "kmi_props_setattr(kmi.properties, 'value', 'GRAPH_EDITOR')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('action.select_all_toggle', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'invert', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('action.clean', 'O', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('action.delete', 'X', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('action.delete', 'DEL', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('action.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+
+mapWeightPaintVertexSelection:
+  - [
+      "kmi = km.keymap_items.new('paint.vert_select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', True)",
+    ]
+
+mapLattice:
+  - [
+      "kmi = km.keymap_items.new('lattice.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+
+mapTimeline:
+  - [
+      "kmi = km.keymap_items.new('time.view_all', 'NDOF_BUTTON_FIT', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('anim.change_frame', 'LEFTMOUSE', 'PRESS')",
+    ]
+
+mapClipDopesheetEditor:
+  - [
+      "kmi = km.keymap_items.new('clip.dopesheet_select_channel', 'SELECTMOUSE', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'extend', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('clip.dopesheet_view_all', 'HOME', 'PRESS')",
+    ]
+
+mapObjectMode:
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.location_clear', 'G', 'PRESS', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.rotation_clear', 'R', 'PRESS', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('object.scale_clear', 'S', 'PRESS', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.call_menu', 'A', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'name', 'VIEW3D_MT_object_apply')",
+    ]
+
+mapAnimationChannels:
+  - [
+      "kmi = km.keymap_items.new('anim.channels_select_all_toggle', 'A', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('anim.channels_ungroup', 'G', 'PRESS', alt=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('anim.channels_visibility_set', 'V', 'PRESS')",
+    ]
+
+mapMesh:
+  - [
+      "kmi = km.keymap_items.new('mesh.shortest_path_pick', 'SELECTMOUSE', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mesh.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mesh.select_similar', 'G', 'PRESS', shift=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mesh.vert_connect', 'J', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'SELECTMOUSE', 'CLICK', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'rotate_source', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'SELECTMOUSE', 'CLICK', shift=True, ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'rotate_source', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+
+mapPose:
+  - [
+      "kmi = km.keymap_items.new('wm.call_menu', 'A', 'PRESS')",
+      "kmi_props_setattr(kmi.properties, 'name', 'VIEW3D_MT_pose_apply')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('pose.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('pose.select_mirror', 'F', 'PRESS', shift=True)",
+    ]
+
+mapMaskEditing:
+  - [
+      "kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)",
+      "kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mask.add_vertex_slide', 'SELECTMOUSE', 'PRESS', ctrl=True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mask.select_all', 'A', 'PRESS', ctrl=True)",
+      "kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mask.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', False)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mask.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True, alt=True)",
+      "kmi_props_setattr(kmi.properties, 'deselect', True)",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mask.slide_point', 'SELECTMOUSE', 'PRESS')",
+      "kmi.active = False",
+    ]
+  - [
+      "kmi = km.keymap_items.new('mask.slide_spline_curvature', 'SELECTMOUSE', 'PRESS')",
+    ]
+  - [
+      "kmi = km.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)",
+    ]
+
