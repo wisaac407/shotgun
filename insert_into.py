@@ -11,19 +11,17 @@ if __name__ == '__main__':
         target_str = target.read()
         target.seek(0)
 
-        for keymap, groups in data.items():
-            name = re.escape(' '.join(re.findall('[A-Z][a-z]+', keymap)))
+        pattern = re.compile(r"(with KeyMap\(kc, '([^']+)'[^\n]+\n) {4}pass")
 
+        def repl(match):
+            header, name = match.groups()
+            name = 'map' + name.replace(' ', '')
 
-            pattern = r"(with KeyMap\(kc, '" + name + r'[^\n]+\n) {4}pass'
-
-            repl = r'\1'
-            for group in groups:
+            s = header
+            for group in data[name]:
                 for line in group:
-                    repl += '    ' + line + '\n'
-                repl += '\n'
-            # Strip trailing newline
-            repl = repl[:-1]
-            target_str = re.sub(pattern, repl, target_str)
+                    s += '    ' + line + '\n'
+                s += '\n'
+            return s
 
-        target.write(target_str)
+        target.write(pattern.sub(repl, target_str))
