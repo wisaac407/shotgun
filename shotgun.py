@@ -13,16 +13,13 @@ class KeyMap:
         wm = bpy.context.window_manager
         dkm = wm.keyconfigs.default.keymaps[self.km.name]
 
-        # Add all the default blender keymap items that don't conflict with the new keymap items
+        # Add all the default blender keymap items
+        # Because they are getting added last the previous hotkeys will override them
         for k in dkm.keymap_items:
-            for k2 in self.km.keymap_items:
-                if k.compare(k2):
-                    break
-            else:
-                kmi = self.km.keymap_items.new(k.idname, k.type, k.value, any=k.any, shift=k.shift, ctrl=k.ctrl,
-                                               alt=k.alt, oskey=k.oskey)
-                for prop, val in k.properties.items():
-                    kmi_props_setattr(kmi.properties, prop, val)
+            kmi = self.km.keymap_items.new(k.idname, k.type, k.value, any=k.any, shift=k.shift, ctrl=k.ctrl,
+                                           alt=k.alt, oskey=k.oskey)
+            for prop, val in k.properties.items():
+                kmi_props_setattr(kmi.properties, prop, val)
 
 
 def kmi_props_setattr(kmi_props, attr, value):
