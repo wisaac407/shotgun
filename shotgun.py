@@ -31,6 +31,7 @@ def kmi_props_setattr(kmi_props, attr, value):
     except Exception as e:
         print("Warning: %r" % e)
 
+
 wm = bpy.context.window_manager
 kc = wm.keyconfigs.new(os.path.splitext(os.path.basename(__file__))[0])
 
@@ -56,8 +57,6 @@ with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=Fal
     kmi = km.keymap_items.new('wm.context_menu_enum', 'TAB', 'PRESS', shift=True, ctrl=True)
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.snap_uv_element')
 
-
-
 # Map Mask Editing
 with KeyMap(kc, 'Mask Editing', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)
@@ -81,8 +80,6 @@ with KeyMap(kc, 'Mask Editing', space_type='EMPTY', region_type='WINDOW', modal=
 
     kmi = km.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
-
-
 # Map File Browser Main
 with KeyMap(kc, 'File Browser Main', space_type='FILE_BROWSER', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('file.select', 'LEFTMOUSE', 'CLICK', alt=True)
@@ -91,13 +88,9 @@ with KeyMap(kc, 'File Browser Main', space_type='FILE_BROWSER', region_type='WIN
 
     kmi = km.keymap_items.new('file.select_all_toggle', 'A', 'PRESS', ctrl=True)
 
-
-
 # Map SequencerPreview
 with KeyMap(kc, 'SequencerPreview', space_type='SEQUENCE_EDITOR', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('sequencer.view_all_preview', 'NDOF_BUTTON_FIT', 'PRESS')
-
-
 
 # Map Clip Editor
 with KeyMap(kc, 'Clip Editor', space_type='CLIP_EDITOR', region_type='WINDOW', modal=False) as km:
@@ -118,8 +111,6 @@ with KeyMap(kc, 'Clip Editor', space_type='CLIP_EDITOR', region_type='WINDOW', m
 
     kmi = km.keymap_items.new('clip.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
-
-
 # Map Clip Graph Editor
 with KeyMap(kc, 'Clip Graph Editor', space_type='CLIP_EDITOR', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('clip.change_frame', 'SELECTMOUSE', 'PRESS', ctrl=True)
@@ -131,8 +122,6 @@ with KeyMap(kc, 'Clip Graph Editor', space_type='CLIP_EDITOR', region_type='WIND
 
     kmi = km.keymap_items.new('clip.graph_view_all', 'NDOF_BUTTON_FIT', 'PRESS')
 
-
-
 # Map Clip Dopesheet Editor
 with KeyMap(kc, 'Clip Dopesheet Editor', space_type='CLIP_EDITOR', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('clip.dopesheet_select_channel', 'SELECTMOUSE', 'PRESS', ctrl=True)
@@ -140,15 +129,11 @@ with KeyMap(kc, 'Clip Dopesheet Editor', space_type='CLIP_EDITOR', region_type='
 
     kmi = km.keymap_items.new('clip.dopesheet_view_all', 'HOME', 'PRESS')
 
-
-
 # Map Outliner
 with KeyMap(kc, 'Outliner', space_type='OUTLINER', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('outliner.scroll_page', 'PAGE_DOWN', 'PRESS')
 
     kmi = km.keymap_items.new('outliner.selected_toggle', 'A', 'PRESS', ctrl=True)
-
-
 
 # Map Graph Editor
 with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False) as km:
@@ -186,8 +171,6 @@ with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW',
     kmi = km.keymap_items.new('graph.view_all', 'NDOF_BUTTON_FIT', 'PRESS')
 
     kmi = km.keymap_items.new('marker.rename', 'M', 'PRESS', ctrl=True)
-
-
 
 # Map 3D View
 with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=False) as km:
@@ -282,14 +265,10 @@ with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=Fal
     kmi = km.keymap_items.new('view3d.select_border', 'EVT_TWEAK_L', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'extend', False)
 
-
-
 # Map Face Mask
 with KeyMap(kc, 'Face Mask', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('paint.face_select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
-
-
 
 # Map Weight Paint Vertex Selection
 with KeyMap(kc, 'Weight Paint Vertex Selection', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
@@ -302,8 +281,6 @@ with KeyMap(kc, 'Weight Paint Vertex Selection', space_type='EMPTY', region_type
     kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)
     kmi_props_setattr(kmi.properties, 'deselect', True)
 
-
-
 # Map Pose
 with KeyMap(kc, 'Pose', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('wm.call_menu', 'A', 'PRESS')
@@ -313,8 +290,6 @@ with KeyMap(kc, 'Pose', space_type='EMPTY', region_type='WINDOW', modal=False) a
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
     kmi = km.keymap_items.new('pose.select_mirror', 'F', 'PRESS', shift=True)
-
-
 
 # Map Object Mode
 with KeyMap(kc, 'Object Mode', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
@@ -333,8 +308,6 @@ with KeyMap(kc, 'Object Mode', space_type='EMPTY', region_type='WINDOW', modal=F
     kmi = km.keymap_items.new('wm.call_menu', 'A', 'PRESS')
     kmi_props_setattr(kmi.properties, 'name', 'VIEW3D_MT_object_apply')
 
-
-
 # Map Curve
 with KeyMap(kc, 'Curve', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('curve.vertex_add', 'SELECTMOUSE', 'CLICK', ctrl=True)
@@ -349,8 +322,6 @@ with KeyMap(kc, 'Curve', space_type='EMPTY', region_type='WINDOW', modal=False) 
     kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')
 
-
-
 # Map Metaball
 with KeyMap(kc, 'Metaball', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('mball.select_all', 'A', 'PRESS', ctrl=True)
@@ -359,8 +330,6 @@ with KeyMap(kc, 'Metaball', space_type='EMPTY', region_type='WINDOW', modal=Fals
     kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')
 
-
-
 # Map Lattice
 with KeyMap(kc, 'Lattice', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('lattice.select_all', 'A', 'PRESS', ctrl=True)
@@ -368,8 +337,6 @@ with KeyMap(kc, 'Lattice', space_type='EMPTY', region_type='WINDOW', modal=False
 
     kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')
-
-
 
 # Map Particle
 with KeyMap(kc, 'Particle', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
@@ -381,8 +348,6 @@ with KeyMap(kc, 'Particle', space_type='EMPTY', region_type='WINDOW', modal=Fals
 
     kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')
-
-
 
 # Map Node Editor
 with KeyMap(kc, 'Node Editor', space_type='NODE_EDITOR', region_type='WINDOW', modal=False) as km:
@@ -423,15 +388,11 @@ with KeyMap(kc, 'Node Editor', space_type='NODE_EDITOR', region_type='WINDOW', m
 
     kmi = km.keymap_items.new('node.detach_translate_attach', 'F', 'PRESS', alt=True)
 
-
-
 # Map Timeline
 with KeyMap(kc, 'Timeline', space_type='TIMELINE', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('time.view_all', 'NDOF_BUTTON_FIT', 'PRESS')
 
     kmi = km.keymap_items.new('anim.change_frame', 'LEFTMOUSE', 'PRESS')
-
-
 
 # Map Mesh
 with KeyMap(kc, 'Mesh', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
@@ -453,8 +414,6 @@ with KeyMap(kc, 'Mesh', space_type='EMPTY', region_type='WINDOW', modal=False) a
     kmi = km.keymap_items.new('wm.context_cycle_enum', 'O', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.proportional_edit_falloff')
 
-
-
 # Map Armature
 with KeyMap(kc, 'Armature', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('armature.select_all', 'A', 'PRESS', ctrl=True)
@@ -468,8 +427,6 @@ with KeyMap(kc, 'Armature', space_type='EMPTY', region_type='WINDOW', modal=Fals
 
     kmi = km.keymap_items.new('armature.separate', 'P', 'PRESS', ctrl=True, alt=True)
 
-
-
 # Map View2D
 with KeyMap(kc, 'View2D', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('view2d.pan', 'MIDDLEMOUSE', 'ANY')
@@ -478,8 +435,6 @@ with KeyMap(kc, 'View2D', space_type='EMPTY', region_type='WINDOW', modal=False)
     kmi.active = False
 
     kmi = km.keymap_items.new('view2d.ndof', 'NDOF_MOTION', 'ANY')
-
-
 
 # Map Image Paint
 with KeyMap(kc, 'Image Paint', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
@@ -533,8 +488,6 @@ with KeyMap(kc, 'Image Paint', space_type='EMPTY', region_type='WINDOW', modal=F
     kmi = km.keymap_items.new('wm.context_menu_enum', 'R', 'PRESS')
     kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.image_paint.brush.texture_angle_source_random')
 
-
-
 # Map Sequencer
 with KeyMap(kc, 'Sequencer', space_type='SEQUENCE_EDITOR', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('sequencer.select_all', 'A', 'PRESS', ctrl=True)
@@ -582,15 +535,11 @@ with KeyMap(kc, 'Sequencer', space_type='SEQUENCE_EDITOR', region_type='WINDOW',
 
     kmi = km.keymap_items.new('view2d.pan', 'RIGHTMOUSE', 'PRESS')
 
-
-
 # Map Animation
 with KeyMap(kc, 'Animation', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('anim.change_frame', 'SELECTMOUSE', 'DOUBLE_CLICK')
 
     kmi = km.keymap_items.new('anim.previewrange_clear', 'P', 'PRESS', alt=True)
-
-
 
 # Map Image
 with KeyMap(kc, 'Image', space_type='IMAGE_EDITOR', region_type='WINDOW', modal=False) as km:
@@ -645,15 +594,11 @@ with KeyMap(kc, 'Image', space_type='IMAGE_EDITOR', region_type='WINDOW', modal=
     kmi_props_setattr(kmi.properties, 'data_path', 'space_data.image.render_slot')
     kmi_props_setattr(kmi.properties, 'value', 8)
 
-
-
 # Map Markers
 with KeyMap(kc, 'Markers', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('marker.move', 'EVT_TWEAK_S', 'ANY', alt=True)
 
     kmi = km.keymap_items.new('marker.select_all', 'A', 'PRESS', ctrl=True)
-
-
 
 # Map Animation Channels
 with KeyMap(kc, 'Animation Channels', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
@@ -663,13 +608,9 @@ with KeyMap(kc, 'Animation Channels', space_type='EMPTY', region_type='WINDOW', 
 
     kmi = km.keymap_items.new('anim.channels_visibility_set', 'V', 'PRESS')
 
-
-
 # Map Info
 with KeyMap(kc, 'Info', space_type='INFO', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('info.select_all_toggle', 'A', 'PRESS', ctrl=True)
-
-
 
 # Map Dopesheet
 with KeyMap(kc, 'Dopesheet', space_type='DOPESHEET_EDITOR', region_type='WINDOW', modal=False) as km:
@@ -693,8 +634,6 @@ with KeyMap(kc, 'Dopesheet', space_type='DOPESHEET_EDITOR', region_type='WINDOW'
 
     kmi = km.keymap_items.new('action.view_all', 'NDOF_BUTTON_FIT', 'PRESS')
 
-
-
 # Map NLA Editor
 with KeyMap(kc, 'NLA Editor', space_type='NLA_EDITOR', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('nla.select_all_toggle', 'A', 'PRESS', ctrl=True)
@@ -703,5 +642,3 @@ with KeyMap(kc, 'NLA Editor', space_type='NLA_EDITOR', region_type='WINDOW', mod
     kmi = km.keymap_items.new('nla.view_all', 'NDOF_BUTTON_FIT', 'PRESS')
 
     kmi = km.keymap_items.new('nla.apply_scale', 'A', 'PRESS')
-
-
