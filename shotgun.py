@@ -18,8 +18,10 @@ class KeyMap:
         for k in dkm.keymap_items:
             kmi = self.km.keymap_items.new(k.idname, k.type, k.value, any=k.any, shift=k.shift, ctrl=k.ctrl,
                                            alt=k.alt, oskey=k.oskey)
-            for prop, val in k.properties.items():
-                kmi_props_setattr(kmi.properties, prop, val)
+            for prop in k.properties.keys():
+                # Pointer properties are set when the operator is run
+                if k.properties.rna_type.properties[prop].type != 'POINTER':
+                    kmi_props_setattr(kmi.properties, prop, getattr(k.properties, prop))
 
 
 def kmi_props_setattr(kmi_props, attr, value):
