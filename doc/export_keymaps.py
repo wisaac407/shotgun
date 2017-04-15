@@ -45,10 +45,16 @@ Indices and tables
 CONF_TEMPLATE = """
 #!/usr/bin/env python3
 
+import sys
+import os
+
+sys.path.append(os.path.dirname(os.getcwd()))
+
 extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.intersphinx',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'keymap_domain'
 ]
 
 # templates_path = ['_templates']
@@ -223,7 +229,7 @@ def generate_docs(kc):
         rst = '*' * len(km.name)
         rst = '\n'.join((rst, km.name, rst)) + '\n\n'
 
-        rst += '.. currentmodule:: ' + kmid + '\n\n'
+        rst += '.. km:module:: ' + kmid + '\n\n'
 
         rst += create_header('Quick Reference', '-')
 
@@ -231,7 +237,7 @@ def generate_docs(kc):
             combo = get_key_combo(kmi)
             operator = kmi.idname
 
-            combo = ':func:`{}`'.format(combo)
+            combo = ':km:hk:`{} <{}->{}->{}>`'.format(combo, kmid, combo, operator)
             operator = ':func:`blender:bpy.ops.{}`'.format(operator)
 
             return combo, operator
@@ -248,7 +254,7 @@ def generate_docs(kc):
                     print('Invalid Operator: ' + kmi.idname)
                     continue
 
-                rst += '.. function:: %s\n\n   %s\n\n' % (get_key_combo(kmi), kmi.name)
+                rst += '.. km:hotkey:: %s -> %s\n\n   %s\n\n' % (get_key_combo(kmi), kmi.idname, kmi.name)
 
                 rst += indent(doc)
                 rst += '\n'
