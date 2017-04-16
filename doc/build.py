@@ -23,32 +23,71 @@
 import subprocess
 import requests
 import os
+import sys
 import shutil
+import argparse
+
+
+def parse_args(args):
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument('-c', '--clean', help='Clean generated files', action='store_true')
+    parser.add_argument('-f', '--full-clean',
+                        help='Same as "--clean" except it removes the bpy doc inventory', action='store_true')
+    parser.add_argument('-r', '--rebuild', help='Fresh rebuild of all docs', action='store_true')
+    parser.add_argument('-d', '--download', help='Re-download bpy doc inventory', action='store_true')
+    parser.add_argument('--keep-source', help='Keep the generated .rst files', action='store_true')
+    parser.add_argument('--skip-export', help='Skip exporting the keymaps from blender', action='store_true')
+    parser.add_argument('--skip-sphinx', help='Skip generating the final html documents', action='store_true')
+
+    return parser.parse_args(args)
 
 
 def main():
+    args = parse_args(sys.argv[1:])
+
+    if args.clean or args.rebuild or args.full_clean:
+        # Clean generated output files
+        if os.path.exists('doc/dist'):
+            shutil.rmtree('doc/dist')
+
+    if args.clean or args.full_clean:
+        if os.path.exists('doc/_source'):
+            shutil.rmtree('doc/_source')
+
+    if args.full_clean:
+        if os.path.exists('doc/blender_objects.inv'):
+            os.remove('doc/blender_objects.inv')
+        sys.exit(0)
+
+    if args.clean:
+        sys.exit(0)
+
     # intersphinx doesn't load it properly from url so we download it here.
-    if not os.path.exists('doc/blender_objects.inv'):
+    if not os.path.exists('doc/blender_objects.inv') or args.download:
         r = requests.get('https://docs.blender.org/api/blender_python_api_master/objects.inv', stream=True)
-        with open('doc/blender_objects.inv', 'w') as f:
+        with open('doc/blender_objects.inv', 'wb') as f:
             f.write(r.content)
 
     try:
-        subprocess.run([
-            'blender',
-            '--factory-startup',
-            '--background',
-            '--python',
-            'doc/export_keymaps.py'
-        ], cwd='doc')
+        if not args.skip_export:
+            subprocess.run([
+                'blender',
+                '--factory-startup',
+                '--background',
+                '--python',
+                'doc/export_keymaps.py'
+            ], cwd='doc')
 
-        subprocess.run([
-            'sphinx-build',
-            '_source',
-            'dist'
-        ], cwd='doc')
+        if not args.skip_sphinx:
+            subprocess.run([
+                'sphinx-build',
+                '_source',
+                'dist'
+            ], cwd='doc')
     finally:
-        if os.path.exists('doc/_source'):
+        # Don't delete the source if we're not running sphinx or if --keep-source flag is active
+        if not (args.keep_source or args.skip_sphinx) and os.path.exists('doc/_source'):
             shutil.rmtree('doc/_source')
 
 if __name__ == '__main__':
