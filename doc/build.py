@@ -44,12 +44,12 @@ def main():
 
         subprocess.run([
             'sphinx-build',
-            'sphinx-in',
+            '_source',
             'dist'
         ], cwd='doc')
     finally:
-        if os.path.exists('doc/sphinx-in'):
-            shutil.rmtree('doc/sphinx-in')
+        if os.path.exists('doc/_source'):
+            shutil.rmtree('doc/_source')
 
 if __name__ == '__main__':
     main()

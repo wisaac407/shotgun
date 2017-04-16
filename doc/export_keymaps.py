@@ -277,23 +277,23 @@ def main():
 
     docs = generate_docs(shotgun)
 
-    if not os.path.exists('sphinx-in'):
-        os.mkdir('sphinx-in')
+    if not os.path.exists('_source'):
+        os.mkdir('_source')
 
-    if not os.path.exists('sphinx-in/keymaps'):
-        os.mkdir('sphinx-in/keymaps')
+    if not os.path.exists('_source/keymaps'):
+        os.mkdir('_source/keymaps')
 
     # Write all the keymap files
     for kmid, rst in docs.items():
-        with open(os.path.join('sphinx-in', kmid + '.rst'), 'w') as f:
+        with open(os.path.join('_source', kmid + '.rst'), 'w') as f:
             f.write(rst)
 
     # Write the index.rst file
-    with open(os.path.join('sphinx-in', 'index.rst'), 'w') as f:
+    with open(os.path.join('_source', 'index.rst'), 'w') as f:
         f.write(INDEX_TEMPLATE.format(contents='\n   '.join(sorted(docs.keys()))))
 
     # Write the configure file
-    with open(os.path.join('sphinx-in', 'conf.py'), 'w') as f:
+    with open(os.path.join('_source', 'conf.py'), 'w') as f:
         # TODO: Find a smart way to get the version/release numbers.
         version = '1.0.0'
         release = version
