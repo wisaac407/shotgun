@@ -28,6 +28,16 @@ import shutil
 import argparse
 
 
+def download_inv():
+    with open('doc/blender_objects.inv', 'wb') as f:
+        print('Downloading inventory file:')
+        r = requests.get('https://docs.blender.org/api/blender_python_api_master/objects.inv', stream=True)
+        for data in r.iter_content(chunk_size=4096):
+            f.write(data)
+            print('.', end='', flush=True)
+        print('Done')
+
+
 def parse_args(args):
     parser = argparse.ArgumentParser()
 
@@ -65,9 +75,7 @@ def main():
 
     # intersphinx doesn't load it properly from url so we download it here.
     if not os.path.exists('doc/blender_objects.inv') or args.download:
-        r = requests.get('https://docs.blender.org/api/blender_python_api_master/objects.inv', stream=True)
-        with open('doc/blender_objects.inv', 'wb') as f:
-            f.write(r.content)
+        download_inv()
 
     try:
         if not args.skip_export:
