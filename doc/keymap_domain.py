@@ -131,6 +131,12 @@ class KeymapHotkey(ObjectDescription):
                                               fullname, '', None))
 
 
+# Useful for development.
+class KeymapInvalidHotkey(KeymapHotkey):
+    def get_signature_prefix(self):
+        return '(invalid) '
+
+
 class KmXRefRole(XRefRole):
     def process_link(self, env, refnode, has_explicit_title, title, target):
         refnode['km:module'] = env.ref_context.get('km:module')
@@ -150,6 +156,7 @@ class KeymapDomain(Domain):
 
     directives = {
         'hotkey': KeymapHotkey,
+        'hotkeyi': KeymapInvalidHotkey,
         'module': KeymapModule,
     }
 

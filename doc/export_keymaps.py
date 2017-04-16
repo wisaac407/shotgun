@@ -248,13 +248,15 @@ def generate_docs(kc):
 
         for kmi in km.keymap_items:
             if kmi.active:
+                directive = 'hotkey'
                 try:
                     doc = lookup_operator(kmi.idname).__doc__ + '\n\n'
                 except AttributeError:
                     print('Invalid Operator: ' + kmi.idname)
-                    continue
+                    doc = ''
+                    directive = 'hotkeyi'
 
-                rst += '.. km:hotkey:: %s -> %s\n\n   %s\n\n' % (get_key_combo(kmi), kmi.idname, kmi.name)
+                rst += '.. km:%s:: %s -> %s\n\n   %s\n\n' % (directive, get_key_combo(kmi), kmi.idname, kmi.name)
 
                 rst += indent(doc)
                 rst += '\n'
