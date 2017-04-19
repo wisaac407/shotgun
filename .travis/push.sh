@@ -3,14 +3,29 @@
 setup_git() {
   COMMIT_AUTHOR_EMAIL=$(git log ${TRAVIS_COMMIT}^! --format='%ae')
   git config --global user.email "${COMMIT_AUTHOR_EMAIL}"
-  git config --global user.name "[skip ci] Travis CI"
+  git config --global user.name "Travis CI"
 }
 
+DOC_BRANCH=documentation
+
 commit_website_files() {
-  git checkout -b documentation
+  git checkout --orphan ${DOC_BRANCH}
+
+  # Copy the files we wan't to commit
+  cp doc/_source doc/_source.new
+  cp doc/blender_objects.inv doc/blender_objects.inv.new
+
+  # Delete everything else and pull the current documentation branch
+  git clean -fd -e doc/_source.new -e doc/blender_object.inv.new
+  git pull origin documentation
+
+  # Move the copied files back
+  mv doc/_source.new doc/_source
+  mv doc/blender_objects.inv.new doc/blender_objects.inv
+
   git add doc/_source
   git add doc/blender_objects.inv
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
 }
 
 upload_files() {
