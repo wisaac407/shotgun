@@ -9,6 +9,7 @@ setup_git() {
 commit_website_files() {
   git checkout -b documentation
   git add doc/_source
+  git add doc/blender_objects.inv
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
