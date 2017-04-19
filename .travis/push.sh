@@ -12,11 +12,12 @@ commit_website_files() {
   git checkout --orphan ${DOC_BRANCH}
 
   # Copy the files we wan't to commit
-  cp doc/_source doc/_source.new
+  cp doc/_source doc/_source.new -r
   cp doc/blender_objects.inv doc/blender_objects.inv.new
 
-  # Delete everything else and pull the current documentation branch
-  git clean -fd -e doc/_source.new -e doc/blender_object.inv.new
+  rm doc/_source -rf
+  rm doc/blender_objects.inv
+
   git pull origin documentation
 
   # Move the copied files back
