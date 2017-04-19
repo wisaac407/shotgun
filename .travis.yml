@@ -8,9 +8,6 @@ install:
 
 script:
   - export PATH=$PATH:/usr/local/blender
-  - ls -al
-  - echo $PATH
-  - blender --version
   - ./doc/build.py --skip-sphinx
 
 after_success:
