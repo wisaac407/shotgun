@@ -1,0 +1,22 @@
+language: python
+python: 3.5
+dist: trusty
+sudo: required
+
+install:
+  - .travis/setup.sh
+
+script:
+  - export PATH=$PATH:/usr/local/blender
+  - ls -al
+  - echo $PATH
+  - blender --version
+  - ./doc/build.py --skip-sphinx
+
+after_success:
+  - .travis/push.sh
+
+env:
+  global:
+    - BLENDER_MAJOR: 2.78
+    - BLENDER_VERSION: 2.78
