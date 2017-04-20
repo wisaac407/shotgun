@@ -21,12 +21,11 @@ commit_website_files() {
   git pull origin ${DOC_BRANCH}
 
   # Move the copied files back
-  mv _source.new doc/_source
+  mv _source.new doc
   mv blender_objects.inv.new doc/blender_objects.inv
 
   # Add files and commit
-  git add doc/_source
-  git add doc/blender_objects.inv
+  git add doc
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
 }
 
