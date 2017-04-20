@@ -1,11 +1,18 @@
 
 Shotgun Documentation
 =====================
-Welcome, this is the documentation for Shotgun version  b8a3d2e.
+Welcome, this is the documentation for Shotgun version 0.1 5343815.
+Shotgun is a custom keymap for `Blender <http://www.blender.org>`_ designed to standardize the keymap and make the most
+commonly used operators accessible.
+
+
+All Keymaps
+===========
+.. note::
+   If a keymap area is not listed below it means that area uses the default Blender keymap.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
    keymaps/3dview
    keymaps/animation
@@ -39,7 +46,6 @@ Welcome, this is the documentation for Shotgun version  b8a3d2e.
    keymaps/uveditor
    keymaps/view2d
    keymaps/weightpaintvertexselection
-
 
 
 Indices and tables
