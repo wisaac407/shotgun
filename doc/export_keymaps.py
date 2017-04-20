@@ -26,13 +26,19 @@ INDEX_TEMPLATE = """
 Shotgun Documentation
 =====================
 Welcome, this is the documentation for Shotgun version {version}.
+Shotgun is a custom keymap for `Blender <http://www.blender.org>`_ designed to standardize the keymap and make the most
+commonly used operators accessible.
+
+
+All Keymaps
+===========
+.. note::
+   If a keymap area is not listed below it means that area uses the default Blender keymap.
 
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 1
 
    {contents}
-
 
 
 Indices and tables
