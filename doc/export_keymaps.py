@@ -23,8 +23,9 @@ import bpy
 
 
 INDEX_TEMPLATE = """
-Welcome to Shotgun's documentation!
-===================================
+Shotgun Documentation
+=====================
+Welcome, this is the documentation for Shotgun version {version}.
 
 .. toctree::
    :maxdepth: 2
@@ -68,7 +69,7 @@ copyright = '{year}, Isaac Weaver'
 author = 'Isaac Weaver'
 
 version = '{version}'
-release = '{release}'
+release = '{version}'
 
 language = None
 
@@ -270,10 +271,18 @@ def generate_docs(kc):
     return docs
 
 
+def get_version():
+    import subprocess
+    version = subprocess.check_output(['git', 'tag']).decode().strip().replace('v', '')
+    revision = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode().strip()
+    return version + ' ' + revision
+
+
 def main():
     bpy.ops.wm.keyconfig_import(filepath='../shotgun.py')
     wm = bpy.context.window_manager
     shotgun = wm.keyconfigs['shotgun']
+    version = get_version()
 
     docs = generate_docs(shotgun)
 
@@ -290,19 +299,17 @@ def main():
 
     # Write the index.rst file
     with open(os.path.join('_source', 'index.rst'), 'w') as f:
-        f.write(INDEX_TEMPLATE.format(contents='\n   '.join(sorted(docs.keys()))))
+        f.write(INDEX_TEMPLATE.format(
+            contents='\n   '.join(sorted(docs.keys())),
+            version=version
+        ))
 
     # Write the configure file
     with open(os.path.join('_source', 'conf.py'), 'w') as f:
-        # TODO: Find a smart way to get the version/release numbers.
-        version = '1.0.0'
-        release = version
-
         import datetime
 
         f.write(CONF_TEMPLATE.format(
             version=version,
-            release=release,
             blender_objects='../blender_objects.inv',
             year=datetime.datetime.now().year
         ))
