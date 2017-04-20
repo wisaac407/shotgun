@@ -1,0 +1,1141 @@
+*********
+Sequencer
+*********
+
+.. km:module:: sequencer
+
+
+---------------
+Quick Reference
+---------------
+
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|Hotkey                                                                                |Operator                                             |
++======================================================================================+=====================================================+
+|:km:hk:`Ctrl-A <sequencer->Ctrl-A->sequencer.select_all>`                             |:func:`blender:bpy.ops.sequencer.select_all`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <sequencer->NDOF_BUTTON_FIT->sequencer.view_all>`             |:func:`blender:bpy.ops.sequencer.view_all`           |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`SELECTMOUSE <sequencer->SELECTMOUSE->sequencer.select>`                       |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-SELECTMOUSE <sequencer->Shift-SELECTMOUSE->sequencer.select>`           |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-SELECTMOUSE <sequencer->Alt-SELECTMOUSE->sequencer.select>`               |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-SELECTMOUSE <sequencer->Shift-Alt-SELECTMOUSE->sequencer.select>`   |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-SELECTMOUSE <sequencer->Ctrl-SELECTMOUSE->sequencer.select>`             |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-SELECTMOUSE <sequencer->Ctrl-Shift-SELECTMOUSE->sequencer.select>` |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-M <sequencer->Ctrl-M->marker.rename>`                                    |:func:`blender:bpy.ops.marker.rename`                |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`RIGHTMOUSE <sequencer->RIGHTMOUSE->view2d.pan>`                               |:func:`blender:bpy.ops.view2d.pan`                   |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`A <sequencer->A->sequencer.select_all>`                                       |:func:`blender:bpy.ops.sequencer.select_all`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-I <sequencer->Ctrl-I->sequencer.select_all>`                             |:func:`blender:bpy.ops.sequencer.select_all`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`K <sequencer->K->sequencer.cut>`                                              |:func:`blender:bpy.ops.sequencer.cut`                |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-K <sequencer->Shift-K->sequencer.cut>`                                  |:func:`blender:bpy.ops.sequencer.cut`                |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`H <sequencer->H->sequencer.mute>`                                             |:func:`blender:bpy.ops.sequencer.mute`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-H <sequencer->Shift-H->sequencer.mute>`                                 |:func:`blender:bpy.ops.sequencer.mute`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-H <sequencer->Alt-H->sequencer.unmute>`                                   |:func:`blender:bpy.ops.sequencer.unmute`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-H <sequencer->Shift-Alt-H->sequencer.unmute>`                       |:func:`blender:bpy.ops.sequencer.unmute`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-L <sequencer->Shift-L->sequencer.lock>`                                 |:func:`blender:bpy.ops.sequencer.lock`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-L <sequencer->Shift-Alt-L->sequencer.unlock>`                       |:func:`blender:bpy.ops.sequencer.unlock`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`R <sequencer->R->sequencer.reassign_inputs>`                                  |:func:`blender:bpy.ops.sequencer.reassign_inputs`    |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-R <sequencer->Alt-R->sequencer.reload>`                                   |:func:`blender:bpy.ops.sequencer.reload`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-R <sequencer->Shift-Alt-R->sequencer.reload>`                       |:func:`blender:bpy.ops.sequencer.reload`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-O <sequencer->Alt-O->sequencer.offset_clear>`                             |:func:`blender:bpy.ops.sequencer.offset_clear`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-D <sequencer->Shift-D->sequencer.duplicate_move>`                       |:func:`blender:bpy.ops.sequencer.duplicate_move`     |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`X <sequencer->X->sequencer.delete>`                                           |:func:`blender:bpy.ops.sequencer.delete`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`DEL <sequencer->DEL->sequencer.delete>`                                       |:func:`blender:bpy.ops.sequencer.delete`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-C <sequencer->Ctrl-C->sequencer.copy>`                                   |:func:`blender:bpy.ops.sequencer.copy`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-V <sequencer->Ctrl-V->sequencer.paste>`                                  |:func:`blender:bpy.ops.sequencer.paste`              |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Y <sequencer->Y->sequencer.images_separate>`                                  |:func:`blender:bpy.ops.sequencer.images_separate`    |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Tab <sequencer->Tab->sequencer.meta_toggle>`                                  |:func:`blender:bpy.ops.sequencer.meta_toggle`        |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-G <sequencer->Ctrl-G->sequencer.meta_make>`                              |:func:`blender:bpy.ops.sequencer.meta_make`          |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-G <sequencer->Alt-G->sequencer.meta_separate>`                            |:func:`blender:bpy.ops.sequencer.meta_separate`      |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`HOME <sequencer->HOME->sequencer.view_all>`                                   |:func:`blender:bpy.ops.sequencer.view_all`           |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <sequencer->NDOF_BUTTON_FIT->sequencer.view_all>`             |:func:`blender:bpy.ops.sequencer.view_all`           |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_PERIOD <sequencer->NUMPAD_PERIOD->sequencer.view_selected>`            |:func:`blender:bpy.ops.sequencer.view_selected`      |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_0 <sequencer->NUMPAD_0->sequencer.view_frame>`                         |:func:`blender:bpy.ops.sequencer.view_frame`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`PAGE_UP <sequencer->PAGE_UP->sequencer.strip_jump>`                           |:func:`blender:bpy.ops.sequencer.strip_jump`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`PAGE_DOWN <sequencer->PAGE_DOWN->sequencer.strip_jump>`                       |:func:`blender:bpy.ops.sequencer.strip_jump`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-PAGE_UP <sequencer->Alt-PAGE_UP->sequencer.strip_jump>`                   |:func:`blender:bpy.ops.sequencer.strip_jump`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-PAGE_DOWN <sequencer->Alt-PAGE_DOWN->sequencer.strip_jump>`               |:func:`blender:bpy.ops.sequencer.strip_jump`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-LEFT_ARROW <sequencer->Alt-LEFT_ARROW->sequencer.swap>`                   |:func:`blender:bpy.ops.sequencer.swap`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-RIGHT_ARROW <sequencer->Alt-RIGHT_ARROW->sequencer.swap>`                 |:func:`blender:bpy.ops.sequencer.swap`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`BACK_SPACE <sequencer->BACK_SPACE->sequencer.gap_remove>`                     |:func:`blender:bpy.ops.sequencer.gap_remove`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-BACK_SPACE <sequencer->Shift-BACK_SPACE->sequencer.gap_remove>`         |:func:`blender:bpy.ops.sequencer.gap_remove`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-EQUAL <sequencer->Shift-EQUAL->sequencer.gap_insert>`                   |:func:`blender:bpy.ops.sequencer.gap_insert`         |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-S <sequencer->Shift-S->sequencer.snap>`                                 |:func:`blender:bpy.ops.sequencer.snap`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-S <sequencer->Alt-S->sequencer.swap_inputs>`                              |:func:`blender:bpy.ops.sequencer.swap_inputs`        |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`1 <sequencer->1->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`2 <sequencer->2->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`3 <sequencer->3->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`4 <sequencer->4->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`5 <sequencer->5->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`6 <sequencer->6->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`7 <sequencer->7->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`8 <sequencer->8->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`9 <sequencer->9->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`0 <sequencer->0->sequencer.cut_multicam>`                                     |:func:`blender:bpy.ops.sequencer.cut_multicam`       |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`SELECTMOUSE <sequencer->SELECTMOUSE->sequencer.select>`                       |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-SELECTMOUSE <sequencer->Shift-SELECTMOUSE->sequencer.select>`           |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-SELECTMOUSE <sequencer->Alt-SELECTMOUSE->sequencer.select>`               |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-SELECTMOUSE <sequencer->Shift-Alt-SELECTMOUSE->sequencer.select>`   |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-SELECTMOUSE <sequencer->Ctrl-SELECTMOUSE->sequencer.select>`             |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-SELECTMOUSE <sequencer->Ctrl-Shift-SELECTMOUSE->sequencer.select>` |:func:`blender:bpy.ops.sequencer.select`             |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_PLUS <sequencer->Ctrl-NUMPAD_PLUS->sequencer.select_more>`        |:func:`blender:bpy.ops.sequencer.select_more`        |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_MINUS <sequencer->Ctrl-NUMPAD_MINUS->sequencer.select_less>`      |:func:`blender:bpy.ops.sequencer.select_less`        |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`L <sequencer->L->sequencer.select_linked_pick>`                               |:func:`blender:bpy.ops.sequencer.select_linked_pick` |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-L <sequencer->Shift-L->sequencer.select_linked_pick>`                   |:func:`blender:bpy.ops.sequencer.select_linked_pick` |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-L <sequencer->Ctrl-L->sequencer.select_linked>`                          |:func:`blender:bpy.ops.sequencer.select_linked`      |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`B <sequencer->B->sequencer.select_border>`                                    |:func:`blender:bpy.ops.sequencer.select_border`      |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-G <sequencer->Shift-G->sequencer.select_grouped>`                       |:func:`blender:bpy.ops.sequencer.select_grouped`     |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-A <sequencer->Shift-A->wm.call_menu>`                                   |:func:`blender:bpy.ops.wm.call_menu`                 |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`C <sequencer->C->wm.call_menu>`                                               |:func:`blender:bpy.ops.wm.call_menu`                 |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`S <sequencer->S->sequencer.slip>`                                             |:func:`blender:bpy.ops.sequencer.slip`               |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`O <sequencer->O->wm.context_set_int>`                                         |:func:`blender:bpy.ops.wm.context_set_int`           |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`G <sequencer->G->transform.seq_slide>`                                        |:func:`blender:bpy.ops.transform.seq_slide`          |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`EVT_TWEAK_S <sequencer->EVT_TWEAK_S->transform.seq_slide>`                    |:func:`blender:bpy.ops.transform.seq_slide`          |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`E <sequencer->E->transform.transform>`                                        |:func:`blender:bpy.ops.transform.transform`          |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`M <sequencer->M->marker.add>`                                                 |:func:`blender:bpy.ops.marker.add`                   |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-M <sequencer->Ctrl-M->marker.rename>`                                    |:func:`blender:bpy.ops.marker.rename`                |
++--------------------------------------------------------------------------------------+-----------------------------------------------------+
+
+
+------------------
+Detailed Reference
+------------------
+
+.. km:hotkey:: Ctrl-A -> sequencer.select_all
+
+   (De)select All
+
+   bpy.ops.sequencer.select_all(action='TOGGLE')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Action      |TOGGLE  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FIT -> sequencer.view_all
+
+   View All
+
+   bpy.ops.sequencer.view_all()
+   
+   
+.. km:hotkey:: SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |False   |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Shift-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |True    |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Alt-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |False   |
+   +--------------+--------+
+   |Linked Handle |True    |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |True    |
+   +--------------+--------+
+   |Linked Handle |True    |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |False   |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Linked Time   |True    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |True    |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Linked Time   |True    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-M -> marker.rename
+
+   Rename Marker
+
+   bpy.ops.marker.rename(name="RenamedMarker")
+   
+   
+.. km:hotkey:: RIGHTMOUSE -> view2d.pan
+
+   Pan View
+
+   bpy.ops.view2d.pan(deltax=0, deltay=0)
+   
+   
+.. km:hotkey:: A -> sequencer.select_all
+
+   (De)select All
+
+   bpy.ops.sequencer.select_all(action='TOGGLE')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Action      |TOGGLE  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-I -> sequencer.select_all
+
+   (De)select All
+
+   bpy.ops.sequencer.select_all(action='TOGGLE')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Action      |INVERT  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: K -> sequencer.cut
+
+   Cut Strips
+
+   bpy.ops.sequencer.cut(frame=0, type='SOFT', side='BOTH')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Type        |SOFT    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-K -> sequencer.cut
+
+   Cut Strips
+
+   bpy.ops.sequencer.cut(frame=0, type='SOFT', side='BOTH')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Type        |HARD    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: H -> sequencer.mute
+
+   Mute Strips
+
+   bpy.ops.sequencer.mute(unselected=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Unselected  |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-H -> sequencer.mute
+
+   Mute Strips
+
+   bpy.ops.sequencer.mute(unselected=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Unselected  |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Alt-H -> sequencer.unmute
+
+   Un-Mute Strips
+
+   bpy.ops.sequencer.unmute(unselected=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Unselected  |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-H -> sequencer.unmute
+
+   Un-Mute Strips
+
+   bpy.ops.sequencer.unmute(unselected=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Unselected  |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-L -> sequencer.lock
+
+   Lock Strips
+
+   bpy.ops.sequencer.lock()
+   
+   
+.. km:hotkey:: Shift-Alt-L -> sequencer.unlock
+
+   UnLock Strips
+
+   bpy.ops.sequencer.unlock()
+   
+   
+.. km:hotkey:: R -> sequencer.reassign_inputs
+
+   Reassign Inputs
+
+   bpy.ops.sequencer.reassign_inputs()
+   
+   
+.. km:hotkey:: Alt-R -> sequencer.reload
+
+   Reload Strips
+
+   bpy.ops.sequencer.reload(adjust_length=False)
+   
+   
+.. km:hotkey:: Shift-Alt-R -> sequencer.reload
+
+   Reload Strips
+
+   bpy.ops.sequencer.reload(adjust_length=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Adjust Length |True    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Alt-O -> sequencer.offset_clear
+
+   Clear Strip Offset
+
+   bpy.ops.sequencer.offset_clear()
+   
+   
+.. km:hotkey:: Shift-D -> sequencer.duplicate_move
+
+   Duplicate Strips
+
+   bpy.ops.sequencer.duplicate_move(SEQUENCER_OT_duplicate={"mode":'TRANSLATION'}, TRANSFORM_OT_seq_slide={"value":(0, 0), "snap":False, "snap_target":'CLOSEST', "snap_point":(0, 0, 0), "snap_align":False, "snap_normal":(0, 0, 0), "release_confirm":False})
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Duplicate Strips |N/A     |
+   +-----------------+--------+
+   |Sequence Slide   |N/A     |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: X -> sequencer.delete
+
+   Erase Strips
+
+   bpy.ops.sequencer.delete()
+   
+   
+.. km:hotkey:: DEL -> sequencer.delete
+
+   Erase Strips
+
+   bpy.ops.sequencer.delete()
+   
+   
+.. km:hotkey:: Ctrl-C -> sequencer.copy
+
+   Copy
+
+   bpy.ops.sequencer.copy()
+   
+   
+.. km:hotkey:: Ctrl-V -> sequencer.paste
+
+   Paste
+
+   bpy.ops.sequencer.paste()
+   
+   
+.. km:hotkey:: Y -> sequencer.images_separate
+
+   Separate Images
+
+   bpy.ops.sequencer.images_separate(length=1)
+   
+   
+.. km:hotkey:: Tab -> sequencer.meta_toggle
+
+   Toggle Meta Strip
+
+   bpy.ops.sequencer.meta_toggle()
+   
+   
+.. km:hotkey:: Ctrl-G -> sequencer.meta_make
+
+   Make Meta Strip
+
+   bpy.ops.sequencer.meta_make()
+   
+   
+.. km:hotkey:: Alt-G -> sequencer.meta_separate
+
+   UnMeta Strip
+
+   bpy.ops.sequencer.meta_separate()
+   
+   
+.. km:hotkey:: HOME -> sequencer.view_all
+
+   View All
+
+   bpy.ops.sequencer.view_all()
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FIT -> sequencer.view_all
+
+   View All
+
+   bpy.ops.sequencer.view_all()
+   
+   
+.. km:hotkey:: NUMPAD_PERIOD -> sequencer.view_selected
+
+   View Selected
+
+   bpy.ops.sequencer.view_selected()
+   
+   
+.. km:hotkey:: NUMPAD_0 -> sequencer.view_frame
+
+   View Frame
+
+   bpy.ops.sequencer.view_frame()
+   
+   
+.. km:hotkey:: PAGE_UP -> sequencer.strip_jump
+
+   Jump to Strip
+
+   bpy.ops.sequencer.strip_jump(next=True, center=True)
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Next Strip       |True    |
+   +-----------------+--------+
+   |Use strip center |False   |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: PAGE_DOWN -> sequencer.strip_jump
+
+   Jump to Strip
+
+   bpy.ops.sequencer.strip_jump(next=True, center=True)
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Next Strip       |False   |
+   +-----------------+--------+
+   |Use strip center |False   |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Alt-PAGE_UP -> sequencer.strip_jump
+
+   Jump to Strip
+
+   bpy.ops.sequencer.strip_jump(next=True, center=True)
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Next Strip       |True    |
+   +-----------------+--------+
+   |Use strip center |True    |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Alt-PAGE_DOWN -> sequencer.strip_jump
+
+   Jump to Strip
+
+   bpy.ops.sequencer.strip_jump(next=True, center=True)
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Next Strip       |False   |
+   +-----------------+--------+
+   |Use strip center |True    |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Alt-LEFT_ARROW -> sequencer.swap
+
+   Swap Strip
+
+   bpy.ops.sequencer.swap(side='RIGHT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Side        |LEFT    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Alt-RIGHT_ARROW -> sequencer.swap
+
+   Swap Strip
+
+   bpy.ops.sequencer.swap(side='RIGHT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Side        |RIGHT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: BACK_SPACE -> sequencer.gap_remove
+
+   Remove Gaps
+
+   bpy.ops.sequencer.gap_remove(all=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Gaps    |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-BACK_SPACE -> sequencer.gap_remove
+
+   Remove Gaps
+
+   bpy.ops.sequencer.gap_remove(all=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Gaps    |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-EQUAL -> sequencer.gap_insert
+
+   Insert Gaps
+
+   bpy.ops.sequencer.gap_insert(frames=10)
+   
+   
+.. km:hotkey:: Shift-S -> sequencer.snap
+
+   Snap Strips
+
+   bpy.ops.sequencer.snap(frame=0)
+   
+   
+.. km:hotkey:: Alt-S -> sequencer.swap_inputs
+
+   Swap Inputs
+
+   bpy.ops.sequencer.swap_inputs()
+   
+   
+.. km:hotkey:: 1 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 2 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |2       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 3 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |3       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 4 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |4       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 5 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |5       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 6 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |6       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 7 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |7       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 8 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |8       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 9 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |9       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: 0 -> sequencer.cut_multicam
+
+   Cut multicam
+
+   bpy.ops.sequencer.cut_multicam(camera=1)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera      |10      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |False   |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Left/Right    |NONE    |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Shift-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |True    |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Left/Right    |NONE    |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Alt-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |False   |
+   +--------------+--------+
+   |Linked Handle |True    |
+   +--------------+--------+
+   |Left/Right    |NONE    |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |True    |
+   +--------------+--------+
+   |Linked Handle |True    |
+   +--------------+--------+
+   |Left/Right    |NONE    |
+   +--------------+--------+
+   |Linked Time   |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |False   |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Left/Right    |MOUSE   |
+   +--------------+--------+
+   |Linked Time   |True    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> sequencer.select
+
+   Activate/Select
+
+   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend        |True    |
+   +--------------+--------+
+   |Linked Handle |False   |
+   +--------------+--------+
+   |Left/Right    |NONE    |
+   +--------------+--------+
+   |Linked Time   |True    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_PLUS -> sequencer.select_more
+
+   Select More
+
+   bpy.ops.sequencer.select_more()
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_MINUS -> sequencer.select_less
+
+   Select Less
+
+   bpy.ops.sequencer.select_less()
+   
+   
+.. km:hotkey:: L -> sequencer.select_linked_pick
+
+   Select Pick Linked
+
+   bpy.ops.sequencer.select_linked_pick(extend=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-L -> sequencer.select_linked_pick
+
+   Select Pick Linked
+
+   bpy.ops.sequencer.select_linked_pick(extend=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-L -> sequencer.select_linked
+
+   Select Linked
+
+   bpy.ops.sequencer.select_linked()
+   
+   
+.. km:hotkey:: B -> sequencer.select_border
+
+   Border Select
+
+   bpy.ops.sequencer.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+.. km:hotkey:: Shift-G -> sequencer.select_grouped
+
+   Select Grouped
+
+   bpy.ops.sequencer.select_grouped(type='TYPE', extend=False, use_active_channel=False)
+   
+   
+.. km:hotkey:: Shift-A -> wm.call_menu
+
+   Call Menu
+
+   bpy.ops.wm.call_menu(name="")
+   
+   
+   +------------+-----------------+
+   |Properties: |Values:          |
+   +============+=================+
+   |Name        |SEQUENCER_MT_add |
+   +------------+-----------------+
+   
+   
+.. km:hotkey:: C -> wm.call_menu
+
+   Call Menu
+
+   bpy.ops.wm.call_menu(name="")
+   
+   
+   +------------+--------------------+
+   |Properties: |Values:             |
+   +============+====================+
+   |Name        |SEQUENCER_MT_change |
+   +------------+--------------------+
+   
+   
+.. km:hotkey:: S -> sequencer.slip
+
+   Trim Strips
+
+   bpy.ops.sequencer.slip(offset=0)
+   
+   
+.. km:hotkey:: O -> wm.context_set_int
+
+   Context Set
+
+   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
+   
+   
+   +-------------------+------------------------------------+
+   |Properties:        |Values:                             |
+   +===================+====================================+
+   |Context Attributes |scene.sequence_editor.overlay_frame |
+   +-------------------+------------------------------------+
+   |Value              |0                                   |
+   +-------------------+------------------------------------+
+   
+   
+.. km:hotkey:: G -> transform.seq_slide
+
+   Sequence Slide
+
+   bpy.ops.transform.seq_slide(value=(0, 0), snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
+   
+   
+.. km:hotkey:: EVT_TWEAK_S -> transform.seq_slide
+
+   Sequence Slide
+
+   bpy.ops.transform.seq_slide(value=(0, 0), snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
+   
+   
+.. km:hotkey:: E -> transform.transform
+
+   Transform
+
+   bpy.ops.transform.transform(mode='TRANSLATION', value=(0, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+   +------------+------------+
+   |Properties: |Values:     |
+   +============+============+
+   |Mode        |TIME_EXTEND |
+   +------------+------------+
+   
+   
+.. km:hotkey:: M -> marker.add
+
+   Add Time Marker
+
+   bpy.ops.marker.add()
+   
+   
+.. km:hotkey:: Ctrl-M -> marker.rename
+
+   Rename Marker
+
+   bpy.ops.marker.rename(name="RenamedMarker")
+   
+   

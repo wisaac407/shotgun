@@ -1,0 +1,2591 @@
+*******
+3D View
+*******
+
+.. km:module:: 3dview
+
+
+---------------
+Quick Reference
+---------------
+
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|Hotkey                                                                                   |Operator                                             |
++=========================================================================================+=====================================================+
+|:km:hk:`Shift-Alt-Z <3dview->Shift-Alt-Z->view3d.show_only_render>`                      |:func:`blender:bpy.ops.view3d.show_only_render`      |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_SLASH <3dview->Shift-NUMPAD_SLASH->wm.return_to_original>`          |:func:`blender:bpy.ops.wm.return_to_original`        |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_SLASH <3dview->Shift-NUMPAD_SLASH->object.edit_linked>`             |:func:`blender:bpy.ops.object.edit_linked`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-LEFTMOUSE <3dview->Any-LEFTMOUSE->view3d.manipulator>`                       |:func:`blender:bpy.ops.view3d.manipulator`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-ACTIONMOUSE <3dview->Ctrl-ACTIONMOUSE->view3d.cursor3d>`                    |:func:`blender:bpy.ops.view3d.cursor3d`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`RIGHTMOUSE <3dview->RIGHTMOUSE->view3d.move>`                                    |:func:`blender:bpy.ops.view3d.move`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_4 <3dview->Shift-NUMPAD_4->view3d.view_roll>`                       |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_6 <3dview->Shift-NUMPAD_6->view3d.view_roll>`                       |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-WHEELUPMOUSE <3dview->Ctrl-Shift-WHEELUPMOUSE->view3d.view_roll>`     |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-WHEELDOWNMOUSE <3dview->Ctrl-Shift-WHEELDOWNMOUSE->view3d.view_roll>` |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_MOTION <3dview->NDOF_MOTION->view3d.ndof_orbit_zoom>`                       |:func:`blender:bpy.ops.view3d.ndof_orbit_zoom`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NDOF_MOTION <3dview->Ctrl-NDOF_MOTION->view3d.ndof_orbit>`                  |:func:`blender:bpy.ops.view3d.ndof_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_MOTION <3dview->Shift-NDOF_MOTION->view3d.ndof_pan>`                  |:func:`blender:bpy.ops.view3d.ndof_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-NDOF_MOTION <3dview->Ctrl-Shift-NDOF_MOTION->view3d.ndof_all>`        |:func:`blender:bpy.ops.view3d.ndof_all`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <3dview->NDOF_BUTTON_FIT->view3d.view_selected>`                 |:func:`blender:bpy.ops.view3d.view_selected`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_ROLL_CCW <3dview->NDOF_BUTTON_ROLL_CCW->view3d.view_roll>`           |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_ROLL_CW <3dview->NDOF_BUTTON_ROLL_CW->view3d.view_roll>`             |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FRONT <3dview->NDOF_BUTTON_FRONT->view3d.viewnumpad>`                |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_BACK <3dview->NDOF_BUTTON_BACK->view3d.viewnumpad>`                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_LEFT <3dview->NDOF_BUTTON_LEFT->view3d.viewnumpad>`                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_RIGHT <3dview->NDOF_BUTTON_RIGHT->view3d.viewnumpad>`                |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_TOP <3dview->NDOF_BUTTON_TOP->view3d.viewnumpad>`                    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_BOTTOM <3dview->NDOF_BUTTON_BOTTOM->view3d.viewnumpad>`              |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_BUTTON_FRONT <3dview->Shift-NDOF_BUTTON_FRONT->view3d.viewnumpad>`    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_BUTTON_RIGHT <3dview->Shift-NDOF_BUTTON_RIGHT->view3d.viewnumpad>`    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_BUTTON_TOP <3dview->Shift-NDOF_BUTTON_TOP->view3d.viewnumpad>`        |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Z <3dview->Shift-Z->wm.context_toggle_enum>`                               |:func:`blender:bpy.ops.wm.context_toggle_enum`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-EVT_TWEAK_S <3dview->Ctrl-EVT_TWEAK_S->view3d.select_lasso>`                |:func:`blender:bpy.ops.view3d.select_lasso`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-EVT_TWEAK_S <3dview->Ctrl-Shift-EVT_TWEAK_S->view3d.select_lasso>`    |:func:`blender:bpy.ops.view3d.select_lasso`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`A <3dview->A->transform.skin_resize>`                                            |:func:`blender:bpy.ops.transform.skin_resize`        |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`SELECTMOUSE <3dview->SELECTMOUSE->object.select_grouped>`                        |:func:`blender:bpy.ops.object.select_grouped`        |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-EVT_TWEAK_L <3dview->Alt-EVT_TWEAK_L->view3d.select_border>`                 |:func:`blender:bpy.ops.view3d.select_border`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-LEFTMOUSE <3dview->Any-LEFTMOUSE->view3d.manipulator>`                       |:func:`blender:bpy.ops.view3d.manipulator`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`ACTIONMOUSE <3dview->ACTIONMOUSE->view3d.cursor3d>`                              |:func:`blender:bpy.ops.view3d.cursor3d`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`MIDDLEMOUSE <3dview->MIDDLEMOUSE->view3d.rotate>`                                |:func:`blender:bpy.ops.view3d.rotate`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-MIDDLEMOUSE <3dview->Shift-MIDDLEMOUSE->view3d.move>`                      |:func:`blender:bpy.ops.view3d.move`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-MIDDLEMOUSE <3dview->Ctrl-MIDDLEMOUSE->view3d.zoom>`                        |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-MIDDLEMOUSE <3dview->Ctrl-Shift-MIDDLEMOUSE->view3d.dolly>`           |:func:`blender:bpy.ops.view3d.dolly`                 |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_PERIOD <3dview->Ctrl-NUMPAD_PERIOD->view3d.view_selected>`           |:func:`blender:bpy.ops.view3d.view_selected`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_PERIOD <3dview->NUMPAD_PERIOD->view3d.view_selected>`                     |:func:`blender:bpy.ops.view3d.view_selected`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_PERIOD <3dview->Shift-NUMPAD_PERIOD->view3d.view_lock_to_active>`   |:func:`blender:bpy.ops.view3d.view_lock_to_active`   |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-NUMPAD_PERIOD <3dview->Alt-NUMPAD_PERIOD->view3d.view_lock_clear>`           |:func:`blender:bpy.ops.view3d.view_lock_clear`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-F <3dview->Shift-F->view3d.navigate>`                                      |:func:`blender:bpy.ops.view3d.navigate`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-TIMER1 <3dview->Any-TIMER1->view3d.smoothview>`                              |:func:`blender:bpy.ops.view3d.smoothview`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`TRACKPADPAN <3dview->TRACKPADPAN->view3d.rotate>`                                |:func:`blender:bpy.ops.view3d.rotate`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`MOUSEROTATE <3dview->MOUSEROTATE->view3d.rotate>`                                |:func:`blender:bpy.ops.view3d.rotate`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-TRACKPADPAN <3dview->Shift-TRACKPADPAN->view3d.move>`                      |:func:`blender:bpy.ops.view3d.move`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`TRACKPADZOOM <3dview->TRACKPADZOOM->view3d.zoom>`                                |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-TRACKPADPAN <3dview->Ctrl-TRACKPADPAN->view3d.zoom>`                        |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_PLUS <3dview->NUMPAD_PLUS->view3d.zoom>`                                  |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_MINUS <3dview->NUMPAD_MINUS->view3d.zoom>`                                |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-EQUAL <3dview->Ctrl-EQUAL->view3d.zoom>`                                    |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-MINUS <3dview->Ctrl-MINUS->view3d.zoom>`                                    |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`WHEELINMOUSE <3dview->WHEELINMOUSE->view3d.zoom>`                                |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`WHEELOUTMOUSE <3dview->WHEELOUTMOUSE->view3d.zoom>`                              |:func:`blender:bpy.ops.view3d.zoom`                  |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_PLUS <3dview->Shift-NUMPAD_PLUS->view3d.dolly>`                     |:func:`blender:bpy.ops.view3d.dolly`                 |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_MINUS <3dview->Shift-NUMPAD_MINUS->view3d.dolly>`                   |:func:`blender:bpy.ops.view3d.dolly`                 |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-EQUAL <3dview->Ctrl-Shift-EQUAL->view3d.dolly>`                       |:func:`blender:bpy.ops.view3d.dolly`                 |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-MINUS <3dview->Ctrl-Shift-MINUS->view3d.dolly>`                       |:func:`blender:bpy.ops.view3d.dolly`                 |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_ENTER <3dview->Shift-NUMPAD_ENTER->view3d.zoom_camera_1_to_1>`      |:func:`blender:bpy.ops.view3d.zoom_camera_1_to_1`    |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`HOME <3dview->HOME->view3d.view_center_camera>`                                  |:func:`blender:bpy.ops.view3d.view_center_camera`    |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`HOME <3dview->HOME->view3d.view_center_lock>`                                    |:func:`blender:bpy.ops.view3d.view_center_lock`      |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-HOME <3dview->Alt-HOME->view3d.view_center_cursor>`                          |:func:`blender:bpy.ops.view3d.view_center_cursor`    |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-F <3dview->Alt-F->view3d.view_center_pick>`                                  |:func:`blender:bpy.ops.view3d.view_center_pick`      |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`HOME <3dview->HOME->view3d.view_all>`                                            |:func:`blender:bpy.ops.view3d.view_all`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-HOME <3dview->Ctrl-HOME->view3d.view_all>`                                  |:func:`blender:bpy.ops.view3d.view_all`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-C <3dview->Shift-C->view3d.view_all>`                                      |:func:`blender:bpy.ops.view3d.view_all`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_0 <3dview->NUMPAD_0->view3d.viewnumpad>`                                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_1 <3dview->NUMPAD_1->view3d.viewnumpad>`                                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_2 <3dview->NUMPAD_2->view3d.view_orbit>`                                  |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_3 <3dview->NUMPAD_3->view3d.viewnumpad>`                                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_4 <3dview->NUMPAD_4->view3d.view_orbit>`                                  |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_5 <3dview->NUMPAD_5->view3d.view_persportho>`                             |:func:`blender:bpy.ops.view3d.view_persportho`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_6 <3dview->NUMPAD_6->view3d.view_orbit>`                                  |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_7 <3dview->NUMPAD_7->view3d.viewnumpad>`                                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_8 <3dview->NUMPAD_8->view3d.view_orbit>`                                  |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_1 <3dview->Ctrl-NUMPAD_1->view3d.viewnumpad>`                        |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_3 <3dview->Ctrl-NUMPAD_3->view3d.viewnumpad>`                        |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_7 <3dview->Ctrl-NUMPAD_7->view3d.viewnumpad>`                        |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_2 <3dview->Ctrl-NUMPAD_2->view3d.view_pan>`                          |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_4 <3dview->Ctrl-NUMPAD_4->view3d.view_pan>`                          |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_6 <3dview->Ctrl-NUMPAD_6->view3d.view_pan>`                          |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_8 <3dview->Ctrl-NUMPAD_8->view3d.view_pan>`                          |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_4 <3dview->Shift-NUMPAD_4->view3d.view_roll>`                       |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_6 <3dview->Shift-NUMPAD_6->view3d.view_roll>`                       |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_9 <3dview->NUMPAD_9->view3d.view_orbit>`                                  |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-WHEELUPMOUSE <3dview->Ctrl-WHEELUPMOUSE->view3d.view_pan>`                  |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-WHEELDOWNMOUSE <3dview->Ctrl-WHEELDOWNMOUSE->view3d.view_pan>`              |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-WHEELUPMOUSE <3dview->Shift-WHEELUPMOUSE->view3d.view_pan>`                |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-WHEELDOWNMOUSE <3dview->Shift-WHEELDOWNMOUSE->view3d.view_pan>`            |:func:`blender:bpy.ops.view3d.view_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Alt-WHEELUPMOUSE <3dview->Ctrl-Alt-WHEELUPMOUSE->view3d.view_orbit>`        |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Alt-WHEELDOWNMOUSE <3dview->Ctrl-Alt-WHEELDOWNMOUSE->view3d.view_orbit>`    |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-WHEELUPMOUSE <3dview->Shift-Alt-WHEELUPMOUSE->view3d.view_orbit>`      |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-WHEELDOWNMOUSE <3dview->Shift-Alt-WHEELDOWNMOUSE->view3d.view_orbit>`  |:func:`blender:bpy.ops.view3d.view_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-WHEELUPMOUSE <3dview->Ctrl-Shift-WHEELUPMOUSE->view3d.view_roll>`     |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-WHEELDOWNMOUSE <3dview->Ctrl-Shift-WHEELDOWNMOUSE->view3d.view_roll>` |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_1 <3dview->Shift-NUMPAD_1->view3d.viewnumpad>`                      |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_3 <3dview->Shift-NUMPAD_3->view3d.viewnumpad>`                      |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NUMPAD_7 <3dview->Shift-NUMPAD_7->view3d.viewnumpad>`                      |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-NUMPAD_1 <3dview->Ctrl-Shift-NUMPAD_1->view3d.viewnumpad>`            |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-NUMPAD_3 <3dview->Ctrl-Shift-NUMPAD_3->view3d.viewnumpad>`            |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-NUMPAD_7 <3dview->Ctrl-Shift-NUMPAD_7->view3d.viewnumpad>`            |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NUMPAD_SLASH <3dview->NUMPAD_SLASH->view3d.localview>`                           |:func:`blender:bpy.ops.view3d.localview`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_MOTION <3dview->NDOF_MOTION->view3d.ndof_orbit_zoom>`                       |:func:`blender:bpy.ops.view3d.ndof_orbit_zoom`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NDOF_MOTION <3dview->Ctrl-NDOF_MOTION->view3d.ndof_orbit>`                  |:func:`blender:bpy.ops.view3d.ndof_orbit`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_MOTION <3dview->Shift-NDOF_MOTION->view3d.ndof_pan>`                  |:func:`blender:bpy.ops.view3d.ndof_pan`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-NDOF_MOTION <3dview->Ctrl-Shift-NDOF_MOTION->view3d.ndof_all>`        |:func:`blender:bpy.ops.view3d.ndof_all`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <3dview->NDOF_BUTTON_FIT->view3d.view_selected>`                 |:func:`blender:bpy.ops.view3d.view_selected`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_ROLL_CCW <3dview->NDOF_BUTTON_ROLL_CCW->view3d.view_roll>`           |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_ROLL_CCW <3dview->NDOF_BUTTON_ROLL_CCW->view3d.view_roll>`           |:func:`blender:bpy.ops.view3d.view_roll`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FRONT <3dview->NDOF_BUTTON_FRONT->view3d.viewnumpad>`                |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_BACK <3dview->NDOF_BUTTON_BACK->view3d.viewnumpad>`                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_LEFT <3dview->NDOF_BUTTON_LEFT->view3d.viewnumpad>`                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_RIGHT <3dview->NDOF_BUTTON_RIGHT->view3d.viewnumpad>`                |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_TOP <3dview->NDOF_BUTTON_TOP->view3d.viewnumpad>`                    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_BOTTOM <3dview->NDOF_BUTTON_BOTTOM->view3d.viewnumpad>`              |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_BUTTON_FRONT <3dview->Shift-NDOF_BUTTON_FRONT->view3d.viewnumpad>`    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_BUTTON_RIGHT <3dview->Shift-NDOF_BUTTON_RIGHT->view3d.viewnumpad>`    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-NDOF_BUTTON_TOP <3dview->Shift-NDOF_BUTTON_TOP->view3d.viewnumpad>`        |:func:`blender:bpy.ops.view3d.viewnumpad`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`ACCENT_GRAVE <3dview->ACCENT_GRAVE->view3d.layers>`                              |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-1 <3dview->Any-1->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-2 <3dview->Any-2->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-3 <3dview->Any-3->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-4 <3dview->Any-4->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-5 <3dview->Any-5->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-6 <3dview->Any-6->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-7 <3dview->Any-7->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-8 <3dview->Any-8->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-9 <3dview->Any-9->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Any-0 <3dview->Any-0->view3d.layers>`                                            |:func:`blender:bpy.ops.view3d.layers`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Z <3dview->Z->wm.context_toggle_enum>`                                           |:func:`blender:bpy.ops.wm.context_toggle_enum`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-Z <3dview->Alt-Z->wm.context_toggle_enum>`                                   |:func:`blender:bpy.ops.wm.context_toggle_enum`       |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Z <3dview->Shift-Z->view3d.toggle_render>`                                 |:func:`blender:bpy.ops.view3d.toggle_render`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`SELECTMOUSE <3dview->SELECTMOUSE->view3d.select>`                                |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-SELECTMOUSE <3dview->Shift-SELECTMOUSE->view3d.select>`                    |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-SELECTMOUSE <3dview->Ctrl-SELECTMOUSE->view3d.select>`                      |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-SELECTMOUSE <3dview->Alt-SELECTMOUSE->view3d.select>`                        |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-SELECTMOUSE <3dview->Ctrl-Shift-SELECTMOUSE->view3d.select>`          |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Alt-SELECTMOUSE <3dview->Ctrl-Alt-SELECTMOUSE->view3d.select>`              |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-SELECTMOUSE <3dview->Shift-Alt-SELECTMOUSE->view3d.select>`            |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-Alt-SELECTMOUSE <3dview->Ctrl-Shift-Alt-SELECTMOUSE->view3d.select>`  |:func:`blender:bpy.ops.view3d.select`                |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`B <3dview->B->view3d.select_border>`                                             |:func:`blender:bpy.ops.view3d.select_border`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-EVT_TWEAK_A <3dview->Ctrl-EVT_TWEAK_A->view3d.select_lasso>`                |:func:`blender:bpy.ops.view3d.select_lasso`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-EVT_TWEAK_A <3dview->Ctrl-Shift-EVT_TWEAK_A->view3d.select_lasso>`    |:func:`blender:bpy.ops.view3d.select_lasso`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`C <3dview->C->view3d.select_circle>`                                             |:func:`blender:bpy.ops.view3d.select_circle`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-B <3dview->Alt-B->view3d.clip_border>`                                       |:func:`blender:bpy.ops.view3d.clip_border`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-B <3dview->Shift-B->view3d.zoom_border>`                                   |:func:`blender:bpy.ops.view3d.zoom_border`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-B <3dview->Shift-B->view3d.render_border>`                                 |:func:`blender:bpy.ops.view3d.render_border`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-B <3dview->Ctrl-B->view3d.render_border>`                                   |:func:`blender:bpy.ops.view3d.render_border`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Alt-B <3dview->Ctrl-Alt-B->view3d.clear_render_border>`                     |:func:`blender:bpy.ops.view3d.clear_render_border`   |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Alt-NUMPAD_0 <3dview->Ctrl-Alt-NUMPAD_0->view3d.camera_to_view>`            |:func:`blender:bpy.ops.view3d.camera_to_view`        |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_0 <3dview->Ctrl-NUMPAD_0->view3d.object_as_camera>`                  |:func:`blender:bpy.ops.view3d.object_as_camera`      |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-S <3dview->Shift-S->wm.call_menu>`                                         |:func:`blender:bpy.ops.wm.call_menu`                 |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-C <3dview->Ctrl-C->view3d.copybuffer>`                                      |:func:`blender:bpy.ops.view3d.copybuffer`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-V <3dview->Ctrl-V->view3d.pastebuffer>`                                     |:func:`blender:bpy.ops.view3d.pastebuffer`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`, <3dview->,->wm.context_set_enum>`                                              |:func:`blender:bpy.ops.wm.context_set_enum`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-, <3dview->Ctrl-,->wm.context_set_enum>`                                    |:func:`blender:bpy.ops.wm.context_set_enum`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-, <3dview->Alt-,->wm.context_toggle>`                                        |:func:`blender:bpy.ops.wm.context_toggle`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-SPACE <3dview->Ctrl-SPACE->wm.context_toggle>`                              |:func:`blender:bpy.ops.wm.context_toggle`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`. <3dview->.->wm.context_set_enum>`                                              |:func:`blender:bpy.ops.wm.context_set_enum`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-. <3dview->Ctrl-.->wm.context_set_enum>`                                    |:func:`blender:bpy.ops.wm.context_set_enum`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-. <3dview->Alt-.->wm.context_set_enum>`                                      |:func:`blender:bpy.ops.wm.context_set_enum`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`G <3dview->G->transform.translate>`                                              |:func:`blender:bpy.ops.transform.translate`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`EVT_TWEAK_S <3dview->EVT_TWEAK_S->transform.translate>`                          |:func:`blender:bpy.ops.transform.translate`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`R <3dview->R->transform.rotate>`                                                 |:func:`blender:bpy.ops.transform.rotate`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`S <3dview->S->transform.resize>`                                                 |:func:`blender:bpy.ops.transform.resize`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-W <3dview->Shift-W->transform.bend>`                                       |:func:`blender:bpy.ops.transform.bend`               |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-S <3dview->Shift-Alt-S->transform.tosphere>`                           |:func:`blender:bpy.ops.transform.tosphere`           |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-Alt-S <3dview->Ctrl-Shift-Alt-S->transform.shear>`                    |:func:`blender:bpy.ops.transform.shear`              |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Alt-SPACE <3dview->Alt-SPACE->transform.select_orientation>`                     |:func:`blender:bpy.ops.transform.select_orientation` |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Alt-SPACE <3dview->Ctrl-Alt-SPACE->transform.create_orientation>`           |:func:`blender:bpy.ops.transform.create_orientation` |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-M <3dview->Ctrl-M->transform.mirror>`                                       |:func:`blender:bpy.ops.transform.mirror`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Tab <3dview->Shift-Tab->wm.context_toggle>`                                |:func:`blender:bpy.ops.wm.context_toggle`            |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-Shift-Tab <3dview->Ctrl-Shift-Tab->wm.context_menu_enum>`                   |:func:`blender:bpy.ops.wm.context_menu_enum`         |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-T <3dview->Shift-T->transform.translate>`                                  |:func:`blender:bpy.ops.transform.translate`          |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Shift-Alt-T <3dview->Shift-Alt-T->transform.resize>`                             |:func:`blender:bpy.ops.transform.resize`             |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+|:km:hk:`Ctrl-A <3dview->Ctrl-A->transform.skin_resize>`                                  |:func:`blender:bpy.ops.transform.skin_resize`        |
++-----------------------------------------------------------------------------------------+-----------------------------------------------------+
+
+
+------------------
+Detailed Reference
+------------------
+
+.. km:hotkeyi:: Shift-Alt-Z -> view3d.show_only_render
+
+   VIEW3D_OT_show_only_render
+
+   
+.. km:hotkeyi:: Shift-NUMPAD_SLASH -> wm.return_to_original
+
+   WM_OT_return_to_original
+
+   
+.. km:hotkeyi:: Shift-NUMPAD_SLASH -> object.edit_linked
+
+   OBJECT_OT_edit_linked
+
+   
+.. km:hotkey:: Any-LEFTMOUSE -> view3d.manipulator
+
+   3D Manipulator
+
+   bpy.ops.view3d.manipulator(constraint_axis=(False, False, False), constraint_orientation='GLOBAL', release_confirm=False)
+   
+   
+   +-------------------+--------+
+   |Properties:        |Values: |
+   +===================+========+
+   |Confirm on Release |True    |
+   +-------------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-ACTIONMOUSE -> view3d.cursor3d
+
+   Set 3D Cursor
+
+   bpy.ops.view3d.cursor3d()
+   
+   
+.. km:hotkey:: RIGHTMOUSE -> view3d.move
+
+   Move View
+
+   bpy.ops.view3d.move()
+   
+   
+.. km:hotkey:: Shift-NUMPAD_4 -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------+--------------------+
+   |Properties: |Values:             |
+   +============+====================+
+   |Roll        |-0.2617993950843811 |
+   +------------+--------------------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_6 -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------+-------------------+
+   |Properties: |Values:            |
+   +============+===================+
+   |Roll        |0.2617993950843811 |
+   +------------+-------------------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-WHEELUPMOUSE -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------+--------------------+
+   |Properties: |Values:             |
+   +============+====================+
+   |Roll        |-0.2617993950843811 |
+   +------------+--------------------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-WHEELDOWNMOUSE -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------+-------------------+
+   |Properties: |Values:            |
+   +============+===================+
+   |Roll        |0.2617993950843811 |
+   +------------+-------------------+
+   
+   
+.. km:hotkey:: NDOF_MOTION -> view3d.ndof_orbit_zoom
+
+   NDOF Orbit View with Zoom
+
+   bpy.ops.view3d.ndof_orbit_zoom()
+   
+   
+.. km:hotkey:: Ctrl-NDOF_MOTION -> view3d.ndof_orbit
+
+   NDOF Orbit View
+
+   bpy.ops.view3d.ndof_orbit()
+   
+   
+.. km:hotkey:: Shift-NDOF_MOTION -> view3d.ndof_pan
+
+   NDOF Pan View
+
+   bpy.ops.view3d.ndof_pan()
+   
+   
+.. km:hotkey:: Ctrl-Shift-NDOF_MOTION -> view3d.ndof_all
+
+   NDOF Move View
+
+   bpy.ops.view3d.ndof_all()
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FIT -> view3d.view_selected
+
+   View Selected
+
+   bpy.ops.view3d.view_selected(use_all_regions=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Regions |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------+--------------------+
+   |Properties: |Values:             |
+   +============+====================+
+   |Roll        |-1.5707963705062866 |
+   +------------+--------------------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_ROLL_CW -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------+-------------------+
+   |Properties: |Values:            |
+   +============+===================+
+   |Roll        |1.5707963705062866 |
+   +------------+-------------------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FRONT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |FRONT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_BACK -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |BACK    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_LEFT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |LEFT    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_RIGHT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |RIGHT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_TOP -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |TOP     |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_BOTTOM -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |BOTTOM  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NDOF_BUTTON_FRONT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |FRONT   |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-NDOF_BUTTON_RIGHT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |RIGHT   |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-NDOF_BUTTON_TOP -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |TOP     |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-Z -> wm.context_toggle_enum
+
+   Context Toggle Values
+
+   bpy.ops.wm.context_toggle_enum(data_path="", value_1="", value_2="")
+   
+   
+   +-------------------+--------------------------+
+   |Properties:        |Values:                   |
+   +===================+==========================+
+   |Context Attributes |space_data.viewport_shade |
+   +-------------------+--------------------------+
+   |Value              |SOLID                     |
+   +-------------------+--------------------------+
+   |Value              |RENDERED                  |
+   +-------------------+--------------------------+
+   
+   
+.. km:hotkey:: Ctrl-EVT_TWEAK_S -> view3d.select_lasso
+
+   Lasso Select
+
+   bpy.ops.view3d.select_lasso(path=[], deselect=False, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Deselect    |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_S -> view3d.select_lasso
+
+   Lasso Select
+
+   bpy.ops.view3d.select_lasso(path=[], deselect=False, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Deselect    |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: A -> transform.skin_resize
+
+   Skin Resize
+
+   bpy.ops.transform.skin_resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
+   
+   
+.. km:hotkey:: SELECTMOUSE -> object.select_grouped
+
+   Select Grouped
+
+   bpy.ops.object.select_grouped(extend=False, type='CHILDREN_RECURSIVE')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Type        |GROUP   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Alt-EVT_TWEAK_L -> view3d.select_border
+
+   Border Select
+
+   bpy.ops.view3d.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-LEFTMOUSE -> view3d.manipulator
+
+   3D Manipulator
+
+   bpy.ops.view3d.manipulator(constraint_axis=(False, False, False), constraint_orientation='GLOBAL', release_confirm=False)
+   
+   
+   +-------------------+--------+
+   |Properties:        |Values: |
+   +===================+========+
+   |Confirm on Release |True    |
+   +-------------------+--------+
+   
+   
+.. km:hotkey:: ACTIONMOUSE -> view3d.cursor3d
+
+   Set 3D Cursor
+
+   bpy.ops.view3d.cursor3d()
+   
+   
+.. km:hotkey:: MIDDLEMOUSE -> view3d.rotate
+
+   Rotate View
+
+   bpy.ops.view3d.rotate()
+   
+   
+.. km:hotkey:: Shift-MIDDLEMOUSE -> view3d.move
+
+   Move View
+
+   bpy.ops.view3d.move()
+   
+   
+.. km:hotkey:: Ctrl-MIDDLEMOUSE -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+.. km:hotkey:: Ctrl-Shift-MIDDLEMOUSE -> view3d.dolly
+
+   Dolly View
+
+   bpy.ops.view3d.dolly(delta=0, mx=0, my=0)
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_PERIOD -> view3d.view_selected
+
+   View Selected
+
+   bpy.ops.view3d.view_selected(use_all_regions=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Regions |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_PERIOD -> view3d.view_selected
+
+   View Selected
+
+   bpy.ops.view3d.view_selected(use_all_regions=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Regions |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_PERIOD -> view3d.view_lock_to_active
+
+   View Lock to Active
+
+   bpy.ops.view3d.view_lock_to_active()
+   
+   
+.. km:hotkey:: Alt-NUMPAD_PERIOD -> view3d.view_lock_clear
+
+   View Lock Clear
+
+   bpy.ops.view3d.view_lock_clear()
+   
+   
+.. km:hotkey:: Shift-F -> view3d.navigate
+
+   View Navigation
+
+   bpy.ops.view3d.navigate()
+   
+   
+.. km:hotkey:: Any-TIMER1 -> view3d.smoothview
+
+   Smooth View
+
+   bpy.ops.view3d.smoothview()
+   
+   
+.. km:hotkey:: TRACKPADPAN -> view3d.rotate
+
+   Rotate View
+
+   bpy.ops.view3d.rotate()
+   
+   
+.. km:hotkey:: MOUSEROTATE -> view3d.rotate
+
+   Rotate View
+
+   bpy.ops.view3d.rotate()
+   
+   
+.. km:hotkey:: Shift-TRACKPADPAN -> view3d.move
+
+   Move View
+
+   bpy.ops.view3d.move()
+   
+   
+.. km:hotkey:: TRACKPADZOOM -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+.. km:hotkey:: Ctrl-TRACKPADPAN -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+.. km:hotkey:: NUMPAD_PLUS -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_MINUS -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |-1      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-EQUAL -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-MINUS -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |-1      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: WHEELINMOUSE -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: WHEELOUTMOUSE -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |-1      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_PLUS -> view3d.dolly
+
+   Dolly View
+
+   bpy.ops.view3d.dolly(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_MINUS -> view3d.dolly
+
+   Dolly View
+
+   bpy.ops.view3d.dolly(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |-1      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-EQUAL -> view3d.dolly
+
+   Dolly View
+
+   bpy.ops.view3d.dolly(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-MINUS -> view3d.dolly
+
+   Dolly View
+
+   bpy.ops.view3d.dolly(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |-1      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_ENTER -> view3d.zoom_camera_1_to_1
+
+   Zoom Camera 1:1
+
+   bpy.ops.view3d.zoom_camera_1_to_1()
+   
+   
+.. km:hotkey:: HOME -> view3d.view_center_camera
+
+   View Camera Center
+
+   bpy.ops.view3d.view_center_camera()
+   
+   
+.. km:hotkey:: HOME -> view3d.view_center_lock
+
+   View Lock Center
+
+   bpy.ops.view3d.view_center_lock()
+   
+   
+.. km:hotkey:: Alt-HOME -> view3d.view_center_cursor
+
+   Center View to Cursor
+
+   bpy.ops.view3d.view_center_cursor()
+   
+   
+.. km:hotkey:: Alt-F -> view3d.view_center_pick
+
+   Center View to Mouse
+
+   bpy.ops.view3d.view_center_pick()
+   
+   
+.. km:hotkey:: HOME -> view3d.view_all
+
+   View All
+
+   bpy.ops.view3d.view_all(use_all_regions=False, center=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Center      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-HOME -> view3d.view_all
+
+   View All
+
+   bpy.ops.view3d.view_all(use_all_regions=False, center=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Regions |True    |
+   +------------+--------+
+   |Center      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-C -> view3d.view_all
+
+   View All
+
+   bpy.ops.view3d.view_all(use_all_regions=False, center=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Center      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_0 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |CAMERA  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_1 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |FRONT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_2 -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+----------+
+   |Properties: |Values:   |
+   +============+==========+
+   |Orbit       |ORBITDOWN |
+   +------------+----------+
+   
+   
+.. km:hotkey:: NUMPAD_3 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |RIGHT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_4 -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+----------+
+   |Properties: |Values:   |
+   +============+==========+
+   |Orbit       |ORBITLEFT |
+   +------------+----------+
+   
+   
+.. km:hotkey:: NUMPAD_5 -> view3d.view_persportho
+
+   View Persp/Ortho
+
+   bpy.ops.view3d.view_persportho()
+   
+   
+.. km:hotkey:: NUMPAD_6 -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+-----------+
+   |Properties: |Values:    |
+   +============+===========+
+   |Orbit       |ORBITRIGHT |
+   +------------+-----------+
+   
+   
+.. km:hotkey:: NUMPAD_7 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |TOP     |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_8 -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Orbit       |ORBITUP |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_1 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |BACK    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_3 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |LEFT    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_7 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |BOTTOM  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_2 -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Pan         |PANDOWN |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_4 -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Pan         |PANLEFT |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_6 -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+---------+
+   |Properties: |Values:  |
+   +============+=========+
+   |Pan         |PANRIGHT |
+   +------------+---------+
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_8 -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Pan         |PANUP   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_4 -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------------+--------+
+   |Properties:       |Values: |
+   +==================+========+
+   |Roll Angle Source |LEFT    |
+   +------------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_6 -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------------+--------+
+   |Properties:       |Values: |
+   +==================+========+
+   |Roll Angle Source |RIGHT   |
+   +------------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_9 -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+-------------------+
+   |Properties: |Values:            |
+   +============+===================+
+   |Orbit       |ORBITRIGHT         |
+   +------------+-------------------+
+   |Roll        |3.1415927410125732 |
+   +------------+-------------------+
+   
+   
+.. km:hotkey:: Ctrl-WHEELUPMOUSE -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+---------+
+   |Properties: |Values:  |
+   +============+=========+
+   |Pan         |PANRIGHT |
+   +------------+---------+
+   
+   
+.. km:hotkey:: Ctrl-WHEELDOWNMOUSE -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Pan         |PANLEFT |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-WHEELUPMOUSE -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Pan         |PANUP   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-WHEELDOWNMOUSE -> view3d.view_pan
+
+   View Pan
+
+   bpy.ops.view3d.view_pan(type='PANLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Pan         |PANDOWN |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-WHEELUPMOUSE -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+----------+
+   |Properties: |Values:   |
+   +============+==========+
+   |Orbit       |ORBITLEFT |
+   +------------+----------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-WHEELDOWNMOUSE -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+-----------+
+   |Properties: |Values:    |
+   +============+===========+
+   |Orbit       |ORBITRIGHT |
+   +------------+-----------+
+   
+   
+.. km:hotkey:: Shift-Alt-WHEELUPMOUSE -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Orbit       |ORBITUP |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-WHEELDOWNMOUSE -> view3d.view_orbit
+
+   View Orbit
+
+   bpy.ops.view3d.view_orbit(angle=0, type='ORBITLEFT')
+   
+   
+   +------------+----------+
+   |Properties: |Values:   |
+   +============+==========+
+   |Orbit       |ORBITDOWN |
+   +------------+----------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-WHEELUPMOUSE -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------------+--------+
+   |Properties:       |Values: |
+   +==================+========+
+   |Roll Angle Source |LEFT    |
+   +------------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-WHEELDOWNMOUSE -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------------+--------+
+   |Properties:       |Values: |
+   +==================+========+
+   |Roll Angle Source |RIGHT   |
+   +------------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_1 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |FRONT   |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_3 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |RIGHT   |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-NUMPAD_7 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |TOP     |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-NUMPAD_1 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |BACK    |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-NUMPAD_3 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |LEFT    |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-NUMPAD_7 -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |BOTTOM  |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: NUMPAD_SLASH -> view3d.localview
+
+   Local View
+
+   bpy.ops.view3d.localview()
+   
+   
+.. km:hotkey:: NDOF_MOTION -> view3d.ndof_orbit_zoom
+
+   NDOF Orbit View with Zoom
+
+   bpy.ops.view3d.ndof_orbit_zoom()
+   
+   
+.. km:hotkey:: Ctrl-NDOF_MOTION -> view3d.ndof_orbit
+
+   NDOF Orbit View
+
+   bpy.ops.view3d.ndof_orbit()
+   
+   
+.. km:hotkey:: Shift-NDOF_MOTION -> view3d.ndof_pan
+
+   NDOF Pan View
+
+   bpy.ops.view3d.ndof_pan()
+   
+   
+.. km:hotkey:: Ctrl-Shift-NDOF_MOTION -> view3d.ndof_all
+
+   NDOF Move View
+
+   bpy.ops.view3d.ndof_all()
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FIT -> view3d.view_selected
+
+   View Selected
+
+   bpy.ops.view3d.view_selected(use_all_regions=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |All Regions |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------------+--------+
+   |Properties:       |Values: |
+   +==================+========+
+   |Roll Angle Source |LEFT    |
+   +------------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
+
+   View Roll
+
+   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
+   
+   
+   +------------------+--------+
+   |Properties:       |Values: |
+   +==================+========+
+   |Roll Angle Source |RIGHT   |
+   +------------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FRONT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |FRONT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_BACK -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |BACK    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_LEFT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |LEFT    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_RIGHT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |RIGHT   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_TOP -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |TOP     |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_BOTTOM -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |View        |BOTTOM  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-NDOF_BUTTON_FRONT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |FRONT   |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-NDOF_BUTTON_RIGHT -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |RIGHT   |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: Shift-NDOF_BUTTON_TOP -> view3d.viewnumpad
+
+   View Numpad
+
+   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
+   
+   
+   +-------------+--------+
+   |Properties:  |Values: |
+   +=============+========+
+   |View         |TOP     |
+   +-------------+--------+
+   |Align Active |True    |
+   +-------------+--------+
+   
+   
+.. km:hotkey:: ACCENT_GRAVE -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |0       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-1 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |1       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-2 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |2       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-3 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |3       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-4 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |4       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-5 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |5       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-6 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |6       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-7 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |7       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-8 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |8       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-9 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |9       |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Any-0 -> view3d.layers
+
+   Layers
+
+   bpy.ops.view3d.layers(nr=1, extend=False, toggle=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Number      |10      |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Z -> wm.context_toggle_enum
+
+   Context Toggle Values
+
+   bpy.ops.wm.context_toggle_enum(data_path="", value_1="", value_2="")
+   
+   
+   +-------------------+--------------------------+
+   |Properties:        |Values:                   |
+   +===================+==========================+
+   |Context Attributes |space_data.viewport_shade |
+   +-------------------+--------------------------+
+   |Value              |SOLID                     |
+   +-------------------+--------------------------+
+   |Value              |WIREFRAME                 |
+   +-------------------+--------------------------+
+   
+   
+.. km:hotkey:: Alt-Z -> wm.context_toggle_enum
+
+   Context Toggle Values
+
+   bpy.ops.wm.context_toggle_enum(data_path="", value_1="", value_2="")
+   
+   
+   +-------------------+--------------------------+
+   |Properties:        |Values:                   |
+   +===================+==========================+
+   |Context Attributes |space_data.viewport_shade |
+   +-------------------+--------------------------+
+   |Value              |SOLID                     |
+   +-------------------+--------------------------+
+   |Value              |TEXTURED                  |
+   +-------------------+--------------------------+
+   
+   
+.. km:hotkey:: Shift-Z -> view3d.toggle_render
+
+   Toggle Rendered Shading
+
+   bpy.ops.view3d.toggle_render()
+   
+   
+.. km:hotkey:: SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |False   |
+   +-----------------+--------+
+   |Center           |False   |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |False   |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Shift-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |True    |
+   +-----------------+--------+
+   |Center           |False   |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |False   |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |False   |
+   +-----------------+--------+
+   |Center           |True    |
+   +-----------------+--------+
+   |Object           |True    |
+   +-----------------+--------+
+   |Enumerate        |False   |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Alt-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |False   |
+   +-----------------+--------+
+   |Center           |False   |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |True    |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |True    |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |True    |
+   +-----------------+--------+
+   |Center           |True    |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |False   |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |False   |
+   +-----------------+--------+
+   |Center           |True    |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |True    |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |True    |
+   +-----------------+--------+
+   |Center           |False   |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |True    |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-Alt-SELECTMOUSE -> view3d.select
+
+   Activate/Select
+
+   bpy.ops.view3d.select(extend=False, deselect=False, toggle=False, center=False, enumerate=False, object=False, location=(0, 0))
+   
+   
+   +-----------------+--------+
+   |Properties:      |Values: |
+   +=================+========+
+   |Extend           |False   |
+   +-----------------+--------+
+   |Deselect         |False   |
+   +-----------------+--------+
+   |Toggle Selection |True    |
+   +-----------------+--------+
+   |Center           |True    |
+   +-----------------+--------+
+   |Object           |False   |
+   +-----------------+--------+
+   |Enumerate        |True    |
+   +-----------------+--------+
+   
+   
+.. km:hotkey:: B -> view3d.select_border
+
+   Border Select
+
+   bpy.ops.view3d.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+.. km:hotkey:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso
+
+   Lasso Select
+
+   bpy.ops.view3d.select_lasso(path=[], deselect=False, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Deselect    |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso
+
+   Lasso Select
+
+   bpy.ops.view3d.select_lasso(path=[], deselect=False, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Deselect    |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: C -> view3d.select_circle
+
+   Circle Select
+
+   bpy.ops.view3d.select_circle(x=0, y=0, radius=1, gesture_mode=0)
+   
+   
+.. km:hotkey:: Alt-B -> view3d.clip_border
+
+   Clipping Border
+
+   bpy.ops.view3d.clip_border(xmin=0, xmax=0, ymin=0, ymax=0)
+   
+   
+.. km:hotkey:: Shift-B -> view3d.zoom_border
+
+   Zoom to Border
+
+   bpy.ops.view3d.zoom_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0)
+   
+   
+.. km:hotkey:: Shift-B -> view3d.render_border
+
+   Set Render Border
+
+   bpy.ops.view3d.render_border(xmin=0, xmax=0, ymin=0, ymax=0, camera_only=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera Only |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-B -> view3d.render_border
+
+   Set Render Border
+
+   bpy.ops.view3d.render_border(xmin=0, xmax=0, ymin=0, ymax=0, camera_only=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Camera Only |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-B -> view3d.clear_render_border
+
+   Clear Render Border
+
+   bpy.ops.view3d.clear_render_border()
+   
+   
+.. km:hotkey:: Ctrl-Alt-NUMPAD_0 -> view3d.camera_to_view
+
+   Align Camera To View
+
+   bpy.ops.view3d.camera_to_view()
+   
+   
+.. km:hotkey:: Ctrl-NUMPAD_0 -> view3d.object_as_camera
+
+   Set Active Object as Camera
+
+   bpy.ops.view3d.object_as_camera()
+   
+   
+.. km:hotkey:: Shift-S -> wm.call_menu
+
+   Call Menu
+
+   bpy.ops.wm.call_menu(name="")
+   
+   
+   +------------+---------------+
+   |Properties: |Values:        |
+   +============+===============+
+   |Name        |VIEW3D_MT_snap |
+   +------------+---------------+
+   
+   
+.. km:hotkey:: Ctrl-C -> view3d.copybuffer
+
+   Copy Selection to Buffer
+
+   bpy.ops.view3d.copybuffer()
+   
+   
+.. km:hotkey:: Ctrl-V -> view3d.pastebuffer
+
+   Paste Selection from Buffer
+
+   bpy.ops.view3d.pastebuffer(autoselect=True, active_layer=True)
+   
+   
+.. km:hotkey:: , -> wm.context_set_enum
+
+   Context Set Enum
+
+   bpy.ops.wm.context_set_enum(data_path="", value="")
+   
+   
+   +-------------------+-----------------------+
+   |Properties:        |Values:                |
+   +===================+=======================+
+   |Context Attributes |space_data.pivot_point |
+   +-------------------+-----------------------+
+   |Value              |BOUNDING_BOX_CENTER    |
+   +-------------------+-----------------------+
+   
+   
+.. km:hotkey:: Ctrl-, -> wm.context_set_enum
+
+   Context Set Enum
+
+   bpy.ops.wm.context_set_enum(data_path="", value="")
+   
+   
+   +-------------------+-----------------------+
+   |Properties:        |Values:                |
+   +===================+=======================+
+   |Context Attributes |space_data.pivot_point |
+   +-------------------+-----------------------+
+   |Value              |MEDIAN_POINT           |
+   +-------------------+-----------------------+
+   
+   
+.. km:hotkey:: Alt-, -> wm.context_toggle
+
+   Context Toggle
+
+   bpy.ops.wm.context_toggle(data_path="")
+   
+   
+   +-------------------+---------------------------------+
+   |Properties:        |Values:                          |
+   +===================+=================================+
+   |Context Attributes |space_data.use_pivot_point_align |
+   +-------------------+---------------------------------+
+   
+   
+.. km:hotkey:: Ctrl-SPACE -> wm.context_toggle
+
+   Context Toggle
+
+   bpy.ops.wm.context_toggle(data_path="")
+   
+   
+   +-------------------+----------------------------+
+   |Properties:        |Values:                     |
+   +===================+============================+
+   |Context Attributes |space_data.show_manipulator |
+   +-------------------+----------------------------+
+   
+   
+.. km:hotkey:: . -> wm.context_set_enum
+
+   Context Set Enum
+
+   bpy.ops.wm.context_set_enum(data_path="", value="")
+   
+   
+   +-------------------+-----------------------+
+   |Properties:        |Values:                |
+   +===================+=======================+
+   |Context Attributes |space_data.pivot_point |
+   +-------------------+-----------------------+
+   |Value              |CURSOR                 |
+   +-------------------+-----------------------+
+   
+   
+.. km:hotkey:: Ctrl-. -> wm.context_set_enum
+
+   Context Set Enum
+
+   bpy.ops.wm.context_set_enum(data_path="", value="")
+   
+   
+   +-------------------+-----------------------+
+   |Properties:        |Values:                |
+   +===================+=======================+
+   |Context Attributes |space_data.pivot_point |
+   +-------------------+-----------------------+
+   |Value              |INDIVIDUAL_ORIGINS     |
+   +-------------------+-----------------------+
+   
+   
+.. km:hotkey:: Alt-. -> wm.context_set_enum
+
+   Context Set Enum
+
+   bpy.ops.wm.context_set_enum(data_path="", value="")
+   
+   
+   +-------------------+-----------------------+
+   |Properties:        |Values:                |
+   +===================+=======================+
+   |Context Attributes |space_data.pivot_point |
+   +-------------------+-----------------------+
+   |Value              |ACTIVE_ELEMENT         |
+   +-------------------+-----------------------+
+   
+   
+.. km:hotkey:: G -> transform.translate
+
+   Translate
+
+   bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
+   
+   
+.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+
+   Translate
+
+   bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
+   
+   
+.. km:hotkey:: R -> transform.rotate
+
+   Rotate
+
+   bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+.. km:hotkey:: S -> transform.resize
+
+   Resize
+
+   bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
+   
+   
+.. km:hotkey:: Shift-W -> transform.bend
+
+   Bend
+
+   bpy.ops.transform.bend(value=(0,), mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+.. km:hotkey:: Shift-Alt-S -> transform.tosphere
+
+   To Sphere
+
+   bpy.ops.transform.tosphere(value=0, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+.. km:hotkey:: Ctrl-Shift-Alt-S -> transform.shear
+
+   Shear
+
+   bpy.ops.transform.shear(value=0, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+.. km:hotkey:: Alt-SPACE -> transform.select_orientation
+
+   Select Orientation
+
+   bpy.ops.transform.select_orientation(orientation='GLOBAL')
+   
+   
+.. km:hotkey:: Ctrl-Alt-SPACE -> transform.create_orientation
+
+   Create Orientation
+
+   bpy.ops.transform.create_orientation(name="", use_view=False, use=False, overwrite=False)
+   
+   
+   +-------------------+--------+
+   |Properties:        |Values: |
+   +===================+========+
+   |Use after creation |True    |
+   +-------------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-M -> transform.mirror
+
+   Mirror
+
+   bpy.ops.transform.mirror(constraint_axis=(False, False, False), constraint_orientation='GLOBAL', proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, gpencil_strokes=False, release_confirm=False)
+   
+   
+.. km:hotkey:: Shift-Tab -> wm.context_toggle
+
+   Context Toggle
+
+   bpy.ops.wm.context_toggle(data_path="")
+   
+   
+   +-------------------+-----------------------+
+   |Properties:        |Values:                |
+   +===================+=======================+
+   |Context Attributes |tool_settings.use_snap |
+   +-------------------+-----------------------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-Tab -> wm.context_menu_enum
+
+   Context Enum Menu
+
+   bpy.ops.wm.context_menu_enum(data_path="")
+   
+   
+   +-------------------+---------------------------+
+   |Properties:        |Values:                    |
+   +===================+===========================+
+   |Context Attributes |tool_settings.snap_element |
+   +-------------------+---------------------------+
+   
+   
+.. km:hotkey:: Shift-T -> transform.translate
+
+   Translate
+
+   bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
+   
+   
+   +-------------------+--------+
+   |Properties:        |Values: |
+   +===================+========+
+   |Edit Texture Space |True    |
+   +-------------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-T -> transform.resize
+
+   Resize
+
+   bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
+   
+   
+   +-------------------+--------+
+   |Properties:        |Values: |
+   +===================+========+
+   |Edit Texture Space |True    |
+   +-------------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-A -> transform.skin_resize
+
+   Skin Resize
+
+   bpy.ops.transform.skin_resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
+   
+   

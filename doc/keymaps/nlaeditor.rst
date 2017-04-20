@@ -1,0 +1,534 @@
+**********
+NLA Editor
+**********
+
+.. km:module:: nlaeditor
+
+
+---------------
+Quick Reference
+---------------
+
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|Hotkey                                                                                    |Operator                                      |
++==========================================================================================+==============================================+
+|:km:hk:`Ctrl-A <nlaeditor->Ctrl-A->nla.select_all_toggle>`                                |:func:`blender:bpy.ops.nla.select_all_toggle` |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <nlaeditor->NDOF_BUTTON_FIT->nla.view_all>`                       |:func:`blender:bpy.ops.nla.view_all`          |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`A <nlaeditor->A->nla.apply_scale>`                                                |:func:`blender:bpy.ops.nla.apply_scale`       |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`SELECTMOUSE <nlaeditor->SELECTMOUSE->nla.click_select>`                           |:func:`blender:bpy.ops.nla.click_select`      |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-SELECTMOUSE <nlaeditor->Shift-SELECTMOUSE->nla.click_select>`               |:func:`blender:bpy.ops.nla.click_select`      |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-SELECTMOUSE <nlaeditor->Ctrl-SELECTMOUSE->nla.select_leftright>`             |:func:`blender:bpy.ops.nla.select_leftright`  |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-Shift-SELECTMOUSE <nlaeditor->Ctrl-Shift-SELECTMOUSE->nla.select_leftright>` |:func:`blender:bpy.ops.nla.select_leftright`  |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`LEFT_BRACKET <nlaeditor->LEFT_BRACKET->nla.select_leftright>`                     |:func:`blender:bpy.ops.nla.select_leftright`  |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`RIGHT_BRACKET <nlaeditor->RIGHT_BRACKET->nla.select_leftright>`                   |:func:`blender:bpy.ops.nla.select_leftright`  |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`A <nlaeditor->A->nla.select_all_toggle>`                                          |:func:`blender:bpy.ops.nla.select_all_toggle` |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-I <nlaeditor->Ctrl-I->nla.select_all_toggle>`                                |:func:`blender:bpy.ops.nla.select_all_toggle` |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`B <nlaeditor->B->nla.select_border>`                                              |:func:`blender:bpy.ops.nla.select_border`     |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Alt-B <nlaeditor->Alt-B->nla.select_border>`                                      |:func:`blender:bpy.ops.nla.select_border`     |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-Alt-P <nlaeditor->Ctrl-Alt-P->nla.previewrange_set>`                         |:func:`blender:bpy.ops.nla.previewrange_set`  |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`HOME <nlaeditor->HOME->nla.view_all>`                                             |:func:`blender:bpy.ops.nla.view_all`          |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <nlaeditor->NDOF_BUTTON_FIT->nla.view_all>`                       |:func:`blender:bpy.ops.nla.view_all`          |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`NUMPAD_PERIOD <nlaeditor->NUMPAD_PERIOD->nla.view_selected>`                      |:func:`blender:bpy.ops.nla.view_selected`     |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`NUMPAD_0 <nlaeditor->NUMPAD_0->nla.view_frame>`                                   |:func:`blender:bpy.ops.nla.view_frame`        |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-A <nlaeditor->Shift-A->nla.actionclip_add>`                                 |:func:`blender:bpy.ops.nla.actionclip_add`    |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-T <nlaeditor->Shift-T->nla.transition_add>`                                 |:func:`blender:bpy.ops.nla.transition_add`    |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-K <nlaeditor->Shift-K->nla.soundclip_add>`                                  |:func:`blender:bpy.ops.nla.soundclip_add`     |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-G <nlaeditor->Shift-G->nla.meta_add>`                                       |:func:`blender:bpy.ops.nla.meta_add`          |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Alt-G <nlaeditor->Alt-G->nla.meta_remove>`                                        |:func:`blender:bpy.ops.nla.meta_remove`       |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-D <nlaeditor->Shift-D->nla.duplicate>`                                      |:func:`blender:bpy.ops.nla.duplicate`         |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Alt-D <nlaeditor->Alt-D->nla.duplicate>`                                          |:func:`blender:bpy.ops.nla.duplicate`         |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`U <nlaeditor->U->nla.make_single_user>`                                           |:func:`blender:bpy.ops.nla.make_single_user`  |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`X <nlaeditor->X->nla.delete>`                                                     |:func:`blender:bpy.ops.nla.delete`            |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`DEL <nlaeditor->DEL->nla.delete>`                                                 |:func:`blender:bpy.ops.nla.delete`            |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Y <nlaeditor->Y->nla.split>`                                                      |:func:`blender:bpy.ops.nla.split`             |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`H <nlaeditor->H->nla.mute_toggle>`                                                |:func:`blender:bpy.ops.nla.mute_toggle`       |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Alt-F <nlaeditor->Alt-F->nla.swap>`                                               |:func:`blender:bpy.ops.nla.swap`              |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`PAGE_UP <nlaeditor->PAGE_UP->nla.move_up>`                                        |:func:`blender:bpy.ops.nla.move_up`           |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`PAGE_DOWN <nlaeditor->PAGE_DOWN->nla.move_down>`                                  |:func:`blender:bpy.ops.nla.move_down`         |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-A <nlaeditor->Ctrl-A->nla.apply_scale>`                                      |:func:`blender:bpy.ops.nla.apply_scale`       |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Alt-S <nlaeditor->Alt-S->nla.clear_scale>`                                        |:func:`blender:bpy.ops.nla.clear_scale`       |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Shift-S <nlaeditor->Shift-S->nla.snap>`                                           |:func:`blender:bpy.ops.nla.snap`              |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-Shift-M <nlaeditor->Ctrl-Shift-M->nla.fmodifier_add>`                        |:func:`blender:bpy.ops.nla.fmodifier_add`     |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`G <nlaeditor->G->transform.transform>`                                            |:func:`blender:bpy.ops.transform.transform`   |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`EVT_TWEAK_S <nlaeditor->EVT_TWEAK_S->transform.transform>`                        |:func:`blender:bpy.ops.transform.transform`   |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`E <nlaeditor->E->transform.transform>`                                            |:func:`blender:bpy.ops.transform.transform`   |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`S <nlaeditor->S->transform.transform>`                                            |:func:`blender:bpy.ops.transform.transform`   |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`M <nlaeditor->M->marker.add>`                                                     |:func:`blender:bpy.ops.marker.add`            |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+|:km:hk:`Ctrl-M <nlaeditor->Ctrl-M->marker.rename>`                                        |:func:`blender:bpy.ops.marker.rename`         |
++------------------------------------------------------------------------------------------+----------------------------------------------+
+
+
+------------------
+Detailed Reference
+------------------
+
+.. km:hotkey:: Ctrl-A -> nla.select_all_toggle
+
+   (De)select All
+
+   bpy.ops.nla.select_all_toggle(invert=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Invert      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FIT -> nla.view_all
+
+   View All
+
+   bpy.ops.nla.view_all()
+   
+   
+.. km:hotkey:: A -> nla.apply_scale
+
+   Apply Scale
+
+   bpy.ops.nla.apply_scale()
+   
+   
+.. km:hotkey:: SELECTMOUSE -> nla.click_select
+
+   Mouse Select
+
+   bpy.ops.nla.click_select(extend=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend Select |False   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Shift-SELECTMOUSE -> nla.click_select
+
+   Mouse Select
+
+   bpy.ops.nla.click_select(extend=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend Select |True    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-SELECTMOUSE -> nla.select_leftright
+
+   Select Left/Right
+
+   bpy.ops.nla.select_leftright(mode='CHECK', extend=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend Select |False   |
+   +--------------+--------+
+   |Mode          |CHECK   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> nla.select_leftright
+
+   Select Left/Right
+
+   bpy.ops.nla.select_leftright(mode='CHECK', extend=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend Select |True    |
+   +--------------+--------+
+   |Mode          |CHECK   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: LEFT_BRACKET -> nla.select_leftright
+
+   Select Left/Right
+
+   bpy.ops.nla.select_leftright(mode='CHECK', extend=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend Select |False   |
+   +--------------+--------+
+   |Mode          |LEFT    |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: RIGHT_BRACKET -> nla.select_leftright
+
+   Select Left/Right
+
+   bpy.ops.nla.select_leftright(mode='CHECK', extend=False)
+   
+   
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Extend Select |False   |
+   +--------------+--------+
+   |Mode          |RIGHT   |
+   +--------------+--------+
+   
+   
+.. km:hotkey:: A -> nla.select_all_toggle
+
+   (De)select All
+
+   bpy.ops.nla.select_all_toggle(invert=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Invert      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-I -> nla.select_all_toggle
+
+   (De)select All
+
+   bpy.ops.nla.select_all_toggle(invert=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Invert      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: B -> nla.select_border
+
+   Border Select
+
+   bpy.ops.nla.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True, axis_range=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Axis Range  |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Alt-B -> nla.select_border
+
+   Border Select
+
+   bpy.ops.nla.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True, axis_range=False)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Axis Range  |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-P -> nla.previewrange_set
+
+   Auto-Set Preview Range
+
+   bpy.ops.nla.previewrange_set()
+   
+   
+.. km:hotkey:: HOME -> nla.view_all
+
+   View All
+
+   bpy.ops.nla.view_all()
+   
+   
+.. km:hotkey:: NDOF_BUTTON_FIT -> nla.view_all
+
+   View All
+
+   bpy.ops.nla.view_all()
+   
+   
+.. km:hotkey:: NUMPAD_PERIOD -> nla.view_selected
+
+   View Selected
+
+   bpy.ops.nla.view_selected()
+   
+   
+.. km:hotkey:: NUMPAD_0 -> nla.view_frame
+
+   View Frame
+
+   bpy.ops.nla.view_frame()
+   
+   
+.. km:hotkey:: Shift-A -> nla.actionclip_add
+
+   Add Action Strip
+
+   bpy.ops.nla.actionclip_add(action='<UNKNOWN ENUM>')
+   
+   
+.. km:hotkey:: Shift-T -> nla.transition_add
+
+   Add Transition
+
+   bpy.ops.nla.transition_add()
+   
+   
+.. km:hotkey:: Shift-K -> nla.soundclip_add
+
+   Add Sound Clip
+
+   bpy.ops.nla.soundclip_add()
+   
+   
+.. km:hotkey:: Shift-G -> nla.meta_add
+
+   Add Meta-Strips
+
+   bpy.ops.nla.meta_add()
+   
+   
+.. km:hotkey:: Alt-G -> nla.meta_remove
+
+   Remove Meta-Strips
+
+   bpy.ops.nla.meta_remove()
+   
+   
+.. km:hotkey:: Shift-D -> nla.duplicate
+
+   Duplicate Strips
+
+   bpy.ops.nla.duplicate(linked=False, mode='TRANSLATION')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Linked      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Alt-D -> nla.duplicate
+
+   Duplicate Strips
+
+   bpy.ops.nla.duplicate(linked=False, mode='TRANSLATION')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Linked      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: U -> nla.make_single_user
+
+   Make Single User
+
+   bpy.ops.nla.make_single_user()
+   
+   
+.. km:hotkey:: X -> nla.delete
+
+   Delete Strips
+
+   bpy.ops.nla.delete()
+   
+   
+.. km:hotkey:: DEL -> nla.delete
+
+   Delete Strips
+
+   bpy.ops.nla.delete()
+   
+   
+.. km:hotkey:: Y -> nla.split
+
+   Split Strips
+
+   bpy.ops.nla.split()
+   
+   
+.. km:hotkey:: H -> nla.mute_toggle
+
+   Toggle Muting
+
+   bpy.ops.nla.mute_toggle()
+   
+   
+.. km:hotkey:: Alt-F -> nla.swap
+
+   Swap Strips
+
+   bpy.ops.nla.swap()
+   
+   
+.. km:hotkey:: PAGE_UP -> nla.move_up
+
+   Move Strips Up
+
+   bpy.ops.nla.move_up()
+   
+   
+.. km:hotkey:: PAGE_DOWN -> nla.move_down
+
+   Move Strips Down
+
+   bpy.ops.nla.move_down()
+   
+   
+.. km:hotkey:: Ctrl-A -> nla.apply_scale
+
+   Apply Scale
+
+   bpy.ops.nla.apply_scale()
+   
+   
+.. km:hotkey:: Alt-S -> nla.clear_scale
+
+   Clear Scale
+
+   bpy.ops.nla.clear_scale()
+   
+   
+.. km:hotkey:: Shift-S -> nla.snap
+
+   Snap Strips
+
+   bpy.ops.nla.snap(type='CFRA')
+   
+   
+.. km:hotkey:: Ctrl-Shift-M -> nla.fmodifier_add
+
+   Add F-Modifier
+
+   bpy.ops.nla.fmodifier_add(type='NULL', only_active=True)
+   
+   
+.. km:hotkey:: G -> transform.transform
+
+   Transform
+
+   bpy.ops.transform.transform(mode='TRANSLATION', value=(0, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+   +------------+------------+
+   |Properties: |Values:     |
+   +============+============+
+   |Mode        |TRANSLATION |
+   +------------+------------+
+   
+   
+.. km:hotkey:: EVT_TWEAK_S -> transform.transform
+
+   Transform
+
+   bpy.ops.transform.transform(mode='TRANSLATION', value=(0, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+   +------------+------------+
+   |Properties: |Values:     |
+   +============+============+
+   |Mode        |TRANSLATION |
+   +------------+------------+
+   
+   
+.. km:hotkey:: E -> transform.transform
+
+   Transform
+
+   bpy.ops.transform.transform(mode='TRANSLATION', value=(0, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+   +------------+------------+
+   |Properties: |Values:     |
+   +============+============+
+   |Mode        |TIME_EXTEND |
+   +------------+------------+
+   
+   
+.. km:hotkey:: S -> transform.transform
+
+   Transform
+
+   bpy.ops.transform.transform(mode='TRANSLATION', value=(0, 0, 0, 0), axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
+   
+   
+   +------------+-----------+
+   |Properties: |Values:    |
+   +============+===========+
+   |Mode        |TIME_SCALE |
+   +------------+-----------+
+   
+   
+.. km:hotkey:: M -> marker.add
+
+   Add Time Marker
+
+   bpy.ops.marker.add()
+   
+   
+.. km:hotkey:: Ctrl-M -> marker.rename
+
+   Rename Marker
+
+   bpy.ops.marker.rename(name="RenamedMarker")
+   
+   
