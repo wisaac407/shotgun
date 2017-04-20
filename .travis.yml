@@ -8,9 +8,19 @@ install:
 
 script:
   - export PATH=$PATH:/usr/local/blender
-  - ./doc/build.py --skip-sphinx
+  - doc/build.py --skip-sphinx
+  - .travis/build_keymap.sh
 
-after_success:
+deploy:
+  provider: releases
+  api_key:
+    secure: kFvEgBS34A/80DHj+dAr+B36kD+9no4l8zuptTssIj+UCj2bKS9NsKBUGFPi7pGw4I0aLZaJaNfVsnZTyxXhfmjPQXrX557F9OVQmsgl65LDB59KuT4w8TJEW/mBKq25Qbuo90eYgwhYzBiF8xbrfMfKWAx4HVJEQdONKrYfQCoPg8qZ/5Mca4qMsuj8U8c4NEilr2ug/en0Q2UwMeTtvdPDMwXipj1rpZZWrrFqb3HYUNGCUPilaOLhTZ8hM47vfG8/x5nMJHuTG0NjmPXs8dry36v4Th8gsu0+UyBrcG+jm5Y4ySi/qXTbCl1pGeniMKC2BeaPvJcPPxbVEcClXxinaB7lTRen4Qs7Rcyi/AQRrew/XxOHfD/ie+hAPw1nznZgoe5FtvLYt1TusaG8JL9roXHX4Bnnt7BChq7tlLWZp0HlO6HQk2brpFV0EtJq3lxGG6lUblFv/Am5F7GouYnNc+172coRgFFuLSbznfdPmQxlQ6uFh2eMybNMytatUtKGL3mAa5P9Nwv1RzjVbTJcKFmvjbP+Z9oK49J/1uyyxb5KMLrhil/CxzUK82FlXlpEjmaEaW0W9lWhA9YnpQR3Bsreo3RpigWifpHJNiguy0dZsrVhz8r/yEUNGi/tPcDZpQd4BfQNmpuQBVPMmK5NW8UXrLGKMjo86plSkkE=
+  skip_cleanup: true
+  file: shotgun.py
+  on:
+    tags: true
+
+after_deploy:
   - .travis/push.sh
 
 env:
