@@ -37,15 +37,12 @@ upload_files() {
   git push --force --quiet --set-upstream "https://${GH_TOKEN}@github.com/wisaac407/shotgun.git" ${DOC_BRANCH}
 }
 
+setup_git
+commit_website_files
+
 # Avoid leaking GH_TOKEN (unfortunately this means loosing useful error messages)
-if ! setup_git > /dev/null 2>&1; then
-  echo "Git Setup Failed"
-fi
-
-if ! commit_website_files > /dev/null 2>&1; then
-  echo "Git commit failed"
-fi
-
-if ! upload_files > /dev/null 2>&1; then
-  echo "Git push failed"
+if upload_files > /dev/null 2>&1; then
+  echo "git push successful"
+else
+  echo "git push failed"
 fi
