@@ -19,6 +19,7 @@ deploy:
   file: shotgun.py
   on:
     tags: true
+    all_branches: true
 
 after_deploy:
   - .travis/push.sh
