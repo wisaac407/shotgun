@@ -23,8 +23,8 @@ project = 'Shotgun'
 copyright = '2017, Isaac Weaver'
 author = 'Isaac Weaver'
 
-version = '1.0.0'
-release = '1.0.0'
+version = ' b8a3d2e'
+release = ' b8a3d2e'
 
 language = None
 

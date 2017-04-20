@@ -1,6 +1,7 @@
 
-Welcome to Shotgun's documentation!
-===================================
+Shotgun Documentation
+=====================
+Welcome, this is the documentation for Shotgun version  b8a3d2e.
 
 .. toctree::
    :maxdepth: 2
