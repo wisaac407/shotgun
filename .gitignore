@@ -90,3 +90,7 @@ ENV/
 
 # Pycharm project settings
 .idea/
+
+# Used for building the documentation
+doc/blender_objects.inv.new
+doc/_source.new

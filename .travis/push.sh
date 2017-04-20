@@ -10,27 +10,28 @@ DOC_BRANCH=documentation
 
 commit_website_files() {
   git checkout --orphan ${DOC_BRANCH}
+  git reset # By default all the files will be added to the index
 
-  # Copy the files we wan't to commit
+  # Copy the files we want to commit
   cp doc/_source doc/_source.new -r
   cp doc/blender_objects.inv doc/blender_objects.inv.new
 
-  rm doc/_source -rf
-  rm doc/blender_objects.inv
-
-  git pull origin documentation
+  # Clean all the files and pull from remote
+  git clean -fd
+  git pull origin ${DOC_BRANCH}
 
   # Move the copied files back
   mv doc/_source.new doc/_source
   mv doc/blender_objects.inv.new doc/blender_objects.inv
 
+  # Add files and commit
   git add doc/_source
   git add doc/blender_objects.inv
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
 }
 
 upload_files() {
-  git push --force --quiet --set-upstream "https://${GH_TOKEN}@github.com/wisaac407/shotgun.git" documentation
+  git push --force --quiet --set-upstream "https://${GH_TOKEN}@github.com/wisaac407/shotgun.git" ${DOC_BRANCH}
 }
 
 setup_git
