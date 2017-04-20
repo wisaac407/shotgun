@@ -92,5 +92,5 @@ ENV/
 .idea/
 
 # Used for building the documentation
-doc/blender_objects.inv.new
-doc/_source.new
+blender_objects.inv.new
+_source.new

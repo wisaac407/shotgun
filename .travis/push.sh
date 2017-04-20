@@ -13,16 +13,16 @@ commit_website_files() {
   git reset # By default all the files will be added to the index
 
   # Copy the files we want to commit
-  cp doc/_source doc/_source.new -r
-  cp doc/blender_objects.inv doc/blender_objects.inv.new
+  cp doc/_source _source.new -r
+  cp doc/blender_objects.inv blender_objects.inv.new
 
   # Clean all the files and pull from remote
   git clean -fd
   git pull origin ${DOC_BRANCH}
 
   # Move the copied files back
-  mv doc/_source.new doc/_source
-  mv doc/blender_objects.inv.new doc/blender_objects.inv
+  mv _source.new doc/_source
+  mv blender_objects.inv.new doc/blender_objects.inv
 
   # Add files and commit
   git add doc/_source
