@@ -15,6 +15,7 @@ commit_website_files() {
   # Copy the files we want to commit
   cp doc/_source _source.new -r
   cp doc/blender_objects.inv blender_objects.inv.new
+  cp doc/keymap_domain.py keymap_domain.py.new
 
   # Clean all the files and pull from remote
   git clean -fd
@@ -23,9 +24,11 @@ commit_website_files() {
   # Move the copied files back
   mv _source.new doc
   mv blender_objects.inv.new doc/blender_objects.inv
+  mv keymap_domain.py.new keymap_domain.py
 
   # Add files and commit
   git add doc
+  git add keymap_domain.py
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
