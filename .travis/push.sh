@@ -26,7 +26,7 @@ commit_website_files() {
 
   # Add files and commit
   git add doc
-  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER [skip ci]"
+  git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
