@@ -94,4 +94,4 @@ ENV/
 # Used for building the documentation
 blender_objects.inv.new
 _source.new
-keymap_domian.py.new
+keymap_domain.py.new
