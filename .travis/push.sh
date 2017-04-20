@@ -22,6 +22,7 @@ commit_website_files() {
   git pull origin ${DOC_BRANCH}
 
   # Move the copied files back
+  rm -rf doc/
   mv _source.new doc
   mv blender_objects.inv.new doc/blender_objects.inv
   mv keymap_domain.py.new keymap_domain.py
@@ -37,14 +38,14 @@ upload_files() {
 }
 
 # Avoid leaking GH_TOKEN (unfortunately this means loosing useful error messages)
-if setup_git > /dev/null 2>&1; then
+if ! setup_git > /dev/null 2>&1; then
   echo "Git Setup Failed"
 fi
 
-if commit_website_files > /dev/null 2>&1; then
+if ! commit_website_files > /dev/null 2>&1; then
   echo "Git commit failed"
 fi
 
-if upload_files > /dev/null 2>&1; then
+if ! upload_files > /dev/null 2>&1; then
   echo "Git push failed"
 fi
