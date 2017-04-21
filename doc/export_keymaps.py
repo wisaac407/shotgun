@@ -238,7 +238,12 @@ def generate_docs(kc):
 
 def get_version():
     import subprocess
-    version = subprocess.check_output(['git', 'describe', '--abbrev=0']).decode().strip().replace('v', '')
+    # Try to get the version from the travis build, otherwise get it directly from git.
+    if 'TRAVIS_TAG' in os.environ:
+        version = os.environ['TRAVIS_TAG']
+    else:
+        version = subprocess.check_output(['git', 'describe', '--abbrev=0']).decode().strip().replace('v', '')
+        print('Getting version from git directly')
     revision = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode().strip()
     return version + ' - ' + revision
 
