@@ -220,7 +220,7 @@ def create_table(headers, items):
 
 def create_directive(directive, title, body):
     """Format a generic directive"""
-    return '.. {}:: {}\n\n   {}\n\n'.format(directive, title, '\n   '.join(body.split('\n')))
+    return '.. {}:: {}\n\n{}\n\n'.format(directive, title, indent(body))
 
 
 def indent(s, level=1):
