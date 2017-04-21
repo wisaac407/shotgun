@@ -186,18 +186,6 @@ with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=Fal
 
     kmi = km.keymap_items.new('view3d.move', 'RIGHTMOUSE', 'PRESS')
 
-    kmi = km.keymap_items.new('view3d.view_roll', 'NUMPAD_4', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'angle', -0.2617993950843811)
-
-    kmi = km.keymap_items.new('view3d.view_roll', 'NUMPAD_6', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'angle', 0.2617993950843811)
-
-    kmi = km.keymap_items.new('view3d.view_roll', 'WHEELUPMOUSE', 'PRESS', shift=True, ctrl=True)
-    kmi_props_setattr(kmi.properties, 'angle', -0.2617993950843811)
-
-    kmi = km.keymap_items.new('view3d.view_roll', 'WHEELDOWNMOUSE', 'PRESS', shift=True, ctrl=True)
-    kmi_props_setattr(kmi.properties, 'angle', 0.2617993950843811)
-
     kmi = km.keymap_items.new('view3d.ndof_orbit_zoom', 'NDOF_MOTION', 'ANY')
 
     kmi = km.keymap_items.new('view3d.ndof_orbit', 'NDOF_MOTION', 'ANY', ctrl=True)
