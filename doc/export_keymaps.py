@@ -236,7 +236,7 @@ def generate_docs(kc):
         rst = '*' * len(km.name)
         rst = '\n'.join((rst, km.name, rst)) + '\n\n'
 
-        rst += '.. km:module:: ' + kmid + '\n\n'
+        rst += create_directive('km:module', kmid, '')
 
         rst += create_header('Quick Reference', '-')
 
@@ -269,7 +269,9 @@ def generate_docs(kc):
                 if is_default_hotkey(kmi):
                     directive = 'hotkeyd'
 
-                rst += '.. km:%s:: %s -> %s\n\n   %s\n\n' % (directive, get_key_combo(kmi), kmi.idname, kmi.name)
+                rst += create_directive('km:' + directive,
+                                        '{} -> {}'.format(get_key_combo(kmi), kmi.idname),
+                                        kmi.name)
 
                 rst += indent(doc)
                 rst += '\n'
