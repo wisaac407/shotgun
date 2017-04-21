@@ -21,7 +21,7 @@ deploy:
     tags: true
     all_branches: true
 
-after_deploy:
+after_script:
   - .travis/push.sh
 
 env:
