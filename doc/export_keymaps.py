@@ -57,7 +57,10 @@ import os
 
 sys.path.append(os.path.dirname(os.getcwd()))
 
-extensions = ['keymap_domain']
+extensions = [
+    'sphinx.ext.intersphinx',
+    'keymap_domain'
+]
 
 master_doc = 'index'
 
