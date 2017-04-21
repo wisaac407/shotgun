@@ -238,9 +238,9 @@ def generate_docs(kc):
 
 def get_version():
     import subprocess
-    version = subprocess.check_output(['git', 'tag']).decode().strip().replace('v', '')
+    version = subprocess.check_output(['git', 'describe', '--abbrev=0']).decode().strip().replace('v', '')
     revision = subprocess.check_output(['git', 'rev-parse', '--short', 'HEAD']).decode().strip()
-    return version + ' ' + revision
+    return version + ' - ' + revision
 
 
 def main():
