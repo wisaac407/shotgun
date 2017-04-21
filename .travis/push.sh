@@ -31,10 +31,11 @@ commit_website_files() {
   git add doc
   git add keymap_domain.py
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
+  git tag "${TRAVIS_TAG}-doc" -m "Travis build: $TRAVIS_BUILD_NUMBER"
 }
 
 upload_files() {
-  git push --force --quiet --set-upstream "https://${GH_TOKEN}@github.com/wisaac407/shotgun.git" ${DOC_BRANCH}
+  git push --force --quiet --set-upstream "https://${GH_TOKEN}@github.com/wisaac407/shotgun.git" ${DOC_BRANCH} --follow-tags
 }
 
 setup_git
