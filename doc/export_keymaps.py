@@ -218,6 +218,11 @@ def create_table(headers, items):
     return table
 
 
+def create_directive(directive, title, body):
+    """Format a generic directive"""
+    return '.. {}:: {}\n\n   {}\n\n'.format(directive, title, '\n   '.join(body.split('\n')))
+
+
 def indent(s, level=1):
     indent_s = '   ' * level
     return '\n'.join(indent_s + line for line in s.split('\n'))
@@ -247,6 +252,9 @@ def generate_docs(kc):
         rst += create_table(['Hotkey', 'Operator'], list(map(to_table_row, km.keymap_items)))
 
         rst += create_header('Detailed Reference', '-')
+        rst += create_directive('note',
+                                'Hotkeys marked with the "(default)" prefix are '
+                                'inherited from the default blender keymap', '')
 
         for kmi in km.keymap_items:
             if kmi.active:
