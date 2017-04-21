@@ -82,6 +82,39 @@ def lookup_operator(op):
     return getattr(getattr(bpy.ops, ns), on)
 
 
+def full_compare(a, b, km='Unknown'):
+    """Check if a and b are exactly equal keymap items."""
+    for prop in ['idname', 'type',  'value',  'any', 'shift', 'ctrl', 'alt', 'oskey', 'key_modifier']:
+        if getattr(a, prop, None) != getattr(b, prop, None):
+            return False
+
+    # At this point they are probably the same but let's check all the properties too
+    for prop in a.properties.keys():
+        # Pointer properties are set when the operator is run
+        if a.properties.rna_type.properties[prop].type != 'POINTER':
+            if getattr(a.properties, prop, None) != getattr(b.properties, prop, None):
+                print("Props Differ: km: {} combo: {} op: {} prop: {} a: {} b: {}".format(
+                    km, get_key_combo(a), a.idname, prop,
+                    getattr(a.properties, prop, None), getattr(b.properties, prop, None)))
+                return False
+    return True
+
+
+def is_default_hotkey(kmi):
+    """Return True if kmi is a default blender hotkey."""
+    try:
+        import shotgun
+    except ImportError:
+        import sys
+        sys.path.append(os.path.dirname(os.getcwd()))
+        import shotgun
+    for name, kmis in shotgun.default_hotkeys.items():
+        for dkmi in kmis:
+            if full_compare(kmi, dkmi, name):
+                return True
+    return False
+
+
 KEY_NAMES_REPLACEMENTS = {
     'COMMA': ',',
     'PERIOD': '.',
@@ -224,6 +257,9 @@ def generate_docs(kc):
                     print('Invalid Operator: ' + kmi.idname)
                     doc = ''
                     directive = 'hotkeyi'
+
+                if is_default_hotkey(kmi):
+                    directive = 'hotkeyd'
 
                 rst += '.. km:%s:: %s -> %s\n\n   %s\n\n' % (directive, get_key_combo(kmi), kmi.idname, kmi.name)
 

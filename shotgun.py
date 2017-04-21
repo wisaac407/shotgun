@@ -1,7 +1,7 @@
 import bpy
 import os
 
-
+default_hotkeys = {}
 class KeyMap:
     def __init__(self, kc, name, space_type, region_type, modal):
         self.km = kc.keymaps.new(name, space_type=space_type, region_type=region_type, modal=modal)
@@ -22,6 +22,9 @@ class KeyMap:
                 # Pointer properties are set when the operator is run
                 if k.properties.rna_type.properties[prop].type != 'POINTER':
                     kmi_props_setattr(kmi.properties, prop, getattr(k.properties, prop))
+
+            # Keep track of the default keymap items for use in documentation.
+            default_hotkeys.setdefault(self.km.name, []).append(kmi)
 
 
 def kmi_props_setattr(kmi_props, attr, value):
