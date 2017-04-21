@@ -31,7 +31,11 @@ commit_website_files() {
   git add doc
   git add keymap_domain.py
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
-  git tag "${TRAVIS_TAG}-doc" -m "Travis build: $TRAVIS_BUILD_NUMBER"
+
+  # Not all builds have tags
+  if [ ${TRAVIS_TAG} ]; then
+    git tag "${TRAVIS_TAG}-doc" -m "Travis build: $TRAVIS_BUILD_NUMBER"
+  fi
 }
 
 upload_files() {
