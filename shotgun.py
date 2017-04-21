@@ -179,12 +179,6 @@ with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW',
 
 # Map 3D View
 with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('view3d.show_only_render', 'Z', 'PRESS', shift=True, alt=True)
-
-    kmi = km.keymap_items.new('wm.return_to_original', 'NUMPAD_SLASH', 'PRESS', shift=True)
-
-    kmi = km.keymap_items.new('object.edit_linked', 'NUMPAD_SLASH', 'PRESS', shift=True)
-
     kmi = km.keymap_items.new('view3d.manipulator', 'LEFTMOUSE', 'PRESS', any=True)
     kmi_props_setattr(kmi.properties, 'release_confirm', True)
 
@@ -359,34 +353,18 @@ with KeyMap(kc, 'Node Editor', space_type='NODE_EDITOR', region_type='WINDOW', m
     kmi = km.keymap_items.new('wm.call_menu', 'W', 'PRESS')
     kmi_props_setattr(kmi.properties, 'name', 'AMTH_NODE_MT_amaranth_templates')
 
-    kmi = km.keymap_items.new('node.show_active_node_image', 'SELECTMOUSE', 'RELEASE')
-
-    kmi = km.keymap_items.new('node.show_active_node_image', 'ACTIONMOUSE', 'RELEASE')
-
     kmi = km.keymap_items.new('wm.call_menu', 'EQUAL', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'name', 'NODE_MT_nw_node_align_menu')
-
-    kmi = km.keymap_items.new('node.nw_merge_nodes', 'ZERO', 'PRESS', ctrl=True, alt=True)
-    kmi_props_setattr(kmi.properties, 'mode', 'MIX')
-    kmi_props_setattr(kmi.properties, 'merge_type', 'MIX')
-
-    kmi = km.keymap_items.new('node.nw_merge_nodes', 'NUMPAD_0', 'PRESS', ctrl=True, alt=True)
-    kmi_props_setattr(kmi.properties, 'mode', 'MIX')
-    kmi_props_setattr(kmi.properties, 'merge_type', 'MIX')
 
     kmi = km.keymap_items.new('node.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
 
     kmi = km.keymap_items.new('node.backimage_sample', 'SELECTMOUSE', 'PRESS', alt=True)
 
-    kmi = km.keymap_items.new('node.parent_clear', 'P', 'PRESS', alt=True)
-
     kmi = km.keymap_items.new('node.view_all', 'NDOF_BUTTON_FIT', 'PRESS')
 
     kmi = km.keymap_items.new('node.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
-
-    kmi = km.keymap_items.new('node.select_same_type', 'G', 'PRESS', shift=True)
 
     kmi = km.keymap_items.new('node.group_edit', 'TAB', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'exit', True)
@@ -610,8 +588,6 @@ with KeyMap(kc, 'Animation Channels', space_type='EMPTY', region_type='WINDOW', 
     kmi = km.keymap_items.new('anim.channels_select_all_toggle', 'A', 'PRESS', ctrl=True)
 
     kmi = km.keymap_items.new('anim.channels_ungroup', 'G', 'PRESS', alt=True)
-
-    kmi = km.keymap_items.new('anim.channels_visibility_set', 'V', 'PRESS')
 
 # Map Info
 with KeyMap(kc, 'Info', space_type='INFO', region_type='WINDOW', modal=False) as km:
