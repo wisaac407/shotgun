@@ -4,6 +4,8 @@ Armature
 
 .. km:module:: armature
 
+   
+
 
 ---------------
 Quick Reference
@@ -132,6 +134,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-A -> armature.select_all
 
    (De)select All
@@ -174,49 +180,49 @@ Detailed Reference
    bpy.ops.armature.separate()
    
    
-.. km:hotkey:: X -> sketch.delete
+.. km:hotkeyd:: X -> sketch.delete
 
    Delete
 
    bpy.ops.sketch.delete()
    
    
-.. km:hotkey:: DEL -> sketch.delete
+.. km:hotkeyd:: DEL -> sketch.delete
 
    Delete
 
    bpy.ops.sketch.delete()
    
    
-.. km:hotkey:: RIGHTMOUSE -> sketch.finish_stroke
+.. km:hotkeyd:: RIGHTMOUSE -> sketch.finish_stroke
 
    End Stroke
 
    bpy.ops.sketch.finish_stroke()
    
    
-.. km:hotkey:: ESC -> sketch.cancel_stroke
+.. km:hotkeyd:: ESC -> sketch.cancel_stroke
 
    Cancel Stroke
 
    bpy.ops.sketch.cancel_stroke()
    
    
-.. km:hotkey:: Shift-LEFTMOUSE -> sketch.gesture
+.. km:hotkeyd:: Shift-LEFTMOUSE -> sketch.gesture
 
    Gesture
 
    bpy.ops.sketch.gesture(snap=False)
    
    
-.. km:hotkey:: LEFTMOUSE -> sketch.draw_stroke
+.. km:hotkeyd:: LEFTMOUSE -> sketch.draw_stroke
 
    Draw Stroke
 
    bpy.ops.sketch.draw_stroke(snap=False)
    
    
-.. km:hotkey:: Ctrl-LEFTMOUSE -> sketch.draw_stroke
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> sketch.draw_stroke
 
    Draw Stroke
 
@@ -230,14 +236,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: MOUSEMOVE -> sketch.draw_preview
+.. km:hotkeyd:: MOUSEMOVE -> sketch.draw_preview
 
    Draw Preview
 
    bpy.ops.sketch.draw_preview(snap=False)
    
    
-.. km:hotkey:: Ctrl-MOUSEMOVE -> sketch.draw_preview
+.. km:hotkeyd:: Ctrl-MOUSEMOVE -> sketch.draw_preview
 
    Draw Preview
 
@@ -251,7 +257,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: H -> armature.hide
+.. km:hotkeyd:: H -> armature.hide
 
    Hide Selected Bones
 
@@ -265,7 +271,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> armature.hide
+.. km:hotkeyd:: Shift-H -> armature.hide
 
    Hide Selected Bones
 
@@ -279,63 +285,63 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-H -> armature.reveal
+.. km:hotkeyd:: Alt-H -> armature.reveal
 
    Reveal Bones
 
    bpy.ops.armature.reveal()
    
    
-.. km:hotkey:: Ctrl-Alt-A -> armature.align
+.. km:hotkeyd:: Ctrl-Alt-A -> armature.align
 
    Align Bones
 
    bpy.ops.armature.align()
    
    
-.. km:hotkey:: Ctrl-N -> armature.calculate_roll
+.. km:hotkeyd:: Ctrl-N -> armature.calculate_roll
 
    Recalculate Roll
 
    bpy.ops.armature.calculate_roll(type='POS_X', axis_flip=False, axis_only=False)
    
    
-.. km:hotkey:: Alt-R -> armature.roll_clear
+.. km:hotkeyd:: Alt-R -> armature.roll_clear
 
    Clear Roll
 
    bpy.ops.armature.roll_clear(roll=0)
    
    
-.. km:hotkey:: Alt-F -> armature.switch_direction
+.. km:hotkeyd:: Alt-F -> armature.switch_direction
 
    Switch Direction
 
    bpy.ops.armature.switch_direction()
    
    
-.. km:hotkey:: Shift-A -> armature.bone_primitive_add
+.. km:hotkeyd:: Shift-A -> armature.bone_primitive_add
 
    Add Bone
 
    bpy.ops.armature.bone_primitive_add(name="Bone")
    
    
-.. km:hotkey:: Ctrl-P -> armature.parent_set
+.. km:hotkeyd:: Ctrl-P -> armature.parent_set
 
    Make Parent
 
    bpy.ops.armature.parent_set(type='CONNECTED')
    
    
-.. km:hotkey:: Alt-P -> armature.parent_clear
+.. km:hotkeyd:: Alt-P -> armature.parent_clear
 
    Clear Parent
 
    bpy.ops.armature.parent_clear(type='CLEAR')
    
    
-.. km:hotkey:: A -> armature.select_all
+.. km:hotkeyd:: A -> armature.select_all
 
    (De)select All
 
@@ -349,7 +355,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> armature.select_all
+.. km:hotkeyd:: Ctrl-I -> armature.select_all
 
    (De)select All
 
@@ -363,7 +369,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-M -> armature.select_mirror
+.. km:hotkeyd:: Ctrl-Shift-M -> armature.select_mirror
 
    Flip Active/Selected Bone
 
@@ -377,7 +383,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: LEFT_BRACKET -> armature.select_hierarchy
+.. km:hotkeyd:: LEFT_BRACKET -> armature.select_hierarchy
 
    Select Hierarchy
 
@@ -393,7 +399,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-LEFT_BRACKET -> armature.select_hierarchy
+.. km:hotkeyd:: Shift-LEFT_BRACKET -> armature.select_hierarchy
 
    Select Hierarchy
 
@@ -409,7 +415,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: RIGHT_BRACKET -> armature.select_hierarchy
+.. km:hotkeyd:: RIGHT_BRACKET -> armature.select_hierarchy
 
    Select Hierarchy
 
@@ -425,7 +431,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-RIGHT_BRACKET -> armature.select_hierarchy
+.. km:hotkeyd:: Shift-RIGHT_BRACKET -> armature.select_hierarchy
 
    Select Hierarchy
 
@@ -441,42 +447,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> armature.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> armature.select_more
 
    Select More
 
    bpy.ops.armature.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> armature.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> armature.select_less
 
    Select Less
 
    bpy.ops.armature.select_less()
    
    
-.. km:hotkey:: Shift-G -> armature.select_similar
+.. km:hotkeyd:: Shift-G -> armature.select_similar
 
    Select Similar
 
    bpy.ops.armature.select_similar(type='LENGTH', threshold=0.1)
    
    
-.. km:hotkey:: L -> armature.select_linked
+.. km:hotkeyd:: L -> armature.select_linked
 
    Select Connected
 
    bpy.ops.armature.select_linked(extend=False)
    
    
-.. km:hotkey:: Ctrl-SELECTMOUSE -> armature.shortest_path_pick
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> armature.shortest_path_pick
 
    Pick Shortest Path
 
    bpy.ops.armature.shortest_path_pick()
    
    
-.. km:hotkey:: X -> wm.call_menu
+.. km:hotkeyd:: X -> wm.call_menu
 
    Call Menu
 
@@ -490,7 +496,7 @@ Detailed Reference
    +------------+-------------------------------+
    
    
-.. km:hotkey:: DEL -> wm.call_menu
+.. km:hotkeyd:: DEL -> wm.call_menu
 
    Call Menu
 
@@ -504,14 +510,14 @@ Detailed Reference
    +------------+-------------------------------+
    
    
-.. km:hotkey:: Ctrl-X -> armature.dissolve
+.. km:hotkeyd:: Ctrl-X -> armature.dissolve
 
    Dissolve Selected Bone(s)
 
    bpy.ops.armature.dissolve()
    
    
-.. km:hotkey:: Shift-D -> armature.duplicate_move
+.. km:hotkeyd:: Shift-D -> armature.duplicate_move
 
    Duplicate
 
@@ -527,7 +533,7 @@ Detailed Reference
    +---------------------------+--------+
    
    
-.. km:hotkey:: E -> armature.extrude_move
+.. km:hotkeyd:: E -> armature.extrude_move
 
    Extrude
 
@@ -543,7 +549,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-E -> armature.extrude_forked
+.. km:hotkeyd:: Shift-E -> armature.extrude_forked
 
    Extrude Forked
 
@@ -559,42 +565,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> armature.click_extrude
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> armature.click_extrude
 
    Click-Extrude
 
    bpy.ops.armature.click_extrude()
    
    
-.. km:hotkey:: F -> armature.fill
+.. km:hotkeyd:: F -> armature.fill
 
    Fill Between Joints
 
    bpy.ops.armature.fill()
    
    
-.. km:hotkey:: Alt-M -> armature.merge
+.. km:hotkeyd:: Alt-M -> armature.merge
 
    Merge Bones
 
    bpy.ops.armature.merge(type='WITHIN_CHAIN')
    
    
-.. km:hotkey:: Y -> armature.split
+.. km:hotkeyd:: Y -> armature.split
 
    Split
 
    bpy.ops.armature.split()
    
    
-.. km:hotkey:: P -> armature.separate
+.. km:hotkeyd:: P -> armature.separate
 
    Separate Bones
 
    bpy.ops.armature.separate()
    
    
-.. km:hotkey:: Shift-W -> wm.call_menu
+.. km:hotkeyd:: Shift-W -> wm.call_menu
 
    Call Menu
 
@@ -608,7 +614,7 @@ Detailed Reference
    +------------+------------------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-W -> wm.call_menu
+.. km:hotkeyd:: Ctrl-Shift-W -> wm.call_menu
 
    Call Menu
 
@@ -622,7 +628,7 @@ Detailed Reference
    +------------+------------------------------+
    
    
-.. km:hotkey:: Alt-W -> wm.call_menu
+.. km:hotkeyd:: Alt-W -> wm.call_menu
 
    Call Menu
 
@@ -636,28 +642,28 @@ Detailed Reference
    +------------+-------------------------------+
    
    
-.. km:hotkey:: Ctrl-ACCENT_GRAVE -> armature.layers_show_all
+.. km:hotkeyd:: Ctrl-ACCENT_GRAVE -> armature.layers_show_all
 
    Show All Layers
 
    bpy.ops.armature.layers_show_all(all=True)
    
    
-.. km:hotkey:: Shift-M -> armature.armature_layers
+.. km:hotkeyd:: Shift-M -> armature.armature_layers
 
    Change Armature Layers
 
    bpy.ops.armature.armature_layers(layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkey:: M -> armature.bone_layers
+.. km:hotkeyd:: M -> armature.bone_layers
 
    Change Bone Layers
 
    bpy.ops.armature.bone_layers(layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkey:: Ctrl-Alt-S -> transform.transform
+.. km:hotkeyd:: Ctrl-Alt-S -> transform.transform
 
    Transform
 
@@ -671,7 +677,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: Alt-S -> transform.transform
+.. km:hotkeyd:: Alt-S -> transform.transform
 
    Transform
 
@@ -685,7 +691,7 @@ Detailed Reference
    +------------+--------------+
    
    
-.. km:hotkey:: Ctrl-R -> transform.transform
+.. km:hotkeyd:: Ctrl-R -> transform.transform
 
    Transform
 
@@ -699,7 +705,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu
 
    Call Menu
 

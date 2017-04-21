@@ -4,6 +4,8 @@ Info
 
 .. km:module:: info
 
+   
+
 
 ---------------
 Quick Reference
@@ -34,6 +36,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-A -> info.select_all_toggle
 
    (De)select All
@@ -41,49 +47,49 @@ Detailed Reference
    bpy.ops.info.select_all_toggle()
    
    
-.. km:hotkey:: SELECTMOUSE -> info.select_pick
+.. km:hotkeyd:: SELECTMOUSE -> info.select_pick
 
    Select Report
 
    bpy.ops.info.select_pick(report_index=0)
    
    
-.. km:hotkey:: A -> info.select_all_toggle
+.. km:hotkeyd:: A -> info.select_all_toggle
 
    (De)select All
 
    bpy.ops.info.select_all_toggle()
    
    
-.. km:hotkey:: B -> info.select_border
+.. km:hotkeyd:: B -> info.select_border
 
    Border Select
 
    bpy.ops.info.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: R -> info.report_replay
+.. km:hotkeyd:: R -> info.report_replay
 
    Replay Operators
 
    bpy.ops.info.report_replay()
    
    
-.. km:hotkey:: X -> info.report_delete
+.. km:hotkeyd:: X -> info.report_delete
 
    Delete Reports
 
    bpy.ops.info.report_delete()
    
    
-.. km:hotkey:: DEL -> info.report_delete
+.. km:hotkeyd:: DEL -> info.report_delete
 
    Delete Reports
 
    bpy.ops.info.report_delete()
    
    
-.. km:hotkey:: Ctrl-C -> info.report_copy
+.. km:hotkeyd:: Ctrl-C -> info.report_copy
 
    Copy Reports to Clipboard
 

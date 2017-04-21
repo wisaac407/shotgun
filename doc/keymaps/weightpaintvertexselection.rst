@@ -4,6 +4,8 @@ Weight Paint Vertex Selection
 
 .. km:module:: weightpaintvertexselection
 
+   
+
 
 ---------------
 Quick Reference
@@ -35,6 +37,10 @@ Quick Reference
 ------------------
 Detailed Reference
 ------------------
+
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
 
 .. km:hotkey:: Ctrl-A -> paint.vert_select_all
 
@@ -78,7 +84,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: A -> paint.vert_select_all
+.. km:hotkeyd:: A -> paint.vert_select_all
 
    (De)select All
 
@@ -92,7 +98,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> paint.vert_select_all
+.. km:hotkeyd:: Ctrl-I -> paint.vert_select_all
 
    (De)select All
 
@@ -106,14 +112,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: B -> view3d.select_border
+.. km:hotkeyd:: B -> view3d.select_border
 
    Border Select
 
    bpy.ops.view3d.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso
+.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso
 
    Lasso Select
 
@@ -127,7 +133,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso
 
    Lasso Select
 
@@ -141,7 +147,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: C -> view3d.select_circle
+.. km:hotkeyd:: C -> view3d.select_circle
 
    Circle Select
 

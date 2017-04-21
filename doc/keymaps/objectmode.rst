@@ -4,6 +4,8 @@ Object Mode
 
 .. km:module:: objectmode
 
+   
+
 
 ---------------
 Quick Reference
@@ -160,7 +162,11 @@ Quick Reference
 Detailed Reference
 ------------------
 
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -188,21 +194,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-G -> object.location_clear
+.. km:hotkeyd:: Alt-G -> object.location_clear
 
    Clear Location
 
    bpy.ops.object.location_clear(clear_delta=False)
    
    
-.. km:hotkey:: Alt-R -> object.rotation_clear
+.. km:hotkeyd:: Alt-R -> object.rotation_clear
 
    Clear Rotation
 
    bpy.ops.object.rotation_clear(clear_delta=False)
    
    
-.. km:hotkey:: Alt-S -> object.scale_clear
+.. km:hotkeyd:: Alt-S -> object.scale_clear
 
    Clear Scale
 
@@ -223,7 +229,7 @@ Detailed Reference
    +------------+-----------------------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -239,7 +245,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: O -> wm.context_toggle
+.. km:hotkeyd:: O -> wm.context_toggle
 
    Context Toggle
 
@@ -253,14 +259,14 @@ Detailed Reference
    +-------------------+--------------------------------------------+
    
    
-.. km:hotkey:: P -> view3d.game_start
+.. km:hotkeyd:: P -> view3d.game_start
 
    Start Game Engine
 
    bpy.ops.view3d.game_start()
    
    
-.. km:hotkey:: A -> object.select_all
+.. km:hotkeyd:: A -> object.select_all
 
    (De)select All
 
@@ -274,7 +280,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> object.select_all
+.. km:hotkeyd:: Ctrl-I -> object.select_all
 
    (De)select All
 
@@ -288,42 +294,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> object.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> object.select_more
 
    Select More
 
    bpy.ops.object.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> object.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> object.select_less
 
    Select Less
 
    bpy.ops.object.select_less()
    
    
-.. km:hotkey:: Shift-L -> object.select_linked
+.. km:hotkeyd:: Shift-L -> object.select_linked
 
    Select Linked
 
    bpy.ops.object.select_linked(extend=False, type='OBDATA')
    
    
-.. km:hotkey:: Shift-G -> object.select_grouped
+.. km:hotkeyd:: Shift-G -> object.select_grouped
 
    Select Grouped
 
    bpy.ops.object.select_grouped(extend=False, type='CHILDREN_RECURSIVE')
    
    
-.. km:hotkey:: Ctrl-Shift-M -> object.select_mirror
+.. km:hotkeyd:: Ctrl-Shift-M -> object.select_mirror
 
    Select Mirror
 
    bpy.ops.object.select_mirror(extend=False)
    
    
-.. km:hotkey:: LEFT_BRACKET -> object.select_hierarchy
+.. km:hotkeyd:: LEFT_BRACKET -> object.select_hierarchy
 
    Select Hierarchy
 
@@ -339,7 +345,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-LEFT_BRACKET -> object.select_hierarchy
+.. km:hotkeyd:: Shift-LEFT_BRACKET -> object.select_hierarchy
 
    Select Hierarchy
 
@@ -355,7 +361,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: RIGHT_BRACKET -> object.select_hierarchy
+.. km:hotkeyd:: RIGHT_BRACKET -> object.select_hierarchy
 
    Select Hierarchy
 
@@ -371,7 +377,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-RIGHT_BRACKET -> object.select_hierarchy
+.. km:hotkeyd:: Shift-RIGHT_BRACKET -> object.select_hierarchy
 
    Select Hierarchy
 
@@ -387,56 +393,56 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-P -> object.parent_set
+.. km:hotkeyd:: Ctrl-P -> object.parent_set
 
    Make Parent
 
    bpy.ops.object.parent_set(type='OBJECT', xmirror=False, keep_transform=False)
    
    
-.. km:hotkey:: Ctrl-Shift-P -> object.parent_no_inverse_set
+.. km:hotkeyd:: Ctrl-Shift-P -> object.parent_no_inverse_set
 
    Make Parent without Inverse
 
    bpy.ops.object.parent_no_inverse_set()
    
    
-.. km:hotkey:: Alt-P -> object.parent_clear
+.. km:hotkeyd:: Alt-P -> object.parent_clear
 
    Clear Parent
 
    bpy.ops.object.parent_clear(type='CLEAR')
    
    
-.. km:hotkey:: Ctrl-T -> object.track_set
+.. km:hotkeyd:: Ctrl-T -> object.track_set
 
    Make Track
 
    bpy.ops.object.track_set(type='DAMPTRACK')
    
    
-.. km:hotkey:: Alt-T -> object.track_clear
+.. km:hotkeyd:: Alt-T -> object.track_clear
 
    Clear Track
 
    bpy.ops.object.track_clear(type='CLEAR')
    
    
-.. km:hotkey:: Ctrl-Shift-C -> object.constraint_add_with_targets
+.. km:hotkeyd:: Ctrl-Shift-C -> object.constraint_add_with_targets
 
    Add Constraint (with Targets)
 
    bpy.ops.object.constraint_add_with_targets(type='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: Ctrl-Alt-C -> object.constraints_clear
+.. km:hotkeyd:: Ctrl-Alt-C -> object.constraints_clear
 
    Clear Object Constraints
 
    bpy.ops.object.constraints_clear()
    
    
-.. km:hotkey:: Alt-G -> object.location_clear
+.. km:hotkeyd:: Alt-G -> object.location_clear
 
    Clear Location
 
@@ -450,7 +456,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-R -> object.rotation_clear
+.. km:hotkeyd:: Alt-R -> object.rotation_clear
 
    Clear Rotation
 
@@ -464,7 +470,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-S -> object.scale_clear
+.. km:hotkeyd:: Alt-S -> object.scale_clear
 
    Clear Scale
 
@@ -478,7 +484,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-G -> object.location_clear
+.. km:hotkeyd:: Shift-Alt-G -> object.location_clear
 
    Clear Location
 
@@ -492,7 +498,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-R -> object.rotation_clear
+.. km:hotkeyd:: Shift-Alt-R -> object.rotation_clear
 
    Clear Rotation
 
@@ -506,7 +512,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-S -> object.scale_clear
+.. km:hotkeyd:: Shift-Alt-S -> object.scale_clear
 
    Clear Scale
 
@@ -520,21 +526,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-O -> object.origin_clear
+.. km:hotkeyd:: Alt-O -> object.origin_clear
 
    Clear Origin
 
    bpy.ops.object.origin_clear()
    
    
-.. km:hotkey:: Alt-H -> object.hide_view_clear
+.. km:hotkeyd:: Alt-H -> object.hide_view_clear
 
    Clear Restrict View
 
    bpy.ops.object.hide_view_clear()
    
    
-.. km:hotkey:: H -> object.hide_view_set
+.. km:hotkeyd:: H -> object.hide_view_set
 
    Set Restrict View
 
@@ -548,7 +554,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> object.hide_view_set
+.. km:hotkeyd:: Shift-H -> object.hide_view_set
 
    Set Restrict View
 
@@ -562,28 +568,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-H -> object.hide_render_clear
+.. km:hotkeyd:: Ctrl-Alt-H -> object.hide_render_clear
 
    Clear Restrict Render
 
    bpy.ops.object.hide_render_clear()
    
    
-.. km:hotkey:: Ctrl-H -> object.hide_render_set
+.. km:hotkeyd:: Ctrl-H -> object.hide_render_set
 
    Set Restrict Render
 
    bpy.ops.object.hide_render_set(unselected=False)
    
    
-.. km:hotkey:: M -> object.move_to_layer
+.. km:hotkeyd:: M -> object.move_to_layer
 
    Move to Layer
 
    bpy.ops.object.move_to_layer(layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkey:: X -> object.delete
+.. km:hotkeyd:: X -> object.delete
 
    Delete
 
@@ -597,7 +603,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Shift-X -> object.delete
+.. km:hotkeyd:: Shift-X -> object.delete
 
    Delete
 
@@ -611,7 +617,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: DEL -> object.delete
+.. km:hotkeyd:: DEL -> object.delete
 
    Delete
 
@@ -625,7 +631,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Shift-DEL -> object.delete
+.. km:hotkeyd:: Shift-DEL -> object.delete
 
    Delete
 
@@ -639,7 +645,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu
 
    Call Menu
 
@@ -653,14 +659,14 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Ctrl-Shift-A -> object.duplicates_make_real
+.. km:hotkeyd:: Ctrl-Shift-A -> object.duplicates_make_real
 
    Make Duplicates Real
 
    bpy.ops.object.duplicates_make_real(use_base_parent=False, use_hierarchy=False)
    
    
-.. km:hotkey:: Ctrl-A -> wm.call_menu
+.. km:hotkeyd:: Ctrl-A -> wm.call_menu
 
    Call Menu
 
@@ -674,7 +680,7 @@ Detailed Reference
    +------------+-----------------------+
    
    
-.. km:hotkey:: U -> wm.call_menu
+.. km:hotkeyd:: U -> wm.call_menu
 
    Call Menu
 
@@ -688,7 +694,7 @@ Detailed Reference
    +------------+---------------------------+
    
    
-.. km:hotkey:: Ctrl-L -> wm.call_menu
+.. km:hotkeyd:: Ctrl-L -> wm.call_menu
 
    Call Menu
 
@@ -702,7 +708,7 @@ Detailed Reference
    +------------+---------------------+
    
    
-.. km:hotkey:: Shift-D -> object.duplicate_move
+.. km:hotkeyd:: Shift-D -> object.duplicate_move
 
    Duplicate Objects
 
@@ -718,7 +724,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: Alt-D -> object.duplicate_move_linked
+.. km:hotkeyd:: Alt-D -> object.duplicate_move_linked
 
    Duplicate Linked
 
@@ -734,91 +740,91 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: Ctrl-J -> object.join
+.. km:hotkeyd:: Ctrl-J -> object.join
 
    Join
 
    bpy.ops.object.join()
    
    
-.. km:hotkey:: Alt-C -> object.convert
+.. km:hotkeyd:: Alt-C -> object.convert
 
    Convert to
 
    bpy.ops.object.convert(target='MESH', keep_original=False)
    
    
-.. km:hotkey:: Ctrl-Alt-P -> object.proxy_make
+.. km:hotkeyd:: Ctrl-Alt-P -> object.proxy_make
 
    Make Proxy
 
    bpy.ops.object.proxy_make(object='DEFAULT')
    
    
-.. km:hotkey:: L -> object.make_local
+.. km:hotkeyd:: L -> object.make_local
 
    Make Local
 
    bpy.ops.object.make_local(type='SELECT_OBJECT')
    
    
-.. km:hotkey:: I -> anim.keyframe_insert_menu
+.. km:hotkeyd:: I -> anim.keyframe_insert_menu
 
    Insert Keyframe Menu
 
    bpy.ops.anim.keyframe_insert_menu(type='DEFAULT', confirm_success=False, always_prompt=False)
    
    
-.. km:hotkey:: Alt-I -> anim.keyframe_delete_v3d
+.. km:hotkeyd:: Alt-I -> anim.keyframe_delete_v3d
 
    Delete Keyframe
 
    bpy.ops.anim.keyframe_delete_v3d()
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-I -> anim.keying_set_active_set
+.. km:hotkeyd:: Ctrl-Shift-Alt-I -> anim.keying_set_active_set
 
    Set Active Keying Set
 
    bpy.ops.anim.keying_set_active_set(type='DEFAULT')
    
    
-.. km:hotkey:: Ctrl-G -> group.create
+.. km:hotkeyd:: Ctrl-G -> group.create
 
    Create New Group
 
    bpy.ops.group.create(name="Group")
    
    
-.. km:hotkey:: Ctrl-Alt-G -> group.objects_remove
+.. km:hotkeyd:: Ctrl-Alt-G -> group.objects_remove
 
    Remove From Group
 
    bpy.ops.group.objects_remove(group='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-G -> group.objects_remove_all
+.. km:hotkeyd:: Ctrl-Shift-Alt-G -> group.objects_remove_all
 
    Remove From All Groups
 
    bpy.ops.group.objects_remove_all()
    
    
-.. km:hotkey:: Ctrl-Shift-G -> group.objects_add_active
+.. km:hotkeyd:: Ctrl-Shift-G -> group.objects_add_active
 
    Add Selected To Active Group
 
    bpy.ops.group.objects_add_active(group='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: Shift-Alt-G -> group.objects_remove_active
+.. km:hotkeyd:: Shift-Alt-G -> group.objects_remove_active
 
    Remove Selected From Active Group
 
    bpy.ops.group.objects_remove_active(group='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu
 
    Call Menu
 
@@ -832,14 +838,14 @@ Detailed Reference
    +------------+--------------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-T -> object.data_transfer
+.. km:hotkeyd:: Ctrl-Shift-T -> object.data_transfer
 
    Transfer Mesh Data
 
    bpy.ops.object.data_transfer(use_reverse_transfer=False, use_freeze=False, data_type='<UNKNOWN ENUM>', use_create=True, vert_mapping='NEAREST', edge_mapping='NEAREST', loop_mapping='NEAREST_POLYNOR', poly_mapping='NEAREST', use_auto_transform=False, use_object_transform=True, use_max_distance=False, max_distance=1, ray_radius=0, islands_precision=0.1, layers_select_src='ACTIVE', layers_select_dst='ACTIVE', mix_mode='REPLACE', mix_factor=1)
    
    
-.. km:hotkey:: Ctrl-0 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-0 -> object.subdivision_set
 
    Subdivision Set
 
@@ -853,7 +859,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-1 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-1 -> object.subdivision_set
 
    Subdivision Set
 
@@ -867,7 +873,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-2 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-2 -> object.subdivision_set
 
    Subdivision Set
 
@@ -881,7 +887,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-3 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-3 -> object.subdivision_set
 
    Subdivision Set
 
@@ -895,7 +901,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-4 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-4 -> object.subdivision_set
 
    Subdivision Set
 
@@ -909,7 +915,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-5 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-5 -> object.subdivision_set
 
    Subdivision Set
 

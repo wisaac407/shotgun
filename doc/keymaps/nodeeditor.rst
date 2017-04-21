@@ -4,6 +4,8 @@ Node Editor
 
 .. km:module:: nodeeditor
 
+   
+
 
 ---------------
 Quick Reference
@@ -14,27 +16,13 @@ Quick Reference
 +================================================================================================+========================================================+
 |:km:hk:`W <nodeeditor->W->wm.call_menu>`                                                        |:func:`blender:bpy.ops.wm.call_menu`                    |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`SELECTMOUSE <nodeeditor->SELECTMOUSE->node.show_active_node_image>`                     |:func:`blender:bpy.ops.node.show_active_node_image`     |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <nodeeditor->ACTIONMOUSE->node.show_active_node_image>`                     |:func:`blender:bpy.ops.node.show_active_node_image`     |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Shift-EQUAL <nodeeditor->Shift-EQUAL->wm.call_menu>`                                    |:func:`blender:bpy.ops.wm.call_menu`                    |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Ctrl-Alt-0 <nodeeditor->Ctrl-Alt-0->node.nw_merge_nodes>`                               |:func:`blender:bpy.ops.node.nw_merge_nodes`             |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Ctrl-Alt-NUMPAD_0 <nodeeditor->Ctrl-Alt-NUMPAD_0->node.nw_merge_nodes>`                 |:func:`blender:bpy.ops.node.nw_merge_nodes`             |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Ctrl-Alt-EVT_TWEAK_S <nodeeditor->Ctrl-Alt-EVT_TWEAK_S->node.select_lasso>`             |:func:`blender:bpy.ops.node.select_lasso`               |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Alt-SELECTMOUSE <nodeeditor->Alt-SELECTMOUSE->node.backimage_sample>`                   |:func:`blender:bpy.ops.node.backimage_sample`           |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Alt-P <nodeeditor->Alt-P->node.parent_clear>`                                           |:func:`blender:bpy.ops.node.parent_clear`               |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FIT <nodeeditor->NDOF_BUTTON_FIT->node.view_all>`                           |:func:`blender:bpy.ops.node.view_all`                   |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Ctrl-A <nodeeditor->Ctrl-A->node.select_all>`                                           |:func:`blender:bpy.ops.node.select_all`                 |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-G <nodeeditor->Shift-G->node.select_same_type>`                                   |:func:`blender:bpy.ops.node.select_same_type`           |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Shift-Tab <nodeeditor->Shift-Tab->node.group_edit>`                                     |:func:`blender:bpy.ops.node.group_edit`                 |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
@@ -214,6 +202,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: W -> wm.call_menu
 
    Call Menu
@@ -228,16 +220,6 @@ Detailed Reference
    +------------+--------------------------------+
    
    
-.. km:hotkeyi:: SELECTMOUSE -> node.show_active_node_image
-
-   NODE_OT_show_active_node_image
-
-   
-.. km:hotkeyi:: ACTIONMOUSE -> node.show_active_node_image
-
-   NODE_OT_show_active_node_image
-
-   
 .. km:hotkey:: Shift-EQUAL -> wm.call_menu
 
    Call Menu
@@ -251,16 +233,6 @@ Detailed Reference
    |Name        |NODE_MT_nw_node_align_menu |
    +------------+---------------------------+
    
-   
-.. km:hotkeyi:: Ctrl-Alt-0 -> node.nw_merge_nodes
-
-   NODE_OT_nw_merge_nodes
-
-   
-.. km:hotkeyi:: Ctrl-Alt-NUMPAD_0 -> node.nw_merge_nodes
-
-   NODE_OT_nw_merge_nodes
-
    
 .. km:hotkey:: Ctrl-Alt-EVT_TWEAK_S -> node.select_lasso
 
@@ -283,18 +255,6 @@ Detailed Reference
    bpy.ops.node.backimage_sample()
    
    
-.. km:hotkeyi:: Alt-P -> node.parent_clear
-
-   NODE_OT_parent_clear
-
-   
-.. km:hotkey:: NDOF_BUTTON_FIT -> node.view_all
-
-   View All
-
-   bpy.ops.node.view_all()
-   
-   
 .. km:hotkey:: Ctrl-A -> node.select_all
 
    (De)select All
@@ -308,11 +268,6 @@ Detailed Reference
    |Action      |TOGGLE  |
    +------------+--------+
    
-   
-.. km:hotkeyi:: Shift-G -> node.select_same_type
-
-   NODE_OT_select_same_type
-
    
 .. km:hotkey:: Shift-Tab -> node.group_edit
 
@@ -346,7 +301,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: ACTIONMOUSE -> node.select
+.. km:hotkeyd:: ACTIONMOUSE -> node.select
 
    Select
 
@@ -360,7 +315,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: SELECTMOUSE -> node.select
+.. km:hotkeyd:: SELECTMOUSE -> node.select
 
    Select
 
@@ -374,7 +329,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> node.select
 
    Select
 
@@ -388,7 +343,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> node.select
 
    Select
 
@@ -402,7 +357,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Alt-ACTIONMOUSE -> node.select
 
    Select
 
@@ -416,7 +371,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Alt-SELECTMOUSE -> node.select
 
    Select
 
@@ -430,7 +385,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-Alt-ACTIONMOUSE -> node.select
 
    Select
 
@@ -444,7 +399,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> node.select
 
    Select
 
@@ -458,7 +413,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Shift-ACTIONMOUSE -> node.select
 
    Select
 
@@ -472,7 +427,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> node.select
 
    Select
 
@@ -486,7 +441,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-Shift-ACTIONMOUSE -> node.select
 
    Select
 
@@ -500,7 +455,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> node.select
 
    Select
 
@@ -514,7 +469,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Shift-Alt-ACTIONMOUSE -> node.select
 
    Select
 
@@ -528,7 +483,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> node.select
 
    Select
 
@@ -542,7 +497,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-ACTIONMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-Shift-Alt-ACTIONMOUSE -> node.select
 
    Select
 
@@ -556,7 +511,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-SELECTMOUSE -> node.select
+.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> node.select
 
    Select
 
@@ -570,7 +525,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: EVT_TWEAK_S -> node.select_border
+.. km:hotkeyd:: EVT_TWEAK_S -> node.select_border
 
    Border Select
 
@@ -584,7 +539,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_A -> node.select_lasso
+.. km:hotkeyd:: Ctrl-Alt-EVT_TWEAK_A -> node.select_lasso
 
    Lasso Select
 
@@ -598,7 +553,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-EVT_TWEAK_A -> node.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-Alt-EVT_TWEAK_A -> node.select_lasso
 
    Lasso Select
 
@@ -612,14 +567,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: C -> node.select_circle
+.. km:hotkeyd:: C -> node.select_circle
 
    Circle Select
 
    bpy.ops.node.select_circle(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkey:: LEFTMOUSE -> node.link
+.. km:hotkeyd:: LEFTMOUSE -> node.link
 
    Link Nodes
 
@@ -633,7 +588,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-LEFTMOUSE -> node.link
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> node.link
 
    Link Nodes
 
@@ -647,28 +602,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: LEFTMOUSE -> node.resize
+.. km:hotkeyd:: LEFTMOUSE -> node.resize
 
    Resize Node
 
    bpy.ops.node.resize()
    
    
-.. km:hotkey:: Shift-LEFTMOUSE -> node.add_reroute
+.. km:hotkeyd:: Shift-LEFTMOUSE -> node.add_reroute
 
    Add Reroute
 
    bpy.ops.node.add_reroute(path=[], cursor=6)
    
    
-.. km:hotkey:: Ctrl-LEFTMOUSE -> node.links_cut
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> node.links_cut
 
    Cut Links
 
    bpy.ops.node.links_cut(path=[], cursor=9)
    
    
-.. km:hotkey:: Ctrl-Shift-LEFTMOUSE -> node.select_link_viewer
+.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> node.select_link_viewer
 
    Link Viewer
 
@@ -684,14 +639,14 @@ Detailed Reference
    +--------------------+--------+
    
    
-.. km:hotkey:: Alt-MIDDLEMOUSE -> node.backimage_move
+.. km:hotkeyd:: Alt-MIDDLEMOUSE -> node.backimage_move
 
    Background Image Move
 
    bpy.ops.node.backimage_move()
    
    
-.. km:hotkey:: V -> node.backimage_zoom
+.. km:hotkeyd:: V -> node.backimage_zoom
 
    Background Image Zoom
 
@@ -705,7 +660,7 @@ Detailed Reference
    +------------+------------------+
    
    
-.. km:hotkey:: Alt-V -> node.backimage_zoom
+.. km:hotkeyd:: Alt-V -> node.backimage_zoom
 
    Background Image Zoom
 
@@ -719,21 +674,21 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkey:: Alt-HOME -> node.backimage_fit
+.. km:hotkeyd:: Alt-HOME -> node.backimage_fit
 
    Background Image Fit
 
    bpy.ops.node.backimage_fit()
    
    
-.. km:hotkey:: Alt-ACTIONMOUSE -> node.backimage_sample
+.. km:hotkeyd:: Alt-ACTIONMOUSE -> node.backimage_sample
 
    Backimage Sample
 
    bpy.ops.node.backimage_sample()
    
    
-.. km:hotkey:: F -> node.link_make
+.. km:hotkeyd:: F -> node.link_make
 
    Make Links
 
@@ -747,7 +702,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-F -> node.link_make
+.. km:hotkeyd:: Shift-F -> node.link_make
 
    Make Links
 
@@ -761,7 +716,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu
 
    Call Menu
 
@@ -775,7 +730,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-D -> node.duplicate_move
+.. km:hotkeyd:: Shift-D -> node.duplicate_move
 
    Duplicate
 
@@ -791,7 +746,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-D -> node.duplicate_move_keep_inputs
+.. km:hotkeyd:: Ctrl-Shift-D -> node.duplicate_move_keep_inputs
 
    Duplicate
 
@@ -807,77 +762,77 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Ctrl-P -> node.parent_set
+.. km:hotkeyd:: Ctrl-P -> node.parent_set
 
    Make Parent
 
    bpy.ops.node.parent_set()
    
    
-.. km:hotkey:: Alt-P -> node.detach
+.. km:hotkeyd:: Alt-P -> node.detach
 
    Detach Nodes
 
    bpy.ops.node.detach()
    
    
-.. km:hotkey:: Ctrl-J -> node.join
+.. km:hotkeyd:: Ctrl-J -> node.join
 
    Join Nodes
 
    bpy.ops.node.join()
    
    
-.. km:hotkey:: H -> node.hide_toggle
+.. km:hotkeyd:: H -> node.hide_toggle
 
    Hide
 
    bpy.ops.node.hide_toggle()
    
    
-.. km:hotkey:: M -> node.mute_toggle
+.. km:hotkeyd:: M -> node.mute_toggle
 
    Toggle Node Mute
 
    bpy.ops.node.mute_toggle()
    
    
-.. km:hotkey:: Shift-H -> node.preview_toggle
+.. km:hotkeyd:: Shift-H -> node.preview_toggle
 
    Toggle Node Preview
 
    bpy.ops.node.preview_toggle()
    
    
-.. km:hotkey:: Ctrl-H -> node.hide_socket_toggle
+.. km:hotkeyd:: Ctrl-H -> node.hide_socket_toggle
 
    Toggle Hidden Node Sockets
 
    bpy.ops.node.hide_socket_toggle()
    
    
-.. km:hotkey:: HOME -> node.view_all
+.. km:hotkeyd:: HOME -> node.view_all
 
    View All
 
    bpy.ops.node.view_all()
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> node.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> node.view_all
 
    View All
 
    bpy.ops.node.view_all()
    
    
-.. km:hotkey:: NUMPAD_PERIOD -> node.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> node.view_selected
 
    View Selected
 
    bpy.ops.node.view_selected()
    
    
-.. km:hotkey:: B -> node.select_border
+.. km:hotkeyd:: B -> node.select_border
 
    Border Select
 
@@ -891,28 +846,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> node.delete
+.. km:hotkeyd:: X -> node.delete
 
    Delete
 
    bpy.ops.node.delete()
    
    
-.. km:hotkey:: DEL -> node.delete
+.. km:hotkeyd:: DEL -> node.delete
 
    Delete
 
    bpy.ops.node.delete()
    
    
-.. km:hotkey:: Ctrl-X -> node.delete_reconnect
+.. km:hotkeyd:: Ctrl-X -> node.delete_reconnect
 
    Delete with Reconnect
 
    bpy.ops.node.delete_reconnect()
    
    
-.. km:hotkey:: A -> node.select_all
+.. km:hotkeyd:: A -> node.select_all
 
    (De)select All
 
@@ -926,7 +881,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> node.select_all
+.. km:hotkeyd:: Ctrl-I -> node.select_all
 
    (De)select All
 
@@ -940,21 +895,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-L -> node.select_linked_to
+.. km:hotkeyd:: Shift-L -> node.select_linked_to
 
    Select Linked To
 
    bpy.ops.node.select_linked_to()
    
    
-.. km:hotkey:: L -> node.select_linked_from
+.. km:hotkeyd:: L -> node.select_linked_from
 
    Select Linked From
 
    bpy.ops.node.select_linked_from()
    
    
-.. km:hotkey:: Shift-G -> node.select_grouped
+.. km:hotkeyd:: Shift-G -> node.select_grouped
 
    Select Grouped
 
@@ -968,7 +923,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-G -> node.select_grouped
+.. km:hotkeyd:: Ctrl-Shift-G -> node.select_grouped
 
    Select Grouped
 
@@ -982,7 +937,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-RIGHT_BRACKET -> node.select_same_type_step
+.. km:hotkeyd:: Shift-RIGHT_BRACKET -> node.select_same_type_step
 
    Activate Same Type Next/Prev
 
@@ -996,7 +951,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-LEFT_BRACKET -> node.select_same_type_step
+.. km:hotkeyd:: Shift-LEFT_BRACKET -> node.select_same_type_step
 
    Activate Same Type Next/Prev
 
@@ -1010,35 +965,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-F -> node.find_node
+.. km:hotkeyd:: Ctrl-F -> node.find_node
 
    Find Node
 
    bpy.ops.node.find_node(prev=False)
    
    
-.. km:hotkey:: Ctrl-G -> node.group_make
+.. km:hotkeyd:: Ctrl-G -> node.group_make
 
    Make Group
 
    bpy.ops.node.group_make()
    
    
-.. km:hotkey:: Alt-G -> node.group_ungroup
+.. km:hotkeyd:: Alt-G -> node.group_ungroup
 
    Ungroup
 
    bpy.ops.node.group_ungroup()
    
    
-.. km:hotkey:: P -> node.group_separate
+.. km:hotkeyd:: P -> node.group_separate
 
    Separate
 
    bpy.ops.node.group_separate(type='COPY')
    
    
-.. km:hotkey:: Tab -> node.group_edit
+.. km:hotkeyd:: Tab -> node.group_edit
 
    Edit Group
 
@@ -1052,7 +1007,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Tab -> node.group_edit
+.. km:hotkeyd:: Ctrl-Tab -> node.group_edit
 
    Edit Group
 
@@ -1066,56 +1021,56 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-R -> node.read_renderlayers
+.. km:hotkeyd:: Ctrl-R -> node.read_renderlayers
 
    Read Render Layers
 
    bpy.ops.node.read_renderlayers()
    
    
-.. km:hotkey:: Shift-R -> node.read_fullsamplelayers
+.. km:hotkeyd:: Shift-R -> node.read_fullsamplelayers
 
    Read Full Sample Layers
 
    bpy.ops.node.read_fullsamplelayers()
    
    
-.. km:hotkey:: Z -> node.render_changed
+.. km:hotkeyd:: Z -> node.render_changed
 
    Render Changed Layer
 
    bpy.ops.node.render_changed()
    
    
-.. km:hotkey:: Ctrl-C -> node.clipboard_copy
+.. km:hotkeyd:: Ctrl-C -> node.clipboard_copy
 
    Copy to Clipboard
 
    bpy.ops.node.clipboard_copy()
    
    
-.. km:hotkey:: Ctrl-V -> node.clipboard_paste
+.. km:hotkeyd:: Ctrl-V -> node.clipboard_paste
 
    Paste from Clipboard
 
    bpy.ops.node.clipboard_paste()
    
    
-.. km:hotkey:: Ctrl-B -> node.viewer_border
+.. km:hotkeyd:: Ctrl-B -> node.viewer_border
 
    Viewer Border
 
    bpy.ops.node.viewer_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: Ctrl-Alt-B -> node.clear_viewer_border
+.. km:hotkeyd:: Ctrl-Alt-B -> node.clear_viewer_border
 
    Clear Viewer Border
 
    bpy.ops.node.clear_viewer_border()
    
    
-.. km:hotkey:: G -> node.translate_attach
+.. km:hotkeyd:: G -> node.translate_attach
 
    Move and Attach
 
@@ -1133,7 +1088,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: EVT_TWEAK_A -> node.translate_attach
+.. km:hotkeyd:: EVT_TWEAK_A -> node.translate_attach
 
    Move and Attach
 
@@ -1151,7 +1106,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: EVT_TWEAK_S -> node.translate_attach
+.. km:hotkeyd:: EVT_TWEAK_S -> node.translate_attach
 
    Move and Attach
 
@@ -1169,7 +1124,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate
 
    Translate
 
@@ -1183,7 +1138,7 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: EVT_TWEAK_A -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_A -> transform.translate
 
    Translate
 
@@ -1197,7 +1152,7 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
 
    Translate
 
@@ -1211,21 +1166,21 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate
 
    Rotate
 
    bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: Alt-D -> node.move_detach_links
+.. km:hotkeyd:: Alt-D -> node.move_detach_links
 
    Detach
 
@@ -1243,7 +1198,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Alt-EVT_TWEAK_A -> node.move_detach_links_release
+.. km:hotkeyd:: Alt-EVT_TWEAK_A -> node.move_detach_links_release
 
    Detach
 
@@ -1259,7 +1214,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Alt-EVT_TWEAK_S -> node.move_detach_links
+.. km:hotkeyd:: Alt-EVT_TWEAK_S -> node.move_detach_links
 
    Detach
 
@@ -1277,7 +1232,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Shift-Tab -> wm.context_toggle
+.. km:hotkeyd:: Shift-Tab -> wm.context_toggle
 
    Context Toggle
 
@@ -1291,7 +1246,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-Tab -> wm.context_menu_enum
+.. km:hotkeyd:: Ctrl-Shift-Tab -> wm.context_menu_enum
 
    Context Enum Menu
 

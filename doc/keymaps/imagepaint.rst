@@ -4,6 +4,8 @@ Image Paint
 
 .. km:module:: imagepaint
 
+   
+
 
 ---------------
 Quick Reference
@@ -112,7 +114,11 @@ Quick Reference
 Detailed Reference
 ------------------
 
-.. km:hotkey:: F -> wm.radial_control
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
+.. km:hotkeyd:: F -> wm.radial_control
 
    Radial Control
 
@@ -142,7 +148,7 @@ Detailed Reference
    +--------------------+--------------------------------------------------------+
    
    
-.. km:hotkey:: Shift-F -> wm.radial_control
+.. km:hotkeyd:: Shift-F -> wm.radial_control
 
    Radial Control
 
@@ -172,7 +178,7 @@ Detailed Reference
    +--------------------+----------------------------------------------------------+
    
    
-.. km:hotkey:: Ctrl-F -> wm.radial_control
+.. km:hotkeyd:: Ctrl-F -> wm.radial_control
 
    Radial Control
 
@@ -202,7 +208,7 @@ Detailed Reference
    +--------------------+---------------------------------------------------+
    
    
-.. km:hotkey:: Ctrl-Alt-F -> wm.radial_control
+.. km:hotkeyd:: Ctrl-Alt-F -> wm.radial_control
 
    Radial Control
 
@@ -232,7 +238,7 @@ Detailed Reference
    +--------------------+--------------------------------------------------------+
    
    
-.. km:hotkey:: Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Alt-RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -260,7 +266,7 @@ Detailed Reference
    +-------------------+------------------------------------------------------------+
    
    
-.. km:hotkey:: LEFTMOUSE -> paint.image_paint
+.. km:hotkeyd:: LEFTMOUSE -> paint.image_paint
 
    Image Paint
 
@@ -274,7 +280,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-LEFTMOUSE -> paint.image_paint
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> paint.image_paint
 
    Image Paint
 
@@ -288,28 +294,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> paint.brush_colors_flip
+.. km:hotkeyd:: X -> paint.brush_colors_flip
 
    Brush Colors Flip
 
    bpy.ops.paint.brush_colors_flip()
    
    
-.. km:hotkey:: RIGHTMOUSE -> paint.grab_clone
+.. km:hotkeyd:: RIGHTMOUSE -> paint.grab_clone
 
    Grab Clone
 
    bpy.ops.paint.grab_clone(delta=(0, 0))
    
    
-.. km:hotkey:: S -> paint.sample_color
+.. km:hotkeyd:: S -> paint.sample_color
 
    Sample Color
 
    bpy.ops.paint.sample_color(location=(0, 0), merged=False, palette=False)
    
    
-.. km:hotkey:: 1 -> brush.active_index_set
+.. km:hotkeyd:: 1 -> brush.active_index_set
 
    Set Brush Number
 
@@ -325,7 +331,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 2 -> brush.active_index_set
+.. km:hotkeyd:: 2 -> brush.active_index_set
 
    Set Brush Number
 
@@ -341,7 +347,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 3 -> brush.active_index_set
+.. km:hotkeyd:: 3 -> brush.active_index_set
 
    Set Brush Number
 
@@ -357,7 +363,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 4 -> brush.active_index_set
+.. km:hotkeyd:: 4 -> brush.active_index_set
 
    Set Brush Number
 
@@ -373,7 +379,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 5 -> brush.active_index_set
+.. km:hotkeyd:: 5 -> brush.active_index_set
 
    Set Brush Number
 
@@ -389,7 +395,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 6 -> brush.active_index_set
+.. km:hotkeyd:: 6 -> brush.active_index_set
 
    Set Brush Number
 
@@ -405,7 +411,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 7 -> brush.active_index_set
+.. km:hotkeyd:: 7 -> brush.active_index_set
 
    Set Brush Number
 
@@ -421,7 +427,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 8 -> brush.active_index_set
+.. km:hotkeyd:: 8 -> brush.active_index_set
 
    Set Brush Number
 
@@ -437,7 +443,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 9 -> brush.active_index_set
+.. km:hotkeyd:: 9 -> brush.active_index_set
 
    Set Brush Number
 
@@ -453,7 +459,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: 0 -> brush.active_index_set
+.. km:hotkeyd:: 0 -> brush.active_index_set
 
    Set Brush Number
 
@@ -469,7 +475,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-1 -> brush.active_index_set
+.. km:hotkeyd:: Shift-1 -> brush.active_index_set
 
    Set Brush Number
 
@@ -485,7 +491,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-2 -> brush.active_index_set
+.. km:hotkeyd:: Shift-2 -> brush.active_index_set
 
    Set Brush Number
 
@@ -501,7 +507,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-3 -> brush.active_index_set
+.. km:hotkeyd:: Shift-3 -> brush.active_index_set
 
    Set Brush Number
 
@@ -517,7 +523,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-4 -> brush.active_index_set
+.. km:hotkeyd:: Shift-4 -> brush.active_index_set
 
    Set Brush Number
 
@@ -533,7 +539,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-5 -> brush.active_index_set
+.. km:hotkeyd:: Shift-5 -> brush.active_index_set
 
    Set Brush Number
 
@@ -549,7 +555,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-6 -> brush.active_index_set
+.. km:hotkeyd:: Shift-6 -> brush.active_index_set
 
    Set Brush Number
 
@@ -565,7 +571,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-7 -> brush.active_index_set
+.. km:hotkeyd:: Shift-7 -> brush.active_index_set
 
    Set Brush Number
 
@@ -581,7 +587,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-8 -> brush.active_index_set
+.. km:hotkeyd:: Shift-8 -> brush.active_index_set
 
    Set Brush Number
 
@@ -597,7 +603,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-9 -> brush.active_index_set
+.. km:hotkeyd:: Shift-9 -> brush.active_index_set
 
    Set Brush Number
 
@@ -613,7 +619,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-0 -> brush.active_index_set
+.. km:hotkeyd:: Shift-0 -> brush.active_index_set
 
    Set Brush Number
 
@@ -629,7 +635,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: LEFT_BRACKET -> brush.scale_size
+.. km:hotkeyd:: LEFT_BRACKET -> brush.scale_size
 
    Scale Sculpt/Paint Brush Size
 
@@ -643,7 +649,7 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkey:: RIGHT_BRACKET -> brush.scale_size
+.. km:hotkeyd:: RIGHT_BRACKET -> brush.scale_size
 
    Scale Sculpt/Paint Brush Size
 
@@ -657,7 +663,7 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkey:: F -> wm.radial_control
+.. km:hotkeyd:: F -> wm.radial_control
 
    Radial Control
 
@@ -691,7 +697,7 @@ Detailed Reference
    +-------------------------+--------------------------------------------------------+
    
    
-.. km:hotkey:: Shift-F -> wm.radial_control
+.. km:hotkeyd:: Shift-F -> wm.radial_control
 
    Radial Control
 
@@ -725,7 +731,7 @@ Detailed Reference
    +-------------------------+----------------------------------------------------------+
    
    
-.. km:hotkey:: Ctrl-F -> wm.radial_control
+.. km:hotkeyd:: Ctrl-F -> wm.radial_control
 
    Radial Control
 
@@ -759,7 +765,7 @@ Detailed Reference
    +-------------------------+-------------------------------------------------------+
    
    
-.. km:hotkey:: Ctrl-Alt-F -> wm.radial_control
+.. km:hotkeyd:: Ctrl-Alt-F -> wm.radial_control
 
    Radial Control
 
@@ -793,7 +799,7 @@ Detailed Reference
    +-------------------------+--------------------------------------------------------+
    
    
-.. km:hotkey:: RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -807,7 +813,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Shift-RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -821,7 +827,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Ctrl-RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -835,7 +841,7 @@ Detailed Reference
    +------------+---------+
    
    
-.. km:hotkey:: Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Alt-RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -851,7 +857,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Shift-Alt-RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -867,7 +873,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: Ctrl-Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Ctrl-Alt-RIGHTMOUSE -> brush.stencil_control
 
    Stencil Brush Control
 
@@ -883,7 +889,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: M -> wm.context_toggle
+.. km:hotkeyd:: M -> wm.context_toggle
 
    Context Toggle
 
@@ -897,7 +903,7 @@ Detailed Reference
    +-------------------+---------------------------------------+
    
    
-.. km:hotkey:: Shift-S -> wm.context_toggle
+.. km:hotkeyd:: Shift-S -> wm.context_toggle
 
    Context Toggle
 
@@ -911,7 +917,7 @@ Detailed Reference
    +-------------------+--------------------------------------------------+
    
    
-.. km:hotkey:: R -> wm.call_menu
+.. km:hotkeyd:: R -> wm.call_menu
 
    Call Menu
 
@@ -925,7 +931,7 @@ Detailed Reference
    +------------+------------------------+
    
    
-.. km:hotkey:: E -> wm.context_menu_enum
+.. km:hotkeyd:: E -> wm.context_menu_enum
 
    Context Enum Menu
 

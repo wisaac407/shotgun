@@ -4,6 +4,8 @@ Animation
 
 .. km:module:: animation
 
+   
+
 
 ---------------
 Quick Reference
@@ -30,6 +32,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: SELECTMOUSE -> anim.change_frame
 
    Change Frame
@@ -37,21 +43,21 @@ Detailed Reference
    bpy.ops.anim.change_frame(frame=0, snap=False)
    
    
-.. km:hotkey:: Alt-P -> anim.previewrange_clear
+.. km:hotkeyd:: Alt-P -> anim.previewrange_clear
 
    Clear Preview Range
 
    bpy.ops.anim.previewrange_clear()
    
    
-.. km:hotkey:: ACTIONMOUSE -> anim.change_frame
+.. km:hotkeyd:: ACTIONMOUSE -> anim.change_frame
 
    Change Frame
 
    bpy.ops.anim.change_frame(frame=0, snap=False)
    
    
-.. km:hotkey:: Ctrl-T -> wm.context_toggle
+.. km:hotkeyd:: Ctrl-T -> wm.context_toggle
 
    Context Toggle
 
@@ -65,14 +71,14 @@ Detailed Reference
    +-------------------+------------------------+
    
    
-.. km:hotkey:: P -> anim.previewrange_set
+.. km:hotkeyd:: P -> anim.previewrange_set
 
    Set Preview Range
 
    bpy.ops.anim.previewrange_set(xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkey:: Alt-P -> anim.previewrange_clear
+.. km:hotkeyd:: Alt-P -> anim.previewrange_clear
 
    Clear Preview Range
 

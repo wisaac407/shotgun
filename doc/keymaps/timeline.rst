@@ -4,6 +4,8 @@ Timeline
 
 .. km:module:: timeline
 
+   
+
 
 ---------------
 Quick Reference
@@ -12,8 +14,6 @@ Quick Reference
 +--------------------------------------------------------------------+---------------------------------------------+
 |Hotkey                                                              |Operator                                     |
 +====================================================================+=============================================+
-|:km:hk:`NDOF_BUTTON_FIT <timeline->NDOF_BUTTON_FIT->time.view_all>` |:func:`blender:bpy.ops.time.view_all`        |
-+--------------------------------------------------------------------+---------------------------------------------+
 |:km:hk:`LEFTMOUSE <timeline->LEFTMOUSE->anim.change_frame>`         |:func:`blender:bpy.ops.anim.change_frame`    |
 +--------------------------------------------------------------------+---------------------------------------------+
 |:km:hk:`S <timeline->S->time.start_frame_set>`                      |:func:`blender:bpy.ops.time.start_frame_set` |
@@ -32,13 +32,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
-.. km:hotkey:: NDOF_BUTTON_FIT -> time.view_all
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
 
-   View All
+   
 
-   bpy.ops.time.view_all()
-   
-   
 .. km:hotkey:: LEFTMOUSE -> anim.change_frame
 
    Change Frame
@@ -46,35 +43,35 @@ Detailed Reference
    bpy.ops.anim.change_frame(frame=0, snap=False)
    
    
-.. km:hotkey:: S -> time.start_frame_set
+.. km:hotkeyd:: S -> time.start_frame_set
 
    Set Start Frame
 
    bpy.ops.time.start_frame_set()
    
    
-.. km:hotkey:: E -> time.end_frame_set
+.. km:hotkeyd:: E -> time.end_frame_set
 
    Set End Frame
 
    bpy.ops.time.end_frame_set()
    
    
-.. km:hotkey:: HOME -> time.view_all
+.. km:hotkeyd:: HOME -> time.view_all
 
    View All
 
    bpy.ops.time.view_all()
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> time.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> time.view_all
 
    View All
 
    bpy.ops.time.view_all()
    
    
-.. km:hotkey:: NUMPAD_0 -> time.view_frame
+.. km:hotkeyd:: NUMPAD_0 -> time.view_frame
 
    View Frame
 

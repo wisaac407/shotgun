@@ -4,6 +4,8 @@ Image
 
 .. km:module:: image
 
+   
+
 
 ---------------
 Quick Reference
@@ -15,10 +17,6 @@ Quick Reference
 |:km:hk:`F <image->F->image.view_all>`                                         |:func:`blender:bpy.ops.image.view_all`            |
 +------------------------------------------------------------------------------+--------------------------------------------------+
 |:km:hk:`ACTIONMOUSE <image->ACTIONMOUSE->image.view_pan>`                     |:func:`blender:bpy.ops.image.view_pan`            |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FIT <image->NDOF_BUTTON_FIT->image.view_all>`             |:func:`blender:bpy.ops.image.view_all`            |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`NDOF_MOTION <image->NDOF_MOTION->image.view_ndof>`                    |:func:`blender:bpy.ops.image.view_ndof`           |
 +------------------------------------------------------------------------------+--------------------------------------------------+
 |:km:hk:`SELECTMOUSE <image->SELECTMOUSE->image.sample>`                       |:func:`blender:bpy.ops.image.sample`              |
 +------------------------------------------------------------------------------+--------------------------------------------------+
@@ -136,6 +134,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: F -> image.view_all
 
    View All
@@ -155,20 +157,6 @@ Detailed Reference
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
-   
-   
-.. km:hotkey:: NDOF_BUTTON_FIT -> image.view_all
-
-   View All
-
-   bpy.ops.image.view_all(fit_view=False)
-   
-   
-.. km:hotkey:: NDOF_MOTION -> image.view_ndof
-
-   NDOF Pan/Zoom
-
-   bpy.ops.image.view_ndof()
    
    
 .. km:hotkey:: SELECTMOUSE -> image.sample
@@ -338,14 +326,14 @@ Detailed Reference
    +-------------------+-----------------------------+
    
    
-.. km:hotkey:: HOME -> image.view_all
+.. km:hotkeyd:: HOME -> image.view_all
 
    View All
 
    bpy.ops.image.view_all(fit_view=False)
    
    
-.. km:hotkey:: Shift-HOME -> image.view_all
+.. km:hotkeyd:: Shift-HOME -> image.view_all
 
    View All
 
@@ -359,105 +347,105 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_PERIOD -> image.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> image.view_selected
 
    View Center
 
    bpy.ops.image.view_selected()
    
    
-.. km:hotkey:: MIDDLEMOUSE -> image.view_pan
+.. km:hotkeyd:: MIDDLEMOUSE -> image.view_pan
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkey:: Shift-MIDDLEMOUSE -> image.view_pan
+.. km:hotkeyd:: Shift-MIDDLEMOUSE -> image.view_pan
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkey:: TRACKPADPAN -> image.view_pan
+.. km:hotkeyd:: TRACKPADPAN -> image.view_pan
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> image.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> image.view_all
 
    View All
 
    bpy.ops.image.view_all(fit_view=False)
    
    
-.. km:hotkey:: NDOF_MOTION -> image.view_ndof
+.. km:hotkeyd:: NDOF_MOTION -> image.view_ndof
 
    NDOF Pan/Zoom
 
    bpy.ops.image.view_ndof()
    
    
-.. km:hotkey:: WHEELINMOUSE -> image.view_zoom_in
+.. km:hotkeyd:: WHEELINMOUSE -> image.view_zoom_in
 
    View Zoom In
 
    bpy.ops.image.view_zoom_in(location=(0, 0))
    
    
-.. km:hotkey:: WHEELOUTMOUSE -> image.view_zoom_out
+.. km:hotkeyd:: WHEELOUTMOUSE -> image.view_zoom_out
 
    View Zoom Out
 
    bpy.ops.image.view_zoom_out(location=(0, 0))
    
    
-.. km:hotkey:: NUMPAD_PLUS -> image.view_zoom_in
+.. km:hotkeyd:: NUMPAD_PLUS -> image.view_zoom_in
 
    View Zoom In
 
    bpy.ops.image.view_zoom_in(location=(0, 0))
    
    
-.. km:hotkey:: NUMPAD_MINUS -> image.view_zoom_out
+.. km:hotkeyd:: NUMPAD_MINUS -> image.view_zoom_out
 
    View Zoom Out
 
    bpy.ops.image.view_zoom_out(location=(0, 0))
    
    
-.. km:hotkey:: Ctrl-MIDDLEMOUSE -> image.view_zoom
+.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> image.view_zoom
 
    View Zoom
 
    bpy.ops.image.view_zoom(factor=0)
    
    
-.. km:hotkey:: TRACKPADZOOM -> image.view_zoom
+.. km:hotkeyd:: TRACKPADZOOM -> image.view_zoom
 
    View Zoom
 
    bpy.ops.image.view_zoom(factor=0)
    
    
-.. km:hotkey:: Ctrl-TRACKPADPAN -> image.view_zoom
+.. km:hotkeyd:: Ctrl-TRACKPADPAN -> image.view_zoom
 
    View Zoom
 
    bpy.ops.image.view_zoom(factor=0)
    
    
-.. km:hotkey:: Shift-B -> image.view_zoom_border
+.. km:hotkeyd:: Shift-B -> image.view_zoom_border
 
    Zoom to Border
 
    bpy.ops.image.view_zoom_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkey:: Ctrl-NUMPAD_8 -> image.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_8 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -471,7 +459,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_4 -> image.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_4 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -485,7 +473,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_2 -> image.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_2 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -499,7 +487,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_8 -> image.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_8 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -513,7 +501,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_4 -> image.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_4 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -527,7 +515,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_2 -> image.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_2 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -541,7 +529,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_1 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_1 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -555,7 +543,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_2 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_2 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -569,7 +557,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_4 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_4 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -583,7 +571,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_8 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_8 -> image.view_zoom_ratio
 
    View Zoom Ratio
 
@@ -597,21 +585,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: LEFTMOUSE -> image.change_frame
+.. km:hotkeyd:: LEFTMOUSE -> image.change_frame
 
    Change Frame
 
    bpy.ops.image.change_frame(frame=0)
    
    
-.. km:hotkey:: ACTIONMOUSE -> image.sample
+.. km:hotkeyd:: ACTIONMOUSE -> image.sample
 
    Sample Color
 
    bpy.ops.image.sample()
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> image.curves_point_set
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> image.curves_point_set
 
    Set Curves Point
 
@@ -625,7 +613,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-ACTIONMOUSE -> image.curves_point_set
+.. km:hotkeyd:: Shift-ACTIONMOUSE -> image.curves_point_set
 
    Set Curves Point
 
@@ -639,7 +627,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Tab -> object.mode_set
+.. km:hotkeyd:: Tab -> object.mode_set
 
    Set Object Mode
 
@@ -655,7 +643,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: 1 -> wm.context_set_int
+.. km:hotkeyd:: 1 -> wm.context_set_int
 
    Context Set
 
@@ -671,7 +659,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 2 -> wm.context_set_int
+.. km:hotkeyd:: 2 -> wm.context_set_int
 
    Context Set
 
@@ -687,7 +675,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 3 -> wm.context_set_int
+.. km:hotkeyd:: 3 -> wm.context_set_int
 
    Context Set
 
@@ -703,7 +691,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 4 -> wm.context_set_int
+.. km:hotkeyd:: 4 -> wm.context_set_int
 
    Context Set
 
@@ -719,7 +707,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 5 -> wm.context_set_int
+.. km:hotkeyd:: 5 -> wm.context_set_int
 
    Context Set
 
@@ -735,7 +723,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 6 -> wm.context_set_int
+.. km:hotkeyd:: 6 -> wm.context_set_int
 
    Context Set
 
@@ -751,7 +739,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 7 -> wm.context_set_int
+.. km:hotkeyd:: 7 -> wm.context_set_int
 
    Context Set
 
@@ -767,7 +755,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: 8 -> wm.context_set_int
+.. km:hotkeyd:: 8 -> wm.context_set_int
 
    Context Set
 
@@ -783,7 +771,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkey:: , -> wm.context_set_enum
+.. km:hotkeyd:: , -> wm.context_set_enum
 
    Context Set Enum
 
@@ -799,7 +787,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-, -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-, -> wm.context_set_enum
 
    Context Set Enum
 
@@ -815,7 +803,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: . -> wm.context_set_enum
+.. km:hotkeyd:: . -> wm.context_set_enum
 
    Context Set Enum
 
@@ -831,14 +819,14 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-B -> image.render_border
+.. km:hotkeyd:: Ctrl-B -> image.render_border
 
    Render Border
 
    bpy.ops.image.render_border(xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkey:: Ctrl-Alt-B -> image.clear_render_border
+.. km:hotkeyd:: Ctrl-Alt-B -> image.clear_render_border
 
    Clear Render Border
 

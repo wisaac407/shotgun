@@ -4,6 +4,8 @@ Graph Editor
 
 .. km:module:: grapheditor
 
+   
+
 
 ---------------
 Quick Reference
@@ -33,8 +35,6 @@ Quick Reference
 |:km:hk:`DEL <grapheditor->DEL->graph.delete>`                                                    |:func:`blender:bpy.ops.graph.delete`                  |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-SELECTMOUSE <grapheditor->Ctrl-SELECTMOUSE->graph.click_insert>`                    |:func:`blender:bpy.ops.graph.click_insert`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FIT <grapheditor->NDOF_BUTTON_FIT->graph.view_all>`                          |:func:`blender:bpy.ops.graph.view_all`                |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-M <grapheditor->Ctrl-M->marker.rename>`                                             |:func:`blender:bpy.ops.marker.rename`                 |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
@@ -172,6 +172,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-Tab -> wm.context_set_enum
 
    Context Set Enum
@@ -297,21 +301,14 @@ Detailed Reference
    bpy.ops.graph.click_insert(frame=1, value=1, extend=False)
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> graph.view_all
-
-   View All
-
-   bpy.ops.graph.view_all(include_handles=True)
-   
-   
-.. km:hotkey:: Ctrl-M -> marker.rename
+.. km:hotkeyd:: Ctrl-M -> marker.rename
 
    Rename Marker
 
    bpy.ops.marker.rename(name="RenamedMarker")
    
    
-.. km:hotkey:: Ctrl-H -> wm.context_toggle
+.. km:hotkeyd:: Ctrl-H -> wm.context_toggle
 
    Context Toggle
 
@@ -325,14 +322,14 @@ Detailed Reference
    +-------------------+------------------------+
    
    
-.. km:hotkey:: ACTIONMOUSE -> graph.cursor_set
+.. km:hotkeyd:: ACTIONMOUSE -> graph.cursor_set
 
    Set Cursor
 
    bpy.ops.graph.cursor_set(frame=0, value=0)
    
    
-.. km:hotkey:: SELECTMOUSE -> graph.clickselect
+.. km:hotkeyd:: SELECTMOUSE -> graph.clickselect
 
    Mouse Select Keys
 
@@ -350,7 +347,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Alt-SELECTMOUSE -> graph.clickselect
+.. km:hotkeyd:: Alt-SELECTMOUSE -> graph.clickselect
 
    Mouse Select Keys
 
@@ -368,7 +365,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Shift-SELECTMOUSE -> graph.clickselect
+.. km:hotkeyd:: Shift-SELECTMOUSE -> graph.clickselect
 
    Mouse Select Keys
 
@@ -386,7 +383,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-SELECTMOUSE -> graph.clickselect
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> graph.clickselect
 
    Mouse Select Keys
 
@@ -404,7 +401,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> graph.clickselect
+.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> graph.clickselect
 
    Mouse Select Keys
 
@@ -422,7 +419,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-SELECTMOUSE -> graph.clickselect
+.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> graph.clickselect
 
    Mouse Select Keys
 
@@ -440,7 +437,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Ctrl-SELECTMOUSE -> graph.select_leftright
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> graph.select_leftright
 
    Select Left/Right
 
@@ -456,7 +453,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> graph.select_leftright
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> graph.select_leftright
 
    Select Left/Right
 
@@ -472,7 +469,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: LEFT_BRACKET -> graph.select_leftright
+.. km:hotkeyd:: LEFT_BRACKET -> graph.select_leftright
 
    Select Left/Right
 
@@ -488,7 +485,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: RIGHT_BRACKET -> graph.select_leftright
+.. km:hotkeyd:: RIGHT_BRACKET -> graph.select_leftright
 
    Select Left/Right
 
@@ -504,7 +501,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: A -> graph.select_all_toggle
+.. km:hotkeyd:: A -> graph.select_all_toggle
 
    Select All
 
@@ -518,7 +515,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> graph.select_all_toggle
+.. km:hotkeyd:: Ctrl-I -> graph.select_all_toggle
 
    Select All
 
@@ -532,7 +529,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: B -> graph.select_border
+.. km:hotkeyd:: B -> graph.select_border
 
    Border Select
 
@@ -548,7 +545,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Alt-B -> graph.select_border
+.. km:hotkeyd:: Alt-B -> graph.select_border
 
    Border Select
 
@@ -564,7 +561,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Ctrl-B -> graph.select_border
+.. km:hotkeyd:: Ctrl-B -> graph.select_border
 
    Border Select
 
@@ -580,7 +577,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-B -> graph.select_border
+.. km:hotkeyd:: Ctrl-Alt-B -> graph.select_border
 
    Border Select
 
@@ -596,7 +593,7 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkey:: Ctrl-EVT_TWEAK_A -> graph.select_lasso
+.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> graph.select_lasso
 
    Lasso Select
 
@@ -610,7 +607,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_A -> graph.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> graph.select_lasso
 
    Lasso Select
 
@@ -624,14 +621,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: C -> graph.select_circle
+.. km:hotkeyd:: C -> graph.select_circle
 
    Circle Select
 
    bpy.ops.graph.select_circle(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkey:: K -> graph.select_column
+.. km:hotkeyd:: K -> graph.select_column
 
    Select All
 
@@ -645,7 +642,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-K -> graph.select_column
+.. km:hotkeyd:: Ctrl-K -> graph.select_column
 
    Select All
 
@@ -659,7 +656,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-K -> graph.select_column
+.. km:hotkeyd:: Shift-K -> graph.select_column
 
    Select All
 
@@ -673,7 +670,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkey:: Alt-K -> graph.select_column
+.. km:hotkeyd:: Alt-K -> graph.select_column
 
    Select All
 
@@ -687,91 +684,91 @@ Detailed Reference
    +------------+----------------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> graph.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> graph.select_more
 
    Select More
 
    bpy.ops.graph.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> graph.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> graph.select_less
 
    Select Less
 
    bpy.ops.graph.select_less()
    
    
-.. km:hotkey:: L -> graph.select_linked
+.. km:hotkeyd:: L -> graph.select_linked
 
    Select Linked
 
    bpy.ops.graph.select_linked()
    
    
-.. km:hotkey:: Ctrl-G -> graph.frame_jump
+.. km:hotkeyd:: Ctrl-G -> graph.frame_jump
 
    Jump to Keyframes
 
    bpy.ops.graph.frame_jump()
    
    
-.. km:hotkey:: Shift-S -> graph.snap
+.. km:hotkeyd:: Shift-S -> graph.snap
 
    Snap Keys
 
    bpy.ops.graph.snap(type='CFRA')
    
    
-.. km:hotkey:: Shift-M -> graph.mirror
+.. km:hotkeyd:: Shift-M -> graph.mirror
 
    Mirror Keys
 
    bpy.ops.graph.mirror(type='CFRA')
    
    
-.. km:hotkey:: V -> graph.handle_type
+.. km:hotkeyd:: V -> graph.handle_type
 
    Set Keyframe Handle Type
 
    bpy.ops.graph.handle_type(type='FREE')
    
    
-.. km:hotkey:: T -> graph.interpolation_type
+.. km:hotkeyd:: T -> graph.interpolation_type
 
    Set Keyframe Interpolation
 
    bpy.ops.graph.interpolation_type(type='CONSTANT')
    
    
-.. km:hotkey:: Ctrl-E -> graph.easing_type
+.. km:hotkeyd:: Ctrl-E -> graph.easing_type
 
    Set Keyframe Easing Type
 
    bpy.ops.graph.easing_type(type='AUTO')
    
    
-.. km:hotkey:: Alt-O -> graph.smooth
+.. km:hotkeyd:: Alt-O -> graph.smooth
 
    Smooth Keys
 
    bpy.ops.graph.smooth()
    
    
-.. km:hotkey:: Shift-O -> graph.sample
+.. km:hotkeyd:: Shift-O -> graph.sample
 
    Sample Keyframes
 
    bpy.ops.graph.sample()
    
    
-.. km:hotkey:: Alt-C -> graph.bake
+.. km:hotkeyd:: Alt-C -> graph.bake
 
    Bake Curve
 
    bpy.ops.graph.bake()
    
    
-.. km:hotkey:: X -> wm.call_menu
+.. km:hotkeyd:: X -> wm.call_menu
 
    Call Menu
 
@@ -785,7 +782,7 @@ Detailed Reference
    +------------+----------------+
    
    
-.. km:hotkey:: DEL -> wm.call_menu
+.. km:hotkeyd:: DEL -> wm.call_menu
 
    Call Menu
 
@@ -799,7 +796,7 @@ Detailed Reference
    +------------+----------------+
    
    
-.. km:hotkey:: Shift-D -> graph.duplicate_move
+.. km:hotkeyd:: Shift-D -> graph.duplicate_move
 
    Duplicate
 
@@ -815,14 +812,14 @@ Detailed Reference
    +--------------------+--------+
    
    
-.. km:hotkey:: I -> graph.keyframe_insert
+.. km:hotkeyd:: I -> graph.keyframe_insert
 
    Insert Keyframes
 
    bpy.ops.graph.keyframe_insert(type='ALL')
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> graph.click_insert
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> graph.click_insert
 
    Click-Insert Keyframes
 
@@ -836,7 +833,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-ACTIONMOUSE -> graph.click_insert
+.. km:hotkeyd:: Ctrl-Shift-ACTIONMOUSE -> graph.click_insert
 
    Click-Insert Keyframes
 
@@ -850,21 +847,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-C -> graph.copy
+.. km:hotkeyd:: Ctrl-C -> graph.copy
 
    Copy Keyframes
 
    bpy.ops.graph.copy()
    
    
-.. km:hotkey:: Ctrl-V -> graph.paste
+.. km:hotkeyd:: Ctrl-V -> graph.paste
 
    Paste Keyframes
 
    bpy.ops.graph.paste(offset='START', merge='MIX', flipped=False)
    
    
-.. km:hotkey:: Ctrl-Shift-V -> graph.paste
+.. km:hotkeyd:: Ctrl-Shift-V -> graph.paste
 
    Paste Keyframes
 
@@ -878,42 +875,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-P -> graph.previewrange_set
+.. km:hotkeyd:: Ctrl-Alt-P -> graph.previewrange_set
 
    Auto-Set Preview Range
 
    bpy.ops.graph.previewrange_set()
    
    
-.. km:hotkey:: HOME -> graph.view_all
+.. km:hotkeyd:: HOME -> graph.view_all
 
    View All
 
    bpy.ops.graph.view_all(include_handles=True)
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> graph.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> graph.view_all
 
    View All
 
    bpy.ops.graph.view_all(include_handles=True)
    
    
-.. km:hotkey:: NUMPAD_PERIOD -> graph.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> graph.view_selected
 
    View Selected
 
    bpy.ops.graph.view_selected(include_handles=True)
    
    
-.. km:hotkey:: NUMPAD_0 -> graph.view_frame
+.. km:hotkeyd:: NUMPAD_0 -> graph.view_frame
 
    View Frame
 
    bpy.ops.graph.view_frame()
    
    
-.. km:hotkey:: Ctrl-Shift-M -> graph.fmodifier_add
+.. km:hotkeyd:: Ctrl-Shift-M -> graph.fmodifier_add
 
    Add F-Curve Modifier
 
@@ -927,28 +924,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Tab -> anim.channels_editable_toggle
+.. km:hotkeyd:: Tab -> anim.channels_editable_toggle
 
    Toggle Channel Editability
 
    bpy.ops.anim.channels_editable_toggle(mode='TOGGLE', type='PROTECT')
    
    
-.. km:hotkey:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: E -> transform.transform
+.. km:hotkeyd:: E -> transform.transform
 
    Transform
 
@@ -962,21 +959,21 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate
 
    Rotate
 
    bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: O -> wm.context_toggle
+.. km:hotkeyd:: O -> wm.context_toggle
 
    Context Toggle
 
@@ -990,7 +987,7 @@ Detailed Reference
    +-------------------+--------------------------------------+
    
    
-.. km:hotkey:: , -> wm.context_set_enum
+.. km:hotkeyd:: , -> wm.context_set_enum
 
    Context Set Enum
 
@@ -1006,7 +1003,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: . -> wm.context_set_enum
+.. km:hotkeyd:: . -> wm.context_set_enum
 
    Context Set Enum
 
@@ -1022,7 +1019,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-. -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-. -> wm.context_set_enum
 
    Context Set Enum
 
@@ -1038,14 +1035,14 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: M -> marker.add
+.. km:hotkeyd:: M -> marker.add
 
    Add Time Marker
 
    bpy.ops.marker.add()
    
    
-.. km:hotkey:: Ctrl-M -> marker.rename
+.. km:hotkeyd:: Ctrl-M -> marker.rename
 
    Rename Marker
 

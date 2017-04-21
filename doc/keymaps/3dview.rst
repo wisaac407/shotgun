@@ -4,6 +4,8 @@
 
 .. km:module:: 3dview
 
+   
+
 
 ---------------
 Quick Reference
@@ -12,57 +14,11 @@ Quick Reference
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
 |Hotkey                                                                                   |Operator                                             |
 +=========================================================================================+=====================================================+
-|:km:hk:`Shift-Alt-Z <3dview->Shift-Alt-Z->view3d.show_only_render>`                      |:func:`blender:bpy.ops.view3d.show_only_render`      |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NUMPAD_SLASH <3dview->Shift-NUMPAD_SLASH->wm.return_to_original>`          |:func:`blender:bpy.ops.wm.return_to_original`        |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NUMPAD_SLASH <3dview->Shift-NUMPAD_SLASH->object.edit_linked>`             |:func:`blender:bpy.ops.object.edit_linked`           |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`Any-LEFTMOUSE <3dview->Any-LEFTMOUSE->view3d.manipulator>`                       |:func:`blender:bpy.ops.view3d.manipulator`           |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`Ctrl-ACTIONMOUSE <3dview->Ctrl-ACTIONMOUSE->view3d.cursor3d>`                    |:func:`blender:bpy.ops.view3d.cursor3d`              |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`RIGHTMOUSE <3dview->RIGHTMOUSE->view3d.move>`                                    |:func:`blender:bpy.ops.view3d.move`                  |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NUMPAD_4 <3dview->Shift-NUMPAD_4->view3d.view_roll>`                       |:func:`blender:bpy.ops.view3d.view_roll`             |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NUMPAD_6 <3dview->Shift-NUMPAD_6->view3d.view_roll>`                       |:func:`blender:bpy.ops.view3d.view_roll`             |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-Shift-WHEELUPMOUSE <3dview->Ctrl-Shift-WHEELUPMOUSE->view3d.view_roll>`     |:func:`blender:bpy.ops.view3d.view_roll`             |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-Shift-WHEELDOWNMOUSE <3dview->Ctrl-Shift-WHEELDOWNMOUSE->view3d.view_roll>` |:func:`blender:bpy.ops.view3d.view_roll`             |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_MOTION <3dview->NDOF_MOTION->view3d.ndof_orbit_zoom>`                       |:func:`blender:bpy.ops.view3d.ndof_orbit_zoom`       |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-NDOF_MOTION <3dview->Ctrl-NDOF_MOTION->view3d.ndof_orbit>`                  |:func:`blender:bpy.ops.view3d.ndof_orbit`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NDOF_MOTION <3dview->Shift-NDOF_MOTION->view3d.ndof_pan>`                  |:func:`blender:bpy.ops.view3d.ndof_pan`              |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-Shift-NDOF_MOTION <3dview->Ctrl-Shift-NDOF_MOTION->view3d.ndof_all>`        |:func:`blender:bpy.ops.view3d.ndof_all`              |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FIT <3dview->NDOF_BUTTON_FIT->view3d.view_selected>`                 |:func:`blender:bpy.ops.view3d.view_selected`         |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_ROLL_CCW <3dview->NDOF_BUTTON_ROLL_CCW->view3d.view_roll>`           |:func:`blender:bpy.ops.view3d.view_roll`             |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_ROLL_CW <3dview->NDOF_BUTTON_ROLL_CW->view3d.view_roll>`             |:func:`blender:bpy.ops.view3d.view_roll`             |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FRONT <3dview->NDOF_BUTTON_FRONT->view3d.viewnumpad>`                |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_BACK <3dview->NDOF_BUTTON_BACK->view3d.viewnumpad>`                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_LEFT <3dview->NDOF_BUTTON_LEFT->view3d.viewnumpad>`                  |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_RIGHT <3dview->NDOF_BUTTON_RIGHT->view3d.viewnumpad>`                |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_TOP <3dview->NDOF_BUTTON_TOP->view3d.viewnumpad>`                    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_BOTTOM <3dview->NDOF_BUTTON_BOTTOM->view3d.viewnumpad>`              |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NDOF_BUTTON_FRONT <3dview->Shift-NDOF_BUTTON_FRONT->view3d.viewnumpad>`    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NDOF_BUTTON_RIGHT <3dview->Shift-NDOF_BUTTON_RIGHT->view3d.viewnumpad>`    |:func:`blender:bpy.ops.view3d.viewnumpad`            |
-+-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-NDOF_BUTTON_TOP <3dview->Shift-NDOF_BUTTON_TOP->view3d.viewnumpad>`        |:func:`blender:bpy.ops.view3d.viewnumpad`            |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`Shift-Z <3dview->Shift-Z->wm.context_toggle_enum>`                               |:func:`blender:bpy.ops.wm.context_toggle_enum`       |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
@@ -372,22 +328,11 @@ Quick Reference
 Detailed Reference
 ------------------
 
-.. km:hotkeyi:: Shift-Alt-Z -> view3d.show_only_render
-
-   VIEW3D_OT_show_only_render
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
 
    
-.. km:hotkeyi:: Shift-NUMPAD_SLASH -> wm.return_to_original
 
-   WM_OT_return_to_original
-
-   
-.. km:hotkeyi:: Shift-NUMPAD_SLASH -> object.edit_linked
-
-   OBJECT_OT_edit_linked
-
-   
-.. km:hotkey:: Any-LEFTMOUSE -> view3d.manipulator
+.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator
 
    3D Manipulator
 
@@ -413,264 +358,6 @@ Detailed Reference
    Move View
 
    bpy.ops.view3d.move()
-   
-   
-.. km:hotkey:: Shift-NUMPAD_4 -> view3d.view_roll
-
-   View Roll
-
-   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
-   
-   
-   +------------+--------------------+
-   |Properties: |Values:             |
-   +============+====================+
-   |Roll        |-0.2617993950843811 |
-   +------------+--------------------+
-   
-   
-.. km:hotkey:: Shift-NUMPAD_6 -> view3d.view_roll
-
-   View Roll
-
-   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
-   
-   
-   +------------+-------------------+
-   |Properties: |Values:            |
-   +============+===================+
-   |Roll        |0.2617993950843811 |
-   +------------+-------------------+
-   
-   
-.. km:hotkey:: Ctrl-Shift-WHEELUPMOUSE -> view3d.view_roll
-
-   View Roll
-
-   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
-   
-   
-   +------------+--------------------+
-   |Properties: |Values:             |
-   +============+====================+
-   |Roll        |-0.2617993950843811 |
-   +------------+--------------------+
-   
-   
-.. km:hotkey:: Ctrl-Shift-WHEELDOWNMOUSE -> view3d.view_roll
-
-   View Roll
-
-   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
-   
-   
-   +------------+-------------------+
-   |Properties: |Values:            |
-   +============+===================+
-   |Roll        |0.2617993950843811 |
-   +------------+-------------------+
-   
-   
-.. km:hotkey:: NDOF_MOTION -> view3d.ndof_orbit_zoom
-
-   NDOF Orbit View with Zoom
-
-   bpy.ops.view3d.ndof_orbit_zoom()
-   
-   
-.. km:hotkey:: Ctrl-NDOF_MOTION -> view3d.ndof_orbit
-
-   NDOF Orbit View
-
-   bpy.ops.view3d.ndof_orbit()
-   
-   
-.. km:hotkey:: Shift-NDOF_MOTION -> view3d.ndof_pan
-
-   NDOF Pan View
-
-   bpy.ops.view3d.ndof_pan()
-   
-   
-.. km:hotkey:: Ctrl-Shift-NDOF_MOTION -> view3d.ndof_all
-
-   NDOF Move View
-
-   bpy.ops.view3d.ndof_all()
-   
-   
-.. km:hotkey:: NDOF_BUTTON_FIT -> view3d.view_selected
-
-   View Selected
-
-   bpy.ops.view3d.view_selected(use_all_regions=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |All Regions |False   |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
-
-   View Roll
-
-   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
-   
-   
-   +------------+--------------------+
-   |Properties: |Values:             |
-   +============+====================+
-   |Roll        |-1.5707963705062866 |
-   +------------+--------------------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_ROLL_CW -> view3d.view_roll
-
-   View Roll
-
-   bpy.ops.view3d.view_roll(angle=0, type='ANGLE')
-   
-   
-   +------------+-------------------+
-   |Properties: |Values:            |
-   +============+===================+
-   |Roll        |1.5707963705062866 |
-   +------------+-------------------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_FRONT -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |View        |FRONT   |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_BACK -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |View        |BACK    |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_LEFT -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |View        |LEFT    |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_RIGHT -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |View        |RIGHT   |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_TOP -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |View        |TOP     |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NDOF_BUTTON_BOTTOM -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |View        |BOTTOM  |
-   +------------+--------+
-   
-   
-.. km:hotkey:: Shift-NDOF_BUTTON_FRONT -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +-------------+--------+
-   |Properties:  |Values: |
-   +=============+========+
-   |View         |FRONT   |
-   +-------------+--------+
-   |Align Active |True    |
-   +-------------+--------+
-   
-   
-.. km:hotkey:: Shift-NDOF_BUTTON_RIGHT -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +-------------+--------+
-   |Properties:  |Values: |
-   +=============+========+
-   |View         |RIGHT   |
-   +-------------+--------+
-   |Align Active |True    |
-   +-------------+--------+
-   
-   
-.. km:hotkey:: Shift-NDOF_BUTTON_TOP -> view3d.viewnumpad
-
-   View Numpad
-
-   bpy.ops.view3d.viewnumpad(type='LEFT', align_active=False)
-   
-   
-   +-------------+--------+
-   |Properties:  |Values: |
-   +=============+========+
-   |View         |TOP     |
-   +-------------+--------+
-   |Align Active |True    |
-   +-------------+--------+
    
    
 .. km:hotkey:: Shift-Z -> wm.context_toggle_enum
@@ -754,7 +441,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-LEFTMOUSE -> view3d.manipulator
+.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator
 
    3D Manipulator
 
@@ -768,42 +455,42 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: ACTIONMOUSE -> view3d.cursor3d
+.. km:hotkeyd:: ACTIONMOUSE -> view3d.cursor3d
 
    Set 3D Cursor
 
    bpy.ops.view3d.cursor3d()
    
    
-.. km:hotkey:: MIDDLEMOUSE -> view3d.rotate
+.. km:hotkeyd:: MIDDLEMOUSE -> view3d.rotate
 
    Rotate View
 
    bpy.ops.view3d.rotate()
    
    
-.. km:hotkey:: Shift-MIDDLEMOUSE -> view3d.move
+.. km:hotkeyd:: Shift-MIDDLEMOUSE -> view3d.move
 
    Move View
 
    bpy.ops.view3d.move()
    
    
-.. km:hotkey:: Ctrl-MIDDLEMOUSE -> view3d.zoom
+.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> view3d.zoom
 
    Zoom View
 
    bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
    
    
-.. km:hotkey:: Ctrl-Shift-MIDDLEMOUSE -> view3d.dolly
+.. km:hotkeyd:: Ctrl-Shift-MIDDLEMOUSE -> view3d.dolly
 
    Dolly View
 
    bpy.ops.view3d.dolly(delta=0, mx=0, my=0)
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PERIOD -> view3d.view_selected
+.. km:hotkeyd:: Ctrl-NUMPAD_PERIOD -> view3d.view_selected
 
    View Selected
 
@@ -817,7 +504,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_PERIOD -> view3d.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> view3d.view_selected
 
    View Selected
 
@@ -831,98 +518,70 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_PERIOD -> view3d.view_lock_to_active
+.. km:hotkeyd:: Shift-NUMPAD_PERIOD -> view3d.view_lock_to_active
 
    View Lock to Active
 
    bpy.ops.view3d.view_lock_to_active()
    
    
-.. km:hotkey:: Alt-NUMPAD_PERIOD -> view3d.view_lock_clear
+.. km:hotkeyd:: Alt-NUMPAD_PERIOD -> view3d.view_lock_clear
 
    View Lock Clear
 
    bpy.ops.view3d.view_lock_clear()
    
    
-.. km:hotkey:: Shift-F -> view3d.navigate
+.. km:hotkeyd:: Shift-F -> view3d.navigate
 
    View Navigation
 
    bpy.ops.view3d.navigate()
    
    
-.. km:hotkey:: Any-TIMER1 -> view3d.smoothview
+.. km:hotkeyd:: Any-TIMER1 -> view3d.smoothview
 
    Smooth View
 
    bpy.ops.view3d.smoothview()
    
    
-.. km:hotkey:: TRACKPADPAN -> view3d.rotate
+.. km:hotkeyd:: TRACKPADPAN -> view3d.rotate
 
    Rotate View
 
    bpy.ops.view3d.rotate()
    
    
-.. km:hotkey:: MOUSEROTATE -> view3d.rotate
+.. km:hotkeyd:: MOUSEROTATE -> view3d.rotate
 
    Rotate View
 
    bpy.ops.view3d.rotate()
    
    
-.. km:hotkey:: Shift-TRACKPADPAN -> view3d.move
+.. km:hotkeyd:: Shift-TRACKPADPAN -> view3d.move
 
    Move View
 
    bpy.ops.view3d.move()
    
    
-.. km:hotkey:: TRACKPADZOOM -> view3d.zoom
+.. km:hotkeyd:: TRACKPADZOOM -> view3d.zoom
 
    Zoom View
 
    bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
    
    
-.. km:hotkey:: Ctrl-TRACKPADPAN -> view3d.zoom
+.. km:hotkeyd:: Ctrl-TRACKPADPAN -> view3d.zoom
 
    Zoom View
 
    bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
    
    
-.. km:hotkey:: NUMPAD_PLUS -> view3d.zoom
-
-   Zoom View
-
-   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Delta       |1       |
-   +------------+--------+
-   
-   
-.. km:hotkey:: NUMPAD_MINUS -> view3d.zoom
-
-   Zoom View
-
-   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Delta       |-1      |
-   +------------+--------+
-   
-   
-.. km:hotkey:: Ctrl-EQUAL -> view3d.zoom
+.. km:hotkeyd:: NUMPAD_PLUS -> view3d.zoom
 
    Zoom View
 
@@ -936,7 +595,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-MINUS -> view3d.zoom
+.. km:hotkeyd:: NUMPAD_MINUS -> view3d.zoom
 
    Zoom View
 
@@ -950,7 +609,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: WHEELINMOUSE -> view3d.zoom
+.. km:hotkeyd:: Ctrl-EQUAL -> view3d.zoom
 
    Zoom View
 
@@ -964,7 +623,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: WHEELOUTMOUSE -> view3d.zoom
+.. km:hotkeyd:: Ctrl-MINUS -> view3d.zoom
 
    Zoom View
 
@@ -978,7 +637,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_PLUS -> view3d.dolly
+.. km:hotkeyd:: WHEELINMOUSE -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |1       |
+   +------------+--------+
+   
+   
+.. km:hotkeyd:: WHEELOUTMOUSE -> view3d.zoom
+
+   Zoom View
+
+   bpy.ops.view3d.zoom(delta=0, mx=0, my=0)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Delta       |-1      |
+   +------------+--------+
+   
+   
+.. km:hotkeyd:: Shift-NUMPAD_PLUS -> view3d.dolly
 
    Dolly View
 
@@ -992,7 +679,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_MINUS -> view3d.dolly
+.. km:hotkeyd:: Shift-NUMPAD_MINUS -> view3d.dolly
 
    Dolly View
 
@@ -1006,7 +693,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EQUAL -> view3d.dolly
+.. km:hotkeyd:: Ctrl-Shift-EQUAL -> view3d.dolly
 
    Dolly View
 
@@ -1020,7 +707,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-MINUS -> view3d.dolly
+.. km:hotkeyd:: Ctrl-Shift-MINUS -> view3d.dolly
 
    Dolly View
 
@@ -1034,42 +721,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_ENTER -> view3d.zoom_camera_1_to_1
+.. km:hotkeyd:: Shift-NUMPAD_ENTER -> view3d.zoom_camera_1_to_1
 
    Zoom Camera 1:1
 
    bpy.ops.view3d.zoom_camera_1_to_1()
    
    
-.. km:hotkey:: HOME -> view3d.view_center_camera
+.. km:hotkeyd:: HOME -> view3d.view_center_camera
 
    View Camera Center
 
    bpy.ops.view3d.view_center_camera()
    
    
-.. km:hotkey:: HOME -> view3d.view_center_lock
+.. km:hotkeyd:: HOME -> view3d.view_center_lock
 
    View Lock Center
 
    bpy.ops.view3d.view_center_lock()
    
    
-.. km:hotkey:: Alt-HOME -> view3d.view_center_cursor
+.. km:hotkeyd:: Alt-HOME -> view3d.view_center_cursor
 
    Center View to Cursor
 
    bpy.ops.view3d.view_center_cursor()
    
    
-.. km:hotkey:: Alt-F -> view3d.view_center_pick
+.. km:hotkeyd:: Alt-F -> view3d.view_center_pick
 
    Center View to Mouse
 
    bpy.ops.view3d.view_center_pick()
    
    
-.. km:hotkey:: HOME -> view3d.view_all
+.. km:hotkeyd:: HOME -> view3d.view_all
 
    View All
 
@@ -1083,7 +770,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-HOME -> view3d.view_all
+.. km:hotkeyd:: Ctrl-HOME -> view3d.view_all
 
    View All
 
@@ -1099,7 +786,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-C -> view3d.view_all
+.. km:hotkeyd:: Shift-C -> view3d.view_all
 
    View All
 
@@ -1113,7 +800,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_0 -> view3d.viewnumpad
+.. km:hotkeyd:: NUMPAD_0 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1127,7 +814,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_1 -> view3d.viewnumpad
+.. km:hotkeyd:: NUMPAD_1 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1141,7 +828,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_2 -> view3d.view_orbit
+.. km:hotkeyd:: NUMPAD_2 -> view3d.view_orbit
 
    View Orbit
 
@@ -1155,7 +842,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: NUMPAD_3 -> view3d.viewnumpad
+.. km:hotkeyd:: NUMPAD_3 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1169,7 +856,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_4 -> view3d.view_orbit
+.. km:hotkeyd:: NUMPAD_4 -> view3d.view_orbit
 
    View Orbit
 
@@ -1183,14 +870,14 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: NUMPAD_5 -> view3d.view_persportho
+.. km:hotkeyd:: NUMPAD_5 -> view3d.view_persportho
 
    View Persp/Ortho
 
    bpy.ops.view3d.view_persportho()
    
    
-.. km:hotkey:: NUMPAD_6 -> view3d.view_orbit
+.. km:hotkeyd:: NUMPAD_6 -> view3d.view_orbit
 
    View Orbit
 
@@ -1204,7 +891,7 @@ Detailed Reference
    +------------+-----------+
    
    
-.. km:hotkey:: NUMPAD_7 -> view3d.viewnumpad
+.. km:hotkeyd:: NUMPAD_7 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1218,7 +905,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NUMPAD_8 -> view3d.view_orbit
+.. km:hotkeyd:: NUMPAD_8 -> view3d.view_orbit
 
    View Orbit
 
@@ -1232,7 +919,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_1 -> view3d.viewnumpad
+.. km:hotkeyd:: Ctrl-NUMPAD_1 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1246,7 +933,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_3 -> view3d.viewnumpad
+.. km:hotkeyd:: Ctrl-NUMPAD_3 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1260,7 +947,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_7 -> view3d.viewnumpad
+.. km:hotkeyd:: Ctrl-NUMPAD_7 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1274,7 +961,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_2 -> view3d.view_pan
+.. km:hotkeyd:: Ctrl-NUMPAD_2 -> view3d.view_pan
 
    View Pan
 
@@ -1288,7 +975,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_4 -> view3d.view_pan
+.. km:hotkeyd:: Ctrl-NUMPAD_4 -> view3d.view_pan
 
    View Pan
 
@@ -1302,7 +989,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_6 -> view3d.view_pan
+.. km:hotkeyd:: Ctrl-NUMPAD_6 -> view3d.view_pan
 
    View Pan
 
@@ -1316,7 +1003,7 @@ Detailed Reference
    +------------+---------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_8 -> view3d.view_pan
+.. km:hotkeyd:: Ctrl-NUMPAD_8 -> view3d.view_pan
 
    View Pan
 
@@ -1330,7 +1017,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_4 -> view3d.view_roll
+.. km:hotkeyd:: Shift-NUMPAD_4 -> view3d.view_roll
 
    View Roll
 
@@ -1344,7 +1031,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_6 -> view3d.view_roll
+.. km:hotkeyd:: Shift-NUMPAD_6 -> view3d.view_roll
 
    View Roll
 
@@ -1358,7 +1045,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: NUMPAD_9 -> view3d.view_orbit
+.. km:hotkeyd:: NUMPAD_9 -> view3d.view_orbit
 
    View Orbit
 
@@ -1374,7 +1061,7 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkey:: Ctrl-WHEELUPMOUSE -> view3d.view_pan
+.. km:hotkeyd:: Ctrl-WHEELUPMOUSE -> view3d.view_pan
 
    View Pan
 
@@ -1388,7 +1075,7 @@ Detailed Reference
    +------------+---------+
    
    
-.. km:hotkey:: Ctrl-WHEELDOWNMOUSE -> view3d.view_pan
+.. km:hotkeyd:: Ctrl-WHEELDOWNMOUSE -> view3d.view_pan
 
    View Pan
 
@@ -1402,7 +1089,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-WHEELUPMOUSE -> view3d.view_pan
+.. km:hotkeyd:: Shift-WHEELUPMOUSE -> view3d.view_pan
 
    View Pan
 
@@ -1416,7 +1103,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-WHEELDOWNMOUSE -> view3d.view_pan
+.. km:hotkeyd:: Shift-WHEELDOWNMOUSE -> view3d.view_pan
 
    View Pan
 
@@ -1430,7 +1117,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-WHEELUPMOUSE -> view3d.view_orbit
+.. km:hotkeyd:: Ctrl-Alt-WHEELUPMOUSE -> view3d.view_orbit
 
    View Orbit
 
@@ -1444,7 +1131,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: Ctrl-Alt-WHEELDOWNMOUSE -> view3d.view_orbit
+.. km:hotkeyd:: Ctrl-Alt-WHEELDOWNMOUSE -> view3d.view_orbit
 
    View Orbit
 
@@ -1458,7 +1145,7 @@ Detailed Reference
    +------------+-----------+
    
    
-.. km:hotkey:: Shift-Alt-WHEELUPMOUSE -> view3d.view_orbit
+.. km:hotkeyd:: Shift-Alt-WHEELUPMOUSE -> view3d.view_orbit
 
    View Orbit
 
@@ -1472,7 +1159,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-WHEELDOWNMOUSE -> view3d.view_orbit
+.. km:hotkeyd:: Shift-Alt-WHEELDOWNMOUSE -> view3d.view_orbit
 
    View Orbit
 
@@ -1486,7 +1173,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: Ctrl-Shift-WHEELUPMOUSE -> view3d.view_roll
+.. km:hotkeyd:: Ctrl-Shift-WHEELUPMOUSE -> view3d.view_roll
 
    View Roll
 
@@ -1500,7 +1187,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-WHEELDOWNMOUSE -> view3d.view_roll
+.. km:hotkeyd:: Ctrl-Shift-WHEELDOWNMOUSE -> view3d.view_roll
 
    View Roll
 
@@ -1514,7 +1201,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_1 -> view3d.viewnumpad
+.. km:hotkeyd:: Shift-NUMPAD_1 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1530,7 +1217,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_3 -> view3d.viewnumpad
+.. km:hotkeyd:: Shift-NUMPAD_3 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1546,7 +1233,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Shift-NUMPAD_7 -> view3d.viewnumpad
+.. km:hotkeyd:: Shift-NUMPAD_7 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1562,7 +1249,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-NUMPAD_1 -> view3d.viewnumpad
+.. km:hotkeyd:: Ctrl-Shift-NUMPAD_1 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1578,7 +1265,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-NUMPAD_3 -> view3d.viewnumpad
+.. km:hotkeyd:: Ctrl-Shift-NUMPAD_3 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1594,7 +1281,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-NUMPAD_7 -> view3d.viewnumpad
+.. km:hotkeyd:: Ctrl-Shift-NUMPAD_7 -> view3d.viewnumpad
 
    View Numpad
 
@@ -1610,42 +1297,42 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: NUMPAD_SLASH -> view3d.localview
+.. km:hotkeyd:: NUMPAD_SLASH -> view3d.localview
 
    Local View
 
    bpy.ops.view3d.localview()
    
    
-.. km:hotkey:: NDOF_MOTION -> view3d.ndof_orbit_zoom
+.. km:hotkeyd:: NDOF_MOTION -> view3d.ndof_orbit_zoom
 
    NDOF Orbit View with Zoom
 
    bpy.ops.view3d.ndof_orbit_zoom()
    
    
-.. km:hotkey:: Ctrl-NDOF_MOTION -> view3d.ndof_orbit
+.. km:hotkeyd:: Ctrl-NDOF_MOTION -> view3d.ndof_orbit
 
    NDOF Orbit View
 
    bpy.ops.view3d.ndof_orbit()
    
    
-.. km:hotkey:: Shift-NDOF_MOTION -> view3d.ndof_pan
+.. km:hotkeyd:: Shift-NDOF_MOTION -> view3d.ndof_pan
 
    NDOF Pan View
 
    bpy.ops.view3d.ndof_pan()
    
    
-.. km:hotkey:: Ctrl-Shift-NDOF_MOTION -> view3d.ndof_all
+.. km:hotkeyd:: Ctrl-Shift-NDOF_MOTION -> view3d.ndof_all
 
    NDOF Move View
 
    bpy.ops.view3d.ndof_all()
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> view3d.view_selected
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> view3d.view_selected
 
    View Selected
 
@@ -1659,7 +1346,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
+.. km:hotkeyd:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
 
    View Roll
 
@@ -1673,7 +1360,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
+.. km:hotkeyd:: NDOF_BUTTON_ROLL_CCW -> view3d.view_roll
 
    View Roll
 
@@ -1687,7 +1374,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_FRONT -> view3d.viewnumpad
+.. km:hotkeyd:: NDOF_BUTTON_FRONT -> view3d.viewnumpad
 
    View Numpad
 
@@ -1701,7 +1388,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_BACK -> view3d.viewnumpad
+.. km:hotkeyd:: NDOF_BUTTON_BACK -> view3d.viewnumpad
 
    View Numpad
 
@@ -1715,7 +1402,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_LEFT -> view3d.viewnumpad
+.. km:hotkeyd:: NDOF_BUTTON_LEFT -> view3d.viewnumpad
 
    View Numpad
 
@@ -1729,7 +1416,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_RIGHT -> view3d.viewnumpad
+.. km:hotkeyd:: NDOF_BUTTON_RIGHT -> view3d.viewnumpad
 
    View Numpad
 
@@ -1743,7 +1430,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_TOP -> view3d.viewnumpad
+.. km:hotkeyd:: NDOF_BUTTON_TOP -> view3d.viewnumpad
 
    View Numpad
 
@@ -1757,7 +1444,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: NDOF_BUTTON_BOTTOM -> view3d.viewnumpad
+.. km:hotkeyd:: NDOF_BUTTON_BOTTOM -> view3d.viewnumpad
 
    View Numpad
 
@@ -1771,7 +1458,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-NDOF_BUTTON_FRONT -> view3d.viewnumpad
+.. km:hotkeyd:: Shift-NDOF_BUTTON_FRONT -> view3d.viewnumpad
 
    View Numpad
 
@@ -1787,7 +1474,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Shift-NDOF_BUTTON_RIGHT -> view3d.viewnumpad
+.. km:hotkeyd:: Shift-NDOF_BUTTON_RIGHT -> view3d.viewnumpad
 
    View Numpad
 
@@ -1803,7 +1490,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Shift-NDOF_BUTTON_TOP -> view3d.viewnumpad
+.. km:hotkeyd:: Shift-NDOF_BUTTON_TOP -> view3d.viewnumpad
 
    View Numpad
 
@@ -1819,7 +1506,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: ACCENT_GRAVE -> view3d.layers
+.. km:hotkeyd:: ACCENT_GRAVE -> view3d.layers
 
    Layers
 
@@ -1833,7 +1520,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-1 -> view3d.layers
+.. km:hotkeyd:: Any-1 -> view3d.layers
 
    Layers
 
@@ -1847,7 +1534,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-2 -> view3d.layers
+.. km:hotkeyd:: Any-2 -> view3d.layers
 
    Layers
 
@@ -1861,7 +1548,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-3 -> view3d.layers
+.. km:hotkeyd:: Any-3 -> view3d.layers
 
    Layers
 
@@ -1875,7 +1562,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-4 -> view3d.layers
+.. km:hotkeyd:: Any-4 -> view3d.layers
 
    Layers
 
@@ -1889,7 +1576,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-5 -> view3d.layers
+.. km:hotkeyd:: Any-5 -> view3d.layers
 
    Layers
 
@@ -1903,7 +1590,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-6 -> view3d.layers
+.. km:hotkeyd:: Any-6 -> view3d.layers
 
    Layers
 
@@ -1917,7 +1604,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-7 -> view3d.layers
+.. km:hotkeyd:: Any-7 -> view3d.layers
 
    Layers
 
@@ -1931,7 +1618,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-8 -> view3d.layers
+.. km:hotkeyd:: Any-8 -> view3d.layers
 
    Layers
 
@@ -1945,7 +1632,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-9 -> view3d.layers
+.. km:hotkeyd:: Any-9 -> view3d.layers
 
    Layers
 
@@ -1959,7 +1646,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-0 -> view3d.layers
+.. km:hotkeyd:: Any-0 -> view3d.layers
 
    Layers
 
@@ -1973,7 +1660,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Z -> wm.context_toggle_enum
+.. km:hotkeyd:: Z -> wm.context_toggle_enum
 
    Context Toggle Values
 
@@ -1991,7 +1678,7 @@ Detailed Reference
    +-------------------+--------------------------+
    
    
-.. km:hotkey:: Alt-Z -> wm.context_toggle_enum
+.. km:hotkeyd:: Alt-Z -> wm.context_toggle_enum
 
    Context Toggle Values
 
@@ -2009,14 +1696,14 @@ Detailed Reference
    +-------------------+--------------------------+
    
    
-.. km:hotkey:: Shift-Z -> view3d.toggle_render
+.. km:hotkeyd:: Shift-Z -> view3d.toggle_render
 
    Toggle Rendered Shading
 
    bpy.ops.view3d.toggle_render()
    
    
-.. km:hotkey:: SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2040,7 +1727,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Shift-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2064,7 +1751,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Ctrl-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2088,7 +1775,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Alt-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Alt-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2112,7 +1799,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2136,7 +1823,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2160,7 +1847,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2184,7 +1871,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-SELECTMOUSE -> view3d.select
+.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> view3d.select
 
    Activate/Select
 
@@ -2208,14 +1895,14 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: B -> view3d.select_border
+.. km:hotkeyd:: B -> view3d.select_border
 
    Border Select
 
    bpy.ops.view3d.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso
+.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso
 
    Lasso Select
 
@@ -2229,7 +1916,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso
 
    Lasso Select
 
@@ -2243,28 +1930,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: C -> view3d.select_circle
+.. km:hotkeyd:: C -> view3d.select_circle
 
    Circle Select
 
    bpy.ops.view3d.select_circle(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkey:: Alt-B -> view3d.clip_border
+.. km:hotkeyd:: Alt-B -> view3d.clip_border
 
    Clipping Border
 
    bpy.ops.view3d.clip_border(xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkey:: Shift-B -> view3d.zoom_border
+.. km:hotkeyd:: Shift-B -> view3d.zoom_border
 
    Zoom to Border
 
    bpy.ops.view3d.zoom_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkey:: Shift-B -> view3d.render_border
+.. km:hotkeyd:: Shift-B -> view3d.render_border
 
    Set Render Border
 
@@ -2278,7 +1965,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-B -> view3d.render_border
+.. km:hotkeyd:: Ctrl-B -> view3d.render_border
 
    Set Render Border
 
@@ -2292,28 +1979,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-B -> view3d.clear_render_border
+.. km:hotkeyd:: Ctrl-Alt-B -> view3d.clear_render_border
 
    Clear Render Border
 
    bpy.ops.view3d.clear_render_border()
    
    
-.. km:hotkey:: Ctrl-Alt-NUMPAD_0 -> view3d.camera_to_view
+.. km:hotkeyd:: Ctrl-Alt-NUMPAD_0 -> view3d.camera_to_view
 
    Align Camera To View
 
    bpy.ops.view3d.camera_to_view()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_0 -> view3d.object_as_camera
+.. km:hotkeyd:: Ctrl-NUMPAD_0 -> view3d.object_as_camera
 
    Set Active Object as Camera
 
    bpy.ops.view3d.object_as_camera()
    
    
-.. km:hotkey:: Shift-S -> wm.call_menu
+.. km:hotkeyd:: Shift-S -> wm.call_menu
 
    Call Menu
 
@@ -2327,21 +2014,21 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkey:: Ctrl-C -> view3d.copybuffer
+.. km:hotkeyd:: Ctrl-C -> view3d.copybuffer
 
    Copy Selection to Buffer
 
    bpy.ops.view3d.copybuffer()
    
    
-.. km:hotkey:: Ctrl-V -> view3d.pastebuffer
+.. km:hotkeyd:: Ctrl-V -> view3d.pastebuffer
 
    Paste Selection from Buffer
 
    bpy.ops.view3d.pastebuffer(autoselect=True, active_layer=True)
    
    
-.. km:hotkey:: , -> wm.context_set_enum
+.. km:hotkeyd:: , -> wm.context_set_enum
 
    Context Set Enum
 
@@ -2357,7 +2044,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-, -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-, -> wm.context_set_enum
 
    Context Set Enum
 
@@ -2373,7 +2060,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Alt-, -> wm.context_toggle
+.. km:hotkeyd:: Alt-, -> wm.context_toggle
 
    Context Toggle
 
@@ -2387,7 +2074,7 @@ Detailed Reference
    +-------------------+---------------------------------+
    
    
-.. km:hotkey:: Ctrl-SPACE -> wm.context_toggle
+.. km:hotkeyd:: Ctrl-SPACE -> wm.context_toggle
 
    Context Toggle
 
@@ -2401,7 +2088,7 @@ Detailed Reference
    +-------------------+----------------------------+
    
    
-.. km:hotkey:: . -> wm.context_set_enum
+.. km:hotkeyd:: . -> wm.context_set_enum
 
    Context Set Enum
 
@@ -2417,7 +2104,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-. -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-. -> wm.context_set_enum
 
    Context Set Enum
 
@@ -2433,7 +2120,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Alt-. -> wm.context_set_enum
+.. km:hotkeyd:: Alt-. -> wm.context_set_enum
 
    Context Set Enum
 
@@ -2449,63 +2136,63 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate
 
    Rotate
 
    bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: Shift-W -> transform.bend
+.. km:hotkeyd:: Shift-W -> transform.bend
 
    Bend
 
    bpy.ops.transform.bend(value=(0,), mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Shift-Alt-S -> transform.tosphere
+.. km:hotkeyd:: Shift-Alt-S -> transform.tosphere
 
    To Sphere
 
    bpy.ops.transform.tosphere(value=0, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-S -> transform.shear
+.. km:hotkeyd:: Ctrl-Shift-Alt-S -> transform.shear
 
    Shear
 
    bpy.ops.transform.shear(value=0, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Alt-SPACE -> transform.select_orientation
+.. km:hotkeyd:: Alt-SPACE -> transform.select_orientation
 
    Select Orientation
 
    bpy.ops.transform.select_orientation(orientation='GLOBAL')
    
    
-.. km:hotkey:: Ctrl-Alt-SPACE -> transform.create_orientation
+.. km:hotkeyd:: Ctrl-Alt-SPACE -> transform.create_orientation
 
    Create Orientation
 
@@ -2519,14 +2206,14 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: Ctrl-M -> transform.mirror
+.. km:hotkeyd:: Ctrl-M -> transform.mirror
 
    Mirror
 
    bpy.ops.transform.mirror(constraint_axis=(False, False, False), constraint_orientation='GLOBAL', proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Shift-Tab -> wm.context_toggle
+.. km:hotkeyd:: Shift-Tab -> wm.context_toggle
 
    Context Toggle
 
@@ -2540,7 +2227,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-Tab -> wm.context_menu_enum
+.. km:hotkeyd:: Ctrl-Shift-Tab -> wm.context_menu_enum
 
    Context Enum Menu
 
@@ -2554,7 +2241,7 @@ Detailed Reference
    +-------------------+---------------------------+
    
    
-.. km:hotkey:: Shift-T -> transform.translate
+.. km:hotkeyd:: Shift-T -> transform.translate
 
    Translate
 
@@ -2568,7 +2255,7 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-T -> transform.resize
+.. km:hotkeyd:: Shift-Alt-T -> transform.resize
 
    Resize
 
@@ -2582,7 +2269,7 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: Ctrl-A -> transform.skin_resize
+.. km:hotkeyd:: Ctrl-A -> transform.skin_resize
 
    Skin Resize
 

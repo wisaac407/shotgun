@@ -4,6 +4,8 @@ View2D
 
 .. km:module:: view2d
 
+   
+
 
 ---------------
 Quick Reference
@@ -15,8 +17,6 @@ Quick Reference
 |:km:hk:`MIDDLEMOUSE <view2d->MIDDLEMOUSE->view2d.pan>`                           |:func:`blender:bpy.ops.view2d.pan`               |
 +---------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`ACTIONMOUSE <view2d->ACTIONMOUSE->view2d.pan>`                           |:func:`blender:bpy.ops.view2d.pan`               |
-+---------------------------------------------------------------------------------+-------------------------------------------------+
-|:km:hk:`NDOF_MOTION <view2d->NDOF_MOTION->view2d.ndof>`                          |:func:`blender:bpy.ops.view2d.ndof`              |
 +---------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`LEFTMOUSE <view2d->LEFTMOUSE->view2d.scroller_activate>`                 |:func:`blender:bpy.ops.view2d.scroller_activate` |
 +---------------------------------------------------------------------------------+-------------------------------------------------+
@@ -70,6 +70,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: MIDDLEMOUSE -> view2d.pan
 
    Pan View
@@ -77,168 +81,161 @@ Detailed Reference
    bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
-.. km:hotkey:: NDOF_MOTION -> view2d.ndof
-
-   NDOF Pan/Zoom
-
-   bpy.ops.view2d.ndof()
-   
-   
-.. km:hotkey:: LEFTMOUSE -> view2d.scroller_activate
+.. km:hotkeyd:: LEFTMOUSE -> view2d.scroller_activate
 
    Scroller Activate
 
    bpy.ops.view2d.scroller_activate()
    
    
-.. km:hotkey:: MIDDLEMOUSE -> view2d.scroller_activate
+.. km:hotkeyd:: MIDDLEMOUSE -> view2d.scroller_activate
 
    Scroller Activate
 
    bpy.ops.view2d.scroller_activate()
    
    
-.. km:hotkey:: MIDDLEMOUSE -> view2d.pan
+.. km:hotkeyd:: MIDDLEMOUSE -> view2d.pan
 
    Pan View
 
    bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Shift-MIDDLEMOUSE -> view2d.pan
+.. km:hotkeyd:: Shift-MIDDLEMOUSE -> view2d.pan
 
    Pan View
 
    bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
-.. km:hotkey:: TRACKPADPAN -> view2d.pan
+.. km:hotkeyd:: TRACKPADPAN -> view2d.pan
 
    Pan View
 
    bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Ctrl-WHEELDOWNMOUSE -> view2d.scroll_right
+.. km:hotkeyd:: Ctrl-WHEELDOWNMOUSE -> view2d.scroll_right
 
    Scroll Right
 
    bpy.ops.view2d.scroll_right(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Ctrl-WHEELUPMOUSE -> view2d.scroll_left
+.. km:hotkeyd:: Ctrl-WHEELUPMOUSE -> view2d.scroll_left
 
    Scroll Left
 
    bpy.ops.view2d.scroll_left(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Shift-WHEELDOWNMOUSE -> view2d.scroll_down
+.. km:hotkeyd:: Shift-WHEELDOWNMOUSE -> view2d.scroll_down
 
    Scroll Down
 
    bpy.ops.view2d.scroll_down(deltax=0, deltay=0, page=False)
    
    
-.. km:hotkey:: Shift-WHEELUPMOUSE -> view2d.scroll_up
+.. km:hotkeyd:: Shift-WHEELUPMOUSE -> view2d.scroll_up
 
    Scroll Up
 
    bpy.ops.view2d.scroll_up(deltax=0, deltay=0, page=False)
    
    
-.. km:hotkey:: NDOF_MOTION -> view2d.ndof
+.. km:hotkeyd:: NDOF_MOTION -> view2d.ndof
 
    NDOF Pan/Zoom
 
    bpy.ops.view2d.ndof()
    
    
-.. km:hotkey:: WHEELOUTMOUSE -> view2d.zoom_out
+.. km:hotkeyd:: WHEELOUTMOUSE -> view2d.zoom_out
 
    Zoom Out
 
    bpy.ops.view2d.zoom_out(zoomfacx=0, zoomfacy=0)
    
    
-.. km:hotkey:: WHEELINMOUSE -> view2d.zoom_in
+.. km:hotkeyd:: WHEELINMOUSE -> view2d.zoom_in
 
    Zoom In
 
    bpy.ops.view2d.zoom_in(zoomfacx=0, zoomfacy=0)
    
    
-.. km:hotkey:: NUMPAD_MINUS -> view2d.zoom_out
+.. km:hotkeyd:: NUMPAD_MINUS -> view2d.zoom_out
 
    Zoom Out
 
    bpy.ops.view2d.zoom_out(zoomfacx=0, zoomfacy=0)
    
    
-.. km:hotkey:: NUMPAD_PLUS -> view2d.zoom_in
+.. km:hotkeyd:: NUMPAD_PLUS -> view2d.zoom_in
 
    Zoom In
 
    bpy.ops.view2d.zoom_in(zoomfacx=0, zoomfacy=0)
    
    
-.. km:hotkey:: Ctrl-TRACKPADPAN -> view2d.zoom
+.. km:hotkeyd:: Ctrl-TRACKPADPAN -> view2d.zoom
 
    Zoom 2D View
 
    bpy.ops.view2d.zoom(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Any-TIMER1 -> view2d.smoothview
+.. km:hotkeyd:: Any-TIMER1 -> view2d.smoothview
 
    Smooth View 2D
 
    bpy.ops.view2d.smoothview(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkey:: WHEELDOWNMOUSE -> view2d.scroll_down
+.. km:hotkeyd:: WHEELDOWNMOUSE -> view2d.scroll_down
 
    Scroll Down
 
    bpy.ops.view2d.scroll_down(deltax=0, deltay=0, page=False)
    
    
-.. km:hotkey:: WHEELUPMOUSE -> view2d.scroll_up
+.. km:hotkeyd:: WHEELUPMOUSE -> view2d.scroll_up
 
    Scroll Up
 
    bpy.ops.view2d.scroll_up(deltax=0, deltay=0, page=False)
    
    
-.. km:hotkey:: WHEELDOWNMOUSE -> view2d.scroll_right
+.. km:hotkeyd:: WHEELDOWNMOUSE -> view2d.scroll_right
 
    Scroll Right
 
    bpy.ops.view2d.scroll_right(deltax=0, deltay=0)
    
    
-.. km:hotkey:: WHEELUPMOUSE -> view2d.scroll_left
+.. km:hotkeyd:: WHEELUPMOUSE -> view2d.scroll_left
 
    Scroll Left
 
    bpy.ops.view2d.scroll_left(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Ctrl-MIDDLEMOUSE -> view2d.zoom
+.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> view2d.zoom
 
    Zoom 2D View
 
    bpy.ops.view2d.zoom(deltax=0, deltay=0)
    
    
-.. km:hotkey:: TRACKPADZOOM -> view2d.zoom
+.. km:hotkeyd:: TRACKPADZOOM -> view2d.zoom
 
    Zoom 2D View
 
    bpy.ops.view2d.zoom(deltax=0, deltay=0)
    
    
-.. km:hotkey:: Shift-B -> view2d.zoom_border
+.. km:hotkeyd:: Shift-B -> view2d.zoom_border
 
    Zoom to Border
 

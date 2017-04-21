@@ -4,6 +4,8 @@ Clip Dopesheet Editor
 
 .. km:module:: clipdopesheeteditor
 
+   
+
 
 ---------------
 Quick Reference
@@ -28,6 +30,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-SELECTMOUSE -> clip.dopesheet_select_channel
 
    Select Channel
@@ -42,14 +48,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: HOME -> clip.dopesheet_view_all
+.. km:hotkeyd:: HOME -> clip.dopesheet_view_all
 
    View All
 
    bpy.ops.clip.dopesheet_view_all()
    
    
-.. km:hotkey:: LEFTMOUSE -> clip.dopesheet_select_channel
+.. km:hotkeyd:: LEFTMOUSE -> clip.dopesheet_select_channel
 
    Select Channel
 
@@ -63,14 +69,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: HOME -> clip.dopesheet_view_all
+.. km:hotkeyd:: HOME -> clip.dopesheet_view_all
 
    View All
 
    bpy.ops.clip.dopesheet_view_all()
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> clip.dopesheet_view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.dopesheet_view_all
 
    View All
 

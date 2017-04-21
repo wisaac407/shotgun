@@ -4,6 +4,8 @@ Pose
 
 .. km:module:: pose
 
+   
+
 
 ---------------
 Quick Reference
@@ -120,6 +122,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: A -> wm.call_menu
 
    Call Menu
@@ -155,14 +161,14 @@ Detailed Reference
    bpy.ops.pose.select_mirror(only_active=False, extend=False)
    
    
-.. km:hotkey:: Ctrl-P -> object.parent_set
+.. km:hotkeyd:: Ctrl-P -> object.parent_set
 
    Make Parent
 
    bpy.ops.object.parent_set(type='OBJECT', xmirror=False, keep_transform=False)
    
    
-.. km:hotkey:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu
 
    Call Menu
 
@@ -176,7 +182,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: H -> pose.hide
+.. km:hotkeyd:: H -> pose.hide
 
    Hide Selected
 
@@ -190,7 +196,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> pose.hide
+.. km:hotkeyd:: Shift-H -> pose.hide
 
    Hide Selected
 
@@ -204,14 +210,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-H -> pose.reveal
+.. km:hotkeyd:: Alt-H -> pose.reveal
 
    Reveal Selected
 
    bpy.ops.pose.reveal()
    
    
-.. km:hotkey:: Ctrl-A -> wm.call_menu
+.. km:hotkeyd:: Ctrl-A -> wm.call_menu
 
    Call Menu
 
@@ -225,49 +231,49 @@ Detailed Reference
    +------------+---------------------+
    
    
-.. km:hotkey:: Alt-R -> pose.rot_clear
+.. km:hotkeyd:: Alt-R -> pose.rot_clear
 
    Clear Pose Rotation
 
    bpy.ops.pose.rot_clear()
    
    
-.. km:hotkey:: Alt-G -> pose.loc_clear
+.. km:hotkeyd:: Alt-G -> pose.loc_clear
 
    Clear Pose Location
 
    bpy.ops.pose.loc_clear()
    
    
-.. km:hotkey:: Alt-S -> pose.scale_clear
+.. km:hotkeyd:: Alt-S -> pose.scale_clear
 
    Clear Pose Scale
 
    bpy.ops.pose.scale_clear()
    
    
-.. km:hotkey:: Alt-F -> pose.quaternions_flip
+.. km:hotkeyd:: Alt-F -> pose.quaternions_flip
 
    Flip Quats
 
    bpy.ops.pose.quaternions_flip()
    
    
-.. km:hotkey:: Ctrl-R -> pose.rotation_mode_set
+.. km:hotkeyd:: Ctrl-R -> pose.rotation_mode_set
 
    Set Rotation Mode
 
    bpy.ops.pose.rotation_mode_set(type='QUATERNION')
    
    
-.. km:hotkey:: Ctrl-C -> pose.copy
+.. km:hotkeyd:: Ctrl-C -> pose.copy
 
    Copy Pose
 
    bpy.ops.pose.copy()
    
    
-.. km:hotkey:: Ctrl-V -> pose.paste
+.. km:hotkeyd:: Ctrl-V -> pose.paste
 
    Paste Pose
 
@@ -281,7 +287,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-V -> pose.paste
+.. km:hotkeyd:: Ctrl-Shift-V -> pose.paste
 
    Paste Pose
 
@@ -295,7 +301,7 @@ Detailed Reference
    +------------------+--------+
    
    
-.. km:hotkey:: A -> pose.select_all
+.. km:hotkeyd:: A -> pose.select_all
 
    (De)select All
 
@@ -309,7 +315,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> pose.select_all
+.. km:hotkeyd:: Ctrl-I -> pose.select_all
 
    (De)select All
 
@@ -323,14 +329,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-P -> pose.select_parent
+.. km:hotkeyd:: Shift-P -> pose.select_parent
 
    Select Parent Bone
 
    bpy.ops.pose.select_parent()
    
    
-.. km:hotkey:: LEFT_BRACKET -> pose.select_hierarchy
+.. km:hotkeyd:: LEFT_BRACKET -> pose.select_hierarchy
 
    Select Hierarchy
 
@@ -346,7 +352,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-LEFT_BRACKET -> pose.select_hierarchy
+.. km:hotkeyd:: Shift-LEFT_BRACKET -> pose.select_hierarchy
 
    Select Hierarchy
 
@@ -362,7 +368,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: RIGHT_BRACKET -> pose.select_hierarchy
+.. km:hotkeyd:: RIGHT_BRACKET -> pose.select_hierarchy
 
    Select Hierarchy
 
@@ -378,7 +384,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-RIGHT_BRACKET -> pose.select_hierarchy
+.. km:hotkeyd:: Shift-RIGHT_BRACKET -> pose.select_hierarchy
 
    Select Hierarchy
 
@@ -394,56 +400,56 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: L -> pose.select_linked
+.. km:hotkeyd:: L -> pose.select_linked
 
    Select Connected
 
    bpy.ops.pose.select_linked(extend=False)
    
    
-.. km:hotkey:: Shift-G -> pose.select_grouped
+.. km:hotkeyd:: Shift-G -> pose.select_grouped
 
    Select Grouped
 
    bpy.ops.pose.select_grouped(extend=False, type='LAYER')
    
    
-.. km:hotkey:: Ctrl-Shift-F -> pose.select_mirror
+.. km:hotkeyd:: Ctrl-Shift-F -> pose.select_mirror
 
    Flip Active/Selected Bone
 
    bpy.ops.pose.select_mirror(only_active=False, extend=False)
    
    
-.. km:hotkey:: Ctrl-Shift-C -> pose.constraint_add_with_targets
+.. km:hotkeyd:: Ctrl-Shift-C -> pose.constraint_add_with_targets
 
    Add Constraint (with Targets)
 
    bpy.ops.pose.constraint_add_with_targets(type='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: Ctrl-Alt-C -> pose.constraints_clear
+.. km:hotkeyd:: Ctrl-Alt-C -> pose.constraints_clear
 
    Clear Pose Constraints
 
    bpy.ops.pose.constraints_clear()
    
    
-.. km:hotkey:: Shift-I -> pose.ik_add
+.. km:hotkeyd:: Shift-I -> pose.ik_add
 
    Add IK to Bone
 
    bpy.ops.pose.ik_add(with_targets=True)
    
    
-.. km:hotkey:: Ctrl-Alt-I -> pose.ik_clear
+.. km:hotkeyd:: Ctrl-Alt-I -> pose.ik_clear
 
    Remove IK
 
    bpy.ops.pose.ik_clear()
    
    
-.. km:hotkey:: Ctrl-G -> wm.call_menu
+.. km:hotkeyd:: Ctrl-G -> wm.call_menu
 
    Call Menu
 
@@ -457,7 +463,7 @@ Detailed Reference
    +------------+---------------------+
    
    
-.. km:hotkey:: Shift-W -> wm.call_menu
+.. km:hotkeyd:: Shift-W -> wm.call_menu
 
    Call Menu
 
@@ -471,7 +477,7 @@ Detailed Reference
    +------------+------------------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-W -> wm.call_menu
+.. km:hotkeyd:: Ctrl-Shift-W -> wm.call_menu
 
    Call Menu
 
@@ -485,7 +491,7 @@ Detailed Reference
    +------------+------------------------------+
    
    
-.. km:hotkey:: Alt-W -> wm.call_menu
+.. km:hotkeyd:: Alt-W -> wm.call_menu
 
    Call Menu
 
@@ -499,28 +505,28 @@ Detailed Reference
    +------------+-------------------------------+
    
    
-.. km:hotkey:: Ctrl-ACCENT_GRAVE -> armature.layers_show_all
+.. km:hotkeyd:: Ctrl-ACCENT_GRAVE -> armature.layers_show_all
 
    Show All Layers
 
    bpy.ops.armature.layers_show_all(all=True)
    
    
-.. km:hotkey:: Shift-M -> armature.armature_layers
+.. km:hotkeyd:: Shift-M -> armature.armature_layers
 
    Change Armature Layers
 
    bpy.ops.armature.armature_layers(layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkey:: M -> pose.bone_layers
+.. km:hotkeyd:: M -> pose.bone_layers
 
    Change Bone Layers
 
    bpy.ops.pose.bone_layers(layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkey:: Ctrl-Alt-S -> transform.transform
+.. km:hotkeyd:: Ctrl-Alt-S -> transform.transform
 
    Transform
 
@@ -534,77 +540,77 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkey:: I -> anim.keyframe_insert_menu
+.. km:hotkeyd:: I -> anim.keyframe_insert_menu
 
    Insert Keyframe Menu
 
    bpy.ops.anim.keyframe_insert_menu(type='DEFAULT', confirm_success=False, always_prompt=False)
    
    
-.. km:hotkey:: Alt-I -> anim.keyframe_delete_v3d
+.. km:hotkeyd:: Alt-I -> anim.keyframe_delete_v3d
 
    Delete Keyframe
 
    bpy.ops.anim.keyframe_delete_v3d()
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-I -> anim.keying_set_active_set
+.. km:hotkeyd:: Ctrl-Shift-Alt-I -> anim.keying_set_active_set
 
    Set Active Keying Set
 
    bpy.ops.anim.keying_set_active_set(type='DEFAULT')
    
    
-.. km:hotkey:: Ctrl-L -> poselib.browse_interactive
+.. km:hotkeyd:: Ctrl-L -> poselib.browse_interactive
 
    PoseLib Browse Poses
 
    bpy.ops.poselib.browse_interactive(pose_index=-1)
    
    
-.. km:hotkey:: Shift-L -> poselib.pose_add
+.. km:hotkeyd:: Shift-L -> poselib.pose_add
 
    PoseLib Add Pose
 
    bpy.ops.poselib.pose_add(frame=1, name="Pose")
    
    
-.. km:hotkey:: Alt-L -> poselib.pose_remove
+.. km:hotkeyd:: Alt-L -> poselib.pose_remove
 
    PoseLib Remove Pose
 
    bpy.ops.poselib.pose_remove(pose='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: Ctrl-Shift-L -> poselib.pose_rename
+.. km:hotkeyd:: Ctrl-Shift-L -> poselib.pose_rename
 
    PoseLib Rename Pose
 
    bpy.ops.poselib.pose_rename(name="RenamedPose", pose='<UNKNOWN ENUM>')
    
    
-.. km:hotkey:: Ctrl-E -> pose.push
+.. km:hotkeyd:: Ctrl-E -> pose.push
 
    Push Pose
 
    bpy.ops.pose.push(prev_frame=0, next_frame=0, percentage=0.5)
    
    
-.. km:hotkey:: Alt-E -> pose.relax
+.. km:hotkeyd:: Alt-E -> pose.relax
 
    Relax Pose
 
    bpy.ops.pose.relax(prev_frame=0, next_frame=0, percentage=0.5)
    
    
-.. km:hotkey:: Shift-E -> pose.breakdown
+.. km:hotkeyd:: Shift-E -> pose.breakdown
 
    Pose Breakdowner
 
    bpy.ops.pose.breakdown(prev_frame=0, next_frame=0, percentage=0.5)
    
    
-.. km:hotkey:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu
 
    Call Menu
 
@@ -618,7 +624,7 @@ Detailed Reference
    +------------+------------------------+
    
    
-.. km:hotkey:: Alt-P -> wm.call_menu
+.. km:hotkeyd:: Alt-P -> wm.call_menu
 
    Call Menu
 

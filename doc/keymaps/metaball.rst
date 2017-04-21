@@ -4,6 +4,8 @@ Metaball
 
 .. km:module:: metaball
 
+   
+
 
 ---------------
 Quick Reference
@@ -48,6 +50,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-A -> mball.select_all
 
    (De)select All
@@ -62,7 +68,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -76,21 +82,21 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: Shift-A -> object.metaball_add
+.. km:hotkeyd:: Shift-A -> object.metaball_add
 
    Add Metaball
 
    bpy.ops.object.metaball_add(type='BALL', radius=1, view_align=False, enter_editmode=False, location=(0, 0, 0), rotation=(0, 0, 0), layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkey:: Alt-H -> mball.reveal_metaelems
+.. km:hotkeyd:: Alt-H -> mball.reveal_metaelems
 
    Reveal
 
    bpy.ops.mball.reveal_metaelems()
    
    
-.. km:hotkey:: H -> mball.hide_metaelems
+.. km:hotkeyd:: H -> mball.hide_metaelems
 
    Hide
 
@@ -104,7 +110,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> mball.hide_metaelems
+.. km:hotkeyd:: Shift-H -> mball.hide_metaelems
 
    Hide
 
@@ -118,21 +124,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> mball.delete_metaelems
+.. km:hotkeyd:: X -> mball.delete_metaelems
 
    Delete
 
    bpy.ops.mball.delete_metaelems()
    
    
-.. km:hotkey:: DEL -> mball.delete_metaelems
+.. km:hotkeyd:: DEL -> mball.delete_metaelems
 
    Delete
 
    bpy.ops.mball.delete_metaelems()
    
    
-.. km:hotkey:: Shift-D -> mball.duplicate_move
+.. km:hotkeyd:: Shift-D -> mball.duplicate_move
 
    Duplicate
 
@@ -148,7 +154,7 @@ Detailed Reference
    +-----------------------+--------+
    
    
-.. km:hotkey:: A -> mball.select_all
+.. km:hotkeyd:: A -> mball.select_all
 
    (De)select All
 
@@ -162,7 +168,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> mball.select_all
+.. km:hotkeyd:: Ctrl-I -> mball.select_all
 
    (De)select All
 
@@ -176,14 +182,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-G -> mball.select_similar
+.. km:hotkeyd:: Shift-G -> mball.select_similar
 
    Select Similar
 
    bpy.ops.mball.select_similar(type='TYPE', threshold=0.1)
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -199,7 +205,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum
 
    Context Toggle Values
 
@@ -217,7 +223,7 @@ Detailed Reference
    +-------------------+--------------------------------+
    
    
-.. km:hotkey:: Alt-O -> wm.context_toggle_enum
+.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum
 
    Context Toggle Values
 

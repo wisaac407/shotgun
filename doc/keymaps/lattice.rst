@@ -4,6 +4,8 @@ Lattice
 
 .. km:module:: lattice
 
+   
+
 
 ---------------
 Quick Reference
@@ -40,6 +42,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-A -> lattice.select_all
 
    (De)select All
@@ -54,7 +60,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -68,7 +74,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: A -> lattice.select_all
+.. km:hotkeyd:: A -> lattice.select_all
 
    (De)select All
 
@@ -82,7 +88,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> lattice.select_all
+.. km:hotkeyd:: Ctrl-I -> lattice.select_all
 
    (De)select All
 
@@ -96,35 +102,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> lattice.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> lattice.select_more
 
    Select More
 
    bpy.ops.lattice.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> lattice.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> lattice.select_less
 
    Select Less
 
    bpy.ops.lattice.select_less()
    
    
-.. km:hotkey:: Ctrl-P -> object.vertex_parent_set
+.. km:hotkeyd:: Ctrl-P -> object.vertex_parent_set
 
    Make Vertex Parent
 
    bpy.ops.object.vertex_parent_set()
    
    
-.. km:hotkey:: Ctrl-F -> lattice.flip
+.. km:hotkeyd:: Ctrl-F -> lattice.flip
 
    Flip (Distortion Free)
 
    bpy.ops.lattice.flip(axis='U')
    
    
-.. km:hotkey:: Ctrl-H -> wm.call_menu
+.. km:hotkeyd:: Ctrl-H -> wm.call_menu
 
    Call Menu
 
@@ -138,7 +144,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -154,7 +160,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum
 
    Context Toggle Values
 

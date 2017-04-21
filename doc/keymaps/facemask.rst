@@ -4,6 +4,8 @@ Face Mask
 
 .. km:module:: facemask
 
+   
+
 
 ---------------
 Quick Reference
@@ -36,6 +38,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-A -> paint.face_select_all
 
    (De)select All
@@ -50,7 +56,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: A -> paint.face_select_all
+.. km:hotkeyd:: A -> paint.face_select_all
 
    (De)select All
 
@@ -64,7 +70,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> paint.face_select_all
+.. km:hotkeyd:: Ctrl-I -> paint.face_select_all
 
    (De)select All
 
@@ -78,7 +84,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: H -> paint.face_select_hide
+.. km:hotkeyd:: H -> paint.face_select_hide
 
    Face Select Hide
 
@@ -92,7 +98,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> paint.face_select_hide
+.. km:hotkeyd:: Shift-H -> paint.face_select_hide
 
    Face Select Hide
 
@@ -106,21 +112,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-H -> paint.face_select_reveal
+.. km:hotkeyd:: Alt-H -> paint.face_select_reveal
 
    Face Select Reveal
 
    bpy.ops.paint.face_select_reveal(unselected=False)
    
    
-.. km:hotkey:: Ctrl-L -> paint.face_select_linked
+.. km:hotkeyd:: Ctrl-L -> paint.face_select_linked
 
    Select Linked
 
    bpy.ops.paint.face_select_linked()
    
    
-.. km:hotkey:: L -> paint.face_select_linked_pick
+.. km:hotkeyd:: L -> paint.face_select_linked_pick
 
    Select Linked Pick
 
@@ -134,7 +140,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-L -> paint.face_select_linked_pick
+.. km:hotkeyd:: Shift-L -> paint.face_select_linked_pick
 
    Select Linked Pick
 

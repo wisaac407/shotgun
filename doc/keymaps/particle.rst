@@ -4,6 +4,8 @@ Particle
 
 .. km:module:: particle
 
+   
+
 
 ---------------
 Quick Reference
@@ -64,6 +66,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-A -> particle.select_all
 
    (De)select All
@@ -78,7 +84,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-LEFTMOUSE -> view3d.manipulator
+.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator
 
    3D Manipulator
 
@@ -92,7 +98,7 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -106,7 +112,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: A -> particle.select_all
+.. km:hotkeyd:: A -> particle.select_all
 
    (De)select All
 
@@ -120,7 +126,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> particle.select_all
+.. km:hotkeyd:: Ctrl-I -> particle.select_all
 
    (De)select All
 
@@ -134,21 +140,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> particle.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> particle.select_more
 
    Select More
 
    bpy.ops.particle.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> particle.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> particle.select_less
 
    Select Less
 
    bpy.ops.particle.select_less()
    
    
-.. km:hotkey:: L -> particle.select_linked
+.. km:hotkeyd:: L -> particle.select_linked
 
    Select Linked
 
@@ -162,7 +168,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-L -> particle.select_linked
+.. km:hotkeyd:: Shift-L -> particle.select_linked
 
    Select Linked
 
@@ -176,28 +182,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> particle.delete
+.. km:hotkeyd:: X -> particle.delete
 
    Delete
 
    bpy.ops.particle.delete(type='PARTICLE')
    
    
-.. km:hotkey:: DEL -> particle.delete
+.. km:hotkeyd:: DEL -> particle.delete
 
    Delete
 
    bpy.ops.particle.delete(type='PARTICLE')
    
    
-.. km:hotkey:: Alt-H -> particle.reveal
+.. km:hotkeyd:: Alt-H -> particle.reveal
 
    Reveal
 
    bpy.ops.particle.reveal()
    
    
-.. km:hotkey:: H -> particle.hide
+.. km:hotkeyd:: H -> particle.hide
 
    Hide Selected
 
@@ -211,7 +217,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> particle.hide
+.. km:hotkeyd:: Shift-H -> particle.hide
 
    Hide Selected
 
@@ -225,7 +231,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-LEFTMOUSE -> view3d.manipulator
+.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator
 
    3D Manipulator
 
@@ -239,21 +245,21 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: LEFTMOUSE -> particle.brush_edit
+.. km:hotkeyd:: LEFTMOUSE -> particle.brush_edit
 
    Brush Edit
 
    bpy.ops.particle.brush_edit(stroke=[])
    
    
-.. km:hotkey:: Shift-LEFTMOUSE -> particle.brush_edit
+.. km:hotkeyd:: Shift-LEFTMOUSE -> particle.brush_edit
 
    Brush Edit
 
    bpy.ops.particle.brush_edit(stroke=[])
    
    
-.. km:hotkey:: F -> wm.radial_control
+.. km:hotkeyd:: F -> wm.radial_control
 
    Radial Control
 
@@ -267,7 +273,7 @@ Detailed Reference
    +------------------+---------------------------------------+
    
    
-.. km:hotkey:: Shift-F -> wm.radial_control
+.. km:hotkeyd:: Shift-F -> wm.radial_control
 
    Radial Control
 
@@ -281,7 +287,7 @@ Detailed Reference
    +------------------+-------------------------------------------+
    
    
-.. km:hotkey:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu
 
    Call Menu
 
@@ -295,14 +301,14 @@ Detailed Reference
    +------------+----------------------------+
    
    
-.. km:hotkey:: Shift-K -> particle.weight_set
+.. km:hotkeyd:: Shift-K -> particle.weight_set
 
    Weight Set
 
    bpy.ops.particle.weight_set(factor=1)
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -318,7 +324,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum
 
    Context Toggle Values
 

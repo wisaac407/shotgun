@@ -4,6 +4,8 @@ UV Editor
 
 .. km:module:: uveditor
 
+   
+
 
 ---------------
 Quick Reference
@@ -124,6 +126,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Shift-B -> uv.select_border
 
    Border Select
@@ -187,7 +193,7 @@ Detailed Reference
    bpy.ops.uv.cursor_set(location=(0, 0))
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -201,7 +207,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-Tab -> wm.context_menu_enum
+.. km:hotkeyd:: Ctrl-Shift-Tab -> wm.context_menu_enum
 
    Context Enum Menu
 
@@ -215,7 +221,7 @@ Detailed Reference
    +-------------------+------------------------------+
    
    
-.. km:hotkey:: Q -> wm.context_toggle
+.. km:hotkeyd:: Q -> wm.context_toggle
 
    Context Toggle
 
@@ -229,14 +235,14 @@ Detailed Reference
    +-------------------+----------------------------+
    
    
-.. km:hotkey:: Ctrl-E -> uv.mark_seam
+.. km:hotkeyd:: Ctrl-E -> uv.mark_seam
 
    Mark Seam
 
    bpy.ops.uv.mark_seam(clear=False)
    
    
-.. km:hotkey:: SELECTMOUSE -> uv.select
+.. km:hotkeyd:: SELECTMOUSE -> uv.select
 
    Select
 
@@ -250,7 +256,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-SELECTMOUSE -> uv.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> uv.select
 
    Select
 
@@ -264,7 +270,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-SELECTMOUSE -> uv.select_loop
+.. km:hotkeyd:: Alt-SELECTMOUSE -> uv.select_loop
 
    Loop Select
 
@@ -278,7 +284,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-SELECTMOUSE -> uv.select_loop
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> uv.select_loop
 
    Loop Select
 
@@ -292,14 +298,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Y -> uv.select_split
+.. km:hotkeyd:: Y -> uv.select_split
 
    Select Split
 
    bpy.ops.uv.select_split()
    
    
-.. km:hotkey:: B -> uv.select_border
+.. km:hotkeyd:: B -> uv.select_border
 
    Border Select
 
@@ -313,7 +319,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-B -> uv.select_border
+.. km:hotkeyd:: Ctrl-B -> uv.select_border
 
    Border Select
 
@@ -327,14 +333,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: C -> uv.circle_select
+.. km:hotkeyd:: C -> uv.circle_select
 
    Circle Select
 
    bpy.ops.uv.circle_select(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkey:: Ctrl-EVT_TWEAK_A -> uv.select_lasso
+.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> uv.select_lasso
 
    Lasso Select UV
 
@@ -348,7 +354,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_A -> uv.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> uv.select_lasso
 
    Lasso Select UV
 
@@ -362,7 +368,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-L -> uv.select_linked
+.. km:hotkeyd:: Ctrl-L -> uv.select_linked
 
    Select Linked
 
@@ -376,7 +382,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: L -> uv.select_linked_pick
+.. km:hotkeyd:: L -> uv.select_linked_pick
 
    Select Linked Pick
 
@@ -390,7 +396,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-L -> uv.select_linked
+.. km:hotkeyd:: Ctrl-Shift-L -> uv.select_linked
 
    Select Linked
 
@@ -404,7 +410,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-L -> uv.select_linked_pick
+.. km:hotkeyd:: Shift-L -> uv.select_linked_pick
 
    Select Linked Pick
 
@@ -418,21 +424,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> uv.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> uv.select_more
 
    Select More
 
    bpy.ops.uv.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> uv.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> uv.select_less
 
    Select Less
 
    bpy.ops.uv.select_less()
    
    
-.. km:hotkey:: A -> uv.select_all
+.. km:hotkeyd:: A -> uv.select_all
 
    (De)select All
 
@@ -446,7 +452,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> uv.select_all
+.. km:hotkeyd:: Ctrl-I -> uv.select_all
 
    (De)select All
 
@@ -460,14 +466,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-P -> uv.select_pinned
+.. km:hotkeyd:: Shift-P -> uv.select_pinned
 
    Selected Pinned
 
    bpy.ops.uv.select_pinned()
    
    
-.. km:hotkey:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu
 
    Call Menu
 
@@ -481,14 +487,14 @@ Detailed Reference
    +------------+-----------------------+
    
    
-.. km:hotkey:: V -> uv.stitch
+.. km:hotkeyd:: V -> uv.stitch
 
    Stitch
 
    bpy.ops.uv.stitch(use_limit=False, snap_islands=True, limit=0.01, static_island=0, midpoint_snap=False, clear_seams=True, mode='VERTEX', stored_mode='VERTEX', selection=[])
    
    
-.. km:hotkey:: P -> uv.pin
+.. km:hotkeyd:: P -> uv.pin
 
    Pin
 
@@ -502,7 +508,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-P -> uv.pin
+.. km:hotkeyd:: Alt-P -> uv.pin
 
    Pin
 
@@ -516,35 +522,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: E -> uv.unwrap
+.. km:hotkeyd:: E -> uv.unwrap
 
    Unwrap
 
    bpy.ops.uv.unwrap(method='ANGLE_BASED', fill_holes=True, correct_aspect=True, use_subsurf_data=False, margin=0.001)
    
    
-.. km:hotkey:: Ctrl-V -> uv.minimize_stretch
+.. km:hotkeyd:: Ctrl-V -> uv.minimize_stretch
 
    Minimize Stretch
 
    bpy.ops.uv.minimize_stretch(fill_holes=True, blend=0, iterations=0)
    
    
-.. km:hotkey:: Ctrl-P -> uv.pack_islands
+.. km:hotkeyd:: Ctrl-P -> uv.pack_islands
 
    Pack Islands
 
    bpy.ops.uv.pack_islands(rotate=True, margin=0.001)
    
    
-.. km:hotkey:: Ctrl-A -> uv.average_islands_scale
+.. km:hotkeyd:: Ctrl-A -> uv.average_islands_scale
 
    Average Islands Scale
 
    bpy.ops.uv.average_islands_scale()
    
    
-.. km:hotkey:: H -> uv.hide
+.. km:hotkeyd:: H -> uv.hide
 
    Hide Selected
 
@@ -558,7 +564,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> uv.hide
+.. km:hotkeyd:: Shift-H -> uv.hide
 
    Hide Selected
 
@@ -572,28 +578,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-H -> uv.reveal
+.. km:hotkeyd:: Alt-H -> uv.reveal
 
    Reveal Hidden
 
    bpy.ops.uv.reveal()
    
    
-.. km:hotkey:: ACTIONMOUSE -> uv.cursor_set
+.. km:hotkeyd:: ACTIONMOUSE -> uv.cursor_set
 
    Set 2D Cursor
 
    bpy.ops.uv.cursor_set(location=(0, 0))
    
    
-.. km:hotkey:: Shift-ACTIONMOUSE -> uv.tile_set
+.. km:hotkeyd:: Shift-ACTIONMOUSE -> uv.tile_set
 
    Set Tile
 
    bpy.ops.uv.tile_set(tile=(0, 0))
    
    
-.. km:hotkey:: Shift-S -> wm.call_menu
+.. km:hotkeyd:: Shift-S -> wm.call_menu
 
    Call Menu
 
@@ -607,7 +613,7 @@ Detailed Reference
    +------------+------------------+
    
    
-.. km:hotkey:: Ctrl-Tab -> wm.call_menu
+.. km:hotkeyd:: Ctrl-Tab -> wm.call_menu
 
    Call Menu
 
@@ -621,7 +627,7 @@ Detailed Reference
    +------------+-------------------------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -637,7 +643,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum
 
    Context Toggle Values
 
@@ -655,49 +661,49 @@ Detailed Reference
    +-------------------+--------------------------------+
    
    
-.. km:hotkey:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate
 
    Rotate
 
    bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-S -> transform.shear
+.. km:hotkeyd:: Ctrl-Shift-Alt-S -> transform.shear
 
    Shear
 
    bpy.ops.transform.shear(value=0, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Ctrl-M -> transform.mirror
+.. km:hotkeyd:: Ctrl-M -> transform.mirror
 
    Mirror
 
    bpy.ops.transform.mirror(constraint_axis=(False, False, False), constraint_orientation='GLOBAL', proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Shift-Tab -> wm.context_toggle
+.. km:hotkeyd:: Shift-Tab -> wm.context_toggle
 
    Context Toggle
 
@@ -711,7 +717,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkey:: Ctrl-Shift-Tab -> wm.context_menu_enum
+.. km:hotkeyd:: Ctrl-Shift-Tab -> wm.context_menu_enum
 
    Context Enum Menu
 

@@ -4,6 +4,8 @@ Mask Editing
 
 .. km:module:: maskediting
 
+   
+
 
 ---------------
 Quick Reference
@@ -120,7 +122,11 @@ Quick Reference
 Detailed Reference
 ------------------
 
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -206,14 +212,14 @@ Detailed Reference
    bpy.ops.uv.cursor_set(location=(0, 0))
    
    
-.. km:hotkey:: Alt-N -> mask.new
+.. km:hotkeyd:: Alt-N -> mask.new
 
    New Mask
 
    bpy.ops.mask.new(name="")
    
    
-.. km:hotkey:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu
 
    Call Menu
 
@@ -227,7 +233,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkey:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
 
    Context Enum Cycle
 
@@ -243,7 +249,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkey:: O -> wm.context_toggle
+.. km:hotkeyd:: O -> wm.context_toggle
 
    Context Toggle
 
@@ -257,7 +263,7 @@ Detailed Reference
    +-------------------+-----------------------------------------+
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> mask.add_vertex_slide
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> mask.add_vertex_slide
 
    Add Vertex and Slide
 
@@ -273,7 +279,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-ACTIONMOUSE -> mask.add_feather_vertex_slide
+.. km:hotkeyd:: Shift-ACTIONMOUSE -> mask.add_feather_vertex_slide
 
    Add Feather Vertex and Slide
 
@@ -289,21 +295,21 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkey:: X -> mask.delete
+.. km:hotkeyd:: X -> mask.delete
 
    Delete
 
    bpy.ops.mask.delete()
    
    
-.. km:hotkey:: DEL -> mask.delete
+.. km:hotkeyd:: DEL -> mask.delete
 
    Delete
 
    bpy.ops.mask.delete()
    
    
-.. km:hotkey:: SELECTMOUSE -> mask.select
+.. km:hotkeyd:: SELECTMOUSE -> mask.select
 
    Select
 
@@ -321,7 +327,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: Shift-SELECTMOUSE -> mask.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> mask.select
 
    Select
 
@@ -339,7 +345,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkey:: A -> mask.select_all
+.. km:hotkeyd:: A -> mask.select_all
 
    (De)select All
 
@@ -353,7 +359,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> mask.select_all
+.. km:hotkeyd:: Ctrl-I -> mask.select_all
 
    (De)select All
 
@@ -367,14 +373,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-L -> mask.select_linked
+.. km:hotkeyd:: Ctrl-L -> mask.select_linked
 
    Select Linked All
 
    bpy.ops.mask.select_linked()
    
    
-.. km:hotkey:: L -> mask.select_linked_pick
+.. km:hotkeyd:: L -> mask.select_linked_pick
 
    Select Linked
 
@@ -388,7 +394,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-L -> mask.select_linked_pick
+.. km:hotkeyd:: Shift-L -> mask.select_linked_pick
 
    Select Linked
 
@@ -402,21 +408,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: B -> mask.select_border
+.. km:hotkeyd:: B -> mask.select_border
 
    Border Select
 
    bpy.ops.mask.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: C -> mask.select_circle
+.. km:hotkeyd:: C -> mask.select_circle
 
    Circle Select
 
    bpy.ops.mask.select_circle(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_A -> mask.select_lasso
+.. km:hotkeyd:: Ctrl-Alt-EVT_TWEAK_A -> mask.select_lasso
 
    Lasso Select
 
@@ -430,7 +436,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-EVT_TWEAK_A -> mask.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-Alt-EVT_TWEAK_A -> mask.select_lasso
 
    Lasso Select
 
@@ -444,28 +450,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-NUMPAD_PLUS -> mask.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> mask.select_more
 
    Select More
 
    bpy.ops.mask.select_more()
    
    
-.. km:hotkey:: Ctrl-NUMPAD_MINUS -> mask.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> mask.select_less
 
    Select Less
 
    bpy.ops.mask.select_less()
    
    
-.. km:hotkey:: Alt-H -> mask.hide_view_clear
+.. km:hotkeyd:: Alt-H -> mask.hide_view_clear
 
    Clear Restrict View
 
    bpy.ops.mask.hide_view_clear()
    
    
-.. km:hotkey:: H -> mask.hide_view_set
+.. km:hotkeyd:: H -> mask.hide_view_set
 
    Set Restrict View
 
@@ -479,7 +485,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-H -> mask.hide_view_set
+.. km:hotkeyd:: Shift-H -> mask.hide_view_set
 
    Set Restrict View
 
@@ -493,7 +499,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-SELECTMOUSE -> clip.select
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> clip.select
 
    Select
 
@@ -507,70 +513,70 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Alt-C -> mask.cyclic_toggle
+.. km:hotkeyd:: Alt-C -> mask.cyclic_toggle
 
    Toggle Cyclic
 
    bpy.ops.mask.cyclic_toggle()
    
    
-.. km:hotkey:: ACTIONMOUSE -> mask.slide_point
+.. km:hotkeyd:: ACTIONMOUSE -> mask.slide_point
 
    Slide Point
 
    bpy.ops.mask.slide_point(slide_feather=False, is_new_point=False)
    
    
-.. km:hotkey:: ACTIONMOUSE -> mask.slide_spline_curvature
+.. km:hotkeyd:: ACTIONMOUSE -> mask.slide_spline_curvature
 
    Slide Spline Curvature
 
    bpy.ops.mask.slide_spline_curvature()
    
    
-.. km:hotkey:: V -> mask.handle_type_set
+.. km:hotkeyd:: V -> mask.handle_type_set
 
    Set Handle Type
 
    bpy.ops.mask.handle_type_set(type='AUTO')
    
    
-.. km:hotkey:: Ctrl-N -> mask.normals_make_consistent
+.. km:hotkeyd:: Ctrl-N -> mask.normals_make_consistent
 
    Recalc Normals
 
    bpy.ops.mask.normals_make_consistent()
    
    
-.. km:hotkey:: Ctrl-P -> mask.parent_set
+.. km:hotkeyd:: Ctrl-P -> mask.parent_set
 
    Make Parent
 
    bpy.ops.mask.parent_set()
    
    
-.. km:hotkey:: Alt-P -> mask.parent_clear
+.. km:hotkeyd:: Alt-P -> mask.parent_clear
 
    Clear Parent
 
    bpy.ops.mask.parent_clear()
    
    
-.. km:hotkey:: I -> mask.shape_key_insert
+.. km:hotkeyd:: I -> mask.shape_key_insert
 
    Insert Shape Key
 
    bpy.ops.mask.shape_key_insert()
    
    
-.. km:hotkey:: Alt-I -> mask.shape_key_clear
+.. km:hotkeyd:: Alt-I -> mask.shape_key_clear
 
    Clear Shape Key
 
    bpy.ops.mask.shape_key_clear()
    
    
-.. km:hotkey:: Shift-D -> mask.duplicate_move
+.. km:hotkeyd:: Shift-D -> mask.duplicate_move
 
    Add Duplicate
 
@@ -586,56 +592,56 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkey:: Ctrl-C -> mask.copy_splines
+.. km:hotkeyd:: Ctrl-C -> mask.copy_splines
 
    Copy Splines
 
    bpy.ops.mask.copy_splines()
    
    
-.. km:hotkey:: Ctrl-V -> mask.paste_splines
+.. km:hotkeyd:: Ctrl-V -> mask.paste_splines
 
    Paste Splines
 
    bpy.ops.mask.paste_splines()
    
    
-.. km:hotkey:: ACTIONMOUSE -> uv.cursor_set
+.. km:hotkeyd:: ACTIONMOUSE -> uv.cursor_set
 
    Set 2D Cursor
 
    bpy.ops.uv.cursor_set(location=(0, 0))
    
    
-.. km:hotkey:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate
 
    Rotate
 
    bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkey:: Alt-S -> transform.transform
+.. km:hotkeyd:: Alt-S -> transform.transform
 
    Transform
 

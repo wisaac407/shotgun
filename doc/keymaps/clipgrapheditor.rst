@@ -4,6 +4,8 @@ Clip Graph Editor
 
 .. km:module:: clipgrapheditor
 
+   
+
 
 ---------------
 Quick Reference
@@ -17,8 +19,6 @@ Quick Reference
 |:km:hk:`Ctrl-A <clipgrapheditor->Ctrl-A->clip.graph_select_all_markers>`                 |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
 +-----------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Any-EVT_TWEAK_L <clipgrapheditor->Any-EVT_TWEAK_L->clip.graph_select_border>`    |:func:`blender:bpy.ops.clip.graph_select_border`        |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FIT <clipgrapheditor->NDOF_BUTTON_FIT->clip.graph_view_all>`         |:func:`blender:bpy.ops.clip.graph_view_all`             |
 +-----------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`ACTIONMOUSE <clipgrapheditor->ACTIONMOUSE->clip.change_frame>`                   |:func:`blender:bpy.ops.clip.change_frame`               |
 +-----------------------------------------------------------------------------------------+--------------------------------------------------------+
@@ -70,6 +70,10 @@ Quick Reference
 Detailed Reference
 ------------------
 
+.. note:: Hotkeys marked with the "(default)" prefix are inherited from the default blender keymap
+
+   
+
 .. km:hotkey:: Ctrl-SELECTMOUSE -> clip.change_frame
 
    Change Frame
@@ -98,21 +102,14 @@ Detailed Reference
    bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> clip.graph_view_all
-
-   View All
-
-   bpy.ops.clip.graph_view_all()
-   
-   
-.. km:hotkey:: ACTIONMOUSE -> clip.change_frame
+.. km:hotkeyd:: ACTIONMOUSE -> clip.change_frame
 
    Change Frame
 
    bpy.ops.clip.change_frame(frame=0)
    
    
-.. km:hotkey:: SELECTMOUSE -> clip.graph_select
+.. km:hotkeyd:: SELECTMOUSE -> clip.graph_select
 
    Select
 
@@ -126,7 +123,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-SELECTMOUSE -> clip.graph_select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> clip.graph_select
 
    Select
 
@@ -140,7 +137,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: A -> clip.graph_select_all_markers
+.. km:hotkeyd:: A -> clip.graph_select_all_markers
 
    (De)select All Markers
 
@@ -154,7 +151,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-I -> clip.graph_select_all_markers
+.. km:hotkeyd:: Ctrl-I -> clip.graph_select_all_markers
 
    (De)select All Markers
 
@@ -168,63 +165,63 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: B -> clip.graph_select_border
+.. km:hotkeyd:: B -> clip.graph_select_border
 
    Border Select
 
    bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkey:: DEL -> clip.graph_delete_curve
+.. km:hotkeyd:: DEL -> clip.graph_delete_curve
 
    Delete Curve
 
    bpy.ops.clip.graph_delete_curve()
    
    
-.. km:hotkey:: X -> clip.graph_delete_curve
+.. km:hotkeyd:: X -> clip.graph_delete_curve
 
    Delete Curve
 
    bpy.ops.clip.graph_delete_curve()
    
    
-.. km:hotkey:: Shift-DEL -> clip.graph_delete_knot
+.. km:hotkeyd:: Shift-DEL -> clip.graph_delete_knot
 
    Delete Knot
 
    bpy.ops.clip.graph_delete_knot()
    
    
-.. km:hotkey:: Shift-X -> clip.graph_delete_knot
+.. km:hotkeyd:: Shift-X -> clip.graph_delete_knot
 
    Delete Knot
 
    bpy.ops.clip.graph_delete_knot()
    
    
-.. km:hotkey:: HOME -> clip.graph_view_all
+.. km:hotkeyd:: HOME -> clip.graph_view_all
 
    View All
 
    bpy.ops.clip.graph_view_all()
    
    
-.. km:hotkey:: NDOF_BUTTON_FIT -> clip.graph_view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.graph_view_all
 
    View All
 
    bpy.ops.clip.graph_view_all()
    
    
-.. km:hotkey:: NUMPAD_PERIOD -> clip.graph_center_current_frame
+.. km:hotkeyd:: NUMPAD_PERIOD -> clip.graph_center_current_frame
 
    Center Current Frame
 
    bpy.ops.clip.graph_center_current_frame()
    
    
-.. km:hotkey:: L -> wm.context_toggle
+.. km:hotkeyd:: L -> wm.context_toggle
 
    Context Toggle
 
@@ -238,7 +235,7 @@ Detailed Reference
    +-------------------+----------------------------+
    
    
-.. km:hotkey:: Alt-T -> clip.clear_track_path
+.. km:hotkeyd:: Alt-T -> clip.clear_track_path
 
    Clear Track Path
 
@@ -254,7 +251,7 @@ Detailed Reference
    +-------------+---------+
    
    
-.. km:hotkey:: Shift-T -> clip.clear_track_path
+.. km:hotkeyd:: Shift-T -> clip.clear_track_path
 
    Clear Track Path
 
@@ -270,7 +267,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Shift-Alt-T -> clip.clear_track_path
+.. km:hotkeyd:: Shift-Alt-T -> clip.clear_track_path
 
    Clear Track Path
 
@@ -286,7 +283,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkey:: Shift-D -> clip.graph_disable_markers
+.. km:hotkeyd:: Shift-D -> clip.graph_disable_markers
 
    Disable Markers
 
@@ -300,28 +297,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkey:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate
 
    Rotate
 
