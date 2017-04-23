@@ -270,7 +270,8 @@ def generate_docs(kc):
                     directive = 'hotkeyd'
 
                 rst += create_directive('km:' + directive,
-                                        '{} -> {}'.format(get_key_combo(kmi), kmi.idname),
+                                        '{} -> {} : {} -> {}'.format(get_key_combo(kmi), kmi.idname,
+                                                                     kmi.map_type, kmi.value),
                                         kmi.name)
 
                 rst += indent(doc)
