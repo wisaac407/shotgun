@@ -156,15 +156,10 @@ with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=Fal
 
     kmi = km.keymap_items.new('view3d.move', 'RIGHTMOUSE', 'PRESS')
 
-    kmi = km.keymap_items.new('wm.context_toggle_enum', 'Z', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'data_path', 'space_data.viewport_shade')
-    kmi_props_setattr(kmi.properties, 'value_1', 'SOLID')
-    kmi_props_setattr(kmi.properties, 'value_2', 'RENDERED')
-
-    kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)
+    kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
 
-    kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)
+    kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True, shift=True)
     kmi_props_setattr(kmi.properties, 'deselect', True)
 
     kmi = km.keymap_items.new('transform.skin_resize', 'A', 'PRESS')
@@ -172,8 +167,11 @@ with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=Fal
     kmi = km.keymap_items.new('object.select_grouped', 'SELECTMOUSE', 'DOUBLE_CLICK')
     kmi_props_setattr(kmi.properties, 'type', 'GROUP')
 
-    kmi = km.keymap_items.new('view3d.select_border', 'EVT_TWEAK_L', 'ANY', alt=True)
+    kmi = km.keymap_items.new('view3d.select_border', 'EVT_TWEAK_S', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'extend', False)
+
+    kmi = km.keymap_items.new('view3d.select_border', 'EVT_TWEAK_S', 'ANY', alt=True, shift=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
 
 # Map Face Mask
 with KeyMap(kc, 'Face Mask', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
