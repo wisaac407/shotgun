@@ -398,3 +398,8 @@ with KeyMap(kc, 'NLA Editor', space_type='NLA_EDITOR', region_type='WINDOW', mod
     kmi_props_setattr(kmi.properties, 'invert', False)
 
     kmi = km.keymap_items.new('nla.apply_scale', 'A', 'PRESS')
+
+
+# Map Console
+with KeyMap(kc, 'Console', space_type='CONSOLE', region_type='WINDOW', modal=False) as km:
+    kmi = km.keymap_items.new('console.autocomplete', 'TAB', 'PRESS')
