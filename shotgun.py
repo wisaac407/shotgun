@@ -279,21 +279,19 @@ with KeyMap(kc, 'Particle', space_type='EMPTY', region_type='WINDOW', modal=Fals
 
 # Map Node Editor
 with KeyMap(kc, 'Node Editor', space_type='NODE_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('wm.call_menu', 'EQUAL', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'name', 'NODE_MT_nw_node_align_menu')
+    kmi = km.keymap_items.new('node.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
 
-    kmi = km.keymap_items.new('node.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)
-    kmi_props_setattr(kmi.properties, 'deselect', False)
+    kmi = km.keymap_items.new('node.select_lasso', 'EVT_TWEAK_A', 'ANY', shift=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'deselect', True)
 
     kmi = km.keymap_items.new('node.backimage_sample', 'SELECTMOUSE', 'PRESS', alt=True)
 
     kmi = km.keymap_items.new('node.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('node.group_edit', 'TAB', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'exit', True)
+    kmi = km.keymap_items.new('node.add_search', 'TAB', 'DOUBLE_CLICK')
+    kmi_props_setattr(kmi.properties, 'use_transform', True)
 
-    kmi = km.keymap_items.new('node.detach_translate_attach', 'F', 'PRESS', alt=True)
 
 # Map Timeline
 with KeyMap(kc, 'Timeline', space_type='TIMELINE', region_type='WINDOW', modal=False) as km:
