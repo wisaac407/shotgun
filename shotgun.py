@@ -78,14 +78,17 @@ kc = wm.keyconfigs.new(os.path.splitext(os.path.basename(__file__))[0])
 
 # Map UV Editor
 with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
-    kmi = km.keymap_items.new('uv.select_border', 'B', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'pinned', True)
-
-    kmi = km.keymap_items.new('uv.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)
+    kmi = km.keymap_items.new('uv.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
 
-    kmi = km.keymap_items.new('uv.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)
+    kmi = km.keymap_items.new('uv.select_lasso', 'EVT_TWEAK_A', 'ANY', shift=True, alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', True)
+
+    kmi = km.keymap_items.new('uv.select_border', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', False)
+
+    kmi = km.keymap_items.new('uv.select_border', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
 
     kmi = km.keymap_items.new('uv.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
