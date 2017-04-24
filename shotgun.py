@@ -1,12 +1,34 @@
 import bpy
 import os
 
+
+def full_compare(a, b):
+    """Check if a and b are exactly equal keymap items."""
+    for prop in ['idname', 'type',  'value',  'any', 'shift', 'ctrl', 'alt', 'oskey', 'key_modifier']:
+        if getattr(a, prop, None) != getattr(b, prop, None):
+            return False
+    # At this point they are probably the same but let's check all the properties too
+    for prop in a.properties.keys():
+        # Pointer properties are set when the operator is run
+        if a.properties.rna_type.properties[prop].type != 'POINTER':
+            if getattr(a.properties, prop, None) != getattr(b.properties, prop, None):
+                return False
+    return True
+
+
 default_hotkeys = {}
 class KeyMap:
-    def __init__(self, kc, name, space_type, region_type, modal):
+    def __init__(self, kc, name, space_type, region_type, modal, use_trash=False):
         self.km = kc.keymaps.new(name, space_type=space_type, region_type=region_type, modal=modal)
+        self.kc = kc
+
+        self._use_trash = use_trash
+        if self._use_trash:
+            self.trash = kc.keymaps.new('trash')
 
     def __enter__(self):
+        if self._use_trash:
+            return self.km, self.trash
         return self.km
 
     def __exit__(self, exc_type, exc_val, exc_tb):
@@ -16,6 +38,16 @@ class KeyMap:
         # Add all the default blender keymap items
         # Because they are getting added last the previous hotkeys will override them
         for k in dkm.keymap_items:
+            # Skip adding this keymap item if it's in the trash keymap
+            if self._use_trash:
+                skip_kmi = False
+                for tkmi in self.trash.keymap_items:
+                    if full_compare(tkmi, k):
+                        skip_kmi = True
+                        break
+                if skip_kmi:
+                    continue
+
             kmi = self.km.keymap_items.new(k.idname, k.type, k.value, any=k.any, shift=k.shift, ctrl=k.ctrl,
                                            alt=k.alt, oskey=k.oskey)
             for prop in k.properties.keys():
@@ -25,6 +57,10 @@ class KeyMap:
 
             # Keep track of the default keymap items for use in documentation.
             default_hotkeys.setdefault(self.km.name, []).append(kmi)
+
+        # Delete the trash keymap
+        if self._use_trash:
+            self.kc.keymaps.remove(self.trash)
 
 
 def kmi_props_setattr(kmi_props, attr, value):
