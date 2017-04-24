@@ -119,10 +119,6 @@ with KeyMap(kc, 'Mask Editing', space_type='EMPTY', region_type='WINDOW', modal=
 
 # Map File Browser Main
 with KeyMap(kc, 'File Browser Main', space_type='FILE_BROWSER', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('file.select', 'LEFTMOUSE', 'CLICK', alt=True)
-    kmi_props_setattr(kmi.properties, 'extend', True)
-    kmi_props_setattr(kmi.properties, 'fill', True)
-
     kmi = km.keymap_items.new('file.select_all_toggle', 'A', 'PRESS', ctrl=True)
 
 # Map Clip Editor
