@@ -187,7 +187,7 @@ with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW',
     kmi = km.keymap_items.new('graph.click_insert', 'SELECTMOUSE', 'CLICK', ctrl=True)
 
 # Map 3D View
-with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=False) as km:
+with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
     kmi = km.keymap_items.new('view3d.cursor3d', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
     kmi = km.keymap_items.new('view3d.move', 'RIGHTMOUSE', 'PRESS')
@@ -208,6 +208,12 @@ with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=Fal
 
     kmi = km.keymap_items.new('view3d.select_border', 'EVT_TWEAK_S', 'ANY', alt=True, shift=True)
     kmi_props_setattr(kmi.properties, 'extend', True)
+
+    tkmi = trash.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_A', 'ANY', ctrl=True)
+    kmi_props_setattr(tkmi.properties, 'deselect', False)
+
+    tkmi = trash.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_A', 'ANY', ctrl=True, shift=True)
+    kmi_props_setattr(tkmi.properties, 'deselect', True)
 
 # Map Face Mask
 with KeyMap(kc, 'Face Mask', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
