@@ -14,8 +14,6 @@ Quick Reference
 +---------------------------------------------------------------------------------------+-----------------------------------------------------------+
 |Hotkey                                                                                 |Operator                                                   |
 +=======================================================================================+===========================================================+
-|:km:hk:`PAGE_DOWN <outliner->PAGE_DOWN->outliner.scroll_page>`                         |:func:`blender:bpy.ops.outliner.scroll_page`               |
-+---------------------------------------------------------------------------------------+-----------------------------------------------------------+
 |:km:hk:`Ctrl-A <outliner->Ctrl-A->outliner.selected_toggle>`                           |:func:`blender:bpy.ops.outliner.selected_toggle`           |
 +---------------------------------------------------------------------------------------+-----------------------------------------------------------+
 |:km:hk:`LEFTMOUSE <outliner->LEFTMOUSE->outliner.item_rename>`                         |:func:`blender:bpy.ops.outliner.item_rename`               |
@@ -84,28 +82,21 @@ Detailed Reference
 
    
 
-.. km:hotkeyd:: PAGE_DOWN -> outliner.scroll_page
-
-   Scroll Page
-
-   bpy.ops.outliner.scroll_page(up=False)
-   
-   
-.. km:hotkey:: Ctrl-A -> outliner.selected_toggle
+.. km:hotkey:: Ctrl-A -> outliner.selected_toggle : KEYBOARD -> PRESS
 
    Toggle Selected
 
    bpy.ops.outliner.selected_toggle()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> outliner.item_rename
+.. km:hotkeyd:: LEFTMOUSE -> outliner.item_rename : MOUSE -> DOUBLE_CLICK
 
    Rename Item
 
    bpy.ops.outliner.item_rename()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> outliner.item_activate
+.. km:hotkeyd:: LEFTMOUSE -> outliner.item_activate : MOUSE -> CLICK
 
    Activate Item
 
@@ -121,7 +112,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-LEFTMOUSE -> outliner.item_activate
+.. km:hotkeyd:: Shift-LEFTMOUSE -> outliner.item_activate : MOUSE -> CLICK
 
    Activate Item
 
@@ -137,7 +128,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-LEFTMOUSE -> outliner.item_activate
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> outliner.item_activate : MOUSE -> CLICK
 
    Activate Item
 
@@ -153,7 +144,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> outliner.item_activate
+.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> outliner.item_activate : MOUSE -> CLICK
 
    Activate Item
 
@@ -169,14 +160,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> outliner.select_border
+.. km:hotkeyd:: B -> outliner.select_border : KEYBOARD -> PRESS
 
    Border Select
 
    bpy.ops.outliner.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkeyd:: RET -> outliner.item_openclose
+.. km:hotkeyd:: RET -> outliner.item_openclose : KEYBOARD -> PRESS
 
    Open/Close Item
 
@@ -190,7 +181,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-RET -> outliner.item_openclose
+.. km:hotkeyd:: Shift-RET -> outliner.item_openclose : KEYBOARD -> PRESS
 
    Open/Close Item
 
@@ -204,42 +195,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-LEFTMOUSE -> outliner.item_rename
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> outliner.item_rename : MOUSE -> PRESS
 
    Rename Item
 
    bpy.ops.outliner.item_rename()
    
    
-.. km:hotkeyd:: RIGHTMOUSE -> outliner.operation
+.. km:hotkeyd:: RIGHTMOUSE -> outliner.operation : MOUSE -> PRESS
 
    Execute Operation
 
    bpy.ops.outliner.operation()
    
    
-.. km:hotkeyd:: HOME -> outliner.show_hierarchy
+.. km:hotkeyd:: HOME -> outliner.show_hierarchy : KEYBOARD -> PRESS
 
    Show Hierarchy
 
    bpy.ops.outliner.show_hierarchy()
    
    
-.. km:hotkeyd:: . -> outliner.show_active
+.. km:hotkeyd:: . -> outliner.show_active : KEYBOARD -> PRESS
 
    Show Active
 
    bpy.ops.outliner.show_active()
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> outliner.show_active
+.. km:hotkeyd:: NUMPAD_PERIOD -> outliner.show_active : KEYBOARD -> PRESS
 
    Show Active
 
    bpy.ops.outliner.show_active()
    
    
-.. km:hotkeyd:: PAGE_DOWN -> outliner.scroll_page
+.. km:hotkeyd:: PAGE_DOWN -> outliner.scroll_page : KEYBOARD -> PRESS
 
    Scroll Page
 
@@ -253,7 +244,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: PAGE_UP -> outliner.scroll_page
+.. km:hotkeyd:: PAGE_UP -> outliner.scroll_page : KEYBOARD -> PRESS
 
    Scroll Page
 
@@ -267,14 +258,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_PLUS -> outliner.show_one_level
+.. km:hotkeyd:: NUMPAD_PLUS -> outliner.show_one_level : KEYBOARD -> PRESS
 
    Show/Hide One Level
 
    bpy.ops.outliner.show_one_level(open=True)
    
    
-.. km:hotkeyd:: NUMPAD_MINUS -> outliner.show_one_level
+.. km:hotkeyd:: NUMPAD_MINUS -> outliner.show_one_level : KEYBOARD -> PRESS
 
    Show/Hide One Level
 
@@ -288,77 +279,77 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: A -> outliner.selected_toggle
+.. km:hotkeyd:: A -> outliner.selected_toggle : KEYBOARD -> PRESS
 
    Toggle Selected
 
    bpy.ops.outliner.selected_toggle()
    
    
-.. km:hotkeyd:: Shift-A -> outliner.expanded_toggle
+.. km:hotkeyd:: Shift-A -> outliner.expanded_toggle : KEYBOARD -> PRESS
 
    Expand/Collapse All
 
    bpy.ops.outliner.expanded_toggle()
    
    
-.. km:hotkeyd:: R -> outliner.renderability_toggle
+.. km:hotkeyd:: R -> outliner.renderability_toggle : KEYBOARD -> PRESS
 
    Toggle Renderability
 
    bpy.ops.outliner.renderability_toggle()
    
    
-.. km:hotkeyd:: S -> outliner.selectability_toggle
+.. km:hotkeyd:: S -> outliner.selectability_toggle : KEYBOARD -> PRESS
 
    Toggle Selectability
 
    bpy.ops.outliner.selectability_toggle()
    
    
-.. km:hotkeyd:: V -> outliner.visibility_toggle
+.. km:hotkeyd:: V -> outliner.visibility_toggle : KEYBOARD -> PRESS
 
    Toggle Visibility
 
    bpy.ops.outliner.visibility_toggle()
    
    
-.. km:hotkeyd:: K -> outliner.keyingset_add_selected
+.. km:hotkeyd:: K -> outliner.keyingset_add_selected : KEYBOARD -> PRESS
 
    Keying Set Add Selected
 
    bpy.ops.outliner.keyingset_add_selected()
    
    
-.. km:hotkeyd:: Alt-K -> outliner.keyingset_remove_selected
+.. km:hotkeyd:: Alt-K -> outliner.keyingset_remove_selected : KEYBOARD -> PRESS
 
    Keying Set Remove Selected
 
    bpy.ops.outliner.keyingset_remove_selected()
    
    
-.. km:hotkeyd:: I -> anim.keyframe_insert
+.. km:hotkeyd:: I -> anim.keyframe_insert : KEYBOARD -> PRESS
 
    Insert Keyframe
 
    bpy.ops.anim.keyframe_insert(type='DEFAULT', confirm_success=True)
    
    
-.. km:hotkeyd:: Alt-I -> anim.keyframe_delete
+.. km:hotkeyd:: Alt-I -> anim.keyframe_delete : KEYBOARD -> PRESS
 
    Delete Keying-Set Keyframe
 
    bpy.ops.anim.keyframe_delete(type='DEFAULT', confirm_success=True)
    
    
-.. km:hotkeyd:: D -> outliner.drivers_add_selected
+.. km:hotkeyd:: D -> outliner.drivers_add_selected : KEYBOARD -> PRESS
 
    Add Drivers for Selected
 
    bpy.ops.outliner.drivers_add_selected()
    
    
-.. km:hotkeyd:: Alt-D -> outliner.drivers_delete_selected
+.. km:hotkeyd:: Alt-D -> outliner.drivers_delete_selected : KEYBOARD -> PRESS
 
    Delete Drivers for Selected
 

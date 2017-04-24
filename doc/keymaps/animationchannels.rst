@@ -16,8 +16,6 @@ Quick Reference
 +=============================================================================================+========================================================+
 |:km:hk:`Ctrl-A <animationchannels->Ctrl-A->anim.channels_select_all_toggle>`                 |:func:`blender:bpy.ops.anim.channels_select_all_toggle` |
 +---------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Alt-G <animationchannels->Alt-G->anim.channels_ungroup>`                             |:func:`blender:bpy.ops.anim.channels_ungroup`           |
-+---------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`LEFTMOUSE <animationchannels->LEFTMOUSE->anim.channels_click>`                       |:func:`blender:bpy.ops.anim.channels_click`             |
 +---------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Shift-LEFTMOUSE <animationchannels->Shift-LEFTMOUSE->anim.channels_click>`           |:func:`blender:bpy.ops.anim.channels_click`             |
@@ -84,28 +82,21 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> anim.channels_select_all_toggle
+.. km:hotkey:: Ctrl-A -> anim.channels_select_all_toggle : KEYBOARD -> PRESS
 
    Select All
 
    bpy.ops.anim.channels_select_all_toggle(invert=False)
    
    
-.. km:hotkeyd:: Alt-G -> anim.channels_ungroup
-
-   Ungroup Channels
-
-   bpy.ops.anim.channels_ungroup()
-   
-   
-.. km:hotkeyd:: LEFTMOUSE -> anim.channels_click
+.. km:hotkeyd:: LEFTMOUSE -> anim.channels_click : MOUSE -> PRESS
 
    Mouse Click on Channels
 
    bpy.ops.anim.channels_click(extend=False, children_only=False)
    
    
-.. km:hotkeyd:: Shift-LEFTMOUSE -> anim.channels_click
+.. km:hotkeyd:: Shift-LEFTMOUSE -> anim.channels_click : MOUSE -> PRESS
 
    Mouse Click on Channels
 
@@ -119,7 +110,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> anim.channels_click
+.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> anim.channels_click : MOUSE -> PRESS
 
    Mouse Click on Channels
 
@@ -133,28 +124,28 @@ Detailed Reference
    +---------------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-LEFTMOUSE -> anim.channels_rename
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> anim.channels_rename : MOUSE -> PRESS
 
    Rename Channels
 
    bpy.ops.anim.channels_rename()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> anim.channels_rename
+.. km:hotkeyd:: LEFTMOUSE -> anim.channels_rename : MOUSE -> DOUBLE_CLICK
 
    Rename Channels
 
    bpy.ops.anim.channels_rename()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> anim.channel_select_keys
+.. km:hotkeyd:: LEFTMOUSE -> anim.channel_select_keys : MOUSE -> DOUBLE_CLICK
 
    Select Channel keyframes
 
    bpy.ops.anim.channel_select_keys(extend=False)
    
    
-.. km:hotkeyd:: Shift-LEFTMOUSE -> anim.channel_select_keys
+.. km:hotkeyd:: Shift-LEFTMOUSE -> anim.channel_select_keys : MOUSE -> DOUBLE_CLICK
 
    Select Channel keyframes
 
@@ -168,21 +159,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-F -> anim.channels_find
+.. km:hotkeyd:: Ctrl-F -> anim.channels_find : KEYBOARD -> PRESS
 
    Find Channels
 
    bpy.ops.anim.channels_find(query="Query")
    
    
-.. km:hotkeyd:: A -> anim.channels_select_all_toggle
+.. km:hotkeyd:: A -> anim.channels_select_all_toggle : KEYBOARD -> PRESS
 
    Select All
 
    bpy.ops.anim.channels_select_all_toggle(invert=False)
    
    
-.. km:hotkeyd:: Ctrl-I -> anim.channels_select_all_toggle
+.. km:hotkeyd:: Ctrl-I -> anim.channels_select_all_toggle : KEYBOARD -> PRESS
 
    Select All
 
@@ -196,77 +187,77 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> anim.channels_select_border
+.. km:hotkeyd:: B -> anim.channels_select_border : KEYBOARD -> PRESS
 
    Border Select
 
    bpy.ops.anim.channels_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: EVT_TWEAK_L -> anim.channels_select_border
+.. km:hotkeyd:: EVT_TWEAK_L -> anim.channels_select_border : TWEAK -> ANY
 
    Border Select
 
    bpy.ops.anim.channels_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: X -> anim.channels_delete
+.. km:hotkeyd:: X -> anim.channels_delete : KEYBOARD -> PRESS
 
    Delete Channels
 
    bpy.ops.anim.channels_delete()
    
    
-.. km:hotkeyd:: DEL -> anim.channels_delete
+.. km:hotkeyd:: DEL -> anim.channels_delete : KEYBOARD -> PRESS
 
    Delete Channels
 
    bpy.ops.anim.channels_delete()
    
    
-.. km:hotkeyd:: Shift-W -> anim.channels_setting_toggle
+.. km:hotkeyd:: Shift-W -> anim.channels_setting_toggle : KEYBOARD -> PRESS
 
    Toggle Channel Setting
 
    bpy.ops.anim.channels_setting_toggle(mode='TOGGLE', type='PROTECT')
    
    
-.. km:hotkeyd:: Ctrl-Shift-W -> anim.channels_setting_enable
+.. km:hotkeyd:: Ctrl-Shift-W -> anim.channels_setting_enable : KEYBOARD -> PRESS
 
    Enable Channel Setting
 
    bpy.ops.anim.channels_setting_enable(mode='ENABLE', type='PROTECT')
    
    
-.. km:hotkeyd:: Alt-W -> anim.channels_setting_disable
+.. km:hotkeyd:: Alt-W -> anim.channels_setting_disable : KEYBOARD -> PRESS
 
    Disable Channel Setting
 
    bpy.ops.anim.channels_setting_disable(mode='DISABLE', type='PROTECT')
    
    
-.. km:hotkeyd:: Tab -> anim.channels_editable_toggle
+.. km:hotkeyd:: Tab -> anim.channels_editable_toggle : KEYBOARD -> PRESS
 
    Toggle Channel Editability
 
    bpy.ops.anim.channels_editable_toggle(mode='TOGGLE', type='PROTECT')
    
    
-.. km:hotkeyd:: NUMPAD_PLUS -> anim.channels_expand
+.. km:hotkeyd:: NUMPAD_PLUS -> anim.channels_expand : KEYBOARD -> PRESS
 
    Expand Channels
 
    bpy.ops.anim.channels_expand(all=True)
    
    
-.. km:hotkeyd:: NUMPAD_MINUS -> anim.channels_collapse
+.. km:hotkeyd:: NUMPAD_MINUS -> anim.channels_collapse : KEYBOARD -> PRESS
 
    Collapse Channels
 
    bpy.ops.anim.channels_collapse(all=True)
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> anim.channels_expand
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> anim.channels_expand : KEYBOARD -> PRESS
 
    Expand Channels
 
@@ -280,7 +271,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> anim.channels_collapse
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> anim.channels_collapse : KEYBOARD -> PRESS
 
    Collapse Channels
 
@@ -294,7 +285,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: PAGE_UP -> anim.channels_move
+.. km:hotkeyd:: PAGE_UP -> anim.channels_move : KEYBOARD -> PRESS
 
    Move Channels
 
@@ -308,7 +299,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: PAGE_DOWN -> anim.channels_move
+.. km:hotkeyd:: PAGE_DOWN -> anim.channels_move : KEYBOARD -> PRESS
 
    Move Channels
 
@@ -322,7 +313,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-PAGE_UP -> anim.channels_move
+.. km:hotkeyd:: Shift-PAGE_UP -> anim.channels_move : KEYBOARD -> PRESS
 
    Move Channels
 
@@ -336,7 +327,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-PAGE_DOWN -> anim.channels_move
+.. km:hotkeyd:: Shift-PAGE_DOWN -> anim.channels_move : KEYBOARD -> PRESS
 
    Move Channels
 
@@ -350,14 +341,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-G -> anim.channels_group
+.. km:hotkeyd:: Ctrl-G -> anim.channels_group : KEYBOARD -> PRESS
 
    Group Channels
 
    bpy.ops.anim.channels_group(name="New Group")
    
    
-.. km:hotkeyd:: Alt-G -> anim.channels_ungroup
+.. km:hotkeyd:: Alt-G -> anim.channels_ungroup : KEYBOARD -> PRESS
 
    Ungroup Channels
 

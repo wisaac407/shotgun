@@ -16,10 +16,6 @@ Quick Reference
 +===============================================================================+===============================================+
 |:km:hk:`Ctrl-A <particle->Ctrl-A->particle.select_all>`                        |:func:`blender:bpy.ops.particle.select_all`    |
 +-------------------------------------------------------------------------------+-----------------------------------------------+
-|:km:hk:`Any-LEFTMOUSE <particle->Any-LEFTMOUSE->view3d.manipulator>`           |:func:`blender:bpy.ops.view3d.manipulator`     |
-+-------------------------------------------------------------------------------+-----------------------------------------------+
-|:km:hk:`Shift-O <particle->Shift-O->wm.context_cycle_enum>`                    |:func:`blender:bpy.ops.wm.context_cycle_enum`  |
-+-------------------------------------------------------------------------------+-----------------------------------------------+
 |:km:hk:`A <particle->A->particle.select_all>`                                  |:func:`blender:bpy.ops.particle.select_all`    |
 +-------------------------------------------------------------------------------+-----------------------------------------------+
 |:km:hk:`Ctrl-I <particle->Ctrl-I->particle.select_all>`                        |:func:`blender:bpy.ops.particle.select_all`    |
@@ -70,7 +66,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> particle.select_all
+.. km:hotkey:: Ctrl-A -> particle.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -84,35 +80,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator
-
-   3D Manipulator
-
-   bpy.ops.view3d.manipulator(constraint_axis=(False, False, False), constraint_orientation='GLOBAL', release_confirm=False)
-   
-   
-   +-------------------+--------+
-   |Properties:        |Values: |
-   +===================+========+
-   |Confirm on Release |True    |
-   +-------------------+--------+
-   
-   
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
-
-   Context Enum Cycle
-
-   bpy.ops.wm.context_cycle_enum(data_path="", reverse=False, wrap=False)
-   
-   
-   +-------------------+----------------------------------------+
-   |Properties:        |Values:                                 |
-   +===================+========================================+
-   |Context Attributes |tool_settings.proportional_edit_falloff |
-   +-------------------+----------------------------------------+
-   
-   
-.. km:hotkeyd:: A -> particle.select_all
+.. km:hotkeyd:: A -> particle.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -126,7 +94,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> particle.select_all
+.. km:hotkeyd:: Ctrl-I -> particle.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -140,21 +108,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> particle.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> particle.select_more : KEYBOARD -> PRESS
 
    Select More
 
    bpy.ops.particle.select_more()
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> particle.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> particle.select_less : KEYBOARD -> PRESS
 
    Select Less
 
    bpy.ops.particle.select_less()
    
    
-.. km:hotkeyd:: L -> particle.select_linked
+.. km:hotkeyd:: L -> particle.select_linked : KEYBOARD -> PRESS
 
    Select Linked
 
@@ -168,7 +136,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-L -> particle.select_linked
+.. km:hotkeyd:: Shift-L -> particle.select_linked : KEYBOARD -> PRESS
 
    Select Linked
 
@@ -182,28 +150,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: X -> particle.delete
+.. km:hotkeyd:: X -> particle.delete : KEYBOARD -> PRESS
 
    Delete
 
    bpy.ops.particle.delete(type='PARTICLE')
    
    
-.. km:hotkeyd:: DEL -> particle.delete
+.. km:hotkeyd:: DEL -> particle.delete : KEYBOARD -> PRESS
 
    Delete
 
    bpy.ops.particle.delete(type='PARTICLE')
    
    
-.. km:hotkeyd:: Alt-H -> particle.reveal
+.. km:hotkeyd:: Alt-H -> particle.reveal : KEYBOARD -> PRESS
 
    Reveal
 
    bpy.ops.particle.reveal()
    
    
-.. km:hotkeyd:: H -> particle.hide
+.. km:hotkeyd:: H -> particle.hide : KEYBOARD -> PRESS
 
    Hide Selected
 
@@ -217,7 +185,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> particle.hide
+.. km:hotkeyd:: Shift-H -> particle.hide : KEYBOARD -> PRESS
 
    Hide Selected
 
@@ -231,7 +199,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator
+.. km:hotkeyd:: Any-LEFTMOUSE -> view3d.manipulator : MOUSE -> PRESS
 
    3D Manipulator
 
@@ -245,21 +213,21 @@ Detailed Reference
    +-------------------+--------+
    
    
-.. km:hotkeyd:: LEFTMOUSE -> particle.brush_edit
+.. km:hotkeyd:: LEFTMOUSE -> particle.brush_edit : MOUSE -> PRESS
 
    Brush Edit
 
    bpy.ops.particle.brush_edit(stroke=[])
    
    
-.. km:hotkeyd:: Shift-LEFTMOUSE -> particle.brush_edit
+.. km:hotkeyd:: Shift-LEFTMOUSE -> particle.brush_edit : MOUSE -> PRESS
 
    Brush Edit
 
    bpy.ops.particle.brush_edit(stroke=[])
    
    
-.. km:hotkeyd:: F -> wm.radial_control
+.. km:hotkeyd:: F -> wm.radial_control : KEYBOARD -> PRESS
 
    Radial Control
 
@@ -273,7 +241,7 @@ Detailed Reference
    +------------------+---------------------------------------+
    
    
-.. km:hotkeyd:: Shift-F -> wm.radial_control
+.. km:hotkeyd:: Shift-F -> wm.radial_control : KEYBOARD -> PRESS
 
    Radial Control
 
@@ -287,7 +255,7 @@ Detailed Reference
    +------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -301,14 +269,14 @@ Detailed Reference
    +------------+----------------------------+
    
    
-.. km:hotkeyd:: Shift-K -> particle.weight_set
+.. km:hotkeyd:: Shift-K -> particle.weight_set : KEYBOARD -> PRESS
 
    Weight Set
 
    bpy.ops.particle.weight_set(factor=1)
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum : KEYBOARD -> PRESS
 
    Context Enum Cycle
 
@@ -324,7 +292,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkeyd:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 

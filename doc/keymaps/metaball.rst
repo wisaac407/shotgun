@@ -16,8 +16,6 @@ Quick Reference
 +============================================================+===============================================+
 |:km:hk:`Ctrl-A <metaball->Ctrl-A->mball.select_all>`        |:func:`blender:bpy.ops.mball.select_all`       |
 +------------------------------------------------------------+-----------------------------------------------+
-|:km:hk:`Shift-O <metaball->Shift-O->wm.context_cycle_enum>` |:func:`blender:bpy.ops.wm.context_cycle_enum`  |
-+------------------------------------------------------------+-----------------------------------------------+
 |:km:hk:`Shift-A <metaball->Shift-A->object.metaball_add>`   |:func:`blender:bpy.ops.object.metaball_add`    |
 +------------------------------------------------------------+-----------------------------------------------+
 |:km:hk:`Alt-H <metaball->Alt-H->mball.reveal_metaelems>`    |:func:`blender:bpy.ops.mball.reveal_metaelems` |
@@ -54,7 +52,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> mball.select_all
+.. km:hotkey:: Ctrl-A -> mball.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -68,35 +66,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
-
-   Context Enum Cycle
-
-   bpy.ops.wm.context_cycle_enum(data_path="", reverse=False, wrap=False)
-   
-   
-   +-------------------+----------------------------------------+
-   |Properties:        |Values:                                 |
-   +===================+========================================+
-   |Context Attributes |tool_settings.proportional_edit_falloff |
-   +-------------------+----------------------------------------+
-   
-   
-.. km:hotkeyd:: Shift-A -> object.metaball_add
+.. km:hotkeyd:: Shift-A -> object.metaball_add : KEYBOARD -> PRESS
 
    Add Metaball
 
    bpy.ops.object.metaball_add(type='BALL', radius=1, view_align=False, enter_editmode=False, location=(0, 0, 0), rotation=(0, 0, 0), layers=(False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False, False))
    
    
-.. km:hotkeyd:: Alt-H -> mball.reveal_metaelems
+.. km:hotkeyd:: Alt-H -> mball.reveal_metaelems : KEYBOARD -> PRESS
 
    Reveal
 
    bpy.ops.mball.reveal_metaelems()
    
    
-.. km:hotkeyd:: H -> mball.hide_metaelems
+.. km:hotkeyd:: H -> mball.hide_metaelems : KEYBOARD -> PRESS
 
    Hide
 
@@ -110,7 +94,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> mball.hide_metaelems
+.. km:hotkeyd:: Shift-H -> mball.hide_metaelems : KEYBOARD -> PRESS
 
    Hide
 
@@ -124,21 +108,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: X -> mball.delete_metaelems
+.. km:hotkeyd:: X -> mball.delete_metaelems : KEYBOARD -> PRESS
 
    Delete
 
    bpy.ops.mball.delete_metaelems()
    
    
-.. km:hotkeyd:: DEL -> mball.delete_metaelems
+.. km:hotkeyd:: DEL -> mball.delete_metaelems : KEYBOARD -> PRESS
 
    Delete
 
    bpy.ops.mball.delete_metaelems()
    
    
-.. km:hotkeyd:: Shift-D -> mball.duplicate_move
+.. km:hotkeyd:: Shift-D -> mball.duplicate_move : KEYBOARD -> PRESS
 
    Duplicate
 
@@ -154,7 +138,7 @@ Detailed Reference
    +-----------------------+--------+
    
    
-.. km:hotkeyd:: A -> mball.select_all
+.. km:hotkeyd:: A -> mball.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -168,7 +152,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> mball.select_all
+.. km:hotkeyd:: Ctrl-I -> mball.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -182,14 +166,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-G -> mball.select_similar
+.. km:hotkeyd:: Shift-G -> mball.select_similar : KEYBOARD -> PRESS
 
    Select Similar
 
    bpy.ops.mball.select_similar(type='TYPE', threshold=0.1)
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum : KEYBOARD -> PRESS
 
    Context Enum Cycle
 
@@ -205,7 +189,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkeyd:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 
@@ -223,7 +207,7 @@ Detailed Reference
    +-------------------+--------------------------------+
    
    
-.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum
+.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 

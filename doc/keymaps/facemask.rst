@@ -42,7 +42,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> paint.face_select_all
+.. km:hotkey:: Ctrl-A -> paint.face_select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -56,7 +56,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: A -> paint.face_select_all
+.. km:hotkeyd:: A -> paint.face_select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -70,7 +70,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> paint.face_select_all
+.. km:hotkeyd:: Ctrl-I -> paint.face_select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -84,7 +84,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: H -> paint.face_select_hide
+.. km:hotkeyd:: H -> paint.face_select_hide : KEYBOARD -> PRESS
 
    Face Select Hide
 
@@ -98,7 +98,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> paint.face_select_hide
+.. km:hotkeyd:: Shift-H -> paint.face_select_hide : KEYBOARD -> PRESS
 
    Face Select Hide
 
@@ -112,21 +112,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-H -> paint.face_select_reveal
+.. km:hotkeyd:: Alt-H -> paint.face_select_reveal : KEYBOARD -> PRESS
 
    Face Select Reveal
 
    bpy.ops.paint.face_select_reveal(unselected=False)
    
    
-.. km:hotkeyd:: Ctrl-L -> paint.face_select_linked
+.. km:hotkeyd:: Ctrl-L -> paint.face_select_linked : KEYBOARD -> PRESS
 
    Select Linked
 
    bpy.ops.paint.face_select_linked()
    
    
-.. km:hotkeyd:: L -> paint.face_select_linked_pick
+.. km:hotkeyd:: L -> paint.face_select_linked_pick : KEYBOARD -> PRESS
 
    Select Linked Pick
 
@@ -140,7 +140,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-L -> paint.face_select_linked_pick
+.. km:hotkeyd:: Shift-L -> paint.face_select_linked_pick : KEYBOARD -> PRESS
 
    Select Linked Pick
 

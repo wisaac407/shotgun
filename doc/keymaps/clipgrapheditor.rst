@@ -74,14 +74,14 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-SELECTMOUSE -> clip.change_frame
+.. km:hotkey:: Ctrl-SELECTMOUSE -> clip.change_frame : MOUSE -> PRESS
 
    Change Frame
 
    bpy.ops.clip.change_frame(frame=0)
    
    
-.. km:hotkey:: Ctrl-A -> clip.graph_select_all_markers
+.. km:hotkey:: Ctrl-A -> clip.graph_select_all_markers : KEYBOARD -> PRESS
 
    (De)select All Markers
 
@@ -95,21 +95,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Any-EVT_TWEAK_L -> clip.graph_select_border
+.. km:hotkey:: Any-EVT_TWEAK_L -> clip.graph_select_border : TWEAK -> ANY
 
    Border Select
 
    bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: ACTIONMOUSE -> clip.change_frame
+.. km:hotkeyd:: ACTIONMOUSE -> clip.change_frame : MOUSE -> PRESS
 
    Change Frame
 
    bpy.ops.clip.change_frame(frame=0)
    
    
-.. km:hotkeyd:: SELECTMOUSE -> clip.graph_select
+.. km:hotkeyd:: SELECTMOUSE -> clip.graph_select : MOUSE -> PRESS
 
    Select
 
@@ -123,7 +123,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-SELECTMOUSE -> clip.graph_select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> clip.graph_select : MOUSE -> PRESS
 
    Select
 
@@ -137,7 +137,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: A -> clip.graph_select_all_markers
+.. km:hotkeyd:: A -> clip.graph_select_all_markers : KEYBOARD -> PRESS
 
    (De)select All Markers
 
@@ -151,7 +151,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> clip.graph_select_all_markers
+.. km:hotkeyd:: Ctrl-I -> clip.graph_select_all_markers : KEYBOARD -> PRESS
 
    (De)select All Markers
 
@@ -165,63 +165,63 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> clip.graph_select_border
+.. km:hotkeyd:: B -> clip.graph_select_border : KEYBOARD -> PRESS
 
    Border Select
 
    bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: DEL -> clip.graph_delete_curve
+.. km:hotkeyd:: DEL -> clip.graph_delete_curve : KEYBOARD -> PRESS
 
    Delete Curve
 
    bpy.ops.clip.graph_delete_curve()
    
    
-.. km:hotkeyd:: X -> clip.graph_delete_curve
+.. km:hotkeyd:: X -> clip.graph_delete_curve : KEYBOARD -> PRESS
 
    Delete Curve
 
    bpy.ops.clip.graph_delete_curve()
    
    
-.. km:hotkeyd:: Shift-DEL -> clip.graph_delete_knot
+.. km:hotkeyd:: Shift-DEL -> clip.graph_delete_knot : KEYBOARD -> PRESS
 
    Delete Knot
 
    bpy.ops.clip.graph_delete_knot()
    
    
-.. km:hotkeyd:: Shift-X -> clip.graph_delete_knot
+.. km:hotkeyd:: Shift-X -> clip.graph_delete_knot : KEYBOARD -> PRESS
 
    Delete Knot
 
    bpy.ops.clip.graph_delete_knot()
    
    
-.. km:hotkeyd:: HOME -> clip.graph_view_all
+.. km:hotkeyd:: HOME -> clip.graph_view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.clip.graph_view_all()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.graph_view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.graph_view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.clip.graph_view_all()
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> clip.graph_center_current_frame
+.. km:hotkeyd:: NUMPAD_PERIOD -> clip.graph_center_current_frame : KEYBOARD -> PRESS
 
    Center Current Frame
 
    bpy.ops.clip.graph_center_current_frame()
    
    
-.. km:hotkeyd:: L -> wm.context_toggle
+.. km:hotkeyd:: L -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -235,7 +235,7 @@ Detailed Reference
    +-------------------+----------------------------+
    
    
-.. km:hotkeyd:: Alt-T -> clip.clear_track_path
+.. km:hotkeyd:: Alt-T -> clip.clear_track_path : KEYBOARD -> PRESS
 
    Clear Track Path
 
@@ -251,7 +251,7 @@ Detailed Reference
    +-------------+---------+
    
    
-.. km:hotkeyd:: Shift-T -> clip.clear_track_path
+.. km:hotkeyd:: Shift-T -> clip.clear_track_path : KEYBOARD -> PRESS
 
    Clear Track Path
 
@@ -267,7 +267,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-T -> clip.clear_track_path
+.. km:hotkeyd:: Shift-Alt-T -> clip.clear_track_path : KEYBOARD -> PRESS
 
    Clear Track Path
 
@@ -283,7 +283,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkeyd:: Shift-D -> clip.graph_disable_markers
+.. km:hotkeyd:: Shift-D -> clip.graph_disable_markers : KEYBOARD -> PRESS
 
    Disable Markers
 
@@ -297,28 +297,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate : KEYBOARD -> PRESS
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate : TWEAK -> ANY
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkeyd:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize : KEYBOARD -> PRESS
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkeyd:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate : KEYBOARD -> PRESS
 
    Rotate
 

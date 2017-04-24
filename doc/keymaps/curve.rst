@@ -22,8 +22,6 @@ Quick Reference
 +------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`DEL <curve->DEL->curve.delete>`                                       |:func:`blender:bpy.ops.curve.delete`                  |
 +------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-O <curve->Shift-O->wm.context_cycle_enum>`                      |:func:`blender:bpy.ops.wm.context_cycle_enum`         |
-+------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Shift-A <curve->Shift-A->wm.call_menu>`                               |:func:`blender:bpy.ops.wm.call_menu`                  |
 +------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`V <curve->V->curve.handle_type_set>`                                  |:func:`blender:bpy.ops.curve.handle_type_set`         |
@@ -108,14 +106,14 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-SELECTMOUSE -> curve.vertex_add
+.. km:hotkey:: Ctrl-SELECTMOUSE -> curve.vertex_add : MOUSE -> CLICK
 
    Add Vertex
 
    bpy.ops.curve.vertex_add(location=(0, 0, 0))
    
    
-.. km:hotkey:: Ctrl-A -> curve.select_all
+.. km:hotkey:: Ctrl-A -> curve.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -129,35 +127,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> curve.delete
+.. km:hotkey:: X -> curve.delete : KEYBOARD -> PRESS
 
    Delete
 
    bpy.ops.curve.delete(type='VERT')
    
    
-.. km:hotkey:: DEL -> curve.delete
+.. km:hotkey:: DEL -> curve.delete : KEYBOARD -> PRESS
 
    Delete
 
    bpy.ops.curve.delete(type='VERT')
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
-
-   Context Enum Cycle
-
-   bpy.ops.wm.context_cycle_enum(data_path="", reverse=False, wrap=False)
-   
-   
-   +-------------------+----------------------------------------+
-   |Properties:        |Values:                                 |
-   +===================+========================================+
-   |Context Attributes |tool_settings.proportional_edit_falloff |
-   +-------------------+----------------------------------------+
-   
-   
-.. km:hotkeyd:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -171,21 +155,21 @@ Detailed Reference
    +------------+-----------------------+
    
    
-.. km:hotkeyd:: V -> curve.handle_type_set
+.. km:hotkeyd:: V -> curve.handle_type_set : KEYBOARD -> PRESS
 
    Set Handle Type
 
    bpy.ops.curve.handle_type_set(type='AUTOMATIC')
    
    
-.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> curve.vertex_add
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> curve.vertex_add : MOUSE -> CLICK
 
    Add Vertex
 
    bpy.ops.curve.vertex_add(location=(0, 0, 0))
    
    
-.. km:hotkeyd:: Shift-ACTIONMOUSE -> curve.draw
+.. km:hotkeyd:: Shift-ACTIONMOUSE -> curve.draw : MOUSE -> PRESS
 
    Draw Curve
 
@@ -199,7 +183,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: A -> curve.select_all
+.. km:hotkeyd:: A -> curve.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -213,7 +197,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> curve.select_all
+.. km:hotkeyd:: Ctrl-I -> curve.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -227,42 +211,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-R -> curve.select_row
+.. km:hotkeyd:: Shift-R -> curve.select_row : KEYBOARD -> PRESS
 
    Select Control Point Row
 
    bpy.ops.curve.select_row()
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> curve.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> curve.select_more : KEYBOARD -> PRESS
 
    Select More
 
    bpy.ops.curve.select_more()
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> curve.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> curve.select_less : KEYBOARD -> PRESS
 
    Select Less
 
    bpy.ops.curve.select_less()
    
    
-.. km:hotkeyd:: Ctrl-L -> curve.select_linked
+.. km:hotkeyd:: Ctrl-L -> curve.select_linked : KEYBOARD -> PRESS
 
    Select Linked All
 
    bpy.ops.curve.select_linked()
    
    
-.. km:hotkeyd:: Shift-G -> curve.select_similar
+.. km:hotkeyd:: Shift-G -> curve.select_similar : KEYBOARD -> PRESS
 
    Select Similar
 
    bpy.ops.curve.select_similar(type='WEIGHT', compare='EQUAL', threshold=0.1)
    
    
-.. km:hotkeyd:: L -> curve.select_linked_pick
+.. km:hotkeyd:: L -> curve.select_linked_pick : KEYBOARD -> PRESS
 
    Select Linked
 
@@ -276,7 +260,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-L -> curve.select_linked_pick
+.. km:hotkeyd:: Shift-L -> curve.select_linked_pick : KEYBOARD -> PRESS
 
    Select Linked
 
@@ -290,28 +274,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> curve.shortest_path_pick
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> curve.shortest_path_pick : MOUSE -> CLICK
 
    Pick Shortest Path
 
    bpy.ops.curve.shortest_path_pick()
    
    
-.. km:hotkeyd:: P -> curve.separate
+.. km:hotkeyd:: P -> curve.separate : KEYBOARD -> PRESS
 
    Separate
 
    bpy.ops.curve.separate()
    
    
-.. km:hotkeyd:: Y -> curve.split
+.. km:hotkeyd:: Y -> curve.split : KEYBOARD -> PRESS
 
    Split
 
    bpy.ops.curve.split()
    
    
-.. km:hotkeyd:: E -> curve.extrude_move
+.. km:hotkeyd:: E -> curve.extrude_move : KEYBOARD -> PRESS
 
    Extrude Curve and Move
 
@@ -327,7 +311,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-D -> curve.duplicate_move
+.. km:hotkeyd:: Shift-D -> curve.duplicate_move : KEYBOARD -> PRESS
 
    Add Duplicate
 
@@ -343,21 +327,21 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkeyd:: F -> curve.make_segment
+.. km:hotkeyd:: F -> curve.make_segment : KEYBOARD -> PRESS
 
    Make Segment
 
    bpy.ops.curve.make_segment()
    
    
-.. km:hotkeyd:: Alt-C -> curve.cyclic_toggle
+.. km:hotkeyd:: Alt-C -> curve.cyclic_toggle : KEYBOARD -> PRESS
 
    Toggle Cyclic
 
    bpy.ops.curve.cyclic_toggle(direction='CYCLIC_U')
    
    
-.. km:hotkeyd:: X -> wm.call_menu
+.. km:hotkeyd:: X -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -371,7 +355,7 @@ Detailed Reference
    +------------+----------------------------+
    
    
-.. km:hotkeyd:: DEL -> wm.call_menu
+.. km:hotkeyd:: DEL -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -385,35 +369,35 @@ Detailed Reference
    +------------+----------------------------+
    
    
-.. km:hotkeyd:: Ctrl-X -> curve.dissolve_verts
+.. km:hotkeyd:: Ctrl-X -> curve.dissolve_verts : KEYBOARD -> PRESS
 
    Dissolve Vertices
 
    bpy.ops.curve.dissolve_verts()
    
    
-.. km:hotkeyd:: Ctrl-DEL -> curve.dissolve_verts
+.. km:hotkeyd:: Ctrl-DEL -> curve.dissolve_verts : KEYBOARD -> PRESS
 
    Dissolve Vertices
 
    bpy.ops.curve.dissolve_verts()
    
    
-.. km:hotkeyd:: Alt-T -> curve.tilt_clear
+.. km:hotkeyd:: Alt-T -> curve.tilt_clear : KEYBOARD -> PRESS
 
    Clear Tilt
 
    bpy.ops.curve.tilt_clear()
    
    
-.. km:hotkeyd:: Ctrl-T -> transform.tilt
+.. km:hotkeyd:: Ctrl-T -> transform.tilt : KEYBOARD -> PRESS
 
    Tilt
 
    bpy.ops.transform.tilt(value=0, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
    
    
-.. km:hotkeyd:: Alt-S -> transform.transform
+.. km:hotkeyd:: Alt-S -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -427,14 +411,14 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkeyd:: Alt-H -> curve.reveal
+.. km:hotkeyd:: Alt-H -> curve.reveal : KEYBOARD -> PRESS
 
    Reveal Hidden
 
    bpy.ops.curve.reveal()
    
    
-.. km:hotkeyd:: H -> curve.hide
+.. km:hotkeyd:: H -> curve.hide : KEYBOARD -> PRESS
 
    Hide Selected
 
@@ -448,7 +432,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> curve.hide
+.. km:hotkeyd:: Shift-H -> curve.hide : KEYBOARD -> PRESS
 
    Hide Selected
 
@@ -462,21 +446,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-N -> curve.normals_make_consistent
+.. km:hotkeyd:: Ctrl-N -> curve.normals_make_consistent : KEYBOARD -> PRESS
 
    Recalc Normals
 
    bpy.ops.curve.normals_make_consistent(calc_length=False)
    
    
-.. km:hotkeyd:: Ctrl-P -> object.vertex_parent_set
+.. km:hotkeyd:: Ctrl-P -> object.vertex_parent_set : KEYBOARD -> PRESS
 
    Make Vertex Parent
 
    bpy.ops.object.vertex_parent_set()
    
    
-.. km:hotkeyd:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -490,7 +474,7 @@ Detailed Reference
    +------------+------------------------------+
    
    
-.. km:hotkeyd:: Ctrl-H -> wm.call_menu
+.. km:hotkeyd:: Ctrl-H -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -504,7 +488,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum : KEYBOARD -> PRESS
 
    Context Enum Cycle
 
@@ -520,7 +504,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkeyd:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 
@@ -538,7 +522,7 @@ Detailed Reference
    +-------------------+--------------------------------+
    
    
-.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum
+.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 

@@ -108,7 +108,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> nla.select_all_toggle
+.. km:hotkey:: Ctrl-A -> nla.select_all_toggle : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -122,14 +122,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: A -> nla.apply_scale
+.. km:hotkey:: A -> nla.apply_scale : KEYBOARD -> PRESS
 
    Apply Scale
 
    bpy.ops.nla.apply_scale()
    
    
-.. km:hotkeyd:: SELECTMOUSE -> nla.click_select
+.. km:hotkeyd:: SELECTMOUSE -> nla.click_select : MOUSE -> PRESS
 
    Mouse Select
 
@@ -143,7 +143,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-SELECTMOUSE -> nla.click_select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> nla.click_select : MOUSE -> PRESS
 
    Mouse Select
 
@@ -157,7 +157,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> nla.select_leftright
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> nla.select_leftright : MOUSE -> PRESS
 
    Select Left/Right
 
@@ -173,7 +173,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> nla.select_leftright
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> nla.select_leftright : MOUSE -> PRESS
 
    Select Left/Right
 
@@ -189,7 +189,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: LEFT_BRACKET -> nla.select_leftright
+.. km:hotkeyd:: LEFT_BRACKET -> nla.select_leftright : KEYBOARD -> PRESS
 
    Select Left/Right
 
@@ -205,7 +205,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: RIGHT_BRACKET -> nla.select_leftright
+.. km:hotkeyd:: RIGHT_BRACKET -> nla.select_leftright : KEYBOARD -> PRESS
 
    Select Left/Right
 
@@ -221,7 +221,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: A -> nla.select_all_toggle
+.. km:hotkeyd:: A -> nla.select_all_toggle : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -235,7 +235,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> nla.select_all_toggle
+.. km:hotkeyd:: Ctrl-I -> nla.select_all_toggle : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -249,7 +249,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> nla.select_border
+.. km:hotkeyd:: B -> nla.select_border : KEYBOARD -> PRESS
 
    Border Select
 
@@ -263,7 +263,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-B -> nla.select_border
+.. km:hotkeyd:: Alt-B -> nla.select_border : KEYBOARD -> PRESS
 
    Border Select
 
@@ -277,77 +277,77 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-P -> nla.previewrange_set
+.. km:hotkeyd:: Ctrl-Alt-P -> nla.previewrange_set : KEYBOARD -> PRESS
 
    Auto-Set Preview Range
 
    bpy.ops.nla.previewrange_set()
    
    
-.. km:hotkeyd:: HOME -> nla.view_all
+.. km:hotkeyd:: HOME -> nla.view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.nla.view_all()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> nla.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> nla.view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.nla.view_all()
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> nla.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> nla.view_selected : KEYBOARD -> PRESS
 
    View Selected
 
    bpy.ops.nla.view_selected()
    
    
-.. km:hotkeyd:: NUMPAD_0 -> nla.view_frame
+.. km:hotkeyd:: NUMPAD_0 -> nla.view_frame : KEYBOARD -> PRESS
 
    View Frame
 
    bpy.ops.nla.view_frame()
    
    
-.. km:hotkeyd:: Shift-A -> nla.actionclip_add
+.. km:hotkeyd:: Shift-A -> nla.actionclip_add : KEYBOARD -> PRESS
 
    Add Action Strip
 
    bpy.ops.nla.actionclip_add(action='<UNKNOWN ENUM>')
    
    
-.. km:hotkeyd:: Shift-T -> nla.transition_add
+.. km:hotkeyd:: Shift-T -> nla.transition_add : KEYBOARD -> PRESS
 
    Add Transition
 
    bpy.ops.nla.transition_add()
    
    
-.. km:hotkeyd:: Shift-K -> nla.soundclip_add
+.. km:hotkeyd:: Shift-K -> nla.soundclip_add : KEYBOARD -> PRESS
 
    Add Sound Clip
 
    bpy.ops.nla.soundclip_add()
    
    
-.. km:hotkeyd:: Shift-G -> nla.meta_add
+.. km:hotkeyd:: Shift-G -> nla.meta_add : KEYBOARD -> PRESS
 
    Add Meta-Strips
 
    bpy.ops.nla.meta_add()
    
    
-.. km:hotkeyd:: Alt-G -> nla.meta_remove
+.. km:hotkeyd:: Alt-G -> nla.meta_remove : KEYBOARD -> PRESS
 
    Remove Meta-Strips
 
    bpy.ops.nla.meta_remove()
    
    
-.. km:hotkeyd:: Shift-D -> nla.duplicate
+.. km:hotkeyd:: Shift-D -> nla.duplicate : KEYBOARD -> PRESS
 
    Duplicate Strips
 
@@ -361,7 +361,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-D -> nla.duplicate
+.. km:hotkeyd:: Alt-D -> nla.duplicate : KEYBOARD -> PRESS
 
    Duplicate Strips
 
@@ -375,91 +375,91 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: U -> nla.make_single_user
+.. km:hotkeyd:: U -> nla.make_single_user : KEYBOARD -> PRESS
 
    Make Single User
 
    bpy.ops.nla.make_single_user()
    
    
-.. km:hotkeyd:: X -> nla.delete
+.. km:hotkeyd:: X -> nla.delete : KEYBOARD -> PRESS
 
    Delete Strips
 
    bpy.ops.nla.delete()
    
    
-.. km:hotkeyd:: DEL -> nla.delete
+.. km:hotkeyd:: DEL -> nla.delete : KEYBOARD -> PRESS
 
    Delete Strips
 
    bpy.ops.nla.delete()
    
    
-.. km:hotkeyd:: Y -> nla.split
+.. km:hotkeyd:: Y -> nla.split : KEYBOARD -> PRESS
 
    Split Strips
 
    bpy.ops.nla.split()
    
    
-.. km:hotkeyd:: H -> nla.mute_toggle
+.. km:hotkeyd:: H -> nla.mute_toggle : KEYBOARD -> PRESS
 
    Toggle Muting
 
    bpy.ops.nla.mute_toggle()
    
    
-.. km:hotkeyd:: Alt-F -> nla.swap
+.. km:hotkeyd:: Alt-F -> nla.swap : KEYBOARD -> PRESS
 
    Swap Strips
 
    bpy.ops.nla.swap()
    
    
-.. km:hotkeyd:: PAGE_UP -> nla.move_up
+.. km:hotkeyd:: PAGE_UP -> nla.move_up : KEYBOARD -> PRESS
 
    Move Strips Up
 
    bpy.ops.nla.move_up()
    
    
-.. km:hotkeyd:: PAGE_DOWN -> nla.move_down
+.. km:hotkeyd:: PAGE_DOWN -> nla.move_down : KEYBOARD -> PRESS
 
    Move Strips Down
 
    bpy.ops.nla.move_down()
    
    
-.. km:hotkeyd:: Ctrl-A -> nla.apply_scale
+.. km:hotkeyd:: Ctrl-A -> nla.apply_scale : KEYBOARD -> PRESS
 
    Apply Scale
 
    bpy.ops.nla.apply_scale()
    
    
-.. km:hotkeyd:: Alt-S -> nla.clear_scale
+.. km:hotkeyd:: Alt-S -> nla.clear_scale : KEYBOARD -> PRESS
 
    Clear Scale
 
    bpy.ops.nla.clear_scale()
    
    
-.. km:hotkeyd:: Shift-S -> nla.snap
+.. km:hotkeyd:: Shift-S -> nla.snap : KEYBOARD -> PRESS
 
    Snap Strips
 
    bpy.ops.nla.snap(type='CFRA')
    
    
-.. km:hotkeyd:: Ctrl-Shift-M -> nla.fmodifier_add
+.. km:hotkeyd:: Ctrl-Shift-M -> nla.fmodifier_add : KEYBOARD -> PRESS
 
    Add F-Modifier
 
    bpy.ops.nla.fmodifier_add(type='NULL', only_active=True)
    
    
-.. km:hotkeyd:: G -> transform.transform
+.. km:hotkeyd:: G -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -473,7 +473,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: EVT_TWEAK_S -> transform.transform
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.transform : TWEAK -> ANY
 
    Transform
 
@@ -487,7 +487,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: E -> transform.transform
+.. km:hotkeyd:: E -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -501,7 +501,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: S -> transform.transform
+.. km:hotkeyd:: S -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -515,14 +515,14 @@ Detailed Reference
    +------------+-----------+
    
    
-.. km:hotkeyd:: M -> marker.add
+.. km:hotkeyd:: M -> marker.add : KEYBOARD -> PRESS
 
    Add Time Marker
 
    bpy.ops.marker.add()
    
    
-.. km:hotkeyd:: Ctrl-M -> marker.rename
+.. km:hotkeyd:: Ctrl-M -> marker.rename : KEYBOARD -> PRESS
 
    Rename Marker
 

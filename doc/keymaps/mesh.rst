@@ -14,19 +14,15 @@ Quick Reference
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
 |Hotkey                                                                                       |Operator                                                     |
 +=============================================================================================+=============================================================+
-|:km:hk:`Ctrl-SELECTMOUSE <mesh->Ctrl-SELECTMOUSE->mesh.shortest_path_pick>`                  |:func:`blender:bpy.ops.mesh.shortest_path_pick`              |
-+---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
 |:km:hk:`Ctrl-A <mesh->Ctrl-A->mesh.select_all>`                                              |:func:`blender:bpy.ops.mesh.select_all`                      |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
-|:km:hk:`Shift-G <mesh->Shift-G->mesh.select_similar>`                                        |:func:`blender:bpy.ops.mesh.select_similar`                  |
+|:km:hk:`Ctrl-MIDDLEMOUSE <mesh->Ctrl-MIDDLEMOUSE->mesh.dupli_extrude_cursor>`                |:func:`blender:bpy.ops.mesh.dupli_extrude_cursor`            |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
-|:km:hk:`J <mesh->J->mesh.vert_connect>`                                                      |:func:`blender:bpy.ops.mesh.vert_connect`                    |
+|:km:hk:`Ctrl-Shift-MIDDLEMOUSE <mesh->Ctrl-Shift-MIDDLEMOUSE->mesh.dupli_extrude_cursor>`    |:func:`blender:bpy.ops.mesh.dupli_extrude_cursor`            |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
-|:km:hk:`Ctrl-SELECTMOUSE <mesh->Ctrl-SELECTMOUSE->mesh.dupli_extrude_cursor>`                |:func:`blender:bpy.ops.mesh.dupli_extrude_cursor`            |
+|:km:hk:`SELECTMOUSE <mesh->SELECTMOUSE->mesh.select_linked>`                                 |:func:`blender:bpy.ops.mesh.select_linked`                   |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
-|:km:hk:`Ctrl-Shift-SELECTMOUSE <mesh->Ctrl-Shift-SELECTMOUSE->mesh.dupli_extrude_cursor>`    |:func:`blender:bpy.ops.mesh.dupli_extrude_cursor`            |
-+---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
-|:km:hk:`Shift-O <mesh->Shift-O->wm.context_cycle_enum>`                                      |:func:`blender:bpy.ops.wm.context_cycle_enum`                |
+|:km:hk:`Shift-SELECTMOUSE <mesh->Shift-SELECTMOUSE->mesh.select_linked>`                     |:func:`blender:bpy.ops.mesh.select_linked`                   |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
 |:km:hk:`Ctrl-R <mesh->Ctrl-R->mesh.loopcut_slide>`                                           |:func:`blender:bpy.ops.mesh.loopcut_slide`                   |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------------------+
@@ -190,14 +186,7 @@ Detailed Reference
 
    
 
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> mesh.shortest_path_pick
-
-   Pick Shortest Path
-
-   bpy.ops.mesh.shortest_path_pick(use_face_step=False, use_topology_distance=False, use_fill=False, nth=1, skip=1, offset=0, index=-1)
-   
-   
-.. km:hotkey:: Ctrl-A -> mesh.select_all
+.. km:hotkey:: Ctrl-A -> mesh.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -211,21 +200,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-G -> mesh.select_similar
-
-   Select Similar
-
-   bpy.ops.mesh.select_similar(type='NORMAL', compare='EQUAL', threshold=0)
-   
-   
-.. km:hotkey:: J -> mesh.vert_connect
-
-   Vertex Connect
-
-   bpy.ops.mesh.vert_connect()
-   
-   
-.. km:hotkey:: Ctrl-SELECTMOUSE -> mesh.dupli_extrude_cursor
+.. km:hotkey:: Ctrl-MIDDLEMOUSE -> mesh.dupli_extrude_cursor : MOUSE -> PRESS
 
    Duplicate or Extrude to Cursor
 
@@ -239,7 +214,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> mesh.dupli_extrude_cursor
+.. km:hotkey:: Ctrl-Shift-MIDDLEMOUSE -> mesh.dupli_extrude_cursor : MOUSE -> PRESS
 
    Duplicate or Extrude to Cursor
 
@@ -253,21 +228,21 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
+.. km:hotkey:: SELECTMOUSE -> mesh.select_linked : MOUSE -> DOUBLE_CLICK
 
-   Context Enum Cycle
+   Select Linked All
 
-   bpy.ops.wm.context_cycle_enum(data_path="", reverse=False, wrap=False)
+   bpy.ops.mesh.select_linked(delimit={'SEAM'})
    
    
-   +-------------------+----------------------------------------+
-   |Properties:        |Values:                                 |
-   +===================+========================================+
-   |Context Attributes |tool_settings.proportional_edit_falloff |
-   +-------------------+----------------------------------------+
+.. km:hotkey:: Shift-SELECTMOUSE -> mesh.select_linked : MOUSE -> DOUBLE_CLICK
+
+   Select Linked All
+
+   bpy.ops.mesh.select_linked(delimit={'SEAM'})
    
    
-.. km:hotkeyd:: Ctrl-R -> mesh.loopcut_slide
+.. km:hotkeyd:: Ctrl-R -> mesh.loopcut_slide : KEYBOARD -> PRESS
 
    Loop Cut and Slide
 
@@ -283,7 +258,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-R -> mesh.offset_edge_loops_slide
+.. km:hotkeyd:: Ctrl-Shift-R -> mesh.offset_edge_loops_slide : KEYBOARD -> PRESS
 
    Offset Edge Slide
 
@@ -299,21 +274,21 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: I -> mesh.inset
+.. km:hotkeyd:: I -> mesh.inset : KEYBOARD -> PRESS
 
    Inset Faces
 
    bpy.ops.mesh.inset(use_boundary=True, use_even_offset=True, use_relative_offset=False, use_edge_rail=False, thickness=0.01, depth=0, use_outset=False, use_select_inset=False, use_individual=False, use_interpolate=True)
    
    
-.. km:hotkeyd:: Alt-P -> mesh.poke
+.. km:hotkeyd:: Alt-P -> mesh.poke : KEYBOARD -> PRESS
 
    Poke Faces
 
    bpy.ops.mesh.poke(offset=0, use_relative_offset=False, center_mode='MEAN_WEIGHTED')
    
    
-.. km:hotkeyd:: Ctrl-B -> mesh.bevel
+.. km:hotkeyd:: Ctrl-B -> mesh.bevel : KEYBOARD -> PRESS
 
    Bevel
 
@@ -327,7 +302,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-B -> mesh.bevel
+.. km:hotkeyd:: Ctrl-Shift-B -> mesh.bevel : KEYBOARD -> PRESS
 
    Bevel
 
@@ -341,7 +316,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-SELECTMOUSE -> mesh.loop_select
+.. km:hotkeyd:: Alt-SELECTMOUSE -> mesh.loop_select : MOUSE -> PRESS
 
    Loop Select
 
@@ -359,7 +334,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> mesh.loop_select
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> mesh.loop_select : MOUSE -> PRESS
 
    Loop Select
 
@@ -377,7 +352,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> mesh.edgering_select
+.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> mesh.edgering_select : MOUSE -> PRESS
 
    Edge Ring Select
 
@@ -395,7 +370,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> mesh.edgering_select
+.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> mesh.edgering_select : MOUSE -> PRESS
 
    Edge Ring Select
 
@@ -413,7 +388,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> mesh.shortest_path_pick
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> mesh.shortest_path_pick : MOUSE -> PRESS
 
    Pick Shortest Path
 
@@ -427,7 +402,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> mesh.shortest_path_pick
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> mesh.shortest_path_pick : MOUSE -> PRESS
 
    Pick Shortest Path
 
@@ -441,7 +416,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: A -> mesh.select_all
+.. km:hotkeyd:: A -> mesh.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -455,7 +430,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> mesh.select_all
+.. km:hotkeyd:: Ctrl-I -> mesh.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -469,49 +444,49 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> mesh.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> mesh.select_more : KEYBOARD -> PRESS
 
    Select More
 
    bpy.ops.mesh.select_more(use_face_step=True)
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> mesh.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> mesh.select_less : KEYBOARD -> PRESS
 
    Select Less
 
    bpy.ops.mesh.select_less(use_face_step=True)
    
    
-.. km:hotkeyd:: Ctrl-Shift-NUMPAD_PLUS -> mesh.select_next_item
+.. km:hotkeyd:: Ctrl-Shift-NUMPAD_PLUS -> mesh.select_next_item : KEYBOARD -> PRESS
 
    Select Next Element
 
    bpy.ops.mesh.select_next_item()
    
    
-.. km:hotkeyd:: Ctrl-Shift-NUMPAD_MINUS -> mesh.select_prev_item
+.. km:hotkeyd:: Ctrl-Shift-NUMPAD_MINUS -> mesh.select_prev_item : KEYBOARD -> PRESS
 
    Select Previous Element
 
    bpy.ops.mesh.select_prev_item()
    
    
-.. km:hotkeyd:: Ctrl-Shift-Alt-M -> mesh.select_non_manifold
+.. km:hotkeyd:: Ctrl-Shift-Alt-M -> mesh.select_non_manifold : KEYBOARD -> PRESS
 
    Select Non Manifold
 
    bpy.ops.mesh.select_non_manifold(extend=True, use_wire=True, use_boundary=True, use_multi_face=True, use_non_contiguous=True, use_verts=True)
    
    
-.. km:hotkeyd:: Ctrl-L -> mesh.select_linked
+.. km:hotkeyd:: Ctrl-L -> mesh.select_linked : KEYBOARD -> PRESS
 
    Select Linked All
 
    bpy.ops.mesh.select_linked(delimit={'SEAM'})
    
    
-.. km:hotkeyd:: L -> mesh.select_linked_pick
+.. km:hotkeyd:: L -> mesh.select_linked_pick : KEYBOARD -> PRESS
 
    Select Linked
 
@@ -525,7 +500,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-L -> mesh.select_linked_pick
+.. km:hotkeyd:: Shift-L -> mesh.select_linked_pick : KEYBOARD -> PRESS
 
    Select Linked
 
@@ -539,14 +514,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-Alt-F -> mesh.faces_select_linked_flat
+.. km:hotkeyd:: Ctrl-Shift-Alt-F -> mesh.faces_select_linked_flat : KEYBOARD -> PRESS
 
    Select Linked Flat Faces
 
    bpy.ops.mesh.faces_select_linked_flat(sharpness=0.0174533)
    
    
-.. km:hotkeyd:: Shift-G -> wm.call_menu
+.. km:hotkeyd:: Shift-G -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -560,7 +535,7 @@ Detailed Reference
    +------------+-----------------------------------+
    
    
-.. km:hotkeyd:: Ctrl-Tab -> wm.call_menu
+.. km:hotkeyd:: Ctrl-Tab -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -574,7 +549,7 @@ Detailed Reference
    +------------+--------------------------------+
    
    
-.. km:hotkeyd:: H -> mesh.hide
+.. km:hotkeyd:: H -> mesh.hide : KEYBOARD -> PRESS
 
    Hide Selection
 
@@ -588,7 +563,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> mesh.hide
+.. km:hotkeyd:: Shift-H -> mesh.hide : KEYBOARD -> PRESS
 
    Hide Selection
 
@@ -602,14 +577,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-H -> mesh.reveal
+.. km:hotkeyd:: Alt-H -> mesh.reveal : KEYBOARD -> PRESS
 
    Reveal Hidden
 
    bpy.ops.mesh.reveal()
    
    
-.. km:hotkeyd:: Ctrl-N -> mesh.normals_make_consistent
+.. km:hotkeyd:: Ctrl-N -> mesh.normals_make_consistent : KEYBOARD -> PRESS
 
    Make Normals Consistent
 
@@ -623,7 +598,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-N -> mesh.normals_make_consistent
+.. km:hotkeyd:: Ctrl-Shift-N -> mesh.normals_make_consistent : KEYBOARD -> PRESS
 
    Make Normals Consistent
 
@@ -637,14 +612,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: E -> view3d.edit_mesh_extrude_move_normal
+.. km:hotkeyd:: E -> view3d.edit_mesh_extrude_move_normal : KEYBOARD -> PRESS
 
    Extrude and Move on Normals
 
    bpy.ops.view3d.edit_mesh_extrude_move_normal()
    
    
-.. km:hotkeyd:: Alt-E -> wm.call_menu
+.. km:hotkeyd:: Alt-E -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -658,35 +633,35 @@ Detailed Reference
    +------------+----------------------------+
    
    
-.. km:hotkeyd:: Shift-E -> transform.edge_crease
+.. km:hotkeyd:: Shift-E -> transform.edge_crease : KEYBOARD -> PRESS
 
    Edge Crease
 
    bpy.ops.transform.edge_crease(value=0, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
    
    
-.. km:hotkeyd:: Alt-R -> mesh.spin
+.. km:hotkeyd:: Alt-R -> mesh.spin : KEYBOARD -> PRESS
 
    Spin
 
    bpy.ops.mesh.spin(steps=9, dupli=False, angle=1.5708, center=(0, 0, 0), axis=(0, 0, 0))
    
    
-.. km:hotkeyd:: Alt-F -> mesh.fill
+.. km:hotkeyd:: Alt-F -> mesh.fill : KEYBOARD -> PRESS
 
    Fill
 
    bpy.ops.mesh.fill(use_beauty=True)
    
    
-.. km:hotkeyd:: Shift-Alt-F -> mesh.beautify_fill
+.. km:hotkeyd:: Shift-Alt-F -> mesh.beautify_fill : KEYBOARD -> PRESS
 
    Beautify Faces
 
    bpy.ops.mesh.beautify_fill(angle_limit=3.14159)
    
    
-.. km:hotkeyd:: Ctrl-T -> mesh.quads_convert_to_tris
+.. km:hotkeyd:: Ctrl-T -> mesh.quads_convert_to_tris : KEYBOARD -> PRESS
 
    Triangulate Faces
 
@@ -702,7 +677,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-T -> mesh.quads_convert_to_tris
+.. km:hotkeyd:: Ctrl-Shift-T -> mesh.quads_convert_to_tris : KEYBOARD -> PRESS
 
    Triangulate Faces
 
@@ -718,14 +693,14 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Alt-J -> mesh.tris_convert_to_quads
+.. km:hotkeyd:: Alt-J -> mesh.tris_convert_to_quads : KEYBOARD -> PRESS
 
    Tris to Quads
 
    bpy.ops.mesh.tris_convert_to_quads(face_threshold=0.698132, shape_threshold=0.698132, uvs=False, vcols=False, seam=False, sharp=False, materials=False)
    
    
-.. km:hotkeyd:: V -> mesh.rip_move
+.. km:hotkeyd:: V -> mesh.rip_move : KEYBOARD -> PRESS
 
    Rip
 
@@ -741,7 +716,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-V -> mesh.rip_move_fill
+.. km:hotkeyd:: Alt-V -> mesh.rip_move_fill : KEYBOARD -> PRESS
 
    Rip Fill
 
@@ -757,7 +732,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-D -> mesh.rip_edge_move
+.. km:hotkeyd:: Alt-D -> mesh.rip_edge_move : KEYBOARD -> PRESS
 
    Extend Vertices
 
@@ -773,28 +748,28 @@ Detailed Reference
    +----------------+--------+
    
    
-.. km:hotkeyd:: Alt-M -> mesh.merge
+.. km:hotkeyd:: Alt-M -> mesh.merge : KEYBOARD -> PRESS
 
    Merge
 
    bpy.ops.mesh.merge(type='CENTER', uvs=False)
    
    
-.. km:hotkeyd:: Alt-S -> transform.shrink_fatten
+.. km:hotkeyd:: Alt-S -> transform.shrink_fatten : KEYBOARD -> PRESS
 
    Shrink/Fatten
 
    bpy.ops.transform.shrink_fatten(value=0, use_even_offset=True, mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
    
    
-.. km:hotkeyd:: F -> mesh.edge_face_add
+.. km:hotkeyd:: F -> mesh.edge_face_add : KEYBOARD -> PRESS
 
    Make Edge/Face
 
    bpy.ops.mesh.edge_face_add()
    
    
-.. km:hotkeyd:: Shift-D -> mesh.duplicate_move
+.. km:hotkeyd:: Shift-D -> mesh.duplicate_move : KEYBOARD -> PRESS
 
    Add Duplicate
 
@@ -810,7 +785,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -824,35 +799,35 @@ Detailed Reference
    +------------+-----------------+
    
    
-.. km:hotkeyd:: P -> mesh.separate
+.. km:hotkeyd:: P -> mesh.separate : KEYBOARD -> PRESS
 
    Separate
 
    bpy.ops.mesh.separate(type='SELECTED')
    
    
-.. km:hotkeyd:: Y -> mesh.split
+.. km:hotkeyd:: Y -> mesh.split : KEYBOARD -> PRESS
 
    Split
 
    bpy.ops.mesh.split()
    
    
-.. km:hotkeyd:: J -> mesh.vert_connect_path
+.. km:hotkeyd:: J -> mesh.vert_connect_path : KEYBOARD -> PRESS
 
    Vertex Connect Path
 
    bpy.ops.mesh.vert_connect_path()
    
    
-.. km:hotkeyd:: Shift-V -> transform.vert_slide
+.. km:hotkeyd:: Shift-V -> transform.vert_slide : KEYBOARD -> PRESS
 
    Vertex Slide
 
    bpy.ops.transform.vert_slide(value=0, use_even=False, flipped=False, use_clamp=True, mirror=False, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), correct_uv=False, release_confirm=False)
    
    
-.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> mesh.dupli_extrude_cursor
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> mesh.dupli_extrude_cursor : MOUSE -> CLICK
 
    Duplicate or Extrude to Cursor
 
@@ -866,7 +841,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-ACTIONMOUSE -> mesh.dupli_extrude_cursor
+.. km:hotkeyd:: Ctrl-Shift-ACTIONMOUSE -> mesh.dupli_extrude_cursor : MOUSE -> CLICK
 
    Duplicate or Extrude to Cursor
 
@@ -880,7 +855,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: X -> wm.call_menu
+.. km:hotkeyd:: X -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -894,7 +869,7 @@ Detailed Reference
    +------------+---------------------------+
    
    
-.. km:hotkeyd:: DEL -> wm.call_menu
+.. km:hotkeyd:: DEL -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -908,21 +883,21 @@ Detailed Reference
    +------------+---------------------------+
    
    
-.. km:hotkeyd:: Ctrl-X -> mesh.dissolve_mode
+.. km:hotkeyd:: Ctrl-X -> mesh.dissolve_mode : KEYBOARD -> PRESS
 
    Dissolve Selection
 
    bpy.ops.mesh.dissolve_mode(use_verts=False, use_face_split=False, use_boundary_tear=False)
    
    
-.. km:hotkeyd:: Ctrl-DEL -> mesh.dissolve_mode
+.. km:hotkeyd:: Ctrl-DEL -> mesh.dissolve_mode : KEYBOARD -> PRESS
 
    Dissolve Selection
 
    bpy.ops.mesh.dissolve_mode(use_verts=False, use_face_split=False, use_boundary_tear=False)
    
    
-.. km:hotkeyd:: K -> mesh.knife_tool
+.. km:hotkeyd:: K -> mesh.knife_tool : KEYBOARD -> PRESS
 
    Knife Topology Tool
 
@@ -938,7 +913,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: Shift-K -> mesh.knife_tool
+.. km:hotkeyd:: Shift-K -> mesh.knife_tool : KEYBOARD -> PRESS
 
    Knife Topology Tool
 
@@ -954,14 +929,14 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-P -> object.vertex_parent_set
+.. km:hotkeyd:: Ctrl-P -> object.vertex_parent_set : KEYBOARD -> PRESS
 
    Make Vertex Parent
 
    bpy.ops.object.vertex_parent_set()
    
    
-.. km:hotkeyd:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -975,7 +950,7 @@ Detailed Reference
    +------------+-----------------------------+
    
    
-.. km:hotkeyd:: Ctrl-F -> wm.call_menu
+.. km:hotkeyd:: Ctrl-F -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -989,7 +964,7 @@ Detailed Reference
    +------------+--------------------------+
    
    
-.. km:hotkeyd:: Ctrl-E -> wm.call_menu
+.. km:hotkeyd:: Ctrl-E -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1003,7 +978,7 @@ Detailed Reference
    +------------+--------------------------+
    
    
-.. km:hotkeyd:: Ctrl-V -> wm.call_menu
+.. km:hotkeyd:: Ctrl-V -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1017,7 +992,7 @@ Detailed Reference
    +------------+-----------------------------+
    
    
-.. km:hotkeyd:: Ctrl-H -> wm.call_menu
+.. km:hotkeyd:: Ctrl-H -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1031,7 +1006,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkeyd:: U -> wm.call_menu
+.. km:hotkeyd:: U -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1045,7 +1020,7 @@ Detailed Reference
    +------------+-----------------+
    
    
-.. km:hotkeyd:: Ctrl-G -> wm.call_menu
+.. km:hotkeyd:: Ctrl-G -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1059,7 +1034,7 @@ Detailed Reference
    +------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-0 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-0 -> object.subdivision_set : KEYBOARD -> PRESS
 
    Subdivision Set
 
@@ -1073,7 +1048,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-1 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-1 -> object.subdivision_set : KEYBOARD -> PRESS
 
    Subdivision Set
 
@@ -1087,7 +1062,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-2 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-2 -> object.subdivision_set : KEYBOARD -> PRESS
 
    Subdivision Set
 
@@ -1101,7 +1076,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-3 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-3 -> object.subdivision_set : KEYBOARD -> PRESS
 
    Subdivision Set
 
@@ -1115,7 +1090,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-4 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-4 -> object.subdivision_set : KEYBOARD -> PRESS
 
    Subdivision Set
 
@@ -1129,7 +1104,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-5 -> object.subdivision_set
+.. km:hotkeyd:: Ctrl-5 -> object.subdivision_set : KEYBOARD -> PRESS
 
    Subdivision Set
 
@@ -1143,7 +1118,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum
+.. km:hotkeyd:: Shift-O -> wm.context_cycle_enum : KEYBOARD -> PRESS
 
    Context Enum Cycle
 
@@ -1159,7 +1134,7 @@ Detailed Reference
    +-------------------+----------------------------------------+
    
    
-.. km:hotkeyd:: O -> wm.context_toggle_enum
+.. km:hotkeyd:: O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 
@@ -1177,7 +1152,7 @@ Detailed Reference
    +-------------------+--------------------------------+
    
    
-.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum
+.. km:hotkeyd:: Alt-O -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 

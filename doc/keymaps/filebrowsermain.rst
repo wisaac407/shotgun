@@ -94,7 +94,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Alt-LEFTMOUSE -> file.select
+.. km:hotkey:: Alt-LEFTMOUSE -> file.select : MOUSE -> CLICK
 
    Activate/Select File
 
@@ -110,14 +110,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-A -> file.select_all_toggle
+.. km:hotkey:: Ctrl-A -> file.select_all_toggle : KEYBOARD -> PRESS
 
    (De)select All Files
 
    bpy.ops.file.select_all_toggle()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> file.execute
+.. km:hotkeyd:: LEFTMOUSE -> file.execute : MOUSE -> DOUBLE_CLICK
 
    Execute File Window
 
@@ -131,35 +131,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> file.refresh
+.. km:hotkeyd:: NUMPAD_PERIOD -> file.refresh : KEYBOARD -> PRESS
 
    Refresh Filelist
 
    bpy.ops.file.refresh()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> file.select
+.. km:hotkeyd:: LEFTMOUSE -> file.select : MOUSE -> CLICK
 
    Activate/Select File
 
    bpy.ops.file.select(extend=False, fill=False, open=True)
    
    
-.. km:hotkeyd:: Shift-LEFTMOUSE -> file.select
-
-   Activate/Select File
-
-   bpy.ops.file.select(extend=False, fill=False, open=True)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Extend      |True    |
-   +------------+--------+
-   
-   
-.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> file.select
+.. km:hotkeyd:: Shift-LEFTMOUSE -> file.select : MOUSE -> CLICK
 
    Activate/Select File
 
@@ -171,41 +157,9 @@ Detailed Reference
    +============+========+
    |Extend      |True    |
    +------------+--------+
-   |Fill        |True    |
-   +------------+--------+
    
    
-.. km:hotkeyd:: RIGHTMOUSE -> file.select
-
-   Activate/Select File
-
-   bpy.ops.file.select(extend=False, fill=False, open=True)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Open        |False   |
-   +------------+--------+
-   
-   
-.. km:hotkeyd:: Shift-RIGHTMOUSE -> file.select
-
-   Activate/Select File
-
-   bpy.ops.file.select(extend=False, fill=False, open=True)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Extend      |True    |
-   +------------+--------+
-   |Open        |False   |
-   +------------+--------+
-   
-   
-.. km:hotkeyd:: Alt-RIGHTMOUSE -> file.select
+.. km:hotkeyd:: Ctrl-Shift-LEFTMOUSE -> file.select : MOUSE -> CLICK
 
    Activate/Select File
 
@@ -219,11 +173,57 @@ Detailed Reference
    +------------+--------+
    |Fill        |True    |
    +------------+--------+
+   
+   
+.. km:hotkeyd:: RIGHTMOUSE -> file.select : MOUSE -> CLICK
+
+   Activate/Select File
+
+   bpy.ops.file.select(extend=False, fill=False, open=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
    |Open        |False   |
    +------------+--------+
    
    
-.. km:hotkeyd:: UP_ARROW -> file.select_walk
+.. km:hotkeyd:: Shift-RIGHTMOUSE -> file.select : MOUSE -> CLICK
+
+   Activate/Select File
+
+   bpy.ops.file.select(extend=False, fill=False, open=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
+   |Open        |False   |
+   +------------+--------+
+   
+   
+.. km:hotkeyd:: Alt-RIGHTMOUSE -> file.select : MOUSE -> CLICK
+
+   Activate/Select File
+
+   bpy.ops.file.select(extend=False, fill=False, open=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
+   |Fill        |True    |
+   +------------+--------+
+   |Open        |False   |
+   +------------+--------+
+   
+   
+.. km:hotkeyd:: UP_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -237,7 +237,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Shift-UP_ARROW -> file.select_walk
+.. km:hotkeyd:: Shift-UP_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -253,7 +253,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-UP_ARROW -> file.select_walk
+.. km:hotkeyd:: Ctrl-Shift-UP_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -271,7 +271,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: DOWN_ARROW -> file.select_walk
+.. km:hotkeyd:: DOWN_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -285,7 +285,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Shift-DOWN_ARROW -> file.select_walk
+.. km:hotkeyd:: Shift-DOWN_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -301,7 +301,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-DOWN_ARROW -> file.select_walk
+.. km:hotkeyd:: Ctrl-Shift-DOWN_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -319,7 +319,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: LEFT_ARROW -> file.select_walk
+.. km:hotkeyd:: LEFT_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -333,7 +333,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Shift-LEFT_ARROW -> file.select_walk
+.. km:hotkeyd:: Shift-LEFT_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -349,7 +349,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-LEFT_ARROW -> file.select_walk
+.. km:hotkeyd:: Ctrl-Shift-LEFT_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -367,7 +367,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: RIGHT_ARROW -> file.select_walk
+.. km:hotkeyd:: RIGHT_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -381,7 +381,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Shift-RIGHT_ARROW -> file.select_walk
+.. km:hotkeyd:: Shift-RIGHT_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -397,7 +397,7 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-RIGHT_ARROW -> file.select_walk
+.. km:hotkeyd:: Ctrl-Shift-RIGHT_ARROW -> file.select_walk : KEYBOARD -> PRESS
 
    Walk Select/Deselect File
 
@@ -415,56 +415,56 @@ Detailed Reference
    +---------------+--------+
    
    
-.. km:hotkeyd:: BUTTON4MOUSE -> file.previous
+.. km:hotkeyd:: BUTTON4MOUSE -> file.previous : MOUSE -> CLICK
 
    Previous Folder
 
    bpy.ops.file.previous()
    
    
-.. km:hotkeyd:: BUTTON5MOUSE -> file.next
+.. km:hotkeyd:: BUTTON5MOUSE -> file.next : MOUSE -> CLICK
 
    Next Folder
 
    bpy.ops.file.next()
    
    
-.. km:hotkeyd:: A -> file.select_all_toggle
+.. km:hotkeyd:: A -> file.select_all_toggle : KEYBOARD -> PRESS
 
    (De)select All Files
 
    bpy.ops.file.select_all_toggle()
    
    
-.. km:hotkeyd:: B -> file.select_border
+.. km:hotkeyd:: B -> file.select_border : KEYBOARD -> PRESS
 
    Activate/Select File
 
    bpy.ops.file.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: EVT_TWEAK_L -> file.select_border
+.. km:hotkeyd:: EVT_TWEAK_L -> file.select_border : TWEAK -> ANY
 
    Activate/Select File
 
    bpy.ops.file.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: Ctrl-LEFTMOUSE -> file.rename
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> file.rename : MOUSE -> PRESS
 
    Rename File or Directory
 
    bpy.ops.file.rename()
    
    
-.. km:hotkeyd:: Any-MOUSEMOVE -> file.highlight
+.. km:hotkeyd:: Any-MOUSEMOVE -> file.highlight : MOUSE -> ANY
 
    Highlight File
 
    bpy.ops.file.highlight()
    
    
-.. km:hotkeyd:: NUMPAD_PLUS -> file.filenum
+.. km:hotkeyd:: NUMPAD_PLUS -> file.filenum : KEYBOARD -> PRESS
 
    Increment Number in Filename
 
@@ -478,7 +478,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_PLUS -> file.filenum
+.. km:hotkeyd:: Shift-NUMPAD_PLUS -> file.filenum : KEYBOARD -> PRESS
 
    Increment Number in Filename
 
@@ -492,7 +492,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> file.filenum
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> file.filenum : KEYBOARD -> PRESS
 
    Increment Number in Filename
 
@@ -506,7 +506,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_MINUS -> file.filenum
+.. km:hotkeyd:: NUMPAD_MINUS -> file.filenum : KEYBOARD -> PRESS
 
    Increment Number in Filename
 
@@ -520,7 +520,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_MINUS -> file.filenum
+.. km:hotkeyd:: Shift-NUMPAD_MINUS -> file.filenum : KEYBOARD -> PRESS
 
    Increment Number in Filename
 
@@ -534,7 +534,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> file.filenum
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> file.filenum : KEYBOARD -> PRESS
 
    Increment Number in Filename
 

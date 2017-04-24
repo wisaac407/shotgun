@@ -56,49 +56,49 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Alt-EVT_TWEAK_S -> marker.move
+.. km:hotkey:: Alt-EVT_TWEAK_S -> marker.move : TWEAK -> ANY
 
    Move Time Marker
 
    bpy.ops.marker.move(frames=0)
    
    
-.. km:hotkey:: Ctrl-A -> marker.select_all
+.. km:hotkey:: Ctrl-A -> marker.select_all : KEYBOARD -> PRESS
 
    (De)select all Markers
 
    bpy.ops.marker.select_all(action='TOGGLE')
    
    
-.. km:hotkeyd:: M -> marker.add
+.. km:hotkeyd:: M -> marker.add : KEYBOARD -> PRESS
 
    Add Time Marker
 
    bpy.ops.marker.add()
    
    
-.. km:hotkeyd:: EVT_TWEAK_S -> marker.move
+.. km:hotkeyd:: EVT_TWEAK_S -> marker.move : TWEAK -> ANY
 
    Move Time Marker
 
    bpy.ops.marker.move(frames=0)
    
    
-.. km:hotkeyd:: Shift-D -> marker.duplicate
+.. km:hotkeyd:: Shift-D -> marker.duplicate : KEYBOARD -> PRESS
 
    Duplicate Time Marker
 
    bpy.ops.marker.duplicate(frames=0)
    
    
-.. km:hotkeyd:: SELECTMOUSE -> marker.select
+.. km:hotkeyd:: SELECTMOUSE -> marker.select : MOUSE -> PRESS
 
    Select Time Marker
 
    bpy.ops.marker.select(extend=False, camera=False)
    
    
-.. km:hotkeyd:: Shift-SELECTMOUSE -> marker.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> marker.select : MOUSE -> PRESS
 
    Select Time Marker
 
@@ -112,7 +112,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> marker.select
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> marker.select : MOUSE -> PRESS
 
    Select Time Marker
 
@@ -128,7 +128,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> marker.select
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> marker.select : MOUSE -> PRESS
 
    Select Time Marker
 
@@ -144,49 +144,49 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> marker.select_border
+.. km:hotkeyd:: B -> marker.select_border : KEYBOARD -> PRESS
 
    Marker Border Select
 
    bpy.ops.marker.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: A -> marker.select_all
+.. km:hotkeyd:: A -> marker.select_all : KEYBOARD -> PRESS
 
    (De)select all Markers
 
    bpy.ops.marker.select_all(action='TOGGLE')
    
    
-.. km:hotkeyd:: X -> marker.delete
+.. km:hotkeyd:: X -> marker.delete : KEYBOARD -> PRESS
 
    Delete Markers
 
    bpy.ops.marker.delete()
    
    
-.. km:hotkeyd:: DEL -> marker.delete
+.. km:hotkeyd:: DEL -> marker.delete : KEYBOARD -> PRESS
 
    Delete Markers
 
    bpy.ops.marker.delete()
    
    
-.. km:hotkeyd:: Ctrl-M -> marker.rename
+.. km:hotkeyd:: Ctrl-M -> marker.rename : KEYBOARD -> PRESS
 
    Rename Marker
 
    bpy.ops.marker.rename(name="RenamedMarker")
    
    
-.. km:hotkeyd:: G -> marker.move
+.. km:hotkeyd:: G -> marker.move : KEYBOARD -> PRESS
 
    Move Time Marker
 
    bpy.ops.marker.move(frames=0)
    
    
-.. km:hotkeyd:: Ctrl-B -> marker.camera_bind
+.. km:hotkeyd:: Ctrl-B -> marker.camera_bind : KEYBOARD -> PRESS
 
    Bind Camera to Markers
 

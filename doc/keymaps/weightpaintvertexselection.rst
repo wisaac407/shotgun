@@ -42,7 +42,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> paint.vert_select_all
+.. km:hotkey:: Ctrl-A -> paint.vert_select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -56,7 +56,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-EVT_TWEAK_S -> view3d.select_lasso
+.. km:hotkey:: Ctrl-EVT_TWEAK_S -> view3d.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -70,7 +70,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_S -> view3d.select_lasso
+.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_S -> view3d.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -84,7 +84,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: A -> paint.vert_select_all
+.. km:hotkeyd:: A -> paint.vert_select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -98,7 +98,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> paint.vert_select_all
+.. km:hotkeyd:: Ctrl-I -> paint.vert_select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -112,14 +112,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> view3d.select_border
+.. km:hotkeyd:: B -> view3d.select_border : KEYBOARD -> PRESS
 
    Border Select
 
    bpy.ops.view3d.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso
+.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> view3d.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -133,7 +133,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> view3d.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -147,7 +147,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: C -> view3d.select_circle
+.. km:hotkeyd:: C -> view3d.select_circle : KEYBOARD -> PRESS
 
    Circle Select
 

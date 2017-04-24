@@ -144,7 +144,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Shift-Tab -> wm.context_toggle_enum
+.. km:hotkey:: Shift-Tab -> wm.context_toggle_enum : KEYBOARD -> PRESS
 
    Context Toggle Values
 
@@ -162,7 +162,7 @@ Detailed Reference
    +-------------------+----------------+
    
    
-.. km:hotkey:: Ctrl-Tab -> wm.context_set_enum
+.. km:hotkey:: Ctrl-Tab -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -178,7 +178,7 @@ Detailed Reference
    +-------------------+-------------+
    
    
-.. km:hotkey:: Ctrl-A -> action.select_all_toggle
+.. km:hotkey:: Ctrl-A -> action.select_all_toggle : KEYBOARD -> PRESS
 
    Select All
 
@@ -192,28 +192,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: O -> action.clean
+.. km:hotkey:: O -> action.clean : KEYBOARD -> PRESS
 
    Clean Keyframes
 
    bpy.ops.action.clean(threshold=0.001, channels=False)
    
    
-.. km:hotkey:: X -> action.delete
+.. km:hotkey:: X -> action.delete : KEYBOARD -> PRESS
 
    Delete Keyframes
 
    bpy.ops.action.delete()
    
    
-.. km:hotkey:: DEL -> action.delete
+.. km:hotkey:: DEL -> action.delete : KEYBOARD -> PRESS
 
    Delete Keyframes
 
    bpy.ops.action.delete()
    
    
-.. km:hotkeyd:: SELECTMOUSE -> action.clickselect
+.. km:hotkeyd:: SELECTMOUSE -> action.clickselect : MOUSE -> PRESS
 
    Mouse Select Keys
 
@@ -231,7 +231,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Alt-SELECTMOUSE -> action.clickselect
+.. km:hotkeyd:: Alt-SELECTMOUSE -> action.clickselect : MOUSE -> PRESS
 
    Mouse Select Keys
 
@@ -249,7 +249,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-SELECTMOUSE -> action.clickselect
+.. km:hotkeyd:: Shift-SELECTMOUSE -> action.clickselect : MOUSE -> PRESS
 
    Mouse Select Keys
 
@@ -267,7 +267,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> action.clickselect
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> action.clickselect : MOUSE -> PRESS
 
    Mouse Select Keys
 
@@ -285,7 +285,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> action.clickselect
+.. km:hotkeyd:: Ctrl-Alt-SELECTMOUSE -> action.clickselect : MOUSE -> PRESS
 
    Mouse Select Keys
 
@@ -303,7 +303,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> action.clickselect
+.. km:hotkeyd:: Ctrl-Shift-Alt-SELECTMOUSE -> action.clickselect : MOUSE -> PRESS
 
    Mouse Select Keys
 
@@ -321,7 +321,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> action.select_leftright
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> action.select_leftright : MOUSE -> PRESS
 
    Select Left/Right
 
@@ -337,7 +337,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> action.select_leftright
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> action.select_leftright : MOUSE -> PRESS
 
    Select Left/Right
 
@@ -353,7 +353,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: LEFT_BRACKET -> action.select_leftright
+.. km:hotkeyd:: LEFT_BRACKET -> action.select_leftright : KEYBOARD -> PRESS
 
    Select Left/Right
 
@@ -369,7 +369,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: RIGHT_BRACKET -> action.select_leftright
+.. km:hotkeyd:: RIGHT_BRACKET -> action.select_leftright : KEYBOARD -> PRESS
 
    Select Left/Right
 
@@ -385,7 +385,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: A -> action.select_all_toggle
+.. km:hotkeyd:: A -> action.select_all_toggle : KEYBOARD -> PRESS
 
    Select All
 
@@ -399,7 +399,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> action.select_all_toggle
+.. km:hotkeyd:: Ctrl-I -> action.select_all_toggle : KEYBOARD -> PRESS
 
    Select All
 
@@ -413,7 +413,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> action.select_border
+.. km:hotkeyd:: B -> action.select_border : KEYBOARD -> PRESS
 
    Border Select
 
@@ -427,7 +427,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-B -> action.select_border
+.. km:hotkeyd:: Alt-B -> action.select_border : KEYBOARD -> PRESS
 
    Border Select
 
@@ -441,7 +441,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> action.select_lasso
+.. km:hotkeyd:: Ctrl-EVT_TWEAK_A -> action.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -455,7 +455,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> action.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-EVT_TWEAK_A -> action.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -469,14 +469,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: C -> action.select_circle
+.. km:hotkeyd:: C -> action.select_circle : KEYBOARD -> PRESS
 
    Circle Select
 
    bpy.ops.action.select_circle(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkeyd:: K -> action.select_column
+.. km:hotkeyd:: K -> action.select_column : KEYBOARD -> PRESS
 
    Select All
 
@@ -490,7 +490,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-K -> action.select_column
+.. km:hotkeyd:: Ctrl-K -> action.select_column : KEYBOARD -> PRESS
 
    Select All
 
@@ -504,7 +504,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-K -> action.select_column
+.. km:hotkeyd:: Shift-K -> action.select_column : KEYBOARD -> PRESS
 
    Select All
 
@@ -518,7 +518,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkeyd:: Alt-K -> action.select_column
+.. km:hotkeyd:: Alt-K -> action.select_column : KEYBOARD -> PRESS
 
    Select All
 
@@ -532,84 +532,84 @@ Detailed Reference
    +------------+----------------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> action.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> action.select_more : KEYBOARD -> PRESS
 
    Select More
 
    bpy.ops.action.select_more()
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> action.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> action.select_less : KEYBOARD -> PRESS
 
    Select Less
 
    bpy.ops.action.select_less()
    
    
-.. km:hotkeyd:: L -> action.select_linked
+.. km:hotkeyd:: L -> action.select_linked : KEYBOARD -> PRESS
 
    Select Linked
 
    bpy.ops.action.select_linked()
    
    
-.. km:hotkeyd:: Ctrl-G -> action.frame_jump
+.. km:hotkeyd:: Ctrl-G -> action.frame_jump : KEYBOARD -> PRESS
 
    Jump to Keyframes
 
    bpy.ops.action.frame_jump()
    
    
-.. km:hotkeyd:: Shift-S -> action.snap
+.. km:hotkeyd:: Shift-S -> action.snap : KEYBOARD -> PRESS
 
    Snap Keys
 
    bpy.ops.action.snap(type='CFRA')
    
    
-.. km:hotkeyd:: Shift-M -> action.mirror
+.. km:hotkeyd:: Shift-M -> action.mirror : KEYBOARD -> PRESS
 
    Mirror Keys
 
    bpy.ops.action.mirror(type='CFRA')
    
    
-.. km:hotkeyd:: V -> action.handle_type
+.. km:hotkeyd:: V -> action.handle_type : KEYBOARD -> PRESS
 
    Set Keyframe Handle Type
 
    bpy.ops.action.handle_type(type='FREE')
    
    
-.. km:hotkeyd:: T -> action.interpolation_type
+.. km:hotkeyd:: T -> action.interpolation_type : KEYBOARD -> PRESS
 
    Set Keyframe Interpolation
 
    bpy.ops.action.interpolation_type(type='CONSTANT')
    
    
-.. km:hotkeyd:: Shift-E -> action.extrapolation_type
+.. km:hotkeyd:: Shift-E -> action.extrapolation_type : KEYBOARD -> PRESS
 
    Set Keyframe Extrapolation
 
    bpy.ops.action.extrapolation_type(type='CONSTANT')
    
    
-.. km:hotkeyd:: R -> action.keyframe_type
+.. km:hotkeyd:: R -> action.keyframe_type : KEYBOARD -> PRESS
 
    Set Keyframe Type
 
    bpy.ops.action.keyframe_type(type='KEYFRAME')
    
    
-.. km:hotkeyd:: Shift-O -> action.sample
+.. km:hotkeyd:: Shift-O -> action.sample : KEYBOARD -> PRESS
 
    Sample Keyframes
 
    bpy.ops.action.sample()
    
    
-.. km:hotkeyd:: X -> wm.call_menu
+.. km:hotkeyd:: X -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -623,7 +623,7 @@ Detailed Reference
    +------------+--------------------+
    
    
-.. km:hotkeyd:: DEL -> wm.call_menu
+.. km:hotkeyd:: DEL -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -637,7 +637,7 @@ Detailed Reference
    +------------+--------------------+
    
    
-.. km:hotkeyd:: Shift-D -> action.duplicate_move
+.. km:hotkeyd:: Shift-D -> action.duplicate_move : KEYBOARD -> PRESS
 
    Duplicate
 
@@ -653,28 +653,28 @@ Detailed Reference
    +--------------------+--------+
    
    
-.. km:hotkeyd:: I -> action.keyframe_insert
+.. km:hotkeyd:: I -> action.keyframe_insert : KEYBOARD -> PRESS
 
    Insert Keyframes
 
    bpy.ops.action.keyframe_insert(type='ALL')
    
    
-.. km:hotkeyd:: Ctrl-C -> action.copy
+.. km:hotkeyd:: Ctrl-C -> action.copy : KEYBOARD -> PRESS
 
    Copy Keyframes
 
    bpy.ops.action.copy()
    
    
-.. km:hotkeyd:: Ctrl-V -> action.paste
+.. km:hotkeyd:: Ctrl-V -> action.paste : KEYBOARD -> PRESS
 
    Paste Keyframes
 
    bpy.ops.action.paste(offset='START', merge='MIX', flipped=False)
    
    
-.. km:hotkeyd:: Ctrl-Shift-V -> action.paste
+.. km:hotkeyd:: Ctrl-Shift-V -> action.paste : KEYBOARD -> PRESS
 
    Paste Keyframes
 
@@ -688,56 +688,56 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-P -> action.previewrange_set
+.. km:hotkeyd:: Ctrl-Alt-P -> action.previewrange_set : KEYBOARD -> PRESS
 
    Auto-Set Preview Range
 
    bpy.ops.action.previewrange_set()
    
    
-.. km:hotkeyd:: HOME -> action.view_all
+.. km:hotkeyd:: HOME -> action.view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.action.view_all()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> action.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> action.view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.action.view_all()
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> action.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> action.view_selected : KEYBOARD -> PRESS
 
    View Selected
 
    bpy.ops.action.view_selected()
    
    
-.. km:hotkeyd:: NUMPAD_0 -> action.view_frame
+.. km:hotkeyd:: NUMPAD_0 -> action.view_frame : KEYBOARD -> PRESS
 
    View Frame
 
    bpy.ops.action.view_frame()
    
    
-.. km:hotkeyd:: Tab -> anim.channels_editable_toggle
+.. km:hotkeyd:: Tab -> anim.channels_editable_toggle : KEYBOARD -> PRESS
 
    Toggle Channel Editability
 
    bpy.ops.anim.channels_editable_toggle(mode='TOGGLE', type='PROTECT')
    
    
-.. km:hotkeyd:: Ctrl-F -> anim.channels_find
+.. km:hotkeyd:: Ctrl-F -> anim.channels_find : KEYBOARD -> PRESS
 
    Find Channels
 
    bpy.ops.anim.channels_find(query="Query")
    
    
-.. km:hotkeyd:: G -> transform.transform
+.. km:hotkeyd:: G -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -751,7 +751,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkeyd:: EVT_TWEAK_S -> transform.transform
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.transform : TWEAK -> ANY
 
    Transform
 
@@ -765,7 +765,7 @@ Detailed Reference
    +------------+---------------+
    
    
-.. km:hotkeyd:: E -> transform.transform
+.. km:hotkeyd:: E -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -779,7 +779,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: S -> transform.transform
+.. km:hotkeyd:: S -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -793,7 +793,7 @@ Detailed Reference
    +------------+-----------+
    
    
-.. km:hotkeyd:: Shift-T -> transform.transform
+.. km:hotkeyd:: Shift-T -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -807,7 +807,7 @@ Detailed Reference
    +------------+-----------+
    
    
-.. km:hotkeyd:: O -> wm.context_toggle
+.. km:hotkeyd:: O -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -821,14 +821,14 @@ Detailed Reference
    +-------------------+--------------------------------------+
    
    
-.. km:hotkeyd:: M -> marker.add
+.. km:hotkeyd:: M -> marker.add : KEYBOARD -> PRESS
 
    Add Time Marker
 
    bpy.ops.marker.add()
    
    
-.. km:hotkeyd:: Ctrl-M -> marker.rename
+.. km:hotkeyd:: Ctrl-M -> marker.rename : KEYBOARD -> PRESS
 
    Rename Marker
 

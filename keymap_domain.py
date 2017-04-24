@@ -30,7 +30,7 @@ from docutils.parsers.rst import directives
 from docutils import nodes
 
 
-km_sig_re = re.compile('^ ?([^\s]+) -> ([\w.]*)$')
+km_sig_re = re.compile('^ ?([^\s]+) -> ([\w.]*) : ([^\s]+) -> ([\w.]*)$')
 
 
 class KeymapModule(Directive):
@@ -85,7 +85,7 @@ class KeymapHotkey(ObjectDescription):
         m = km_sig_re.match(sig)
         if m is None:
             raise ValueError
-        name, operator = m.groups()
+        name, operator, map_type, value = m.groups()
 
         # determine module and class name (if applicable), as well as full name
         modname = self.options.get(
@@ -102,6 +102,11 @@ class KeymapHotkey(ObjectDescription):
         signode += addnodes.desc_name(name, name)
 
         signode += addnodes.desc_returns(operator, operator)
+
+        map_type = ' : ' + map_type
+
+        signode += addnodes.desc_annotation(map_type, map_type)
+        signode += addnodes.desc_returns(value, value)
 
         return fullname, name
 

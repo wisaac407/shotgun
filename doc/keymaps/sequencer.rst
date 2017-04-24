@@ -16,20 +16,6 @@ Quick Reference
 +======================================================================================+=====================================================+
 |:km:hk:`Ctrl-A <sequencer->Ctrl-A->sequencer.select_all>`                             |:func:`blender:bpy.ops.sequencer.select_all`         |
 +--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`SELECTMOUSE <sequencer->SELECTMOUSE->sequencer.select>`                       |:func:`blender:bpy.ops.sequencer.select`             |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-SELECTMOUSE <sequencer->Shift-SELECTMOUSE->sequencer.select>`           |:func:`blender:bpy.ops.sequencer.select`             |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Alt-SELECTMOUSE <sequencer->Alt-SELECTMOUSE->sequencer.select>`               |:func:`blender:bpy.ops.sequencer.select`             |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Shift-Alt-SELECTMOUSE <sequencer->Shift-Alt-SELECTMOUSE->sequencer.select>`   |:func:`blender:bpy.ops.sequencer.select`             |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-SELECTMOUSE <sequencer->Ctrl-SELECTMOUSE->sequencer.select>`             |:func:`blender:bpy.ops.sequencer.select`             |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-Shift-SELECTMOUSE <sequencer->Ctrl-Shift-SELECTMOUSE->sequencer.select>` |:func:`blender:bpy.ops.sequencer.select`             |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`Ctrl-M <sequencer->Ctrl-M->marker.rename>`                                    |:func:`blender:bpy.ops.marker.rename`                |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`RIGHTMOUSE <sequencer->RIGHTMOUSE->view2d.pan>`                               |:func:`blender:bpy.ops.view2d.pan`                   |
 +--------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`A <sequencer->A->sequencer.select_all>`                                       |:func:`blender:bpy.ops.sequencer.select_all`         |
@@ -182,7 +168,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-A -> sequencer.select_all
+.. km:hotkey:: Ctrl-A -> sequencer.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -196,129 +182,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: SELECTMOUSE -> sequencer.select
-
-   Activate/Select
-
-   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Extend        |False   |
-   +--------------+--------+
-   |Linked Handle |False   |
-   +--------------+--------+
-   |Linked Time   |False   |
-   +--------------+--------+
-   
-   
-.. km:hotkeyd:: Shift-SELECTMOUSE -> sequencer.select
-
-   Activate/Select
-
-   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Extend        |True    |
-   +--------------+--------+
-   |Linked Handle |False   |
-   +--------------+--------+
-   |Linked Time   |False   |
-   +--------------+--------+
-   
-   
-.. km:hotkeyd:: Alt-SELECTMOUSE -> sequencer.select
-
-   Activate/Select
-
-   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Extend        |False   |
-   +--------------+--------+
-   |Linked Handle |True    |
-   +--------------+--------+
-   |Linked Time   |False   |
-   +--------------+--------+
-   
-   
-.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> sequencer.select
-
-   Activate/Select
-
-   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Extend        |True    |
-   +--------------+--------+
-   |Linked Handle |True    |
-   +--------------+--------+
-   |Linked Time   |False   |
-   +--------------+--------+
-   
-   
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> sequencer.select
-
-   Activate/Select
-
-   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Extend        |False   |
-   +--------------+--------+
-   |Linked Handle |False   |
-   +--------------+--------+
-   |Linked Time   |True    |
-   +--------------+--------+
-   
-   
-.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> sequencer.select
-
-   Activate/Select
-
-   bpy.ops.sequencer.select(extend=False, linked_handle=False, left_right='NONE', linked_time=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Extend        |True    |
-   +--------------+--------+
-   |Linked Handle |False   |
-   +--------------+--------+
-   |Linked Time   |True    |
-   +--------------+--------+
-   
-   
-.. km:hotkeyd:: Ctrl-M -> marker.rename
-
-   Rename Marker
-
-   bpy.ops.marker.rename(name="RenamedMarker")
-   
-   
-.. km:hotkey:: RIGHTMOUSE -> view2d.pan
+.. km:hotkey:: RIGHTMOUSE -> view2d.pan : MOUSE -> PRESS
 
    Pan View
 
    bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
-.. km:hotkeyd:: A -> sequencer.select_all
+.. km:hotkeyd:: A -> sequencer.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -332,7 +203,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> sequencer.select_all
+.. km:hotkeyd:: Ctrl-I -> sequencer.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -346,7 +217,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: K -> sequencer.cut
+.. km:hotkeyd:: K -> sequencer.cut : KEYBOARD -> PRESS
 
    Cut Strips
 
@@ -360,7 +231,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-K -> sequencer.cut
+.. km:hotkeyd:: Shift-K -> sequencer.cut : KEYBOARD -> PRESS
 
    Cut Strips
 
@@ -374,7 +245,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: H -> sequencer.mute
+.. km:hotkeyd:: H -> sequencer.mute : KEYBOARD -> PRESS
 
    Mute Strips
 
@@ -388,7 +259,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> sequencer.mute
+.. km:hotkeyd:: Shift-H -> sequencer.mute : KEYBOARD -> PRESS
 
    Mute Strips
 
@@ -402,7 +273,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-H -> sequencer.unmute
+.. km:hotkeyd:: Alt-H -> sequencer.unmute : KEYBOARD -> PRESS
 
    Un-Mute Strips
 
@@ -416,7 +287,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-H -> sequencer.unmute
+.. km:hotkeyd:: Shift-Alt-H -> sequencer.unmute : KEYBOARD -> PRESS
 
    Un-Mute Strips
 
@@ -430,35 +301,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-L -> sequencer.lock
+.. km:hotkeyd:: Shift-L -> sequencer.lock : KEYBOARD -> PRESS
 
    Lock Strips
 
    bpy.ops.sequencer.lock()
    
    
-.. km:hotkeyd:: Shift-Alt-L -> sequencer.unlock
+.. km:hotkeyd:: Shift-Alt-L -> sequencer.unlock : KEYBOARD -> PRESS
 
    UnLock Strips
 
    bpy.ops.sequencer.unlock()
    
    
-.. km:hotkeyd:: R -> sequencer.reassign_inputs
+.. km:hotkeyd:: R -> sequencer.reassign_inputs : KEYBOARD -> PRESS
 
    Reassign Inputs
 
    bpy.ops.sequencer.reassign_inputs()
    
    
-.. km:hotkeyd:: Alt-R -> sequencer.reload
+.. km:hotkeyd:: Alt-R -> sequencer.reload : KEYBOARD -> PRESS
 
    Reload Strips
 
    bpy.ops.sequencer.reload(adjust_length=False)
    
    
-.. km:hotkeyd:: Shift-Alt-R -> sequencer.reload
+.. km:hotkeyd:: Shift-Alt-R -> sequencer.reload : KEYBOARD -> PRESS
 
    Reload Strips
 
@@ -472,14 +343,14 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Alt-O -> sequencer.offset_clear
+.. km:hotkeyd:: Alt-O -> sequencer.offset_clear : KEYBOARD -> PRESS
 
    Clear Strip Offset
 
    bpy.ops.sequencer.offset_clear()
    
    
-.. km:hotkeyd:: Shift-D -> sequencer.duplicate_move
+.. km:hotkeyd:: Shift-D -> sequencer.duplicate_move : KEYBOARD -> PRESS
 
    Duplicate Strips
 
@@ -495,91 +366,91 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: X -> sequencer.delete
+.. km:hotkeyd:: X -> sequencer.delete : KEYBOARD -> PRESS
 
    Erase Strips
 
    bpy.ops.sequencer.delete()
    
    
-.. km:hotkeyd:: DEL -> sequencer.delete
+.. km:hotkeyd:: DEL -> sequencer.delete : KEYBOARD -> PRESS
 
    Erase Strips
 
    bpy.ops.sequencer.delete()
    
    
-.. km:hotkeyd:: Ctrl-C -> sequencer.copy
+.. km:hotkeyd:: Ctrl-C -> sequencer.copy : KEYBOARD -> PRESS
 
    Copy
 
    bpy.ops.sequencer.copy()
    
    
-.. km:hotkeyd:: Ctrl-V -> sequencer.paste
+.. km:hotkeyd:: Ctrl-V -> sequencer.paste : KEYBOARD -> PRESS
 
    Paste
 
    bpy.ops.sequencer.paste()
    
    
-.. km:hotkeyd:: Y -> sequencer.images_separate
+.. km:hotkeyd:: Y -> sequencer.images_separate : KEYBOARD -> PRESS
 
    Separate Images
 
    bpy.ops.sequencer.images_separate(length=1)
    
    
-.. km:hotkeyd:: Tab -> sequencer.meta_toggle
+.. km:hotkeyd:: Tab -> sequencer.meta_toggle : KEYBOARD -> PRESS
 
    Toggle Meta Strip
 
    bpy.ops.sequencer.meta_toggle()
    
    
-.. km:hotkeyd:: Ctrl-G -> sequencer.meta_make
+.. km:hotkeyd:: Ctrl-G -> sequencer.meta_make : KEYBOARD -> PRESS
 
    Make Meta Strip
 
    bpy.ops.sequencer.meta_make()
    
    
-.. km:hotkeyd:: Alt-G -> sequencer.meta_separate
+.. km:hotkeyd:: Alt-G -> sequencer.meta_separate : KEYBOARD -> PRESS
 
    UnMeta Strip
 
    bpy.ops.sequencer.meta_separate()
    
    
-.. km:hotkeyd:: HOME -> sequencer.view_all
+.. km:hotkeyd:: HOME -> sequencer.view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.sequencer.view_all()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> sequencer.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> sequencer.view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.sequencer.view_all()
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> sequencer.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> sequencer.view_selected : KEYBOARD -> PRESS
 
    View Selected
 
    bpy.ops.sequencer.view_selected()
    
    
-.. km:hotkeyd:: NUMPAD_0 -> sequencer.view_frame
+.. km:hotkeyd:: NUMPAD_0 -> sequencer.view_frame : KEYBOARD -> PRESS
 
    View Frame
 
    bpy.ops.sequencer.view_frame()
    
    
-.. km:hotkeyd:: PAGE_UP -> sequencer.strip_jump
+.. km:hotkeyd:: PAGE_UP -> sequencer.strip_jump : KEYBOARD -> PRESS
 
    Jump to Strip
 
@@ -595,7 +466,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: PAGE_DOWN -> sequencer.strip_jump
+.. km:hotkeyd:: PAGE_DOWN -> sequencer.strip_jump : KEYBOARD -> PRESS
 
    Jump to Strip
 
@@ -611,7 +482,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: Alt-PAGE_UP -> sequencer.strip_jump
+.. km:hotkeyd:: Alt-PAGE_UP -> sequencer.strip_jump : KEYBOARD -> PRESS
 
    Jump to Strip
 
@@ -627,7 +498,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: Alt-PAGE_DOWN -> sequencer.strip_jump
+.. km:hotkeyd:: Alt-PAGE_DOWN -> sequencer.strip_jump : KEYBOARD -> PRESS
 
    Jump to Strip
 
@@ -643,7 +514,7 @@ Detailed Reference
    +-----------------+--------+
    
    
-.. km:hotkeyd:: Alt-LEFT_ARROW -> sequencer.swap
+.. km:hotkeyd:: Alt-LEFT_ARROW -> sequencer.swap : KEYBOARD -> PRESS
 
    Swap Strip
 
@@ -657,7 +528,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-RIGHT_ARROW -> sequencer.swap
+.. km:hotkeyd:: Alt-RIGHT_ARROW -> sequencer.swap : KEYBOARD -> PRESS
 
    Swap Strip
 
@@ -671,7 +542,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: BACK_SPACE -> sequencer.gap_remove
+.. km:hotkeyd:: BACK_SPACE -> sequencer.gap_remove : KEYBOARD -> PRESS
 
    Remove Gaps
 
@@ -685,7 +556,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-BACK_SPACE -> sequencer.gap_remove
+.. km:hotkeyd:: Shift-BACK_SPACE -> sequencer.gap_remove : KEYBOARD -> PRESS
 
    Remove Gaps
 
@@ -699,28 +570,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-EQUAL -> sequencer.gap_insert
+.. km:hotkeyd:: Shift-EQUAL -> sequencer.gap_insert : KEYBOARD -> PRESS
 
    Insert Gaps
 
    bpy.ops.sequencer.gap_insert(frames=10)
    
    
-.. km:hotkeyd:: Shift-S -> sequencer.snap
+.. km:hotkeyd:: Shift-S -> sequencer.snap : KEYBOARD -> PRESS
 
    Snap Strips
 
    bpy.ops.sequencer.snap(frame=0)
    
    
-.. km:hotkeyd:: Alt-S -> sequencer.swap_inputs
+.. km:hotkeyd:: Alt-S -> sequencer.swap_inputs : KEYBOARD -> PRESS
 
    Swap Inputs
 
    bpy.ops.sequencer.swap_inputs()
    
    
-.. km:hotkeyd:: 1 -> sequencer.cut_multicam
+.. km:hotkeyd:: 1 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -734,7 +605,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 2 -> sequencer.cut_multicam
+.. km:hotkeyd:: 2 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -748,7 +619,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 3 -> sequencer.cut_multicam
+.. km:hotkeyd:: 3 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -762,7 +633,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 4 -> sequencer.cut_multicam
+.. km:hotkeyd:: 4 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -776,7 +647,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 5 -> sequencer.cut_multicam
+.. km:hotkeyd:: 5 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -790,7 +661,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 6 -> sequencer.cut_multicam
+.. km:hotkeyd:: 6 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -804,7 +675,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 7 -> sequencer.cut_multicam
+.. km:hotkeyd:: 7 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -818,7 +689,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 8 -> sequencer.cut_multicam
+.. km:hotkeyd:: 8 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -832,7 +703,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 9 -> sequencer.cut_multicam
+.. km:hotkeyd:: 9 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -846,7 +717,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 0 -> sequencer.cut_multicam
+.. km:hotkeyd:: 0 -> sequencer.cut_multicam : KEYBOARD -> PRESS
 
    Cut multicam
 
@@ -860,7 +731,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: SELECTMOUSE -> sequencer.select
+.. km:hotkeyd:: SELECTMOUSE -> sequencer.select : MOUSE -> PRESS
 
    Activate/Select
 
@@ -880,7 +751,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-SELECTMOUSE -> sequencer.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> sequencer.select : MOUSE -> PRESS
 
    Activate/Select
 
@@ -900,7 +771,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Alt-SELECTMOUSE -> sequencer.select
+.. km:hotkeyd:: Alt-SELECTMOUSE -> sequencer.select : MOUSE -> PRESS
 
    Activate/Select
 
@@ -920,7 +791,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> sequencer.select
+.. km:hotkeyd:: Shift-Alt-SELECTMOUSE -> sequencer.select : MOUSE -> PRESS
 
    Activate/Select
 
@@ -940,7 +811,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-SELECTMOUSE -> sequencer.select
+.. km:hotkeyd:: Ctrl-SELECTMOUSE -> sequencer.select : MOUSE -> PRESS
 
    Activate/Select
 
@@ -960,7 +831,7 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> sequencer.select
+.. km:hotkeyd:: Ctrl-Shift-SELECTMOUSE -> sequencer.select : MOUSE -> PRESS
 
    Activate/Select
 
@@ -980,21 +851,21 @@ Detailed Reference
    +--------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> sequencer.select_more
+.. km:hotkeyd:: Ctrl-NUMPAD_PLUS -> sequencer.select_more : KEYBOARD -> PRESS
 
    Select More
 
    bpy.ops.sequencer.select_more()
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> sequencer.select_less
+.. km:hotkeyd:: Ctrl-NUMPAD_MINUS -> sequencer.select_less : KEYBOARD -> PRESS
 
    Select Less
 
    bpy.ops.sequencer.select_less()
    
    
-.. km:hotkeyd:: L -> sequencer.select_linked_pick
+.. km:hotkeyd:: L -> sequencer.select_linked_pick : KEYBOARD -> PRESS
 
    Select Pick Linked
 
@@ -1008,7 +879,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-L -> sequencer.select_linked_pick
+.. km:hotkeyd:: Shift-L -> sequencer.select_linked_pick : KEYBOARD -> PRESS
 
    Select Pick Linked
 
@@ -1022,28 +893,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-L -> sequencer.select_linked
+.. km:hotkeyd:: Ctrl-L -> sequencer.select_linked : KEYBOARD -> PRESS
 
    Select Linked
 
    bpy.ops.sequencer.select_linked()
    
    
-.. km:hotkeyd:: B -> sequencer.select_border
+.. km:hotkeyd:: B -> sequencer.select_border : KEYBOARD -> PRESS
 
    Border Select
 
    bpy.ops.sequencer.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: Shift-G -> sequencer.select_grouped
+.. km:hotkeyd:: Shift-G -> sequencer.select_grouped : KEYBOARD -> PRESS
 
    Select Grouped
 
    bpy.ops.sequencer.select_grouped(type='TYPE', extend=False, use_active_channel=False)
    
    
-.. km:hotkeyd:: Shift-A -> wm.call_menu
+.. km:hotkeyd:: Shift-A -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1057,7 +928,7 @@ Detailed Reference
    +------------+-----------------+
    
    
-.. km:hotkeyd:: C -> wm.call_menu
+.. km:hotkeyd:: C -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -1071,14 +942,14 @@ Detailed Reference
    +------------+--------------------+
    
    
-.. km:hotkeyd:: S -> sequencer.slip
+.. km:hotkeyd:: S -> sequencer.slip : KEYBOARD -> PRESS
 
    Trim Strips
 
    bpy.ops.sequencer.slip(offset=0)
    
    
-.. km:hotkeyd:: O -> wm.context_set_int
+.. km:hotkeyd:: O -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -1094,21 +965,21 @@ Detailed Reference
    +-------------------+------------------------------------+
    
    
-.. km:hotkeyd:: G -> transform.seq_slide
+.. km:hotkeyd:: G -> transform.seq_slide : KEYBOARD -> PRESS
 
    Sequence Slide
 
    bpy.ops.transform.seq_slide(value=(0, 0), snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
    
    
-.. km:hotkeyd:: EVT_TWEAK_S -> transform.seq_slide
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.seq_slide : TWEAK -> ANY
 
    Sequence Slide
 
    bpy.ops.transform.seq_slide(value=(0, 0), snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), release_confirm=False)
    
    
-.. km:hotkeyd:: E -> transform.transform
+.. km:hotkeyd:: E -> transform.transform : KEYBOARD -> PRESS
 
    Transform
 
@@ -1122,14 +993,14 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: M -> marker.add
+.. km:hotkeyd:: M -> marker.add : KEYBOARD -> PRESS
 
    Add Time Marker
 
    bpy.ops.marker.add()
    
    
-.. km:hotkeyd:: Ctrl-M -> marker.rename
+.. km:hotkeyd:: Ctrl-M -> marker.rename : KEYBOARD -> PRESS
 
    Rename Marker
 

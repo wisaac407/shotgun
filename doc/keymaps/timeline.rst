@@ -36,42 +36,42 @@ Detailed Reference
 
    
 
-.. km:hotkey:: LEFTMOUSE -> anim.change_frame
+.. km:hotkey:: LEFTMOUSE -> anim.change_frame : MOUSE -> PRESS
 
    Change Frame
 
    bpy.ops.anim.change_frame(frame=0, snap=False)
    
    
-.. km:hotkeyd:: S -> time.start_frame_set
+.. km:hotkeyd:: S -> time.start_frame_set : KEYBOARD -> PRESS
 
    Set Start Frame
 
    bpy.ops.time.start_frame_set()
    
    
-.. km:hotkeyd:: E -> time.end_frame_set
+.. km:hotkeyd:: E -> time.end_frame_set : KEYBOARD -> PRESS
 
    Set End Frame
 
    bpy.ops.time.end_frame_set()
    
    
-.. km:hotkeyd:: HOME -> time.view_all
+.. km:hotkeyd:: HOME -> time.view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.time.view_all()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> time.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> time.view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.time.view_all()
    
    
-.. km:hotkeyd:: NUMPAD_0 -> time.view_frame
+.. km:hotkeyd:: NUMPAD_0 -> time.view_frame : KEYBOARD -> PRESS
 
    View Frame
 

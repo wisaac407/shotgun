@@ -14,16 +14,6 @@ Quick Reference
 +----------------------------------------------------------------------------------------+------------------------------------------------+
 |Hotkey                                                                                  |Operator                                        |
 +========================================================================================+================================================+
-|:km:hk:`F <imagepaint->F->wm.radial_control>`                                           |:func:`blender:bpy.ops.wm.radial_control`       |
-+----------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Shift-F <imagepaint->Shift-F->wm.radial_control>`                               |:func:`blender:bpy.ops.wm.radial_control`       |
-+----------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Ctrl-F <imagepaint->Ctrl-F->wm.radial_control>`                                 |:func:`blender:bpy.ops.wm.radial_control`       |
-+----------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Ctrl-Alt-F <imagepaint->Ctrl-Alt-F->wm.radial_control>`                         |:func:`blender:bpy.ops.wm.radial_control`       |
-+----------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Alt-RIGHTMOUSE <imagepaint->Alt-RIGHTMOUSE->brush.stencil_control>`             |:func:`blender:bpy.ops.brush.stencil_control`   |
-+----------------------------------------------------------------------------------------+------------------------------------------------+
 |:km:hk:`R <imagepaint->R->wm.context_menu_enum>`                                        |:func:`blender:bpy.ops.wm.context_menu_enum`    |
 +----------------------------------------------------------------------------------------+------------------------------------------------+
 |:km:hk:`LEFTMOUSE <imagepaint->LEFTMOUSE->paint.image_paint>`                           |:func:`blender:bpy.ops.paint.image_paint`       |
@@ -118,141 +108,7 @@ Detailed Reference
 
    
 
-.. km:hotkeyd:: F -> wm.radial_control
-
-   Radial Control
-
-   bpy.ops.wm.radial_control(data_path_primary="", data_path_secondary="", use_secondary="", rotation_path="", color_path="", fill_color_path="", fill_color_override_path="", fill_color_override_test_path="", zoom_path="", image_id="", secondary_tex=False)
-   
-   
-   +--------------------+--------------------------------------------------------+
-   |Properties:         |Values:                                                 |
-   +====================+========================================================+
-   |Primary Data Path   |tool_settings.image_paint.brush.size                    |
-   +--------------------+--------------------------------------------------------+
-   |Secondary Data Path |tool_settings.unified_paint_settings.size               |
-   +--------------------+--------------------------------------------------------+
-   |Use Secondary       |tool_settings.unified_paint_settings.use_unified_size   |
-   +--------------------+--------------------------------------------------------+
-   |Rotation Path       |tool_settings.image_paint.brush.mask_texture_slot.angle |
-   +--------------------+--------------------------------------------------------+
-   |Color Path          |tool_settings.image_paint.brush.cursor_color_add        |
-   +--------------------+--------------------------------------------------------+
-   |Fill Color Path     |tool_settings.image_paint.brush.color                   |
-   +--------------------+--------------------------------------------------------+
-   |Zoom Path           |space_data.zoom                                         |
-   +--------------------+--------------------------------------------------------+
-   |Image ID            |tool_settings.image_paint.brush                         |
-   +--------------------+--------------------------------------------------------+
-   |Secondary Texture   |True                                                    |
-   +--------------------+--------------------------------------------------------+
-   
-   
-.. km:hotkeyd:: Shift-F -> wm.radial_control
-
-   Radial Control
-
-   bpy.ops.wm.radial_control(data_path_primary="", data_path_secondary="", use_secondary="", rotation_path="", color_path="", fill_color_path="", fill_color_override_path="", fill_color_override_test_path="", zoom_path="", image_id="", secondary_tex=False)
-   
-   
-   +--------------------+----------------------------------------------------------+
-   |Properties:         |Values:                                                   |
-   +====================+==========================================================+
-   |Primary Data Path   |tool_settings.image_paint.brush.strength                  |
-   +--------------------+----------------------------------------------------------+
-   |Secondary Data Path |tool_settings.unified_paint_settings.strength             |
-   +--------------------+----------------------------------------------------------+
-   |Use Secondary       |tool_settings.unified_paint_settings.use_unified_strength |
-   +--------------------+----------------------------------------------------------+
-   |Rotation Path       |tool_settings.image_paint.brush.mask_texture_slot.angle   |
-   +--------------------+----------------------------------------------------------+
-   |Color Path          |tool_settings.image_paint.brush.cursor_color_add          |
-   +--------------------+----------------------------------------------------------+
-   |Fill Color Path     |tool_settings.image_paint.brush.color                     |
-   +--------------------+----------------------------------------------------------+
-   |Zoom Path           |                                                          |
-   +--------------------+----------------------------------------------------------+
-   |Image ID            |tool_settings.image_paint.brush                           |
-   +--------------------+----------------------------------------------------------+
-   |Secondary Texture   |True                                                      |
-   +--------------------+----------------------------------------------------------+
-   
-   
-.. km:hotkeyd:: Ctrl-F -> wm.radial_control
-
-   Radial Control
-
-   bpy.ops.wm.radial_control(data_path_primary="", data_path_secondary="", use_secondary="", rotation_path="", color_path="", fill_color_path="", fill_color_override_path="", fill_color_override_test_path="", zoom_path="", image_id="", secondary_tex=False)
-   
-   
-   +--------------------+---------------------------------------------------+
-   |Properties:         |Values:                                            |
-   +====================+===================================================+
-   |Primary Data Path   |tool_settings.image_paint.brush.texture_slot.angle |
-   +--------------------+---------------------------------------------------+
-   |Secondary Data Path |                                                   |
-   +--------------------+---------------------------------------------------+
-   |Use Secondary       |                                                   |
-   +--------------------+---------------------------------------------------+
-   |Rotation Path       |tool_settings.image_paint.brush.texture_slot.angle |
-   +--------------------+---------------------------------------------------+
-   |Color Path          |tool_settings.image_paint.brush.cursor_color_add   |
-   +--------------------+---------------------------------------------------+
-   |Fill Color Path     |tool_settings.image_paint.brush.color              |
-   +--------------------+---------------------------------------------------+
-   |Zoom Path           |                                                   |
-   +--------------------+---------------------------------------------------+
-   |Image ID            |tool_settings.image_paint.brush                    |
-   +--------------------+---------------------------------------------------+
-   |Secondary Texture   |False                                              |
-   +--------------------+---------------------------------------------------+
-   
-   
-.. km:hotkeyd:: Ctrl-Alt-F -> wm.radial_control
-
-   Radial Control
-
-   bpy.ops.wm.radial_control(data_path_primary="", data_path_secondary="", use_secondary="", rotation_path="", color_path="", fill_color_path="", fill_color_override_path="", fill_color_override_test_path="", zoom_path="", image_id="", secondary_tex=False)
-   
-   
-   +--------------------+--------------------------------------------------------+
-   |Properties:         |Values:                                                 |
-   +====================+========================================================+
-   |Primary Data Path   |tool_settings.image_paint.brush.mask_texture_slot.angle |
-   +--------------------+--------------------------------------------------------+
-   |Secondary Data Path |                                                        |
-   +--------------------+--------------------------------------------------------+
-   |Use Secondary       |                                                        |
-   +--------------------+--------------------------------------------------------+
-   |Rotation Path       |tool_settings.image_paint.brush.mask_texture_slot.angle |
-   +--------------------+--------------------------------------------------------+
-   |Color Path          |tool_settings.image_paint.brush.cursor_color_add        |
-   +--------------------+--------------------------------------------------------+
-   |Fill Color Path     |tool_settings.image_paint.brush.color                   |
-   +--------------------+--------------------------------------------------------+
-   |Zoom Path           |                                                        |
-   +--------------------+--------------------------------------------------------+
-   |Image ID            |tool_settings.image_paint.brush                         |
-   +--------------------+--------------------------------------------------------+
-   |Secondary Texture   |True                                                    |
-   +--------------------+--------------------------------------------------------+
-   
-   
-.. km:hotkeyd:: Alt-RIGHTMOUSE -> brush.stencil_control
-
-   Stencil Brush Control
-
-   bpy.ops.brush.stencil_control(mode='TRANSLATION', texmode='PRIMARY')
-   
-   
-   +------------+------------+
-   |Properties: |Values:     |
-   +============+============+
-   |Tool        |TRANSLATION |
-   +------------+------------+
-   
-   
-.. km:hotkey:: R -> wm.context_menu_enum
+.. km:hotkey:: R -> wm.context_menu_enum : KEYBOARD -> PRESS
 
    Context Enum Menu
 
@@ -266,7 +122,7 @@ Detailed Reference
    +-------------------+------------------------------------------------------------+
    
    
-.. km:hotkeyd:: LEFTMOUSE -> paint.image_paint
+.. km:hotkeyd:: LEFTMOUSE -> paint.image_paint : MOUSE -> PRESS
 
    Image Paint
 
@@ -280,7 +136,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-LEFTMOUSE -> paint.image_paint
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> paint.image_paint : MOUSE -> PRESS
 
    Image Paint
 
@@ -294,28 +150,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: X -> paint.brush_colors_flip
+.. km:hotkeyd:: X -> paint.brush_colors_flip : KEYBOARD -> PRESS
 
    Brush Colors Flip
 
    bpy.ops.paint.brush_colors_flip()
    
    
-.. km:hotkeyd:: RIGHTMOUSE -> paint.grab_clone
+.. km:hotkeyd:: RIGHTMOUSE -> paint.grab_clone : MOUSE -> PRESS
 
    Grab Clone
 
    bpy.ops.paint.grab_clone(delta=(0, 0))
    
    
-.. km:hotkeyd:: S -> paint.sample_color
+.. km:hotkeyd:: S -> paint.sample_color : KEYBOARD -> PRESS
 
    Sample Color
 
    bpy.ops.paint.sample_color(location=(0, 0), merged=False, palette=False)
    
    
-.. km:hotkeyd:: 1 -> brush.active_index_set
+.. km:hotkeyd:: 1 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -331,7 +187,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 2 -> brush.active_index_set
+.. km:hotkeyd:: 2 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -347,7 +203,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 3 -> brush.active_index_set
+.. km:hotkeyd:: 3 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -363,7 +219,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 4 -> brush.active_index_set
+.. km:hotkeyd:: 4 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -379,7 +235,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 5 -> brush.active_index_set
+.. km:hotkeyd:: 5 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -395,7 +251,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 6 -> brush.active_index_set
+.. km:hotkeyd:: 6 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -411,7 +267,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 7 -> brush.active_index_set
+.. km:hotkeyd:: 7 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -427,7 +283,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 8 -> brush.active_index_set
+.. km:hotkeyd:: 8 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -443,7 +299,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 9 -> brush.active_index_set
+.. km:hotkeyd:: 9 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -459,7 +315,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: 0 -> brush.active_index_set
+.. km:hotkeyd:: 0 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -475,7 +331,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-1 -> brush.active_index_set
+.. km:hotkeyd:: Shift-1 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -491,7 +347,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-2 -> brush.active_index_set
+.. km:hotkeyd:: Shift-2 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -507,7 +363,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-3 -> brush.active_index_set
+.. km:hotkeyd:: Shift-3 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -523,7 +379,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-4 -> brush.active_index_set
+.. km:hotkeyd:: Shift-4 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -539,7 +395,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-5 -> brush.active_index_set
+.. km:hotkeyd:: Shift-5 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -555,7 +411,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-6 -> brush.active_index_set
+.. km:hotkeyd:: Shift-6 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -571,7 +427,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-7 -> brush.active_index_set
+.. km:hotkeyd:: Shift-7 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -587,7 +443,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-8 -> brush.active_index_set
+.. km:hotkeyd:: Shift-8 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -603,7 +459,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-9 -> brush.active_index_set
+.. km:hotkeyd:: Shift-9 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -619,7 +475,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-0 -> brush.active_index_set
+.. km:hotkeyd:: Shift-0 -> brush.active_index_set : KEYBOARD -> PRESS
 
    Set Brush Number
 
@@ -635,7 +491,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: LEFT_BRACKET -> brush.scale_size
+.. km:hotkeyd:: LEFT_BRACKET -> brush.scale_size : KEYBOARD -> PRESS
 
    Scale Sculpt/Paint Brush Size
 
@@ -649,7 +505,7 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkeyd:: RIGHT_BRACKET -> brush.scale_size
+.. km:hotkeyd:: RIGHT_BRACKET -> brush.scale_size : KEYBOARD -> PRESS
 
    Scale Sculpt/Paint Brush Size
 
@@ -663,7 +519,7 @@ Detailed Reference
    +------------+-------------------+
    
    
-.. km:hotkeyd:: F -> wm.radial_control
+.. km:hotkeyd:: F -> wm.radial_control : KEYBOARD -> PRESS
 
    Radial Control
 
@@ -697,7 +553,7 @@ Detailed Reference
    +-------------------------+--------------------------------------------------------+
    
    
-.. km:hotkeyd:: Shift-F -> wm.radial_control
+.. km:hotkeyd:: Shift-F -> wm.radial_control : KEYBOARD -> PRESS
 
    Radial Control
 
@@ -731,7 +587,7 @@ Detailed Reference
    +-------------------------+----------------------------------------------------------+
    
    
-.. km:hotkeyd:: Ctrl-F -> wm.radial_control
+.. km:hotkeyd:: Ctrl-F -> wm.radial_control : KEYBOARD -> PRESS
 
    Radial Control
 
@@ -765,7 +621,7 @@ Detailed Reference
    +-------------------------+-------------------------------------------------------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-F -> wm.radial_control
+.. km:hotkeyd:: Ctrl-Alt-F -> wm.radial_control : KEYBOARD -> PRESS
 
    Radial Control
 
@@ -799,7 +655,7 @@ Detailed Reference
    +-------------------------+--------------------------------------------------------+
    
    
-.. km:hotkeyd:: RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: RIGHTMOUSE -> brush.stencil_control : MOUSE -> PRESS
 
    Stencil Brush Control
 
@@ -813,7 +669,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Shift-RIGHTMOUSE -> brush.stencil_control : MOUSE -> PRESS
 
    Stencil Brush Control
 
@@ -827,7 +683,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Ctrl-RIGHTMOUSE -> brush.stencil_control : MOUSE -> PRESS
 
    Stencil Brush Control
 
@@ -841,7 +697,7 @@ Detailed Reference
    +------------+---------+
    
    
-.. km:hotkeyd:: Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Alt-RIGHTMOUSE -> brush.stencil_control : MOUSE -> PRESS
 
    Stencil Brush Control
 
@@ -857,7 +713,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Shift-Alt-RIGHTMOUSE -> brush.stencil_control : MOUSE -> PRESS
 
    Stencil Brush Control
 
@@ -873,7 +729,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-RIGHTMOUSE -> brush.stencil_control
+.. km:hotkeyd:: Ctrl-Alt-RIGHTMOUSE -> brush.stencil_control : MOUSE -> PRESS
 
    Stencil Brush Control
 
@@ -889,7 +745,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkeyd:: M -> wm.context_toggle
+.. km:hotkeyd:: M -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -903,7 +759,7 @@ Detailed Reference
    +-------------------+---------------------------------------+
    
    
-.. km:hotkeyd:: Shift-S -> wm.context_toggle
+.. km:hotkeyd:: Shift-S -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -917,7 +773,7 @@ Detailed Reference
    +-------------------+--------------------------------------------------+
    
    
-.. km:hotkeyd:: R -> wm.call_menu
+.. km:hotkeyd:: R -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -931,7 +787,7 @@ Detailed Reference
    +------------+------------------------+
    
    
-.. km:hotkeyd:: E -> wm.context_menu_enum
+.. km:hotkeyd:: E -> wm.context_menu_enum : KEYBOARD -> PRESS
 
    Context Enum Menu
 

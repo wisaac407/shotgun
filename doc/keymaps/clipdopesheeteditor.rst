@@ -16,8 +16,6 @@ Quick Reference
 +=================================================================================================+======================================================+
 |:km:hk:`Ctrl-SELECTMOUSE <clipdopesheeteditor->Ctrl-SELECTMOUSE->clip.dopesheet_select_channel>` |:func:`blender:bpy.ops.clip.dopesheet_select_channel` |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`HOME <clipdopesheeteditor->HOME->clip.dopesheet_view_all>`                               |:func:`blender:bpy.ops.clip.dopesheet_view_all`       |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`LEFTMOUSE <clipdopesheeteditor->LEFTMOUSE->clip.dopesheet_select_channel>`               |:func:`blender:bpy.ops.clip.dopesheet_select_channel` |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`HOME <clipdopesheeteditor->HOME->clip.dopesheet_view_all>`                               |:func:`blender:bpy.ops.clip.dopesheet_view_all`       |
@@ -34,7 +32,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-SELECTMOUSE -> clip.dopesheet_select_channel
+.. km:hotkey:: Ctrl-SELECTMOUSE -> clip.dopesheet_select_channel : MOUSE -> PRESS
 
    Select Channel
 
@@ -48,14 +46,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: HOME -> clip.dopesheet_view_all
-
-   View All
-
-   bpy.ops.clip.dopesheet_view_all()
-   
-   
-.. km:hotkeyd:: LEFTMOUSE -> clip.dopesheet_select_channel
+.. km:hotkeyd:: LEFTMOUSE -> clip.dopesheet_select_channel : MOUSE -> PRESS
 
    Select Channel
 
@@ -69,14 +60,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: HOME -> clip.dopesheet_view_all
+.. km:hotkeyd:: HOME -> clip.dopesheet_view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.clip.dopesheet_view_all()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.dopesheet_view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.dopesheet_view_all : NDOF -> PRESS
 
    View All
 

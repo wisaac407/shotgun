@@ -20,26 +20,6 @@ Quick Reference
 +------------------------------------------------------------------------------+--------------------------------------------------+
 |:km:hk:`SELECTMOUSE <image->SELECTMOUSE->image.sample>`                       |:func:`blender:bpy.ops.image.sample`              |
 +------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`Tab <image->Tab->object.mode_set>`                                    |:func:`blender:bpy.ops.object.mode_set`           |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`1 <image->1->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`2 <image->2->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`3 <image->3->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`4 <image->4->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`5 <image->5->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`6 <image->6->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`7 <image->7->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`8 <image->8->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
-|:km:hk:`9 <image->9->wm.context_set_int>`                                     |:func:`blender:bpy.ops.wm.context_set_int`        |
-+------------------------------------------------------------------------------+--------------------------------------------------+
 |:km:hk:`HOME <image->HOME->image.view_all>`                                   |:func:`blender:bpy.ops.image.view_all`            |
 +------------------------------------------------------------------------------+--------------------------------------------------+
 |:km:hk:`Shift-HOME <image->Shift-HOME->image.view_all>`                       |:func:`blender:bpy.ops.image.view_all`            |
@@ -138,7 +118,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: F -> image.view_all
+.. km:hotkey:: F -> image.view_all : KEYBOARD -> PRESS
 
    View All
 
@@ -152,188 +132,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: ACTIONMOUSE -> image.view_pan
+.. km:hotkey:: ACTIONMOUSE -> image.view_pan : MOUSE -> PRESS
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkey:: SELECTMOUSE -> image.sample
+.. km:hotkey:: SELECTMOUSE -> image.sample : MOUSE -> PRESS
 
    Sample Color
 
    bpy.ops.image.sample()
    
    
-.. km:hotkey:: Tab -> object.mode_set
-
-   Set Object Mode
-
-   bpy.ops.object.mode_set(mode='OBJECT', toggle=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Mode        |OBJECT  |
-   +------------+--------+
-   |Toggle      |True    |
-   +------------+--------+
-   
-   
-.. km:hotkey:: 1 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |0                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 2 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |1                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 3 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |2                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 4 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |3                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 5 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |4                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 6 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |5                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 7 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |6                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 8 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |7                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkey:: 9 -> wm.context_set_int
-
-   Context Set
-
-   bpy.ops.wm.context_set_int(data_path="", value=0, relative=False)
-   
-   
-   +-------------------+-----------------------------+
-   |Properties:        |Values:                      |
-   +===================+=============================+
-   |Context Attributes |space_data.image.render_slot |
-   +-------------------+-----------------------------+
-   |Value              |8                            |
-   +-------------------+-----------------------------+
-   
-   
-.. km:hotkeyd:: HOME -> image.view_all
+.. km:hotkeyd:: HOME -> image.view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.image.view_all(fit_view=False)
    
    
-.. km:hotkeyd:: Shift-HOME -> image.view_all
+.. km:hotkeyd:: Shift-HOME -> image.view_all : KEYBOARD -> PRESS
 
    View All
 
@@ -347,105 +167,105 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> image.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> image.view_selected : KEYBOARD -> PRESS
 
    View Center
 
    bpy.ops.image.view_selected()
    
    
-.. km:hotkeyd:: MIDDLEMOUSE -> image.view_pan
+.. km:hotkeyd:: MIDDLEMOUSE -> image.view_pan : MOUSE -> PRESS
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkeyd:: Shift-MIDDLEMOUSE -> image.view_pan
+.. km:hotkeyd:: Shift-MIDDLEMOUSE -> image.view_pan : MOUSE -> PRESS
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkeyd:: TRACKPADPAN -> image.view_pan
+.. km:hotkeyd:: TRACKPADPAN -> image.view_pan : MOUSE -> ANY
 
    View Pan
 
    bpy.ops.image.view_pan(offset=(0, 0))
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> image.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> image.view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.image.view_all(fit_view=False)
    
    
-.. km:hotkeyd:: NDOF_MOTION -> image.view_ndof
+.. km:hotkeyd:: NDOF_MOTION -> image.view_ndof : NDOF -> ANY
 
    NDOF Pan/Zoom
 
    bpy.ops.image.view_ndof()
    
    
-.. km:hotkeyd:: WHEELINMOUSE -> image.view_zoom_in
+.. km:hotkeyd:: WHEELINMOUSE -> image.view_zoom_in : MOUSE -> PRESS
 
    View Zoom In
 
    bpy.ops.image.view_zoom_in(location=(0, 0))
    
    
-.. km:hotkeyd:: WHEELOUTMOUSE -> image.view_zoom_out
+.. km:hotkeyd:: WHEELOUTMOUSE -> image.view_zoom_out : MOUSE -> PRESS
 
    View Zoom Out
 
    bpy.ops.image.view_zoom_out(location=(0, 0))
    
    
-.. km:hotkeyd:: NUMPAD_PLUS -> image.view_zoom_in
+.. km:hotkeyd:: NUMPAD_PLUS -> image.view_zoom_in : KEYBOARD -> PRESS
 
    View Zoom In
 
    bpy.ops.image.view_zoom_in(location=(0, 0))
    
    
-.. km:hotkeyd:: NUMPAD_MINUS -> image.view_zoom_out
+.. km:hotkeyd:: NUMPAD_MINUS -> image.view_zoom_out : KEYBOARD -> PRESS
 
    View Zoom Out
 
    bpy.ops.image.view_zoom_out(location=(0, 0))
    
    
-.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> image.view_zoom
+.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> image.view_zoom : MOUSE -> PRESS
 
    View Zoom
 
    bpy.ops.image.view_zoom(factor=0)
    
    
-.. km:hotkeyd:: TRACKPADZOOM -> image.view_zoom
+.. km:hotkeyd:: TRACKPADZOOM -> image.view_zoom : MOUSE -> ANY
 
    View Zoom
 
    bpy.ops.image.view_zoom(factor=0)
    
    
-.. km:hotkeyd:: Ctrl-TRACKPADPAN -> image.view_zoom
+.. km:hotkeyd:: Ctrl-TRACKPADPAN -> image.view_zoom : MOUSE -> ANY
 
    View Zoom
 
    bpy.ops.image.view_zoom(factor=0)
    
    
-.. km:hotkeyd:: Shift-B -> image.view_zoom_border
+.. km:hotkeyd:: Shift-B -> image.view_zoom_border : KEYBOARD -> PRESS
 
    Zoom to Border
 
    bpy.ops.image.view_zoom_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_8 -> image.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_8 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -459,7 +279,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_4 -> image.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_4 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -473,7 +293,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_2 -> image.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_2 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -487,7 +307,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_8 -> image.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_8 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -501,7 +321,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_4 -> image.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_4 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -515,7 +335,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_2 -> image.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_2 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -529,7 +349,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_1 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_1 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -543,7 +363,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_2 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_2 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -557,7 +377,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_4 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_4 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -571,7 +391,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_8 -> image.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_8 -> image.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -585,21 +405,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: LEFTMOUSE -> image.change_frame
+.. km:hotkeyd:: LEFTMOUSE -> image.change_frame : MOUSE -> PRESS
 
    Change Frame
 
    bpy.ops.image.change_frame(frame=0)
    
    
-.. km:hotkeyd:: ACTIONMOUSE -> image.sample
+.. km:hotkeyd:: ACTIONMOUSE -> image.sample : MOUSE -> PRESS
 
    Sample Color
 
    bpy.ops.image.sample()
    
    
-.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> image.curves_point_set
+.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> image.curves_point_set : MOUSE -> PRESS
 
    Set Curves Point
 
@@ -613,7 +433,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Shift-ACTIONMOUSE -> image.curves_point_set
+.. km:hotkeyd:: Shift-ACTIONMOUSE -> image.curves_point_set : MOUSE -> PRESS
 
    Set Curves Point
 
@@ -627,7 +447,7 @@ Detailed Reference
    +------------+------------+
    
    
-.. km:hotkeyd:: Tab -> object.mode_set
+.. km:hotkeyd:: Tab -> object.mode_set : KEYBOARD -> PRESS
 
    Set Object Mode
 
@@ -643,7 +463,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: 1 -> wm.context_set_int
+.. km:hotkeyd:: 1 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -659,7 +479,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 2 -> wm.context_set_int
+.. km:hotkeyd:: 2 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -675,7 +495,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 3 -> wm.context_set_int
+.. km:hotkeyd:: 3 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -691,7 +511,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 4 -> wm.context_set_int
+.. km:hotkeyd:: 4 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -707,7 +527,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 5 -> wm.context_set_int
+.. km:hotkeyd:: 5 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -723,7 +543,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 6 -> wm.context_set_int
+.. km:hotkeyd:: 6 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -739,7 +559,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 7 -> wm.context_set_int
+.. km:hotkeyd:: 7 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -755,7 +575,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: 8 -> wm.context_set_int
+.. km:hotkeyd:: 8 -> wm.context_set_int : KEYBOARD -> PRESS
 
    Context Set
 
@@ -771,7 +591,7 @@ Detailed Reference
    +-------------------+-------------------------------------------+
    
    
-.. km:hotkeyd:: , -> wm.context_set_enum
+.. km:hotkeyd:: , -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -787,7 +607,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-, -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-, -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -803,7 +623,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: . -> wm.context_set_enum
+.. km:hotkeyd:: . -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -819,14 +639,14 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-B -> image.render_border
+.. km:hotkeyd:: Ctrl-B -> image.render_border : KEYBOARD -> PRESS
 
    Render Border
 
    bpy.ops.image.render_border(xmin=0, xmax=0, ymin=0, ymax=0)
    
    
-.. km:hotkeyd:: Ctrl-Alt-B -> image.clear_render_border
+.. km:hotkeyd:: Ctrl-Alt-B -> image.clear_render_border : KEYBOARD -> PRESS
 
    Clear Render Border
 

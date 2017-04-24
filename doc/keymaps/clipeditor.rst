@@ -182,14 +182,14 @@ Detailed Reference
 
    
 
-.. km:hotkey:: ACTIONMOUSE -> clip.view_pan
+.. km:hotkey:: ACTIONMOUSE -> clip.view_pan : MOUSE -> PRESS
 
    View Pan
 
    bpy.ops.clip.view_pan(offset=(0, 0))
    
    
-.. km:hotkey:: Ctrl-A -> clip.select_all
+.. km:hotkey:: Ctrl-A -> clip.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -203,7 +203,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_S -> clip.select_lasso
+.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_S -> clip.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -217,7 +217,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-EVT_TWEAK_S -> clip.select_lasso
+.. km:hotkey:: Ctrl-Shift-Alt-EVT_TWEAK_S -> clip.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -231,84 +231,84 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> clip.cursor_set
+.. km:hotkey:: Ctrl-ACTIONMOUSE -> clip.cursor_set : MOUSE -> PRESS
 
    Set 2D Cursor
 
    bpy.ops.clip.cursor_set(location=(0, 0))
    
    
-.. km:hotkeyd:: MIDDLEMOUSE -> clip.view_pan
+.. km:hotkeyd:: MIDDLEMOUSE -> clip.view_pan : MOUSE -> PRESS
 
    View Pan
 
    bpy.ops.clip.view_pan(offset=(0, 0))
    
    
-.. km:hotkeyd:: Shift-MIDDLEMOUSE -> clip.view_pan
+.. km:hotkeyd:: Shift-MIDDLEMOUSE -> clip.view_pan : MOUSE -> PRESS
 
    View Pan
 
    bpy.ops.clip.view_pan(offset=(0, 0))
    
    
-.. km:hotkeyd:: TRACKPADPAN -> clip.view_pan
+.. km:hotkeyd:: TRACKPADPAN -> clip.view_pan : MOUSE -> ANY
 
    View Pan
 
    bpy.ops.clip.view_pan(offset=(0, 0))
    
    
-.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> clip.view_zoom
+.. km:hotkeyd:: Ctrl-MIDDLEMOUSE -> clip.view_zoom : MOUSE -> PRESS
 
    View Zoom
 
    bpy.ops.clip.view_zoom(factor=0)
    
    
-.. km:hotkeyd:: TRACKPADZOOM -> clip.view_zoom
+.. km:hotkeyd:: TRACKPADZOOM -> clip.view_zoom : MOUSE -> ANY
 
    View Zoom
 
    bpy.ops.clip.view_zoom(factor=0)
    
    
-.. km:hotkeyd:: Ctrl-TRACKPADPAN -> clip.view_zoom
+.. km:hotkeyd:: Ctrl-TRACKPADPAN -> clip.view_zoom : MOUSE -> ANY
 
    View Zoom
 
    bpy.ops.clip.view_zoom(factor=0)
    
    
-.. km:hotkeyd:: WHEELINMOUSE -> clip.view_zoom_in
+.. km:hotkeyd:: WHEELINMOUSE -> clip.view_zoom_in : MOUSE -> PRESS
 
    View Zoom In
 
    bpy.ops.clip.view_zoom_in(location=(0, 0))
    
    
-.. km:hotkeyd:: WHEELOUTMOUSE -> clip.view_zoom_out
+.. km:hotkeyd:: WHEELOUTMOUSE -> clip.view_zoom_out : MOUSE -> PRESS
 
    View Zoom Out
 
    bpy.ops.clip.view_zoom_out(location=(0, 0))
    
    
-.. km:hotkeyd:: NUMPAD_PLUS -> clip.view_zoom_in
+.. km:hotkeyd:: NUMPAD_PLUS -> clip.view_zoom_in : KEYBOARD -> PRESS
 
    View Zoom In
 
    bpy.ops.clip.view_zoom_in(location=(0, 0))
    
    
-.. km:hotkeyd:: NUMPAD_MINUS -> clip.view_zoom_out
+.. km:hotkeyd:: NUMPAD_MINUS -> clip.view_zoom_out : KEYBOARD -> PRESS
 
    View Zoom Out
 
    bpy.ops.clip.view_zoom_out(location=(0, 0))
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_8 -> clip.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_8 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -322,7 +322,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_4 -> clip.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_4 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -336,7 +336,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-NUMPAD_2 -> clip.view_zoom_ratio
+.. km:hotkeyd:: Ctrl-NUMPAD_2 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -350,7 +350,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_8 -> clip.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_8 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -364,7 +364,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_4 -> clip.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_4 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -378,7 +378,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-NUMPAD_2 -> clip.view_zoom_ratio
+.. km:hotkeyd:: Shift-NUMPAD_2 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -392,7 +392,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_1 -> clip.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_1 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -406,7 +406,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_2 -> clip.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_2 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -420,7 +420,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_4 -> clip.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_4 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -434,7 +434,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_8 -> clip.view_zoom_ratio
+.. km:hotkeyd:: NUMPAD_8 -> clip.view_zoom_ratio : KEYBOARD -> PRESS
 
    View Zoom Ratio
 
@@ -448,14 +448,14 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: HOME -> clip.view_all
+.. km:hotkeyd:: HOME -> clip.view_all : KEYBOARD -> PRESS
 
    View All
 
    bpy.ops.clip.view_all(fit_view=False)
    
    
-.. km:hotkeyd:: F -> clip.view_all
+.. km:hotkeyd:: F -> clip.view_all : KEYBOARD -> PRESS
 
    View All
 
@@ -469,28 +469,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: NUMPAD_PERIOD -> clip.view_selected
+.. km:hotkeyd:: NUMPAD_PERIOD -> clip.view_selected : KEYBOARD -> PRESS
 
    View Selected
 
    bpy.ops.clip.view_selected()
    
    
-.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.view_all
+.. km:hotkeyd:: NDOF_BUTTON_FIT -> clip.view_all : NDOF -> PRESS
 
    View All
 
    bpy.ops.clip.view_all(fit_view=False)
    
    
-.. km:hotkeyd:: NDOF_MOTION -> clip.view_ndof
+.. km:hotkeyd:: NDOF_MOTION -> clip.view_ndof : NDOF -> ANY
 
    NDOF Pan/Zoom
 
    bpy.ops.clip.view_ndof()
    
    
-.. km:hotkeyd:: Ctrl-Shift-LEFT_ARROW -> clip.frame_jump
+.. km:hotkeyd:: Ctrl-Shift-LEFT_ARROW -> clip.frame_jump : KEYBOARD -> PRESS
 
    Jump to Frame
 
@@ -504,7 +504,7 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-RIGHT_ARROW -> clip.frame_jump
+.. km:hotkeyd:: Ctrl-Shift-RIGHT_ARROW -> clip.frame_jump : KEYBOARD -> PRESS
 
    Jump to Frame
 
@@ -518,7 +518,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-LEFT_ARROW -> clip.frame_jump
+.. km:hotkeyd:: Shift-Alt-LEFT_ARROW -> clip.frame_jump : KEYBOARD -> PRESS
 
    Jump to Frame
 
@@ -532,7 +532,7 @@ Detailed Reference
    +------------+-----------+
    
    
-.. km:hotkeyd:: Shift-Alt-RIGHT_ARROW -> clip.frame_jump
+.. km:hotkeyd:: Shift-Alt-RIGHT_ARROW -> clip.frame_jump : KEYBOARD -> PRESS
 
    Jump to Frame
 
@@ -546,14 +546,14 @@ Detailed Reference
    +------------+----------+
    
    
-.. km:hotkeyd:: LEFTMOUSE -> clip.change_frame
+.. km:hotkeyd:: LEFTMOUSE -> clip.change_frame : MOUSE -> PRESS
 
    Change Frame
 
    bpy.ops.clip.change_frame(frame=0)
    
    
-.. km:hotkeyd:: SELECTMOUSE -> clip.select
+.. km:hotkeyd:: SELECTMOUSE -> clip.select : MOUSE -> PRESS
 
    Select
 
@@ -567,7 +567,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-SELECTMOUSE -> clip.select
+.. km:hotkeyd:: Shift-SELECTMOUSE -> clip.select : MOUSE -> PRESS
 
    Select
 
@@ -581,7 +581,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: A -> clip.select_all
+.. km:hotkeyd:: A -> clip.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -595,7 +595,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-I -> clip.select_all
+.. km:hotkeyd:: Ctrl-I -> clip.select_all : KEYBOARD -> PRESS
 
    (De)select All
 
@@ -609,21 +609,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: B -> clip.select_border
+.. km:hotkeyd:: B -> clip.select_border : KEYBOARD -> PRESS
 
    Border Select
 
    bpy.ops.clip.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
-.. km:hotkeyd:: C -> clip.select_circle
+.. km:hotkeyd:: C -> clip.select_circle : KEYBOARD -> PRESS
 
    Circle Select
 
    bpy.ops.clip.select_circle(x=0, y=0, radius=1, gesture_mode=0)
    
    
-.. km:hotkeyd:: Shift-G -> wm.call_menu
+.. km:hotkeyd:: Shift-G -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -637,7 +637,7 @@ Detailed Reference
    +------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-Alt-EVT_TWEAK_A -> clip.select_lasso
+.. km:hotkeyd:: Ctrl-Alt-EVT_TWEAK_A -> clip.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -651,7 +651,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-Shift-Alt-EVT_TWEAK_A -> clip.select_lasso
+.. km:hotkeyd:: Ctrl-Shift-Alt-EVT_TWEAK_A -> clip.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -665,7 +665,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Ctrl-LEFTMOUSE -> clip.add_marker_slide
+.. km:hotkeyd:: Ctrl-LEFTMOUSE -> clip.add_marker_slide : MOUSE -> PRESS
 
    Add Marker and Slide
 
@@ -681,28 +681,28 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-DEL -> clip.delete_marker
+.. km:hotkeyd:: Shift-DEL -> clip.delete_marker : KEYBOARD -> PRESS
 
    Delete Marker
 
    bpy.ops.clip.delete_marker()
    
    
-.. km:hotkeyd:: Shift-X -> clip.delete_marker
+.. km:hotkeyd:: Shift-X -> clip.delete_marker : KEYBOARD -> PRESS
 
    Delete Marker
 
    bpy.ops.clip.delete_marker()
    
    
-.. km:hotkeyd:: LEFTMOUSE -> clip.slide_marker
+.. km:hotkeyd:: LEFTMOUSE -> clip.slide_marker : MOUSE -> PRESS
 
    Slide Marker
 
    bpy.ops.clip.slide_marker(offset=(0, 0))
    
    
-.. km:hotkeyd:: Shift-D -> clip.disable_markers
+.. km:hotkeyd:: Shift-D -> clip.disable_markers : KEYBOARD -> PRESS
 
    Disable Markers
 
@@ -716,21 +716,21 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: DEL -> clip.delete_track
+.. km:hotkeyd:: DEL -> clip.delete_track : KEYBOARD -> PRESS
 
    Delete Track
 
    bpy.ops.clip.delete_track()
    
    
-.. km:hotkeyd:: X -> clip.delete_track
+.. km:hotkeyd:: X -> clip.delete_track : KEYBOARD -> PRESS
 
    Delete Track
 
    bpy.ops.clip.delete_track()
    
    
-.. km:hotkeyd:: Ctrl-L -> clip.lock_tracks
+.. km:hotkeyd:: Ctrl-L -> clip.lock_tracks : KEYBOARD -> PRESS
 
    Lock Tracks
 
@@ -744,7 +744,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-L -> clip.lock_tracks
+.. km:hotkeyd:: Alt-L -> clip.lock_tracks : KEYBOARD -> PRESS
 
    Lock Tracks
 
@@ -758,7 +758,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: H -> clip.hide_tracks
+.. km:hotkeyd:: H -> clip.hide_tracks : KEYBOARD -> PRESS
 
    Hide Tracks
 
@@ -772,7 +772,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Shift-H -> clip.hide_tracks
+.. km:hotkeyd:: Shift-H -> clip.hide_tracks : KEYBOARD -> PRESS
 
    Hide Tracks
 
@@ -786,42 +786,42 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkeyd:: Alt-H -> clip.hide_tracks_clear
+.. km:hotkeyd:: Alt-H -> clip.hide_tracks_clear : KEYBOARD -> PRESS
 
    Hide Tracks Clear
 
    bpy.ops.clip.hide_tracks_clear()
    
    
-.. km:hotkeyd:: ACTIONMOUSE -> clip.slide_plane_marker
+.. km:hotkeyd:: ACTIONMOUSE -> clip.slide_plane_marker : MOUSE -> PRESS
 
    Slide Plane Marker
 
    bpy.ops.clip.slide_plane_marker()
    
    
-.. km:hotkeyd:: I -> clip.keyframe_insert
+.. km:hotkeyd:: I -> clip.keyframe_insert : KEYBOARD -> PRESS
 
    Insert keyframe
 
    bpy.ops.clip.keyframe_insert()
    
    
-.. km:hotkeyd:: Alt-I -> clip.keyframe_delete
+.. km:hotkeyd:: Alt-I -> clip.keyframe_delete : KEYBOARD -> PRESS
 
    Delete keyframe
 
    bpy.ops.clip.keyframe_delete()
    
    
-.. km:hotkeyd:: Ctrl-J -> clip.join_tracks
+.. km:hotkeyd:: Ctrl-J -> clip.join_tracks : KEYBOARD -> PRESS
 
    Join Tracks
 
    bpy.ops.clip.join_tracks()
    
    
-.. km:hotkeyd:: W -> wm.call_menu
+.. km:hotkeyd:: W -> wm.call_menu : KEYBOARD -> PRESS
 
    Call Menu
 
@@ -835,7 +835,7 @@ Detailed Reference
    +------------+--------------------------+
    
    
-.. km:hotkeyd:: L -> wm.context_toggle
+.. km:hotkeyd:: L -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -849,7 +849,7 @@ Detailed Reference
    +-------------------+--------------------------+
    
    
-.. km:hotkeyd:: Alt-D -> wm.context_toggle
+.. km:hotkeyd:: Alt-D -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -863,7 +863,7 @@ Detailed Reference
    +-------------------+-------------------------+
    
    
-.. km:hotkeyd:: Alt-S -> wm.context_toggle
+.. km:hotkeyd:: Alt-S -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -877,7 +877,7 @@ Detailed Reference
    +-------------------+------------------------------+
    
    
-.. km:hotkeyd:: M -> wm.context_toggle
+.. km:hotkeyd:: M -> wm.context_toggle : KEYBOARD -> PRESS
 
    Context Toggle
 
@@ -891,35 +891,35 @@ Detailed Reference
    +-------------------+----------------------------+
    
    
-.. km:hotkeyd:: G -> transform.translate
+.. km:hotkeyd:: G -> transform.translate : KEYBOARD -> PRESS
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate
+.. km:hotkeyd:: EVT_TWEAK_S -> transform.translate : TWEAK -> ANY
 
    Translate
 
    bpy.ops.transform.translate(value=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkeyd:: S -> transform.resize
+.. km:hotkeyd:: S -> transform.resize : KEYBOARD -> PRESS
 
    Resize
 
    bpy.ops.transform.resize(value=(1, 1, 1), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, texture_space=False, remove_on_cancel=False, release_confirm=False)
    
    
-.. km:hotkeyd:: R -> transform.rotate
+.. km:hotkeyd:: R -> transform.rotate : KEYBOARD -> PRESS
 
    Rotate
 
    bpy.ops.transform.rotate(value=0, axis=(0, 0, 0), constraint_axis=(False, False, False), constraint_orientation='GLOBAL', mirror=False, proportional='DISABLED', proportional_edit_falloff='SMOOTH', proportional_size=1, snap=False, snap_target='CLOSEST', snap_point=(0, 0, 0), snap_align=False, snap_normal=(0, 0, 0), gpencil_strokes=False, release_confirm=False)
    
    
-.. km:hotkeyd:: Alt-T -> clip.clear_track_path
+.. km:hotkeyd:: Alt-T -> clip.clear_track_path : KEYBOARD -> PRESS
 
    Clear Track Path
 
@@ -935,7 +935,7 @@ Detailed Reference
    +-------------+---------+
    
    
-.. km:hotkeyd:: Shift-T -> clip.clear_track_path
+.. km:hotkeyd:: Shift-T -> clip.clear_track_path : KEYBOARD -> PRESS
 
    Clear Track Path
 
@@ -951,7 +951,7 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkeyd:: Shift-Alt-T -> clip.clear_track_path
+.. km:hotkeyd:: Shift-Alt-T -> clip.clear_track_path : KEYBOARD -> PRESS
 
    Clear Track Path
 
@@ -967,14 +967,14 @@ Detailed Reference
    +-------------+--------+
    
    
-.. km:hotkeyd:: ACTIONMOUSE -> clip.cursor_set
+.. km:hotkeyd:: ACTIONMOUSE -> clip.cursor_set : MOUSE -> PRESS
 
    Set 2D Cursor
 
    bpy.ops.clip.cursor_set(location=(0, 0))
    
    
-.. km:hotkeyd:: , -> wm.context_set_enum
+.. km:hotkeyd:: , -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -990,7 +990,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-, -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-, -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -1006,7 +1006,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: . -> wm.context_set_enum
+.. km:hotkeyd:: . -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -1022,7 +1022,7 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-. -> wm.context_set_enum
+.. km:hotkeyd:: Ctrl-. -> wm.context_set_enum : KEYBOARD -> PRESS
 
    Context Set Enum
 
@@ -1038,14 +1038,14 @@ Detailed Reference
    +-------------------+-----------------------+
    
    
-.. km:hotkeyd:: Ctrl-C -> clip.copy_tracks
+.. km:hotkeyd:: Ctrl-C -> clip.copy_tracks : KEYBOARD -> PRESS
 
    Copy Tracks
 
    bpy.ops.clip.copy_tracks()
    
    
-.. km:hotkeyd:: Ctrl-V -> clip.paste_tracks
+.. km:hotkeyd:: Ctrl-V -> clip.paste_tracks : KEYBOARD -> PRESS
 
    Paste Tracks
 
