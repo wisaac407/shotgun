@@ -77,7 +77,7 @@ wm = bpy.context.window_manager
 kc = wm.keyconfigs.new(os.path.splitext(os.path.basename(__file__))[0])
 
 # Map UV Editor
-with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
+with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
     kmi = km.keymap_items.new('uv.select_border', 'B', 'PRESS', shift=True)
     kmi_props_setattr(kmi.properties, 'pinned', True)
 
@@ -91,6 +91,8 @@ with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=Fal
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
     kmi = km.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
+
+    tkmi = trash.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS')
 
 # Map Mask Editing
 with KeyMap(kc, 'Mask Editing', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
