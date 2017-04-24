@@ -333,7 +333,6 @@ with KeyMap(kc, 'View2D', space_type='EMPTY', region_type='WINDOW', modal=False)
     kmi = km.keymap_items.new('view2d.pan', 'MIDDLEMOUSE', 'ANY')
 
     kmi = km.keymap_items.new('view2d.pan', 'ACTIONMOUSE', 'ANY')
-    kmi.active = False
 
 # Map Image Paint
 with KeyMap(kc, 'Image Paint', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
