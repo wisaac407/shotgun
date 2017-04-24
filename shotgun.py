@@ -302,15 +302,16 @@ with KeyMap(kc, 'Mesh', space_type='EMPTY', region_type='WINDOW', modal=False) a
     kmi = km.keymap_items.new('mesh.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('mesh.select_similar', 'G', 'PRESS', shift=True)
-
-    kmi = km.keymap_items.new('mesh.vert_connect', 'J', 'PRESS')
-
-    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'SELECTMOUSE', 'CLICK', ctrl=True)
+    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'MIDDLEMOUSE', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'rotate_source', True)
 
-    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'SELECTMOUSE', 'CLICK', shift=True, ctrl=True)
+    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'MIDDLEMOUSE', 'PRESS', shift=True, ctrl=True)
     kmi_props_setattr(kmi.properties, 'rotate_source', False)
+
+    kmi = km.keymap_items.new('mesh.select_linked', 'SELECTMOUSE', 'DOUBLE_CLICK')
+
+    kmi = km.keymap_items.new('mesh.select_linked', 'SELECTMOUSE', 'DOUBLE_CLICK', shift=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
 
 # Map Armature
 with KeyMap(kc, 'Armature', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
