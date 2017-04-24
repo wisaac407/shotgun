@@ -88,8 +88,6 @@ Quick Reference
 +------------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`Alt-H <uveditor->Alt-H->uv.reveal>`                                         |:func:`blender:bpy.ops.uv.reveal`                |
 +------------------------------------------------------------------------------------+-------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <uveditor->ACTIONMOUSE->uv.cursor_set>`                         |:func:`blender:bpy.ops.uv.cursor_set`            |
-+------------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`Shift-ACTIONMOUSE <uveditor->Shift-ACTIONMOUSE->uv.tile_set>`               |:func:`blender:bpy.ops.uv.tile_set`              |
 +------------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`Shift-S <uveditor->Shift-S->wm.call_menu>`                                  |:func:`blender:bpy.ops.wm.call_menu`             |
@@ -551,13 +549,6 @@ Detailed Reference
    Reveal Hidden
 
    bpy.ops.uv.reveal()
-   
-   
-.. km:hotkeyd:: ACTIONMOUSE -> uv.cursor_set : MOUSE -> PRESS
-
-   Set 2D Cursor
-
-   bpy.ops.uv.cursor_set(location=(0, 0))
    
    
 .. km:hotkeyd:: Shift-ACTIONMOUSE -> uv.tile_set : MOUSE -> PRESS

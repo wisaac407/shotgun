@@ -81,6 +81,13 @@ Detailed Reference
    bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
+.. km:hotkey:: ACTIONMOUSE -> view2d.pan : MOUSE -> ANY
+
+   Pan View
+
+   bpy.ops.view2d.pan(deltax=0, deltay=0)
+   
+   
 .. km:hotkeyd:: LEFTMOUSE -> view2d.scroller_activate : MOUSE -> PRESS
 
    Scroller Activate
