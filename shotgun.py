@@ -317,13 +317,7 @@ with KeyMap(kc, 'Armature', space_type='EMPTY', region_type='WINDOW', modal=Fals
     kmi = km.keymap_items.new('armature.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('armature.delete', 'X', 'PRESS')
-
-    kmi = km.keymap_items.new('armature.delete', 'DEL', 'PRESS')
-
-    kmi = km.keymap_items.new('armature.click_extrude', 'SELECTMOUSE', 'CLICK', ctrl=True)
-
-    kmi = km.keymap_items.new('armature.separate', 'P', 'PRESS', ctrl=True, alt=True)
+    kmi = km.keymap_items.new('armature.click_extrude', 'SELECTMOUSE', 'PRESS', ctrl=True, alt=True)
 
 # Map View2D
 with KeyMap(kc, 'View2D', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
