@@ -350,6 +350,8 @@ with KeyMap(kc, 'Image', space_type='IMAGE_EDITOR', region_type='WINDOW', modal=
 
 # Map Markers
 with KeyMap(kc, 'Markers', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
+    kmi = km.keymap_items.new('marker.select', 'SELECTMOUSE', 'PRESS', alt=True)
+
     kmi = km.keymap_items.new('marker.move', 'EVT_TWEAK_S', 'ANY', alt=True)
 
     kmi = km.keymap_items.new('marker.select_all', 'A', 'PRESS', ctrl=True)
