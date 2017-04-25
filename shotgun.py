@@ -240,8 +240,6 @@ with KeyMap(kc, 'Pose', space_type='EMPTY', region_type='WINDOW', modal=False) a
     kmi = km.keymap_items.new('pose.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('pose.select_mirror', 'F', 'PRESS', shift=True)
-
 # Map Object Mode
 with KeyMap(kc, 'Object Mode', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('object.select_all', 'A', 'PRESS', ctrl=True)
