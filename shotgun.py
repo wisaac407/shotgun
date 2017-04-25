@@ -250,14 +250,10 @@ with KeyMap(kc, 'Object Mode', space_type='EMPTY', region_type='WINDOW', modal=F
 
 # Map Curve
 with KeyMap(kc, 'Curve', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('curve.vertex_add', 'SELECTMOUSE', 'CLICK', ctrl=True)
-
     kmi = km.keymap_items.new('curve.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('curve.delete', 'X', 'PRESS')
-
-    kmi = km.keymap_items.new('curve.delete', 'DEL', 'PRESS')
+    kmi = km.keymap_items.new('curve.vertex_add', 'SELECTMOUSE', 'CLICK', ctrl=True, alt=True)
 
 # Map Metaball
 with KeyMap(kc, 'Metaball', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
