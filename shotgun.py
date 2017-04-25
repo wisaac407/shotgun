@@ -337,7 +337,7 @@ with KeyMap(kc, 'Animation', space_type='EMPTY', region_type='WINDOW', modal=Fal
 
 # Map Image
 with KeyMap(kc, 'Image', space_type='IMAGE_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('image.view_all', 'F', 'PRESS')
+    kmi = km.keymap_items.new('image.view_all', 'F', 'PRESS', alt=True)
     kmi_props_setattr(kmi.properties, 'fit_view', True)
 
     kmi = km.keymap_items.new('image.view_pan', 'ACTIONMOUSE', 'PRESS')
