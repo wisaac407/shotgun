@@ -319,11 +319,6 @@ with KeyMap(kc, 'View2D', space_type='EMPTY', region_type='WINDOW', modal=False)
 
     kmi = km.keymap_items.new('view2d.pan', 'ACTIONMOUSE', 'ANY')
 
-# Map Image Paint
-with KeyMap(kc, 'Image Paint', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('wm.context_menu_enum', 'R', 'PRESS')
-    kmi_props_setattr(kmi.properties, 'data_path', 'tool_settings.image_paint.brush.texture_angle_source_random')
-
 # Map Sequencer
 with KeyMap(kc, 'Sequencer', space_type='SEQUENCE_EDITOR', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('sequencer.select_all', 'A', 'PRESS', ctrl=True)
