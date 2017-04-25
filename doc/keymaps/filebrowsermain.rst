@@ -14,8 +14,6 @@ Quick Reference
 +--------------------------------------------------------------------------------------------+-----------------------------------------------+
 |Hotkey                                                                                      |Operator                                       |
 +============================================================================================+===============================================+
-|:km:hk:`Alt-LEFTMOUSE <filebrowsermain->Alt-LEFTMOUSE->file.select>`                        |:func:`blender:bpy.ops.file.select`            |
-+--------------------------------------------------------------------------------------------+-----------------------------------------------+
 |:km:hk:`Ctrl-A <filebrowsermain->Ctrl-A->file.select_all_toggle>`                           |:func:`blender:bpy.ops.file.select_all_toggle` |
 +--------------------------------------------------------------------------------------------+-----------------------------------------------+
 |:km:hk:`LEFTMOUSE <filebrowsermain->LEFTMOUSE->file.execute>`                               |:func:`blender:bpy.ops.file.execute`           |
@@ -94,22 +92,6 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Alt-LEFTMOUSE -> file.select : MOUSE -> CLICK
-
-   Activate/Select File
-
-   bpy.ops.file.select(extend=False, fill=False, open=True)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Extend      |True    |
-   +------------+--------+
-   |Fill        |True    |
-   +------------+--------+
-   
-   
 .. km:hotkey:: Ctrl-A -> file.select_all_toggle : KEYBOARD -> PRESS
 
    (De)select All Files

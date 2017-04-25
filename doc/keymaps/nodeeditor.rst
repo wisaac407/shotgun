@@ -14,17 +14,15 @@ Quick Reference
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |Hotkey                                                                                          |Operator                                                |
 +================================================================================================+========================================================+
-|:km:hk:`Shift-EQUAL <nodeeditor->Shift-EQUAL->wm.call_menu>`                                    |:func:`blender:bpy.ops.wm.call_menu`                    |
+|:km:hk:`Alt-EVT_TWEAK_A <nodeeditor->Alt-EVT_TWEAK_A->node.select_lasso>`                       |:func:`blender:bpy.ops.node.select_lasso`               |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Ctrl-Alt-EVT_TWEAK_S <nodeeditor->Ctrl-Alt-EVT_TWEAK_S->node.select_lasso>`             |:func:`blender:bpy.ops.node.select_lasso`               |
+|:km:hk:`Shift-Alt-EVT_TWEAK_A <nodeeditor->Shift-Alt-EVT_TWEAK_A->node.select_lasso>`           |:func:`blender:bpy.ops.node.select_lasso`               |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Alt-SELECTMOUSE <nodeeditor->Alt-SELECTMOUSE->node.backimage_sample>`                   |:func:`blender:bpy.ops.node.backimage_sample`           |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Ctrl-A <nodeeditor->Ctrl-A->node.select_all>`                                           |:func:`blender:bpy.ops.node.select_all`                 |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-Tab <nodeeditor->Shift-Tab->node.group_edit>`                                     |:func:`blender:bpy.ops.node.group_edit`                 |
-+------------------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Alt-F <nodeeditor->Alt-F->node.detach_translate_attach>`                                |:func:`blender:bpy.ops.node.detach_translate_attach`    |
+|:km:hk:`Tab <nodeeditor->Tab->node.add_search>`                                                 |:func:`blender:bpy.ops.node.add_search`                 |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`ACTIONMOUSE <nodeeditor->ACTIONMOUSE->node.select>`                                     |:func:`blender:bpy.ops.node.select`                     |
 +------------------------------------------------------------------------------------------------+--------------------------------------------------------+
@@ -204,21 +202,14 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Shift-EQUAL -> wm.call_menu : KEYBOARD -> PRESS
+.. km:hotkey:: Alt-EVT_TWEAK_A -> node.select_lasso : TWEAK -> ANY
 
-   Call Menu
+   Lasso Select
 
-   bpy.ops.wm.call_menu(name="")
+   bpy.ops.node.select_lasso(path=[], deselect=False, extend=True)
    
    
-   +------------+---------------------------+
-   |Properties: |Values:                    |
-   +============+===========================+
-   |Name        |NODE_MT_nw_node_align_menu |
-   +------------+---------------------------+
-   
-   
-.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_S -> node.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_A -> node.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -228,7 +219,7 @@ Detailed Reference
    +------------+--------+
    |Properties: |Values: |
    +============+========+
-   |Deselect    |False   |
+   |Deselect    |True    |
    +------------+--------+
    
    
@@ -253,36 +244,18 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Shift-Tab -> node.group_edit : KEYBOARD -> PRESS
+.. km:hotkey:: Tab -> node.add_search : KEYBOARD -> DOUBLE_CLICK
 
-   Edit Group
+   Search and Add Node
 
-   bpy.ops.node.group_edit(exit=False)
+   bpy.ops.node.add_search(type="", use_transform=False, settings=[], node_item='0')
    
    
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Exit        |True    |
-   +------------+--------+
-   
-   
-.. km:hotkey:: Alt-F -> node.detach_translate_attach : KEYBOARD -> PRESS
-
-   Detach and Move
-
-   bpy.ops.node.detach_translate_attach(NODE_OT_detach={}, TRANSFORM_OT_translate={"value":(0, 0, 0), "constraint_axis":(False, False, False), "constraint_orientation":'GLOBAL', "mirror":False, "proportional":'DISABLED', "proportional_edit_falloff":'SMOOTH', "proportional_size":1, "snap":False, "snap_target":'CLOSEST', "snap_point":(0, 0, 0), "snap_align":False, "snap_normal":(0, 0, 0), "gpencil_strokes":False, "texture_space":False, "remove_on_cancel":False, "release_confirm":False}, NODE_OT_attach={})
-   
-   
-   +-------------+--------+
-   |Properties:  |Values: |
-   +=============+========+
-   |Detach Nodes |N/A     |
-   +-------------+--------+
-   |Translate    |N/A     |
-   +-------------+--------+
-   |Attach Nodes |N/A     |
-   +-------------+--------+
+   +--------------+--------+
+   |Properties:   |Values: |
+   +==============+========+
+   |Use Transform |True    |
+   +--------------+--------+
    
    
 .. km:hotkeyd:: ACTIONMOUSE -> node.select : MOUSE -> PRESS
