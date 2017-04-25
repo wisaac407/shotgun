@@ -301,10 +301,10 @@ with KeyMap(kc, 'Mesh', space_type='EMPTY', region_type='WINDOW', modal=False) a
     kmi = km.keymap_items.new('mesh.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'MIDDLEMOUSE', 'PRESS', ctrl=True)
+    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'SELECTMOUSE', 'PRESS', ctrl=True, alt=True)
     kmi_props_setattr(kmi.properties, 'rotate_source', True)
 
-    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'MIDDLEMOUSE', 'PRESS', shift=True, ctrl=True)
+    kmi = km.keymap_items.new('mesh.dupli_extrude_cursor', 'SELECTMOUSE', 'PRESS', shift=True, ctrl=True, alt=True)
     kmi_props_setattr(kmi.properties, 'rotate_source', False)
 
     kmi = km.keymap_items.new('mesh.select_linked', 'SELECTMOUSE', 'DOUBLE_CLICK')
