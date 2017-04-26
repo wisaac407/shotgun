@@ -98,24 +98,33 @@ with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=Fal
     tkmi = trash.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS')
 
 # Map Mask Editing
-with KeyMap(kc, 'Mask Editing', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('mask.add_vertex_slide', 'SELECTMOUSE', 'PRESS', ctrl=True)
-
+with KeyMap(kc, 'Mask Editing', space_type='EMPTY', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
     kmi = km.keymap_items.new('mask.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('mask.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)
+    kmi = km.keymap_items.new('mask.add_vertex_slide', 'SELECTMOUSE', 'PRESS', ctrl=True, alt=True)
+
+    kmi = km.keymap_items.new('mask.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
 
-    kmi = km.keymap_items.new('mask.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True, alt=True)
+    kmi = km.keymap_items.new('mask.select_lasso', 'EVT_TWEAK_A', 'ANY', shift=True, alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', True)
 
-    kmi = km.keymap_items.new('mask.slide_point', 'SELECTMOUSE', 'PRESS')
-    kmi.active = False
+    kmi = km.keymap_items.new('mask.select_border', 'EVT_TWEAK_S', 'ANY', alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', False)
 
-    kmi = km.keymap_items.new('mask.slide_spline_curvature', 'SELECTMOUSE', 'PRESS')
+    kmi = km.keymap_items.new('mask.select_border', 'EVT_TWEAK_S', 'ANY', shift=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
+
+    kmi = km.keymap_items.new('mask.slide_point', 'SELECTMOUSE', 'PRESS')
+
+    kmi = km.keymap_items.new('mask.add_feather_vertex_slide', 'SELECTMOUSE', 'PRESS', ctrl=True, shift=True)
 
     kmi = km.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
+
+    tkmi = trash.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS')
+
+    tkmi = trash.keymap_items.new('mask.slide_point', 'ACTIONMOUSE', 'PRESS')
 
 # Map File Browser Main
 with KeyMap(kc, 'File Browser Main', space_type='FILE_BROWSER', region_type='WINDOW', modal=False) as km:
