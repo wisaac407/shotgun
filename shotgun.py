@@ -164,33 +164,27 @@ with KeyMap(kc, 'Outliner', space_type='OUTLINER', region_type='WINDOW', modal=F
     kmi = km.keymap_items.new('outliner.selected_toggle', 'A', 'PRESS', ctrl=True)
 
 # Map Graph Editor
-with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False) as km:
+with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
     kmi = km.keymap_items.new('graph.cursor_set', 'SELECTMOUSE', 'DOUBLE_CLICK')
-
-    kmi = km.keymap_items.new('graph.select_leftright', 'SELECTMOUSE', 'PRESS', alt=True)
-    kmi_props_setattr(kmi.properties, 'mode', 'CHECK')
-    kmi_props_setattr(kmi.properties, 'extend', False)
-
-    kmi = km.keymap_items.new('graph.select_leftright', 'SELECTMOUSE', 'PRESS', shift=True, alt=True)
-    kmi_props_setattr(kmi.properties, 'mode', 'CHECK')
-    kmi_props_setattr(kmi.properties, 'extend', True)
 
     kmi = km.keymap_items.new('graph.select_all_toggle', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'invert', False)
 
-    kmi = km.keymap_items.new('graph.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)
+    kmi = km.keymap_items.new('graph.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
 
-    kmi = km.keymap_items.new('graph.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)
+    kmi = km.keymap_items.new('graph.select_lasso', 'EVT_TWEAK_A', 'ANY', shift=True, alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', True)
 
-    kmi = km.keymap_items.new('graph.clean', 'O', 'PRESS')
+    kmi = km.keymap_items.new('graph.select_border', 'EVT_TWEAK_S', 'ANY', alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', False)
 
-    kmi = km.keymap_items.new('graph.delete', 'X', 'PRESS')
+    kmi = km.keymap_items.new('graph.select_border', 'EVT_TWEAK_S', 'ANY', shift=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
 
-    kmi = km.keymap_items.new('graph.delete', 'DEL', 'PRESS')
+    kmi = km.keymap_items.new('graph.click_insert', 'SELECTMOUSE', 'CLICK', ctrl=True, alt=True)
 
-    kmi = km.keymap_items.new('graph.click_insert', 'SELECTMOUSE', 'CLICK', ctrl=True)
+    tkmi = trash.keymap_items.new('graph.click_insert', 'ACTIONMOUSE', 'CLICK', ctrl=True)
 
 # Map 3D View
 with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
