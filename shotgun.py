@@ -226,12 +226,6 @@ with KeyMap(kc, 'Weight Paint Vertex Selection', space_type='EMPTY', region_type
     kmi = km.keymap_items.new('paint.vert_select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True)
-    kmi_props_setattr(kmi.properties, 'deselect', False)
-
-    kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True)
-    kmi_props_setattr(kmi.properties, 'deselect', True)
-
 # Map Pose
 with KeyMap(kc, 'Pose', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('wm.call_menu', 'A', 'PRESS')
