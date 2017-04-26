@@ -165,10 +165,6 @@ with KeyMap(kc, 'Outliner', space_type='OUTLINER', region_type='WINDOW', modal=F
 
 # Map Graph Editor
 with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('wm.context_set_enum', 'TAB', 'PRESS', ctrl=True)
-    kmi_props_setattr(kmi.properties, 'data_path', 'area.type')
-    kmi_props_setattr(kmi.properties, 'value', 'DOPESHEET_EDITOR')
-
     kmi = km.keymap_items.new('graph.cursor_set', 'SELECTMOUSE', 'DOUBLE_CLICK')
 
     kmi = km.keymap_items.new('graph.select_leftright', 'SELECTMOUSE', 'PRESS', alt=True)
