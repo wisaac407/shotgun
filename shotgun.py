@@ -327,8 +327,6 @@ with KeyMap(kc, 'Sequencer', space_type='SEQUENCE_EDITOR', region_type='WINDOW',
     kmi = km.keymap_items.new('sequencer.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('view2d.pan', 'RIGHTMOUSE', 'PRESS')
-
 # Map Animation
 with KeyMap(kc, 'Animation', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('anim.change_frame', 'SELECTMOUSE', 'DOUBLE_CLICK')
