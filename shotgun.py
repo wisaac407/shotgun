@@ -358,23 +358,8 @@ with KeyMap(kc, 'Info', space_type='INFO', region_type='WINDOW', modal=False) as
 
 # Map Dopesheet
 with KeyMap(kc, 'Dopesheet', space_type='DOPESHEET_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('wm.context_toggle_enum', 'TAB', 'PRESS', shift=True)
-    kmi_props_setattr(kmi.properties, 'data_path', 'space_data.mode')
-    kmi_props_setattr(kmi.properties, 'value_1', 'ACTION')
-    kmi_props_setattr(kmi.properties, 'value_2', 'DOPESHEET')
-
-    kmi = km.keymap_items.new('wm.context_set_enum', 'TAB', 'PRESS', ctrl=True)
-    kmi_props_setattr(kmi.properties, 'data_path', 'area.type')
-    kmi_props_setattr(kmi.properties, 'value', 'GRAPH_EDITOR')
-
     kmi = km.keymap_items.new('action.select_all_toggle', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'invert', False)
-
-    kmi = km.keymap_items.new('action.clean', 'O', 'PRESS')
-
-    kmi = km.keymap_items.new('action.delete', 'X', 'PRESS')
-
-    kmi = km.keymap_items.new('action.delete', 'DEL', 'PRESS')
 
 # Map NLA Editor
 with KeyMap(kc, 'NLA Editor', space_type='NLA_EDITOR', region_type='WINDOW', modal=False) as km:
