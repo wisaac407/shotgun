@@ -187,6 +187,8 @@ with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW',
     kmi = km.keymap_items.new('graph.select_border', 'EVT_TWEAK_S', 'ANY', shift=True, alt=True)
     kmi_props_setattr(kmi.properties, 'extend', True)
 
+    kmi = km.keymap_items.new('graph.select_linked', 'SELECTMOUSE', 'DOUBLE_CLICK')
+
     kmi = km.keymap_items.new('graph.click_insert', 'SELECTMOUSE', 'CLICK', ctrl=True, alt=True)
 
     tkmi = trash.keymap_items.new('graph.click_insert', 'ACTIONMOUSE', 'CLICK', ctrl=True)
