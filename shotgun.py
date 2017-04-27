@@ -137,27 +137,32 @@ with KeyMap(kc, 'Clip Editor', space_type='CLIP_EDITOR', region_type='WINDOW', m
     kmi = km.keymap_items.new('clip.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
-    kmi = km.keymap_items.new('clip.select_lasso', 'EVT_TWEAK_S', 'ANY', ctrl=True, alt=True)
+    kmi = km.keymap_items.new('clip.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
 
-    kmi = km.keymap_items.new('clip.select_lasso', 'EVT_TWEAK_S', 'ANY', shift=True, ctrl=True, alt=True)
+    kmi = km.keymap_items.new('clip.select_lasso', 'EVT_TWEAK_A', 'ANY', shift=True, alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', True)
 
-    kmi = km.keymap_items.new('clip.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
+    kmi = km.keymap_items.new('clip.select_border', 'EVT_TWEAK_S', 'ANY', alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', False)
+
+    kmi = km.keymap_items.new('clip.select_border', 'EVT_TWEAK_S', 'ANY', shift=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
+
+    kmi = km.keymap_items.new('clip.cursor_set', 'SELECTMOUSE', 'DOUBLE_CLICK')
 
 # Map Clip Graph Editor
 with KeyMap(kc, 'Clip Graph Editor', space_type='CLIP_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('clip.change_frame', 'SELECTMOUSE', 'PRESS', ctrl=True)
+    kmi = km.keymap_items.new('clip.change_frame', 'SELECTMOUSE', 'DOUBLE_CLICK')
+
+    kmi = km.keymap_items.new('clip.graph_select_border', 'EVT_TWEAK_S', 'ANY', alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', False)
+
+    kmi = km.keymap_items.new('clip.graph_select_border', 'EVT_TWEAK_S', 'ANY', shift=True, alt=True)
+    kmi_props_setattr(kmi.properties, 'extend', True)
 
     kmi = km.keymap_items.new('clip.graph_select_all_markers', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
-
-    kmi = km.keymap_items.new('clip.graph_select_border', 'EVT_TWEAK_L', 'ANY', any=True)
-
-# Map Clip Dopesheet Editor
-with KeyMap(kc, 'Clip Dopesheet Editor', space_type='CLIP_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('clip.dopesheet_select_channel', 'SELECTMOUSE', 'PRESS', ctrl=True)
-    kmi_props_setattr(kmi.properties, 'extend', True)
 
 # Map Outliner
 with KeyMap(kc, 'Outliner', space_type='OUTLINER', region_type='WINDOW', modal=False) as km:
