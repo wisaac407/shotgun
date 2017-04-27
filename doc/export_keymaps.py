@@ -19,6 +19,7 @@
 # ##### END GPL LICENSE BLOCK #####
 
 import os
+import re
 import bpy
 
 
@@ -75,6 +76,12 @@ intersphinx_mapping = {{
     'blender': ('http://docs.blender.org/api/blender_python_api_master/', '{blender_objects}')
 }}
 """
+
+SPECIAL_WHITESPACE_RE = re.compile('([\r\n\t])')
+
+
+def rep_special_whitespace(m):
+    return repr(m.group())[1:-1].replace('\\', '\\\\')
 
 
 def lookup_operator(op):
@@ -166,7 +173,7 @@ def format_props(props):
         if typ.type == 'POINTER':
             val = 'N/A'  # Most likely set when the operator is run (e.g. the object under the cursor)
 
-        vals.append(str(val))
+        vals.append(SPECIAL_WHITESPACE_RE.sub(rep_special_whitespace, str(val)))
 
     return keys, vals
 
