@@ -14,27 +14,19 @@ Quick Reference
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |Hotkey                                                                                           |Operator                                              |
 +=================================================================================================+======================================================+
-|:km:hk:`Ctrl-Tab <grapheditor->Ctrl-Tab->wm.context_set_enum>`                                   |:func:`blender:bpy.ops.wm.context_set_enum`           |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`SELECTMOUSE <grapheditor->SELECTMOUSE->graph.cursor_set>`                                |:func:`blender:bpy.ops.graph.cursor_set`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-SELECTMOUSE <grapheditor->Alt-SELECTMOUSE->graph.select_leftright>`                  |:func:`blender:bpy.ops.graph.select_leftright`        |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-Alt-SELECTMOUSE <grapheditor->Shift-Alt-SELECTMOUSE->graph.select_leftright>`      |:func:`blender:bpy.ops.graph.select_leftright`        |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-A <grapheditor->Ctrl-A->graph.select_all_toggle>`                                   |:func:`blender:bpy.ops.graph.select_all_toggle`       |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-EVT_TWEAK_S <grapheditor->Ctrl-EVT_TWEAK_S->graph.select_lasso>`                    |:func:`blender:bpy.ops.graph.select_lasso`            |
+|:km:hk:`Alt-EVT_TWEAK_A <grapheditor->Alt-EVT_TWEAK_A->graph.select_lasso>`                      |:func:`blender:bpy.ops.graph.select_lasso`            |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-Shift-EVT_TWEAK_S <grapheditor->Ctrl-Shift-EVT_TWEAK_S->graph.select_lasso>`        |:func:`blender:bpy.ops.graph.select_lasso`            |
+|:km:hk:`Shift-Alt-EVT_TWEAK_A <grapheditor->Shift-Alt-EVT_TWEAK_A->graph.select_lasso>`          |:func:`blender:bpy.ops.graph.select_lasso`            |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`O <grapheditor->O->graph.clean>`                                                         |:func:`blender:bpy.ops.graph.clean`                   |
+|:km:hk:`Alt-EVT_TWEAK_S <grapheditor->Alt-EVT_TWEAK_S->graph.select_border>`                     |:func:`blender:bpy.ops.graph.select_border`           |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`X <grapheditor->X->graph.delete>`                                                        |:func:`blender:bpy.ops.graph.delete`                  |
+|:km:hk:`Shift-Alt-EVT_TWEAK_S <grapheditor->Shift-Alt-EVT_TWEAK_S->graph.select_border>`         |:func:`blender:bpy.ops.graph.select_border`           |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`DEL <grapheditor->DEL->graph.delete>`                                                    |:func:`blender:bpy.ops.graph.delete`                  |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-SELECTMOUSE <grapheditor->Ctrl-SELECTMOUSE->graph.click_insert>`                    |:func:`blender:bpy.ops.graph.click_insert`            |
+|:km:hk:`Ctrl-Alt-SELECTMOUSE <grapheditor->Ctrl-Alt-SELECTMOUSE->graph.click_insert>`            |:func:`blender:bpy.ops.graph.click_insert`            |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-H <grapheditor->Ctrl-H->wm.context_toggle>`                                         |:func:`blender:bpy.ops.wm.context_toggle`             |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
@@ -118,8 +110,6 @@ Quick Reference
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`I <grapheditor->I->graph.keyframe_insert>`                                               |:func:`blender:bpy.ops.graph.keyframe_insert`         |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-ACTIONMOUSE <grapheditor->Ctrl-ACTIONMOUSE->graph.click_insert>`                    |:func:`blender:bpy.ops.graph.click_insert`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-Shift-ACTIONMOUSE <grapheditor->Ctrl-Shift-ACTIONMOUSE->graph.click_insert>`        |:func:`blender:bpy.ops.graph.click_insert`            |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-C <grapheditor->Ctrl-C->graph.copy>`                                                |:func:`blender:bpy.ops.graph.copy`                    |
@@ -174,59 +164,11 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-Tab -> wm.context_set_enum : KEYBOARD -> PRESS
-
-   Context Set Enum
-
-   bpy.ops.wm.context_set_enum(data_path="", value="")
-   
-   
-   +-------------------+-----------------+
-   |Properties:        |Values:          |
-   +===================+=================+
-   |Context Attributes |area.type        |
-   +-------------------+-----------------+
-   |Value              |DOPESHEET_EDITOR |
-   +-------------------+-----------------+
-   
-   
 .. km:hotkey:: SELECTMOUSE -> graph.cursor_set : MOUSE -> DOUBLE_CLICK
 
    Set Cursor
 
    bpy.ops.graph.cursor_set(frame=0, value=0)
-   
-   
-.. km:hotkey:: Alt-SELECTMOUSE -> graph.select_leftright : MOUSE -> PRESS
-
-   Select Left/Right
-
-   bpy.ops.graph.select_leftright(mode='CHECK', extend=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Mode          |CHECK   |
-   +--------------+--------+
-   |Extend Select |False   |
-   +--------------+--------+
-   
-   
-.. km:hotkey:: Shift-Alt-SELECTMOUSE -> graph.select_leftright : MOUSE -> PRESS
-
-   Select Left/Right
-
-   bpy.ops.graph.select_leftright(mode='CHECK', extend=False)
-   
-   
-   +--------------+--------+
-   |Properties:   |Values: |
-   +==============+========+
-   |Mode          |CHECK   |
-   +--------------+--------+
-   |Extend Select |True    |
-   +--------------+--------+
    
    
 .. km:hotkey:: Ctrl-A -> graph.select_all_toggle : KEYBOARD -> PRESS
@@ -243,7 +185,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-EVT_TWEAK_S -> graph.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Alt-EVT_TWEAK_A -> graph.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -257,7 +199,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_S -> graph.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_A -> graph.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -271,28 +213,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: O -> graph.clean : KEYBOARD -> PRESS
+.. km:hotkey:: Alt-EVT_TWEAK_S -> graph.select_border : TWEAK -> ANY
 
-   Clean Keyframes
+   Border Select
 
-   bpy.ops.graph.clean(threshold=0.001, channels=False)
+   bpy.ops.graph.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True, axis_range=False, include_handles=False)
    
    
-.. km:hotkey:: X -> graph.delete : KEYBOARD -> PRESS
-
-   Delete Keyframes
-
-   bpy.ops.graph.delete()
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |False   |
+   +------------+--------+
    
    
-.. km:hotkey:: DEL -> graph.delete : KEYBOARD -> PRESS
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_S -> graph.select_border : TWEAK -> ANY
 
-   Delete Keyframes
+   Border Select
 
-   bpy.ops.graph.delete()
+   bpy.ops.graph.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True, axis_range=False, include_handles=False)
    
    
-.. km:hotkey:: Ctrl-SELECTMOUSE -> graph.click_insert : MOUSE -> CLICK
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> graph.click_insert : MOUSE -> CLICK
 
    Click-Insert Keyframes
 
@@ -808,20 +757,6 @@ Detailed Reference
    Insert Keyframes
 
    bpy.ops.graph.keyframe_insert(type='ALL')
-   
-   
-.. km:hotkeyd:: Ctrl-ACTIONMOUSE -> graph.click_insert : MOUSE -> CLICK
-
-   Click-Insert Keyframes
-
-   bpy.ops.graph.click_insert(frame=1, value=1, extend=False)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Extend      |False   |
-   +------------+--------+
    
    
 .. km:hotkeyd:: Ctrl-Shift-ACTIONMOUSE -> graph.click_insert : MOUSE -> CLICK

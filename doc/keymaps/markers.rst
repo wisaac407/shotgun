@@ -14,6 +14,8 @@ Quick Reference
 +---------------------------------------------------------------------------------+---------------------------------------------+
 |Hotkey                                                                           |Operator                                     |
 +=================================================================================+=============================================+
+|:km:hk:`Alt-SELECTMOUSE <markers->Alt-SELECTMOUSE->marker.select>`               |:func:`blender:bpy.ops.marker.select`        |
++---------------------------------------------------------------------------------+---------------------------------------------+
 |:km:hk:`Alt-EVT_TWEAK_S <markers->Alt-EVT_TWEAK_S->marker.move>`                 |:func:`blender:bpy.ops.marker.move`          |
 +---------------------------------------------------------------------------------+---------------------------------------------+
 |:km:hk:`Ctrl-A <markers->Ctrl-A->marker.select_all>`                             |:func:`blender:bpy.ops.marker.select_all`    |
@@ -56,6 +58,13 @@ Detailed Reference
 
    
 
+.. km:hotkey:: Alt-SELECTMOUSE -> marker.select : MOUSE -> PRESS
+
+   Select Time Marker
+
+   bpy.ops.marker.select(extend=False, camera=False)
+   
+   
 .. km:hotkey:: Alt-EVT_TWEAK_S -> marker.move : TWEAK -> ANY
 
    Move Time Marker

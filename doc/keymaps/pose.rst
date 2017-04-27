@@ -18,8 +18,6 @@ Quick Reference
 +--------------------------------------------------------------------------------+---------------------------------------------------------+
 |:km:hk:`Ctrl-A <pose->Ctrl-A->pose.select_all>`                                 |:func:`blender:bpy.ops.pose.select_all`                  |
 +--------------------------------------------------------------------------------+---------------------------------------------------------+
-|:km:hk:`Shift-F <pose->Shift-F->pose.select_mirror>`                            |:func:`blender:bpy.ops.pose.select_mirror`               |
-+--------------------------------------------------------------------------------+---------------------------------------------------------+
 |:km:hk:`Ctrl-P <pose->Ctrl-P->object.parent_set>`                               |:func:`blender:bpy.ops.object.parent_set`                |
 +--------------------------------------------------------------------------------+---------------------------------------------------------+
 |:km:hk:`Shift-A <pose->Shift-A->wm.call_menu>`                                  |:func:`blender:bpy.ops.wm.call_menu`                     |
@@ -152,13 +150,6 @@ Detailed Reference
    +============+========+
    |Action      |TOGGLE  |
    +------------+--------+
-   
-   
-.. km:hotkey:: Shift-F -> pose.select_mirror : KEYBOARD -> PRESS
-
-   Flip Active/Selected Bone
-
-   bpy.ops.pose.select_mirror(only_active=False, extend=False)
    
    
 .. km:hotkeyd:: Ctrl-P -> object.parent_set : KEYBOARD -> PRESS

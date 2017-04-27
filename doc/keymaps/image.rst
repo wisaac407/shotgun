@@ -14,7 +14,7 @@ Quick Reference
 +------------------------------------------------------------------------------+--------------------------------------------------+
 |Hotkey                                                                        |Operator                                          |
 +==============================================================================+==================================================+
-|:km:hk:`F <image->F->image.view_all>`                                         |:func:`blender:bpy.ops.image.view_all`            |
+|:km:hk:`Alt-F <image->Alt-F->image.view_all>`                                 |:func:`blender:bpy.ops.image.view_all`            |
 +------------------------------------------------------------------------------+--------------------------------------------------+
 |:km:hk:`ACTIONMOUSE <image->ACTIONMOUSE->image.view_pan>`                     |:func:`blender:bpy.ops.image.view_pan`            |
 +------------------------------------------------------------------------------+--------------------------------------------------+
@@ -118,7 +118,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: F -> image.view_all : KEYBOARD -> PRESS
+.. km:hotkey:: Alt-F -> image.view_all : KEYBOARD -> PRESS
 
    View All
 

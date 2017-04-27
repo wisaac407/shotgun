@@ -16,10 +16,6 @@ Quick Reference
 +==========================================================================================================+==============================================+
 |:km:hk:`Ctrl-A <weightpaintvertexselection->Ctrl-A->paint.vert_select_all>`                               |:func:`blender:bpy.ops.paint.vert_select_all` |
 +----------------------------------------------------------------------------------------------------------+----------------------------------------------+
-|:km:hk:`Ctrl-EVT_TWEAK_S <weightpaintvertexselection->Ctrl-EVT_TWEAK_S->view3d.select_lasso>`             |:func:`blender:bpy.ops.view3d.select_lasso`   |
-+----------------------------------------------------------------------------------------------------------+----------------------------------------------+
-|:km:hk:`Ctrl-Shift-EVT_TWEAK_S <weightpaintvertexselection->Ctrl-Shift-EVT_TWEAK_S->view3d.select_lasso>` |:func:`blender:bpy.ops.view3d.select_lasso`   |
-+----------------------------------------------------------------------------------------------------------+----------------------------------------------+
 |:km:hk:`A <weightpaintvertexselection->A->paint.vert_select_all>`                                         |:func:`blender:bpy.ops.paint.vert_select_all` |
 +----------------------------------------------------------------------------------------------------------+----------------------------------------------+
 |:km:hk:`Ctrl-I <weightpaintvertexselection->Ctrl-I->paint.vert_select_all>`                               |:func:`blender:bpy.ops.paint.vert_select_all` |
@@ -53,34 +49,6 @@ Detailed Reference
    |Properties: |Values: |
    +============+========+
    |Action      |TOGGLE  |
-   +------------+--------+
-   
-   
-.. km:hotkey:: Ctrl-EVT_TWEAK_S -> view3d.select_lasso : TWEAK -> ANY
-
-   Lasso Select
-
-   bpy.ops.view3d.select_lasso(path=[], deselect=False, extend=True)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Deselect    |False   |
-   +------------+--------+
-   
-   
-.. km:hotkey:: Ctrl-Shift-EVT_TWEAK_S -> view3d.select_lasso : TWEAK -> ANY
-
-   Lasso Select
-
-   bpy.ops.view3d.select_lasso(path=[], deselect=False, extend=True)
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Deselect    |True    |
    +------------+--------+
    
    

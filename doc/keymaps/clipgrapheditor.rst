@@ -11,59 +11,61 @@ Clip Graph Editor
 Quick Reference
 ---------------
 
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|Hotkey                                                                                   |Operator                                                |
-+=========================================================================================+========================================================+
-|:km:hk:`Ctrl-SELECTMOUSE <clipgrapheditor->Ctrl-SELECTMOUSE->clip.change_frame>`         |:func:`blender:bpy.ops.clip.change_frame`               |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Ctrl-A <clipgrapheditor->Ctrl-A->clip.graph_select_all_markers>`                 |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Any-EVT_TWEAK_L <clipgrapheditor->Any-EVT_TWEAK_L->clip.graph_select_border>`    |:func:`blender:bpy.ops.clip.graph_select_border`        |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <clipgrapheditor->ACTIONMOUSE->clip.change_frame>`                   |:func:`blender:bpy.ops.clip.change_frame`               |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`SELECTMOUSE <clipgrapheditor->SELECTMOUSE->clip.graph_select>`                   |:func:`blender:bpy.ops.clip.graph_select`               |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-SELECTMOUSE <clipgrapheditor->Shift-SELECTMOUSE->clip.graph_select>`       |:func:`blender:bpy.ops.clip.graph_select`               |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`A <clipgrapheditor->A->clip.graph_select_all_markers>`                           |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Ctrl-I <clipgrapheditor->Ctrl-I->clip.graph_select_all_markers>`                 |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`B <clipgrapheditor->B->clip.graph_select_border>`                                |:func:`blender:bpy.ops.clip.graph_select_border`        |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`DEL <clipgrapheditor->DEL->clip.graph_delete_curve>`                             |:func:`blender:bpy.ops.clip.graph_delete_curve`         |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`X <clipgrapheditor->X->clip.graph_delete_curve>`                                 |:func:`blender:bpy.ops.clip.graph_delete_curve`         |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-DEL <clipgrapheditor->Shift-DEL->clip.graph_delete_knot>`                  |:func:`blender:bpy.ops.clip.graph_delete_knot`          |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-X <clipgrapheditor->Shift-X->clip.graph_delete_knot>`                      |:func:`blender:bpy.ops.clip.graph_delete_knot`          |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`HOME <clipgrapheditor->HOME->clip.graph_view_all>`                               |:func:`blender:bpy.ops.clip.graph_view_all`             |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`NDOF_BUTTON_FIT <clipgrapheditor->NDOF_BUTTON_FIT->clip.graph_view_all>`         |:func:`blender:bpy.ops.clip.graph_view_all`             |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`NUMPAD_PERIOD <clipgrapheditor->NUMPAD_PERIOD->clip.graph_center_current_frame>` |:func:`blender:bpy.ops.clip.graph_center_current_frame` |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`L <clipgrapheditor->L->wm.context_toggle>`                                       |:func:`blender:bpy.ops.wm.context_toggle`               |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Alt-T <clipgrapheditor->Alt-T->clip.clear_track_path>`                           |:func:`blender:bpy.ops.clip.clear_track_path`           |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-T <clipgrapheditor->Shift-T->clip.clear_track_path>`                       |:func:`blender:bpy.ops.clip.clear_track_path`           |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-Alt-T <clipgrapheditor->Shift-Alt-T->clip.clear_track_path>`               |:func:`blender:bpy.ops.clip.clear_track_path`           |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`Shift-D <clipgrapheditor->Shift-D->clip.graph_disable_markers>`                  |:func:`blender:bpy.ops.clip.graph_disable_markers`      |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`G <clipgrapheditor->G->transform.translate>`                                     |:func:`blender:bpy.ops.transform.translate`             |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`EVT_TWEAK_S <clipgrapheditor->EVT_TWEAK_S->transform.translate>`                 |:func:`blender:bpy.ops.transform.translate`             |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`S <clipgrapheditor->S->transform.resize>`                                        |:func:`blender:bpy.ops.transform.resize`                |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
-|:km:hk:`R <clipgrapheditor->R->transform.rotate>`                                        |:func:`blender:bpy.ops.transform.rotate`                |
-+-----------------------------------------------------------------------------------------+--------------------------------------------------------+
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|Hotkey                                                                                            |Operator                                                |
++==================================================================================================+========================================================+
+|:km:hk:`SELECTMOUSE <clipgrapheditor->SELECTMOUSE->clip.change_frame>`                            |:func:`blender:bpy.ops.clip.change_frame`               |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Alt-EVT_TWEAK_S <clipgrapheditor->Alt-EVT_TWEAK_S->clip.graph_select_border>`             |:func:`blender:bpy.ops.clip.graph_select_border`        |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-Alt-EVT_TWEAK_S <clipgrapheditor->Shift-Alt-EVT_TWEAK_S->clip.graph_select_border>` |:func:`blender:bpy.ops.clip.graph_select_border`        |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Ctrl-A <clipgrapheditor->Ctrl-A->clip.graph_select_all_markers>`                          |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`ACTIONMOUSE <clipgrapheditor->ACTIONMOUSE->clip.change_frame>`                            |:func:`blender:bpy.ops.clip.change_frame`               |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`SELECTMOUSE <clipgrapheditor->SELECTMOUSE->clip.graph_select>`                            |:func:`blender:bpy.ops.clip.graph_select`               |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-SELECTMOUSE <clipgrapheditor->Shift-SELECTMOUSE->clip.graph_select>`                |:func:`blender:bpy.ops.clip.graph_select`               |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`A <clipgrapheditor->A->clip.graph_select_all_markers>`                                    |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Ctrl-I <clipgrapheditor->Ctrl-I->clip.graph_select_all_markers>`                          |:func:`blender:bpy.ops.clip.graph_select_all_markers`   |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`B <clipgrapheditor->B->clip.graph_select_border>`                                         |:func:`blender:bpy.ops.clip.graph_select_border`        |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`DEL <clipgrapheditor->DEL->clip.graph_delete_curve>`                                      |:func:`blender:bpy.ops.clip.graph_delete_curve`         |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`X <clipgrapheditor->X->clip.graph_delete_curve>`                                          |:func:`blender:bpy.ops.clip.graph_delete_curve`         |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-DEL <clipgrapheditor->Shift-DEL->clip.graph_delete_knot>`                           |:func:`blender:bpy.ops.clip.graph_delete_knot`          |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-X <clipgrapheditor->Shift-X->clip.graph_delete_knot>`                               |:func:`blender:bpy.ops.clip.graph_delete_knot`          |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`HOME <clipgrapheditor->HOME->clip.graph_view_all>`                                        |:func:`blender:bpy.ops.clip.graph_view_all`             |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`NDOF_BUTTON_FIT <clipgrapheditor->NDOF_BUTTON_FIT->clip.graph_view_all>`                  |:func:`blender:bpy.ops.clip.graph_view_all`             |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`NUMPAD_PERIOD <clipgrapheditor->NUMPAD_PERIOD->clip.graph_center_current_frame>`          |:func:`blender:bpy.ops.clip.graph_center_current_frame` |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`L <clipgrapheditor->L->wm.context_toggle>`                                                |:func:`blender:bpy.ops.wm.context_toggle`               |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Alt-T <clipgrapheditor->Alt-T->clip.clear_track_path>`                                    |:func:`blender:bpy.ops.clip.clear_track_path`           |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-T <clipgrapheditor->Shift-T->clip.clear_track_path>`                                |:func:`blender:bpy.ops.clip.clear_track_path`           |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-Alt-T <clipgrapheditor->Shift-Alt-T->clip.clear_track_path>`                        |:func:`blender:bpy.ops.clip.clear_track_path`           |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`Shift-D <clipgrapheditor->Shift-D->clip.graph_disable_markers>`                           |:func:`blender:bpy.ops.clip.graph_disable_markers`      |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`G <clipgrapheditor->G->transform.translate>`                                              |:func:`blender:bpy.ops.transform.translate`             |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`EVT_TWEAK_S <clipgrapheditor->EVT_TWEAK_S->transform.translate>`                          |:func:`blender:bpy.ops.transform.translate`             |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`S <clipgrapheditor->S->transform.resize>`                                                 |:func:`blender:bpy.ops.transform.resize`                |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
+|:km:hk:`R <clipgrapheditor->R->transform.rotate>`                                                 |:func:`blender:bpy.ops.transform.rotate`                |
++--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 
 
 ------------------
@@ -74,11 +76,39 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-SELECTMOUSE -> clip.change_frame : MOUSE -> PRESS
+.. km:hotkey:: SELECTMOUSE -> clip.change_frame : MOUSE -> DOUBLE_CLICK
 
    Change Frame
 
    bpy.ops.clip.change_frame(frame=0)
+   
+   
+.. km:hotkey:: Alt-EVT_TWEAK_S -> clip.graph_select_border : TWEAK -> ANY
+
+   Border Select
+
+   bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_S -> clip.graph_select_border : TWEAK -> ANY
+
+   Border Select
+
+   bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
    
    
 .. km:hotkey:: Ctrl-A -> clip.graph_select_all_markers : KEYBOARD -> PRESS
@@ -93,13 +123,6 @@ Detailed Reference
    +============+========+
    |Action      |TOGGLE  |
    +------------+--------+
-   
-   
-.. km:hotkey:: Any-EVT_TWEAK_L -> clip.graph_select_border : TWEAK -> ANY
-
-   Border Select
-
-   bpy.ops.clip.graph_select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
    
    
 .. km:hotkeyd:: ACTIONMOUSE -> clip.change_frame : MOUSE -> PRESS

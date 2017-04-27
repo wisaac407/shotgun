@@ -14,17 +14,7 @@ Quick Reference
 +------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |Hotkey                                                                                          |Operator                                              |
 +================================================================================================+======================================================+
-|:km:hk:`Shift-Tab <dopesheet->Shift-Tab->wm.context_toggle_enum>`                               |:func:`blender:bpy.ops.wm.context_toggle_enum`        |
-+------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-Tab <dopesheet->Ctrl-Tab->wm.context_set_enum>`                                    |:func:`blender:bpy.ops.wm.context_set_enum`           |
-+------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-A <dopesheet->Ctrl-A->action.select_all_toggle>`                                   |:func:`blender:bpy.ops.action.select_all_toggle`      |
-+------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`O <dopesheet->O->action.clean>`                                                         |:func:`blender:bpy.ops.action.clean`                  |
-+------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`X <dopesheet->X->action.delete>`                                                        |:func:`blender:bpy.ops.action.delete`                 |
-+------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`DEL <dopesheet->DEL->action.delete>`                                                    |:func:`blender:bpy.ops.action.delete`                 |
 +------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`SELECTMOUSE <dopesheet->SELECTMOUSE->action.clickselect>`                               |:func:`blender:bpy.ops.action.clickselect`            |
 +------------------------------------------------------------------------------------------------+------------------------------------------------------+
@@ -144,40 +134,6 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Shift-Tab -> wm.context_toggle_enum : KEYBOARD -> PRESS
-
-   Context Toggle Values
-
-   bpy.ops.wm.context_toggle_enum(data_path="", value_1="", value_2="")
-   
-   
-   +-------------------+----------------+
-   |Properties:        |Values:         |
-   +===================+================+
-   |Context Attributes |space_data.mode |
-   +-------------------+----------------+
-   |Value              |ACTION          |
-   +-------------------+----------------+
-   |Value              |DOPESHEET       |
-   +-------------------+----------------+
-   
-   
-.. km:hotkey:: Ctrl-Tab -> wm.context_set_enum : KEYBOARD -> PRESS
-
-   Context Set Enum
-
-   bpy.ops.wm.context_set_enum(data_path="", value="")
-   
-   
-   +-------------------+-------------+
-   |Properties:        |Values:      |
-   +===================+=============+
-   |Context Attributes |area.type    |
-   +-------------------+-------------+
-   |Value              |GRAPH_EDITOR |
-   +-------------------+-------------+
-   
-   
 .. km:hotkey:: Ctrl-A -> action.select_all_toggle : KEYBOARD -> PRESS
 
    Select All
@@ -190,27 +146,6 @@ Detailed Reference
    +============+========+
    |Invert      |False   |
    +------------+--------+
-   
-   
-.. km:hotkey:: O -> action.clean : KEYBOARD -> PRESS
-
-   Clean Keyframes
-
-   bpy.ops.action.clean(threshold=0.001, channels=False)
-   
-   
-.. km:hotkey:: X -> action.delete : KEYBOARD -> PRESS
-
-   Delete Keyframes
-
-   bpy.ops.action.delete()
-   
-   
-.. km:hotkey:: DEL -> action.delete : KEYBOARD -> PRESS
-
-   Delete Keyframes
-
-   bpy.ops.action.delete()
    
    
 .. km:hotkeyd:: SELECTMOUSE -> action.clickselect : MOUSE -> PRESS

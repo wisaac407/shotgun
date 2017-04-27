@@ -16,8 +16,6 @@ Quick Reference
 +======================================================================================+=====================================================+
 |:km:hk:`Ctrl-A <sequencer->Ctrl-A->sequencer.select_all>`                             |:func:`blender:bpy.ops.sequencer.select_all`         |
 +--------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`RIGHTMOUSE <sequencer->RIGHTMOUSE->view2d.pan>`                               |:func:`blender:bpy.ops.view2d.pan`                   |
-+--------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`A <sequencer->A->sequencer.select_all>`                                       |:func:`blender:bpy.ops.sequencer.select_all`         |
 +--------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`Ctrl-I <sequencer->Ctrl-I->sequencer.select_all>`                             |:func:`blender:bpy.ops.sequencer.select_all`         |
@@ -180,13 +178,6 @@ Detailed Reference
    +============+========+
    |Action      |TOGGLE  |
    +------------+--------+
-   
-   
-.. km:hotkey:: RIGHTMOUSE -> view2d.pan : MOUSE -> PRESS
-
-   Pan View
-
-   bpy.ops.view2d.pan(deltax=0, deltay=0)
    
    
 .. km:hotkeyd:: A -> sequencer.select_all : KEYBOARD -> PRESS

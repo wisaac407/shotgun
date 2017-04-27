@@ -14,13 +14,9 @@ Quick Reference
 +------------------------------------------------------------------------------+------------------------------------------------------+
 |Hotkey                                                                        |Operator                                              |
 +==============================================================================+======================================================+
-|:km:hk:`Ctrl-SELECTMOUSE <curve->Ctrl-SELECTMOUSE->curve.vertex_add>`         |:func:`blender:bpy.ops.curve.vertex_add`              |
-+------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-A <curve->Ctrl-A->curve.select_all>`                             |:func:`blender:bpy.ops.curve.select_all`              |
 +------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`X <curve->X->curve.delete>`                                           |:func:`blender:bpy.ops.curve.delete`                  |
-+------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`DEL <curve->DEL->curve.delete>`                                       |:func:`blender:bpy.ops.curve.delete`                  |
+|:km:hk:`Ctrl-Alt-SELECTMOUSE <curve->Ctrl-Alt-SELECTMOUSE->curve.vertex_add>` |:func:`blender:bpy.ops.curve.vertex_add`              |
 +------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Shift-A <curve->Shift-A->wm.call_menu>`                               |:func:`blender:bpy.ops.wm.call_menu`                  |
 +------------------------------------------------------------------------------+------------------------------------------------------+
@@ -106,13 +102,6 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-SELECTMOUSE -> curve.vertex_add : MOUSE -> CLICK
-
-   Add Vertex
-
-   bpy.ops.curve.vertex_add(location=(0, 0, 0))
-   
-   
 .. km:hotkey:: Ctrl-A -> curve.select_all : KEYBOARD -> PRESS
 
    (De)select All
@@ -127,18 +116,11 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> curve.delete : KEYBOARD -> PRESS
+.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> curve.vertex_add : MOUSE -> CLICK
 
-   Delete
+   Add Vertex
 
-   bpy.ops.curve.delete(type='VERT')
-   
-   
-.. km:hotkey:: DEL -> curve.delete : KEYBOARD -> PRESS
-
-   Delete
-
-   bpy.ops.curve.delete(type='VERT')
+   bpy.ops.curve.vertex_add(location=(0, 0, 0))
    
    
 .. km:hotkeyd:: Shift-A -> wm.call_menu : KEYBOARD -> PRESS

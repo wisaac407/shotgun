@@ -18,11 +18,15 @@ Quick Reference
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
 |:km:hk:`Ctrl-A <clipeditor->Ctrl-A->clip.select_all>`                                           |:func:`blender:bpy.ops.clip.select_all`         |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Ctrl-Alt-EVT_TWEAK_S <clipeditor->Ctrl-Alt-EVT_TWEAK_S->clip.select_lasso>`             |:func:`blender:bpy.ops.clip.select_lasso`       |
+|:km:hk:`Alt-EVT_TWEAK_A <clipeditor->Alt-EVT_TWEAK_A->clip.select_lasso>`                       |:func:`blender:bpy.ops.clip.select_lasso`       |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Ctrl-Shift-Alt-EVT_TWEAK_S <clipeditor->Ctrl-Shift-Alt-EVT_TWEAK_S->clip.select_lasso>` |:func:`blender:bpy.ops.clip.select_lasso`       |
+|:km:hk:`Shift-Alt-EVT_TWEAK_A <clipeditor->Shift-Alt-EVT_TWEAK_A->clip.select_lasso>`           |:func:`blender:bpy.ops.clip.select_lasso`       |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Ctrl-ACTIONMOUSE <clipeditor->Ctrl-ACTIONMOUSE->clip.cursor_set>`                       |:func:`blender:bpy.ops.clip.cursor_set`         |
+|:km:hk:`Alt-EVT_TWEAK_S <clipeditor->Alt-EVT_TWEAK_S->clip.select_border>`                      |:func:`blender:bpy.ops.clip.select_border`      |
++------------------------------------------------------------------------------------------------+------------------------------------------------+
+|:km:hk:`Shift-Alt-EVT_TWEAK_S <clipeditor->Shift-Alt-EVT_TWEAK_S->clip.select_border>`          |:func:`blender:bpy.ops.clip.select_border`      |
++------------------------------------------------------------------------------------------------+------------------------------------------------+
+|:km:hk:`SELECTMOUSE <clipeditor->SELECTMOUSE->clip.cursor_set>`                                 |:func:`blender:bpy.ops.clip.cursor_set`         |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
 |:km:hk:`MIDDLEMOUSE <clipeditor->MIDDLEMOUSE->clip.view_pan>`                                   |:func:`blender:bpy.ops.clip.view_pan`           |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
@@ -203,7 +207,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_S -> clip.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Alt-EVT_TWEAK_A -> clip.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -217,7 +221,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-EVT_TWEAK_S -> clip.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_A -> clip.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -231,7 +235,35 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-ACTIONMOUSE -> clip.cursor_set : MOUSE -> PRESS
+.. km:hotkey:: Alt-EVT_TWEAK_S -> clip.select_border : TWEAK -> ANY
+
+   Border Select
+
+   bpy.ops.clip.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_S -> clip.select_border : TWEAK -> ANY
+
+   Border Select
+
+   bpy.ops.clip.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: SELECTMOUSE -> clip.cursor_set : MOUSE -> DOUBLE_CLICK
 
    Set 2D Cursor
 

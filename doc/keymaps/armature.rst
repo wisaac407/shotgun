@@ -16,13 +16,7 @@ Quick Reference
 +========================================================================================+====================================================+
 |:km:hk:`Ctrl-A <armature->Ctrl-A->armature.select_all>`                                 |:func:`blender:bpy.ops.armature.select_all`         |
 +----------------------------------------------------------------------------------------+----------------------------------------------------+
-|:km:hk:`X <armature->X->armature.delete>`                                               |:func:`blender:bpy.ops.armature.delete`             |
-+----------------------------------------------------------------------------------------+----------------------------------------------------+
-|:km:hk:`DEL <armature->DEL->armature.delete>`                                           |:func:`blender:bpy.ops.armature.delete`             |
-+----------------------------------------------------------------------------------------+----------------------------------------------------+
-|:km:hk:`Ctrl-SELECTMOUSE <armature->Ctrl-SELECTMOUSE->armature.click_extrude>`          |:func:`blender:bpy.ops.armature.click_extrude`      |
-+----------------------------------------------------------------------------------------+----------------------------------------------------+
-|:km:hk:`Ctrl-Alt-P <armature->Ctrl-Alt-P->armature.separate>`                           |:func:`blender:bpy.ops.armature.separate`           |
+|:km:hk:`Ctrl-Alt-SELECTMOUSE <armature->Ctrl-Alt-SELECTMOUSE->armature.click_extrude>`  |:func:`blender:bpy.ops.armature.click_extrude`      |
 +----------------------------------------------------------------------------------------+----------------------------------------------------+
 |:km:hk:`X <armature->X->sketch.delete>`                                                 |:func:`blender:bpy.ops.sketch.delete`               |
 +----------------------------------------------------------------------------------------+----------------------------------------------------+
@@ -152,32 +146,11 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: X -> armature.delete : KEYBOARD -> PRESS
-
-   Delete Selected Bone(s)
-
-   bpy.ops.armature.delete()
-   
-   
-.. km:hotkey:: DEL -> armature.delete : KEYBOARD -> PRESS
-
-   Delete Selected Bone(s)
-
-   bpy.ops.armature.delete()
-   
-   
-.. km:hotkey:: Ctrl-SELECTMOUSE -> armature.click_extrude : MOUSE -> CLICK
+.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> armature.click_extrude : MOUSE -> PRESS
 
    Click-Extrude
 
    bpy.ops.armature.click_extrude()
-   
-   
-.. km:hotkey:: Ctrl-Alt-P -> armature.separate : KEYBOARD -> PRESS
-
-   Separate Bones
-
-   bpy.ops.armature.separate()
    
    
 .. km:hotkeyd:: X -> sketch.delete : KEYBOARD -> PRESS

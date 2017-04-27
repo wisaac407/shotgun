@@ -11,109 +11,109 @@ Mask Editing
 Quick Reference
 ---------------
 
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|Hotkey                                                                                           |Operator                                              |
-+=================================================================================================+======================================================+
-|:km:hk:`Ctrl-SELECTMOUSE <maskediting->Ctrl-SELECTMOUSE->mask.add_vertex_slide>`                 |:func:`blender:bpy.ops.mask.add_vertex_slide`         |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-A <maskediting->Ctrl-A->mask.select_all>`                                           |:func:`blender:bpy.ops.mask.select_all`               |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-Alt-EVT_TWEAK_S <maskediting->Ctrl-Alt-EVT_TWEAK_S->mask.select_lasso>`             |:func:`blender:bpy.ops.mask.select_lasso`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-Shift-Alt-EVT_TWEAK_S <maskediting->Ctrl-Shift-Alt-EVT_TWEAK_S->mask.select_lasso>` |:func:`blender:bpy.ops.mask.select_lasso`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`SELECTMOUSE <maskediting->SELECTMOUSE->mask.slide_point>`                                |:func:`blender:bpy.ops.mask.slide_point`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`SELECTMOUSE <maskediting->SELECTMOUSE->mask.slide_spline_curvature>`                     |:func:`blender:bpy.ops.mask.slide_spline_curvature`   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-ACTIONMOUSE <maskediting->Ctrl-ACTIONMOUSE->uv.cursor_set>`                         |:func:`blender:bpy.ops.uv.cursor_set`                 |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-N <maskediting->Alt-N->mask.new>`                                                    |:func:`blender:bpy.ops.mask.new`                      |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-A <maskediting->Shift-A->wm.call_menu>`                                            |:func:`blender:bpy.ops.wm.call_menu`                  |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-O <maskediting->Shift-O->wm.context_cycle_enum>`                                   |:func:`blender:bpy.ops.wm.context_cycle_enum`         |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`O <maskediting->O->wm.context_toggle>`                                                   |:func:`blender:bpy.ops.wm.context_toggle`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-ACTIONMOUSE <maskediting->Ctrl-ACTIONMOUSE->mask.add_vertex_slide>`                 |:func:`blender:bpy.ops.mask.add_vertex_slide`         |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-ACTIONMOUSE <maskediting->Shift-ACTIONMOUSE->mask.add_feather_vertex_slide>`       |:func:`blender:bpy.ops.mask.add_feather_vertex_slide` |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`X <maskediting->X->mask.delete>`                                                         |:func:`blender:bpy.ops.mask.delete`                   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`DEL <maskediting->DEL->mask.delete>`                                                     |:func:`blender:bpy.ops.mask.delete`                   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`SELECTMOUSE <maskediting->SELECTMOUSE->mask.select>`                                     |:func:`blender:bpy.ops.mask.select`                   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-SELECTMOUSE <maskediting->Shift-SELECTMOUSE->mask.select>`                         |:func:`blender:bpy.ops.mask.select`                   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`A <maskediting->A->mask.select_all>`                                                     |:func:`blender:bpy.ops.mask.select_all`               |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-I <maskediting->Ctrl-I->mask.select_all>`                                           |:func:`blender:bpy.ops.mask.select_all`               |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-L <maskediting->Ctrl-L->mask.select_linked>`                                        |:func:`blender:bpy.ops.mask.select_linked`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`L <maskediting->L->mask.select_linked_pick>`                                             |:func:`blender:bpy.ops.mask.select_linked_pick`       |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-L <maskediting->Shift-L->mask.select_linked_pick>`                                 |:func:`blender:bpy.ops.mask.select_linked_pick`       |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`B <maskediting->B->mask.select_border>`                                                  |:func:`blender:bpy.ops.mask.select_border`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`C <maskediting->C->mask.select_circle>`                                                  |:func:`blender:bpy.ops.mask.select_circle`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-Alt-EVT_TWEAK_A <maskediting->Ctrl-Alt-EVT_TWEAK_A->mask.select_lasso>`             |:func:`blender:bpy.ops.mask.select_lasso`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-Shift-Alt-EVT_TWEAK_A <maskediting->Ctrl-Shift-Alt-EVT_TWEAK_A->mask.select_lasso>` |:func:`blender:bpy.ops.mask.select_lasso`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-NUMPAD_PLUS <maskediting->Ctrl-NUMPAD_PLUS->mask.select_more>`                      |:func:`blender:bpy.ops.mask.select_more`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-NUMPAD_MINUS <maskediting->Ctrl-NUMPAD_MINUS->mask.select_less>`                    |:func:`blender:bpy.ops.mask.select_less`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-H <maskediting->Alt-H->mask.hide_view_clear>`                                        |:func:`blender:bpy.ops.mask.hide_view_clear`          |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`H <maskediting->H->mask.hide_view_set>`                                                  |:func:`blender:bpy.ops.mask.hide_view_set`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-H <maskediting->Shift-H->mask.hide_view_set>`                                      |:func:`blender:bpy.ops.mask.hide_view_set`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-SELECTMOUSE <maskediting->Ctrl-SELECTMOUSE->clip.select>`                           |:func:`blender:bpy.ops.clip.select`                   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-C <maskediting->Alt-C->mask.cyclic_toggle>`                                          |:func:`blender:bpy.ops.mask.cyclic_toggle`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <maskediting->ACTIONMOUSE->mask.slide_point>`                                |:func:`blender:bpy.ops.mask.slide_point`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <maskediting->ACTIONMOUSE->mask.slide_spline_curvature>`                     |:func:`blender:bpy.ops.mask.slide_spline_curvature`   |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`V <maskediting->V->mask.handle_type_set>`                                                |:func:`blender:bpy.ops.mask.handle_type_set`          |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-N <maskediting->Ctrl-N->mask.normals_make_consistent>`                              |:func:`blender:bpy.ops.mask.normals_make_consistent`  |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-P <maskediting->Ctrl-P->mask.parent_set>`                                           |:func:`blender:bpy.ops.mask.parent_set`               |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-P <maskediting->Alt-P->mask.parent_clear>`                                           |:func:`blender:bpy.ops.mask.parent_clear`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`I <maskediting->I->mask.shape_key_insert>`                                               |:func:`blender:bpy.ops.mask.shape_key_insert`         |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-I <maskediting->Alt-I->mask.shape_key_clear>`                                        |:func:`blender:bpy.ops.mask.shape_key_clear`          |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Shift-D <maskediting->Shift-D->mask.duplicate_move>`                                     |:func:`blender:bpy.ops.mask.duplicate_move`           |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-C <maskediting->Ctrl-C->mask.copy_splines>`                                         |:func:`blender:bpy.ops.mask.copy_splines`             |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Ctrl-V <maskediting->Ctrl-V->mask.paste_splines>`                                        |:func:`blender:bpy.ops.mask.paste_splines`            |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <maskediting->ACTIONMOUSE->uv.cursor_set>`                                   |:func:`blender:bpy.ops.uv.cursor_set`                 |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`G <maskediting->G->transform.translate>`                                                 |:func:`blender:bpy.ops.transform.translate`           |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`EVT_TWEAK_S <maskediting->EVT_TWEAK_S->transform.translate>`                             |:func:`blender:bpy.ops.transform.translate`           |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`S <maskediting->S->transform.resize>`                                                    |:func:`blender:bpy.ops.transform.resize`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`R <maskediting->R->transform.rotate>`                                                    |:func:`blender:bpy.ops.transform.rotate`              |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
-|:km:hk:`Alt-S <maskediting->Alt-S->transform.transform>`                                         |:func:`blender:bpy.ops.transform.transform`           |
-+-------------------------------------------------------------------------------------------------+------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|Hotkey                                                                                               |Operator                                              |
++=====================================================================================================+======================================================+
+|:km:hk:`Ctrl-A <maskediting->Ctrl-A->mask.select_all>`                                               |:func:`blender:bpy.ops.mask.select_all`               |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-Alt-SELECTMOUSE <maskediting->Ctrl-Alt-SELECTMOUSE->mask.add_vertex_slide>`             |:func:`blender:bpy.ops.mask.add_vertex_slide`         |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-EVT_TWEAK_A <maskediting->Alt-EVT_TWEAK_A->mask.select_lasso>`                           |:func:`blender:bpy.ops.mask.select_lasso`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-Alt-EVT_TWEAK_A <maskediting->Shift-Alt-EVT_TWEAK_A->mask.select_lasso>`               |:func:`blender:bpy.ops.mask.select_lasso`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-EVT_TWEAK_S <maskediting->Alt-EVT_TWEAK_S->mask.select_border>`                          |:func:`blender:bpy.ops.mask.select_border`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-Alt-EVT_TWEAK_S <maskediting->Shift-Alt-EVT_TWEAK_S->mask.select_border>`              |:func:`blender:bpy.ops.mask.select_border`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`SELECTMOUSE <maskediting->SELECTMOUSE->mask.slide_point>`                                    |:func:`blender:bpy.ops.mask.slide_point`              |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-Shift-SELECTMOUSE <maskediting->Ctrl-Shift-SELECTMOUSE->mask.add_feather_vertex_slide>` |:func:`blender:bpy.ops.mask.add_feather_vertex_slide` |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-ACTIONMOUSE <maskediting->Ctrl-ACTIONMOUSE->uv.cursor_set>`                             |:func:`blender:bpy.ops.uv.cursor_set`                 |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-N <maskediting->Alt-N->mask.new>`                                                        |:func:`blender:bpy.ops.mask.new`                      |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-A <maskediting->Shift-A->wm.call_menu>`                                                |:func:`blender:bpy.ops.wm.call_menu`                  |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-O <maskediting->Shift-O->wm.context_cycle_enum>`                                       |:func:`blender:bpy.ops.wm.context_cycle_enum`         |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`O <maskediting->O->wm.context_toggle>`                                                       |:func:`blender:bpy.ops.wm.context_toggle`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-ACTIONMOUSE <maskediting->Ctrl-ACTIONMOUSE->mask.add_vertex_slide>`                     |:func:`blender:bpy.ops.mask.add_vertex_slide`         |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-ACTIONMOUSE <maskediting->Shift-ACTIONMOUSE->mask.add_feather_vertex_slide>`           |:func:`blender:bpy.ops.mask.add_feather_vertex_slide` |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`X <maskediting->X->mask.delete>`                                                             |:func:`blender:bpy.ops.mask.delete`                   |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`DEL <maskediting->DEL->mask.delete>`                                                         |:func:`blender:bpy.ops.mask.delete`                   |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`SELECTMOUSE <maskediting->SELECTMOUSE->mask.select>`                                         |:func:`blender:bpy.ops.mask.select`                   |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-SELECTMOUSE <maskediting->Shift-SELECTMOUSE->mask.select>`                             |:func:`blender:bpy.ops.mask.select`                   |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`A <maskediting->A->mask.select_all>`                                                         |:func:`blender:bpy.ops.mask.select_all`               |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-I <maskediting->Ctrl-I->mask.select_all>`                                               |:func:`blender:bpy.ops.mask.select_all`               |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-L <maskediting->Ctrl-L->mask.select_linked>`                                            |:func:`blender:bpy.ops.mask.select_linked`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`L <maskediting->L->mask.select_linked_pick>`                                                 |:func:`blender:bpy.ops.mask.select_linked_pick`       |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-L <maskediting->Shift-L->mask.select_linked_pick>`                                     |:func:`blender:bpy.ops.mask.select_linked_pick`       |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`B <maskediting->B->mask.select_border>`                                                      |:func:`blender:bpy.ops.mask.select_border`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`C <maskediting->C->mask.select_circle>`                                                      |:func:`blender:bpy.ops.mask.select_circle`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-Alt-EVT_TWEAK_A <maskediting->Ctrl-Alt-EVT_TWEAK_A->mask.select_lasso>`                 |:func:`blender:bpy.ops.mask.select_lasso`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-Shift-Alt-EVT_TWEAK_A <maskediting->Ctrl-Shift-Alt-EVT_TWEAK_A->mask.select_lasso>`     |:func:`blender:bpy.ops.mask.select_lasso`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_PLUS <maskediting->Ctrl-NUMPAD_PLUS->mask.select_more>`                          |:func:`blender:bpy.ops.mask.select_more`              |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-NUMPAD_MINUS <maskediting->Ctrl-NUMPAD_MINUS->mask.select_less>`                        |:func:`blender:bpy.ops.mask.select_less`              |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-H <maskediting->Alt-H->mask.hide_view_clear>`                                            |:func:`blender:bpy.ops.mask.hide_view_clear`          |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`H <maskediting->H->mask.hide_view_set>`                                                      |:func:`blender:bpy.ops.mask.hide_view_set`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-H <maskediting->Shift-H->mask.hide_view_set>`                                          |:func:`blender:bpy.ops.mask.hide_view_set`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-SELECTMOUSE <maskediting->Ctrl-SELECTMOUSE->clip.select>`                               |:func:`blender:bpy.ops.clip.select`                   |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-C <maskediting->Alt-C->mask.cyclic_toggle>`                                              |:func:`blender:bpy.ops.mask.cyclic_toggle`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`ACTIONMOUSE <maskediting->ACTIONMOUSE->mask.slide_spline_curvature>`                         |:func:`blender:bpy.ops.mask.slide_spline_curvature`   |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`V <maskediting->V->mask.handle_type_set>`                                                    |:func:`blender:bpy.ops.mask.handle_type_set`          |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-N <maskediting->Ctrl-N->mask.normals_make_consistent>`                                  |:func:`blender:bpy.ops.mask.normals_make_consistent`  |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-P <maskediting->Ctrl-P->mask.parent_set>`                                               |:func:`blender:bpy.ops.mask.parent_set`               |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-P <maskediting->Alt-P->mask.parent_clear>`                                               |:func:`blender:bpy.ops.mask.parent_clear`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`I <maskediting->I->mask.shape_key_insert>`                                                   |:func:`blender:bpy.ops.mask.shape_key_insert`         |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-I <maskediting->Alt-I->mask.shape_key_clear>`                                            |:func:`blender:bpy.ops.mask.shape_key_clear`          |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Shift-D <maskediting->Shift-D->mask.duplicate_move>`                                         |:func:`blender:bpy.ops.mask.duplicate_move`           |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-C <maskediting->Ctrl-C->mask.copy_splines>`                                             |:func:`blender:bpy.ops.mask.copy_splines`             |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Ctrl-V <maskediting->Ctrl-V->mask.paste_splines>`                                            |:func:`blender:bpy.ops.mask.paste_splines`            |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`G <maskediting->G->transform.translate>`                                                     |:func:`blender:bpy.ops.transform.translate`           |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`EVT_TWEAK_S <maskediting->EVT_TWEAK_S->transform.translate>`                                 |:func:`blender:bpy.ops.transform.translate`           |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`S <maskediting->S->transform.resize>`                                                        |:func:`blender:bpy.ops.transform.resize`              |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`R <maskediting->R->transform.rotate>`                                                        |:func:`blender:bpy.ops.transform.rotate`              |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`Alt-S <maskediting->Alt-S->transform.transform>`                                             |:func:`blender:bpy.ops.transform.transform`           |
++-----------------------------------------------------------------------------------------------------+------------------------------------------------------+
 
 
 ------------------
@@ -124,7 +124,21 @@ Detailed Reference
 
    
 
-.. km:hotkey:: Ctrl-SELECTMOUSE -> mask.add_vertex_slide : MOUSE -> PRESS
+.. km:hotkey:: Ctrl-A -> mask.select_all : KEYBOARD -> PRESS
+
+   (De)select All
+
+   bpy.ops.mask.select_all(action='TOGGLE')
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Action      |TOGGLE  |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> mask.add_vertex_slide : MOUSE -> PRESS
 
    Add Vertex and Slide
 
@@ -140,21 +154,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-A -> mask.select_all : KEYBOARD -> PRESS
-
-   (De)select All
-
-   bpy.ops.mask.select_all(action='TOGGLE')
-   
-   
-   +------------+--------+
-   |Properties: |Values: |
-   +============+========+
-   |Action      |TOGGLE  |
-   +------------+--------+
-   
-   
-.. km:hotkey:: Ctrl-Alt-EVT_TWEAK_S -> mask.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Alt-EVT_TWEAK_A -> mask.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -168,7 +168,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: Ctrl-Shift-Alt-EVT_TWEAK_S -> mask.select_lasso : TWEAK -> ANY
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_A -> mask.select_lasso : TWEAK -> ANY
 
    Lasso Select
 
@@ -182,11 +182,55 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: SELECTMOUSE -> mask.slide_spline_curvature : MOUSE -> PRESS
+.. km:hotkey:: Alt-EVT_TWEAK_S -> mask.select_border : TWEAK -> ANY
 
-   Slide Spline Curvature
+   Border Select
 
-   bpy.ops.mask.slide_spline_curvature()
+   bpy.ops.mask.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |False   |
+   +------------+--------+
+   
+   
+.. km:hotkey:: Shift-Alt-EVT_TWEAK_S -> mask.select_border : TWEAK -> ANY
+
+   Border Select
+
+   bpy.ops.mask.select_border(gesture_mode=0, xmin=0, xmax=0, ymin=0, ymax=0, extend=True)
+   
+   
+   +------------+--------+
+   |Properties: |Values: |
+   +============+========+
+   |Extend      |True    |
+   +------------+--------+
+   
+   
+.. km:hotkey:: SELECTMOUSE -> mask.slide_point : MOUSE -> PRESS
+
+   Slide Point
+
+   bpy.ops.mask.slide_point(slide_feather=False, is_new_point=False)
+   
+   
+.. km:hotkey:: Ctrl-Shift-SELECTMOUSE -> mask.add_feather_vertex_slide : MOUSE -> PRESS
+
+   Add Feather Vertex and Slide
+
+   bpy.ops.mask.add_feather_vertex_slide(MASK_OT_add_feather_vertex={"location":(0, 0)}, MASK_OT_slide_point={"slide_feather":False, "is_new_point":False})
+   
+   
+   +-------------------+--------+
+   |Properties:        |Values: |
+   +===================+========+
+   |Add Feather Vertex |N/A     |
+   +-------------------+--------+
+   |Slide Point        |N/A     |
+   +-------------------+--------+
    
    
 .. km:hotkey:: Ctrl-ACTIONMOUSE -> uv.cursor_set : MOUSE -> PRESS
@@ -504,13 +548,6 @@ Detailed Reference
    bpy.ops.mask.cyclic_toggle()
    
    
-.. km:hotkeyd:: ACTIONMOUSE -> mask.slide_point : MOUSE -> PRESS
-
-   Slide Point
-
-   bpy.ops.mask.slide_point(slide_feather=False, is_new_point=False)
-   
-   
 .. km:hotkeyd:: ACTIONMOUSE -> mask.slide_spline_curvature : MOUSE -> PRESS
 
    Slide Spline Curvature
@@ -588,13 +625,6 @@ Detailed Reference
    Paste Splines
 
    bpy.ops.mask.paste_splines()
-   
-   
-.. km:hotkeyd:: ACTIONMOUSE -> uv.cursor_set : MOUSE -> PRESS
-
-   Set 2D Cursor
-
-   bpy.ops.uv.cursor_set(location=(0, 0))
    
    
 .. km:hotkeyd:: G -> transform.translate : KEYBOARD -> PRESS
