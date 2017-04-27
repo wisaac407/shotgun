@@ -22,7 +22,6 @@ import os
 import re
 import bpy
 
-
 INDEX_TEMPLATE = """
 Shotgun Documentation
 =====================
@@ -91,7 +90,7 @@ def lookup_operator(op):
 
 def full_compare(a, b, km='Unknown'):
     """Check if a and b are exactly equal keymap items."""
-    for prop in ['idname', 'type',  'value',  'any', 'shift', 'ctrl', 'alt', 'oskey', 'key_modifier']:
+    for prop in ['idname', 'type', 'value', 'any', 'shift', 'ctrl', 'alt', 'oskey', 'key_modifier']:
         if getattr(a, prop, None) != getattr(b, prop, None):
             return False
 
@@ -340,6 +339,7 @@ def main():
             blender_objects='../blender_objects.inv',
             year=datetime.datetime.now().year
         ))
+
 
 if __name__ == '__main__':
     main()
