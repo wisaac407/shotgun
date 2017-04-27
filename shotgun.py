@@ -149,11 +149,11 @@ with KeyMap(kc, 'Clip Editor', space_type='CLIP_EDITOR', region_type='WINDOW', m
     kmi = km.keymap_items.new('clip.select_border', 'EVT_TWEAK_S', 'ANY', shift=True, alt=True)
     kmi_props_setattr(kmi.properties, 'extend', True)
 
-    kmi = km.keymap_items.new('clip.cursor_set', 'SELECTMOUSE', 'DOUBLE_CLICK')
+    kmi = km.keymap_items.new('clip.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
 # Map Clip Graph Editor
 with KeyMap(kc, 'Clip Graph Editor', space_type='CLIP_EDITOR', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('clip.change_frame', 'SELECTMOUSE', 'DOUBLE_CLICK')
+    kmi = km.keymap_items.new('clip.change_frame', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
     kmi = km.keymap_items.new('clip.graph_select_border', 'EVT_TWEAK_S', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'extend', False)
@@ -170,7 +170,7 @@ with KeyMap(kc, 'Outliner', space_type='OUTLINER', region_type='WINDOW', modal=F
 
 # Map Graph Editor
 with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
-    kmi = km.keymap_items.new('graph.cursor_set', 'SELECTMOUSE', 'DOUBLE_CLICK')
+    kmi = km.keymap_items.new('graph.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
     kmi = km.keymap_items.new('graph.select_all_toggle', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'invert', False)
@@ -324,7 +324,7 @@ with KeyMap(kc, 'Sequencer', space_type='SEQUENCE_EDITOR', region_type='WINDOW',
 
 # Map Animation
 with KeyMap(kc, 'Animation', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('anim.change_frame', 'SELECTMOUSE', 'DOUBLE_CLICK')
+    kmi = km.keymap_items.new('anim.change_frame', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
 # Map Image
 with KeyMap(kc, 'Image', space_type='IMAGE_EDITOR', region_type='WINDOW', modal=False) as km:
