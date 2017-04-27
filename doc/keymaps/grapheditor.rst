@@ -14,7 +14,7 @@ Quick Reference
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |Hotkey                                                                                           |Operator                                              |
 +=================================================================================================+======================================================+
-|:km:hk:`SELECTMOUSE <grapheditor->SELECTMOUSE->graph.cursor_set>`                                |:func:`blender:bpy.ops.graph.cursor_set`              |
+|:km:hk:`Ctrl-ACTIONMOUSE <grapheditor->Ctrl-ACTIONMOUSE->graph.cursor_set>`                      |:func:`blender:bpy.ops.graph.cursor_set`              |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-A <grapheditor->Ctrl-A->graph.select_all_toggle>`                                   |:func:`blender:bpy.ops.graph.select_all_toggle`       |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
@@ -25,6 +25,8 @@ Quick Reference
 |:km:hk:`Alt-EVT_TWEAK_S <grapheditor->Alt-EVT_TWEAK_S->graph.select_border>`                     |:func:`blender:bpy.ops.graph.select_border`           |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Shift-Alt-EVT_TWEAK_S <grapheditor->Shift-Alt-EVT_TWEAK_S->graph.select_border>`         |:func:`blender:bpy.ops.graph.select_border`           |
++-------------------------------------------------------------------------------------------------+------------------------------------------------------+
+|:km:hk:`SELECTMOUSE <grapheditor->SELECTMOUSE->graph.select_linked>`                             |:func:`blender:bpy.ops.graph.select_linked`           |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
 |:km:hk:`Ctrl-Alt-SELECTMOUSE <grapheditor->Ctrl-Alt-SELECTMOUSE->graph.click_insert>`            |:func:`blender:bpy.ops.graph.click_insert`            |
 +-------------------------------------------------------------------------------------------------+------------------------------------------------------+
@@ -164,7 +166,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: SELECTMOUSE -> graph.cursor_set : MOUSE -> DOUBLE_CLICK
+.. km:hotkey:: Ctrl-ACTIONMOUSE -> graph.cursor_set : MOUSE -> PRESS
 
    Set Cursor
 
@@ -239,6 +241,13 @@ Detailed Reference
    +============+========+
    |Extend      |True    |
    +------------+--------+
+   
+   
+.. km:hotkey:: SELECTMOUSE -> graph.select_linked : MOUSE -> DOUBLE_CLICK
+
+   Select Linked
+
+   bpy.ops.graph.select_linked()
    
    
 .. km:hotkey:: Ctrl-Alt-SELECTMOUSE -> graph.click_insert : MOUSE -> CLICK

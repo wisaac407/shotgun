@@ -14,7 +14,7 @@ Quick Reference
 +--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |Hotkey                                                                                            |Operator                                                |
 +==================================================================================================+========================================================+
-|:km:hk:`SELECTMOUSE <clipgrapheditor->SELECTMOUSE->clip.change_frame>`                            |:func:`blender:bpy.ops.clip.change_frame`               |
+|:km:hk:`Ctrl-ACTIONMOUSE <clipgrapheditor->Ctrl-ACTIONMOUSE->clip.change_frame>`                  |:func:`blender:bpy.ops.clip.change_frame`               |
 +--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
 |:km:hk:`Alt-EVT_TWEAK_S <clipgrapheditor->Alt-EVT_TWEAK_S->clip.graph_select_border>`             |:func:`blender:bpy.ops.clip.graph_select_border`        |
 +--------------------------------------------------------------------------------------------------+--------------------------------------------------------+
@@ -76,7 +76,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: SELECTMOUSE -> clip.change_frame : MOUSE -> DOUBLE_CLICK
+.. km:hotkey:: Ctrl-ACTIONMOUSE -> clip.change_frame : MOUSE -> PRESS
 
    Change Frame
 

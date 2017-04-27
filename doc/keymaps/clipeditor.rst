@@ -26,7 +26,7 @@ Quick Reference
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
 |:km:hk:`Shift-Alt-EVT_TWEAK_S <clipeditor->Shift-Alt-EVT_TWEAK_S->clip.select_border>`          |:func:`blender:bpy.ops.clip.select_border`      |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`SELECTMOUSE <clipeditor->SELECTMOUSE->clip.cursor_set>`                                 |:func:`blender:bpy.ops.clip.cursor_set`         |
+|:km:hk:`Ctrl-ACTIONMOUSE <clipeditor->Ctrl-ACTIONMOUSE->clip.cursor_set>`                       |:func:`blender:bpy.ops.clip.cursor_set`         |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
 |:km:hk:`MIDDLEMOUSE <clipeditor->MIDDLEMOUSE->clip.view_pan>`                                   |:func:`blender:bpy.ops.clip.view_pan`           |
 +------------------------------------------------------------------------------------------------+------------------------------------------------+
@@ -263,7 +263,7 @@ Detailed Reference
    +------------+--------+
    
    
-.. km:hotkey:: SELECTMOUSE -> clip.cursor_set : MOUSE -> DOUBLE_CLICK
+.. km:hotkey:: Ctrl-ACTIONMOUSE -> clip.cursor_set : MOUSE -> PRESS
 
    Set 2D Cursor
 

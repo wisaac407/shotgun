@@ -11,19 +11,19 @@ Animation
 Quick Reference
 ---------------
 
-+-----------------------------------------------------------------+------------------------------------------------+
-|Hotkey                                                           |Operator                                        |
-+=================================================================+================================================+
-|:km:hk:`SELECTMOUSE <animation->SELECTMOUSE->anim.change_frame>` |:func:`blender:bpy.ops.anim.change_frame`       |
-+-----------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`ACTIONMOUSE <animation->ACTIONMOUSE->anim.change_frame>` |:func:`blender:bpy.ops.anim.change_frame`       |
-+-----------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Ctrl-T <animation->Ctrl-T->wm.context_toggle>`           |:func:`blender:bpy.ops.wm.context_toggle`       |
-+-----------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`P <animation->P->anim.previewrange_set>`                 |:func:`blender:bpy.ops.anim.previewrange_set`   |
-+-----------------------------------------------------------------+------------------------------------------------+
-|:km:hk:`Alt-P <animation->Alt-P->anim.previewrange_clear>`       |:func:`blender:bpy.ops.anim.previewrange_clear` |
-+-----------------------------------------------------------------+------------------------------------------------+
++---------------------------------------------------------------------------+------------------------------------------------+
+|Hotkey                                                                     |Operator                                        |
++===========================================================================+================================================+
+|:km:hk:`Ctrl-ACTIONMOUSE <animation->Ctrl-ACTIONMOUSE->anim.change_frame>` |:func:`blender:bpy.ops.anim.change_frame`       |
++---------------------------------------------------------------------------+------------------------------------------------+
+|:km:hk:`ACTIONMOUSE <animation->ACTIONMOUSE->anim.change_frame>`           |:func:`blender:bpy.ops.anim.change_frame`       |
++---------------------------------------------------------------------------+------------------------------------------------+
+|:km:hk:`Ctrl-T <animation->Ctrl-T->wm.context_toggle>`                     |:func:`blender:bpy.ops.wm.context_toggle`       |
++---------------------------------------------------------------------------+------------------------------------------------+
+|:km:hk:`P <animation->P->anim.previewrange_set>`                           |:func:`blender:bpy.ops.anim.previewrange_set`   |
++---------------------------------------------------------------------------+------------------------------------------------+
+|:km:hk:`Alt-P <animation->Alt-P->anim.previewrange_clear>`                 |:func:`blender:bpy.ops.anim.previewrange_clear` |
++---------------------------------------------------------------------------+------------------------------------------------+
 
 
 ------------------
@@ -34,7 +34,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: SELECTMOUSE -> anim.change_frame : MOUSE -> DOUBLE_CLICK
+.. km:hotkey:: Ctrl-ACTIONMOUSE -> anim.change_frame : MOUSE -> PRESS
 
    Change Frame
 
