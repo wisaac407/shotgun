@@ -30,6 +30,7 @@ commit_website_files() {
   # Add files and commit
   git add doc
   git add keymap_domain.py
+  git add blender_objects.inv
   git commit --message "Travis build: $TRAVIS_BUILD_NUMBER"
 
   # Not all builds have tags
