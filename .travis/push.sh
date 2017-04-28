@@ -24,7 +24,7 @@ commit_website_files() {
   # Move the copied files back
   rm -rf doc/
   mv _source.new doc
-  mv blender_objects.inv.new doc/blender_objects.inv
+  mv blender_objects.inv.new blender_objects.inv
   mv keymap_domain.py.new keymap_domain.py
 
   # Add files and commit
