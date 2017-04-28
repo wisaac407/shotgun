@@ -248,7 +248,7 @@ Detailed Reference
 
    Search and Add Node
 
-   bpy.ops.node.add_search(settings=[], type="", use_transform=False, node_item='0')
+   bpy.ops.node.add_search(use_transform=False, type="", settings=[], node_item='0')
    
    
    +--------------+--------+
