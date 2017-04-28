@@ -93,6 +93,8 @@ with KeyMap(kc, 'UV Editor', space_type='EMPTY', region_type='WINDOW', modal=Fal
     kmi = km.keymap_items.new('uv.select_all', 'A', 'PRESS', ctrl=True)
     kmi_props_setattr(kmi.properties, 'action', 'TOGGLE')
 
+    kmi = km.keymap_items.new('uv.select_linked', 'SELECTMOUSE', 'DOUBLE_CLICK')
+
     kmi = km.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
     tkmi = trash.keymap_items.new('uv.cursor_set', 'ACTIONMOUSE', 'PRESS')
