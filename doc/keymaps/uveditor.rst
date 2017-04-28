@@ -24,6 +24,8 @@ Quick Reference
 +---------------------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`Ctrl-A <uveditor->Ctrl-A->uv.select_all>`                                            |:func:`blender:bpy.ops.uv.select_all`            |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------+
+|:km:hk:`SELECTMOUSE <uveditor->SELECTMOUSE->uv.select_linked>`                               |:func:`blender:bpy.ops.uv.select_linked`         |
++---------------------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`Ctrl-ACTIONMOUSE <uveditor->Ctrl-ACTIONMOUSE->uv.cursor_set>`                        |:func:`blender:bpy.ops.uv.cursor_set`            |
 +---------------------------------------------------------------------------------------------+-------------------------------------------------+
 |:km:hk:`Q <uveditor->Q->wm.context_toggle>`                                                  |:func:`blender:bpy.ops.wm.context_toggle`        |
@@ -194,6 +196,13 @@ Detailed Reference
    +============+========+
    |Action      |TOGGLE  |
    +------------+--------+
+   
+   
+.. km:hotkey:: SELECTMOUSE -> uv.select_linked : MOUSE -> DOUBLE_CLICK
+
+   Select Linked
+
+   bpy.ops.uv.select_linked(extend=False)
    
    
 .. km:hotkey:: Ctrl-ACTIONMOUSE -> uv.cursor_set : MOUSE -> PRESS
