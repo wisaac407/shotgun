@@ -40,7 +40,7 @@ commonly used operators accessible.
 """
 
 CONF_TEMPLATE = """
-#!/usr/bin/env python3
+#!/usr/bin/env python
 
 import sys
 import os
