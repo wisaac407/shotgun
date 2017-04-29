@@ -37,14 +37,6 @@ commonly used operators accessible.
 
    Overview<overview.rst>
    All Keymaps<keymaps.rst>
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
 """
 
 CONF_TEMPLATE = """
