@@ -35,7 +35,7 @@ commit_website_files() {
 
   # Not all builds have tags
   if [ ${TRAVIS_TAG} ]; then
-    git tag "${TRAVIS_TAG:1}" -m "Travis build: $TRAVIS_BUILD_NUMBER"
+    git tag "${TRAVIS_TAG}-doc" -m "Travis build: $TRAVIS_BUILD_NUMBER"
   fi
 }
 
