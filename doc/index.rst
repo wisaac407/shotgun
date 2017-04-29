@@ -3,7 +3,7 @@
 Shotgun Documentation
 =====================
 
-Welcome, this is the documentation for Shotgun version v0.2.3 - 5245b37.
+Welcome, this is the documentation for Shotgun version  - ba58ac6.
 Shotgun is a custom keymap for `Blender <http://www.blender.org>`_ designed to standardize the keymap and make the most
 commonly used operators accessible.
 
@@ -12,11 +12,3 @@ commonly used operators accessible.
 
    Overview<overview.rst>
    All Keymaps<keymaps.rst>
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
