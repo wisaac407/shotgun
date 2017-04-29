@@ -20,6 +20,7 @@
 
 import os
 import re
+import shutil
 import bpy
 
 INDEX_TEMPLATE = """
@@ -29,16 +30,11 @@ Welcome, this is the documentation for Shotgun version {version}.
 Shotgun is a custom keymap for `Blender <http://www.blender.org>`_ designed to standardize the keymap and make the most
 commonly used operators accessible.
 
-
-All Keymaps
-===========
-.. note::
-   If a keymap area is not listed below it means that area uses the default Blender keymap.
-
 .. toctree::
    :maxdepth: 1
 
-   {contents}
+   Overview<overview.rst>
+   All Keymaps<keymaps.rst>
 
 
 Indices and tables
@@ -318,6 +314,24 @@ def main():
     if not os.path.exists('_source/keymaps'):
         os.mkdir('_source/keymaps')
 
+    # Copy all the pre-written rst files (overwriting if necessary)
+    for path in os.listdir('source'):
+        source = os.path.join('source', path)
+        target = os.path.join('_source', path)
+
+        # If the target path exists remove it
+        if os.path.exists(target):
+            if os.path.isdir(target):
+                shutil.rmtree(target)
+            else:
+                os.remove(target)
+
+        # Copy to the target path
+        if os.path.isdir(source):
+            shutil.copytree(source, target)
+        else:
+            shutil.copy2(source, target)
+
     # Write all the keymap files
     for kmid, rst in docs.items():
         with open(os.path.join('_source', kmid + '.rst'), 'w') as f:
@@ -326,7 +340,6 @@ def main():
     # Write the index.rst file
     with open(os.path.join('_source', 'index.rst'), 'w') as f:
         f.write(INDEX_TEMPLATE.format(
-            contents='\n   '.join(sorted(docs.keys())),
             version=version
         ))
 
