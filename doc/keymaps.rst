@@ -1,6 +1,6 @@
-%%%%%%%%%%%
+===========
 All Keymaps
-%%%%%%%%%%%
+===========
 
 This is the complete reference of every hotkey. For a more birds eye view of how it works see the
 `overview <overview.html>`_.
