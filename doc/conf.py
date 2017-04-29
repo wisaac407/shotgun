@@ -17,8 +17,8 @@ project = 'Shotgun'
 copyright = '2017, Isaac Weaver'
 author = 'Isaac Weaver'
 
-version = ' - 5245b37'
-release = ' - 5245b37'
+version = 'v0.2.3 - 5245b37'
+release = 'v0.2.3 - 5245b37'
 
 intersphinx_mapping = {
     'blender': ('http://docs.blender.org/api/blender_python_api_master/', '../blender_objects.inv')
