@@ -5,3 +5,9 @@
 blender --background --factory-startup --python-expr \
  "import bpy; bpy.ops.wm.keyconfig_import(filepath='shotgun.py'); bpy.ops.wm.keyconfig_export(filepath='shotgun.py')"
 
+BANNER="# Shotgun keymap. More info at http://shotgun.readthedocs.io
+VERSION = '$(git describe --abbrev=0)'
+
+"
+
+printf "${BANNER}" | cat - shotgun.py > temp; mv temp shotgun.py
