@@ -35,6 +35,7 @@ commonly used operators accessible.
 .. toctree::
    :maxdepth: 1
 
+   Installation<installation.rst>
    Overview<overview.rst>
    All Keymaps<keymaps.rst>
 """
