@@ -12,3 +12,9 @@ VERSION = '$(git describe --abbrev=0)'
 
 printf "${BANNER}" | cat - temp.py > shotgun.py
 rm temp.py
+
+# Copy the built keymap into the shotgun_manager addon directory
+cp shotgun.py shotgun_manager/
+
+# Zip the addon
+zip shotgun_manager.zip shotgun_manager
