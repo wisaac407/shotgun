@@ -36,6 +36,7 @@ commonly used operators accessible.
    :maxdepth: 1
 
    Installation<installation.rst>
+   Shotgun Manager<shotgun_manager.rst>
    Overview<overview.rst>
    All Keymaps<keymaps.rst>
 """
