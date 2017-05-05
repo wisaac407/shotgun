@@ -178,6 +178,9 @@ class CheckUpdateShotgun(bpy.types.Operator):
         return {'FINISHED'}
 
 
+_previous_mouse_selection = None
+
+
 class EnableShotgun(bpy.types.Operator):
     """Enable the Shotgun keymap"""
     bl_idname = 'wm.shotgun_enable'
@@ -188,6 +191,11 @@ class EnableShotgun(bpy.types.Operator):
         return context.window_manager.keyconfigs.active.name != 'shotgun'
 
     def execute(self, context):
+        if context.user_preferences.addons['shotgun_manager'].preferences.use_left_select:
+            global _previous_mouse_selection
+            _previous_mouse_selection = context.user_preferences.inputs.select_mouse
+            context.user_preferences.inputs.select_mouse = 'LEFT'
+
         wm = context.window_manager
 
         if manager.is_installed:
@@ -208,6 +216,11 @@ class DisableShotgun(bpy.types.Operator):
         return context.window_manager.keyconfigs.active.name == 'shotgun'
 
     def execute(self, context):
+        if _previous_mouse_selection is not None:
+            global _previous_mouse_selection
+            context.user_preferences.inputs.select_mouse = _previous_mouse_selection
+            _previous_mouse_selection = None
+
         wm = context.window_manager
         wm.keyconfigs.active = wm.keyconfigs.default
 
@@ -255,8 +268,15 @@ class ShotgunUserPrefs(bpy.types.AddonPreferences):
         description='Show/Hide Panel in 3D View properties'
     )
 
+    use_left_select = bpy.props.BoolProperty(
+        name='Left Mouse Selection',
+        default=True,
+        description='Ensure that the left mouse button is used for selection'
+    )
+
     def draw(self, context):
         self.layout.prop(self, 'show_ui_panel')
+        self.layout.prop(self, 'use_left_select')
 
         # noinspection PyCallByClass
         ShotgunPanel.draw(self, context)
