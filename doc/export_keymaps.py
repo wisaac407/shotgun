@@ -328,6 +328,11 @@ def main():
         else:
             shutil.copy2(source, target)
 
+    # Write the image files
+    if os.path.exists('_source/images'):
+        shutil.rmtree('_source/images')
+    shutil.copytree('images', '_source/images')
+
     # Write all the keymap files
     for kmid, rst in docs.items():
         with open(os.path.join('_source', kmid + '.rst'), 'w') as f:
