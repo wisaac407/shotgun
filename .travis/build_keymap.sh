@@ -17,4 +17,4 @@ rm temp.py
 cp shotgun.py shotgun_manager/
 
 # Zip the addon
-zip shotgun_manager.zip shotgun_manager
+zip shotgun_manager.zip shotgun_manager -r
