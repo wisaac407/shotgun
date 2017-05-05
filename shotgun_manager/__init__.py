@@ -233,7 +233,6 @@ class ShotgunPanel(bpy.types.Panel):
     bl_idname = '3DVIEW_PT_shotgun'
     bl_space_type = 'VIEW_3D'
     bl_region_type = 'UI'
-    # bl_context = ''
 
     @classmethod
     def poll(cls, context):
