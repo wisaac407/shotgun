@@ -24,3 +24,5 @@ newest version is.
 If you wan't to hide the panel in the 3D Viewport go to the addon settings (Ctrl-Alt-U to open User Preferences and
 under the addon tab search for "Shotgun Manager") make sure that `Show UI Panel` is unchecked. Then press `Save User Preferences`.
 You can still enable/disable and update the keymap from the addon settings.
+
+By default, Shotgun Manager will enable left-click selection, you can change this behavior in the addon settings by unchecking `Left Mouse Selection`.
