@@ -1,11 +1,13 @@
+.. _overview:
+
 ========
 Overview
 ========
 
 Here is a birds eye view of the basics of Shotgun. Because Shotgun is designed to augment Blender's existing keymap most
 of the hotkeys will be the same as what you're already used to. For a more detailed reference of every hotkey see the
-`list of all keymaps <keymaps.html>`_.
-For instructions on how to install it see the `installation <installation.html>`_.
+:ref:`list of all keymaps <keymaps>`.
+For instructions on how to install it see the :ref:`installation <install>`.
 
 ----------
 Navigation
