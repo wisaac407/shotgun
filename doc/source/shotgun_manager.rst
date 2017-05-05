@@ -14,7 +14,7 @@ Basic Usage
 Once Shotgun Manager has been installed and enabled there is a new tab in the properties panel in the 3D View.
 At first it should only have one button called `Enable Shotgun`, if you press that it will install and enable Shotgun.
 
-After that there should be some info of the currently installed keymap. Below the version info there are two buttons,
+After that there should be some info about the currently installed version. Below the version info there are two buttons,
 one label `Check For Updates` and another labeled `Disable Shotgun`.
 
 Pressing `Disable Shotgun` will disable the keymap. `Check For Updates` will check to see if there is a newer version
