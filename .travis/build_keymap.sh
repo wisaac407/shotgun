@@ -16,5 +16,9 @@ rm temp.py
 # Copy the built keymap into the shotgun_manager addon directory
 cp shotgun.py shotgun_manager/
 
+# Include the license and readme with the addon
+cp LICENSE shotgun_manager/
+cp README.md shotgun_manager/
+
 # Zip the addon
 zip shotgun_manager.zip shotgun_manager -r
