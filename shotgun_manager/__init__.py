@@ -29,7 +29,7 @@ import bpy
 bl_info = {
     "name": "Shotgun Manager",
     "author": "Isaac Weaver",
-    "version": (0, 1),
+    "version": (0, 2, 5),
     "blender": (2, 78, 0),
     "description": "Utility tool for installing Shotgun and keeping it up-to-date",
     "category": "System"
