@@ -95,3 +95,4 @@ ENV/
 blender_objects.inv.new
 _source.new
 keymap_domain.py.new
+doc/blender_objects.inv
