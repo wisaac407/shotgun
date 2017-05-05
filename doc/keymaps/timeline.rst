@@ -14,7 +14,7 @@ Quick Reference
 +--------------------------------------------------------------------+---------------------------------------------+
 |Hotkey                                                              |Operator                                     |
 +====================================================================+=============================================+
-|:km:hk:`LEFTMOUSE <timeline->LEFTMOUSE->anim.change_frame>`         |:func:`blender:bpy.ops.anim.change_frame`    |
+|:km:hk:`SELECTMOUSE <timeline->SELECTMOUSE->anim.change_frame>`     |:func:`blender:bpy.ops.anim.change_frame`    |
 +--------------------------------------------------------------------+---------------------------------------------+
 |:km:hk:`S <timeline->S->time.start_frame_set>`                      |:func:`blender:bpy.ops.time.start_frame_set` |
 +--------------------------------------------------------------------+---------------------------------------------+
@@ -36,7 +36,7 @@ Detailed Reference
 
    
 
-.. km:hotkey:: LEFTMOUSE -> anim.change_frame : MOUSE -> PRESS
+.. km:hotkey:: SELECTMOUSE -> anim.change_frame : MOUSE -> PRESS
 
    Change Frame
 

@@ -16,7 +16,7 @@ Quick Reference
 +=========================================================================================+=====================================================+
 |:km:hk:`Ctrl-ACTIONMOUSE <3dview->Ctrl-ACTIONMOUSE->view3d.cursor3d>`                    |:func:`blender:bpy.ops.view3d.cursor3d`              |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
-|:km:hk:`RIGHTMOUSE <3dview->RIGHTMOUSE->view3d.move>`                                    |:func:`blender:bpy.ops.view3d.move`                  |
+|:km:hk:`ACTIONMOUSE <3dview->ACTIONMOUSE->view3d.move>`                                  |:func:`blender:bpy.ops.view3d.move`                  |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
 |:km:hk:`Alt-EVT_TWEAK_A <3dview->Alt-EVT_TWEAK_A->view3d.select_lasso>`                  |:func:`blender:bpy.ops.view3d.select_lasso`          |
 +-----------------------------------------------------------------------------------------+-----------------------------------------------------+
@@ -333,7 +333,7 @@ Detailed Reference
    bpy.ops.view3d.cursor3d()
    
    
-.. km:hotkey:: RIGHTMOUSE -> view3d.move : MOUSE -> PRESS
+.. km:hotkey:: ACTIONMOUSE -> view3d.move : MOUSE -> PRESS
 
    Move View
 
