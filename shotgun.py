@@ -199,7 +199,7 @@ with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW',
 with KeyMap(kc, '3D View', space_type='VIEW_3D', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
     kmi = km.keymap_items.new('view3d.cursor3d', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
-    kmi = km.keymap_items.new('view3d.move', 'RIGHTMOUSE', 'PRESS')
+    kmi = km.keymap_items.new('view3d.move', 'ACTIONMOUSE', 'PRESS')
 
     kmi = km.keymap_items.new('view3d.select_lasso', 'EVT_TWEAK_A', 'ANY', alt=True)
     kmi_props_setattr(kmi.properties, 'deselect', False)
@@ -290,7 +290,7 @@ with KeyMap(kc, 'Node Editor', space_type='NODE_EDITOR', region_type='WINDOW', m
 
 # Map Timeline
 with KeyMap(kc, 'Timeline', space_type='TIMELINE', region_type='WINDOW', modal=False) as km:
-    kmi = km.keymap_items.new('anim.change_frame', 'LEFTMOUSE', 'PRESS')
+    kmi = km.keymap_items.new('anim.change_frame', 'SELECTMOUSE', 'PRESS')
 
 # Map Mesh
 with KeyMap(kc, 'Mesh', space_type='EMPTY', region_type='WINDOW', modal=False) as km:
