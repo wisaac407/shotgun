@@ -4,7 +4,8 @@
 Installation
 ============
 
-You can install the Shotgun Manager addon just like any other addon. First, make sure you've downloaded a copy from the Blender Market.
+You can install the Shotgun Manager addon just like any other addon. First, make sure you've downloaded a copy from the
+`Blender Market <https://blendermarket.com/products/shotgun>`_.
 Then in Blender, open the user preferences (`Ctrl-Alt-U`) and under
 the add-ons tab click `Install From File...` then select the file you just downloaded. Finally, don't forget to enable it
 and press `Save User Preferences` so it is enabled by default.
