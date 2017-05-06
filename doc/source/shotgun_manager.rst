@@ -5,7 +5,7 @@ Shotgun Manager
 ===============
 
 Shotgun Manager is a lightweight addon that makes it easier to install and update the Shotgun keymap.
-For instructions on how to install it see the :ref:`installation <install_shotgun_manager>` page.
+For instructions on how to install it see the :ref:`installation <install>` page.
 
 -----------
 Basic Usage
