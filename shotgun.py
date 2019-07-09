@@ -4,7 +4,7 @@ import os
 
 def full_compare(a, b):
     """Check if a and b are exactly equal keymap items."""
-    for prop in ['idname', 'type',  'value',  'any', 'shift', 'ctrl', 'alt', 'oskey', 'key_modifier']:
+    for prop in ['idname', 'type', 'value', 'any', 'shift', 'ctrl', 'alt', 'oskey', 'key_modifier']:
         if getattr(a, prop, None) != getattr(b, prop, None):
             return False
     # At this point they are probably the same but let's check all the properties too
@@ -17,6 +17,8 @@ def full_compare(a, b):
 
 
 default_hotkeys = {}
+
+
 class KeyMap:
     def __init__(self, kc, name, space_type, region_type, modal, use_trash=False):
         self.km = kc.keymaps.new(name, space_type=space_type, region_type=region_type, modal=modal)
@@ -171,7 +173,8 @@ with KeyMap(kc, 'Outliner', space_type='OUTLINER', region_type='WINDOW', modal=F
     kmi = km.keymap_items.new('outliner.selected_toggle', 'A', 'PRESS', ctrl=True)
 
 # Map Graph Editor
-with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False, use_trash=True) as (km, trash):
+with KeyMap(kc, 'Graph Editor', space_type='GRAPH_EDITOR', region_type='WINDOW', modal=False, use_trash=True) as (
+km, trash):
     kmi = km.keymap_items.new('graph.cursor_set', 'ACTIONMOUSE', 'PRESS', ctrl=True)
 
     kmi = km.keymap_items.new('graph.select_all_toggle', 'A', 'PRESS', ctrl=True)
@@ -287,7 +290,6 @@ with KeyMap(kc, 'Node Editor', space_type='NODE_EDITOR', region_type='WINDOW', m
     kmi = km.keymap_items.new('node.add_search', 'TAB', 'DOUBLE_CLICK')
     kmi_props_setattr(kmi.properties, 'use_transform', True)
 
-
 # Map Timeline
 with KeyMap(kc, 'Timeline', space_type='TIMELINE', region_type='WINDOW', modal=False) as km:
     kmi = km.keymap_items.new('anim.change_frame', 'SELECTMOUSE', 'PRESS')
@@ -366,7 +368,6 @@ with KeyMap(kc, 'NLA Editor', space_type='NLA_EDITOR', region_type='WINDOW', mod
     kmi_props_setattr(kmi.properties, 'invert', False)
 
     kmi = km.keymap_items.new('nla.apply_scale', 'A', 'PRESS')
-
 
 # Map Console
 with KeyMap(kc, 'Console', space_type='CONSOLE', region_type='WINDOW', modal=False) as km:
